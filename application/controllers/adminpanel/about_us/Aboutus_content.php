@@ -53,6 +53,18 @@ Class Aboutus_content extends CI_Controller {
             ),            
         );
 
+        $data['ckeditor_tDeanDetails'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tDeanDetails',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
         $data['ckeditor_tDeanMsg'] = array(
             //ID of the textarea that will be replaced
             'id' => 'tDeanMsg',

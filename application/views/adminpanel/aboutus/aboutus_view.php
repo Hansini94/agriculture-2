@@ -5,6 +5,8 @@ if ($cSaveStatus == "E") {
     $tMissionDes = $aboutus_data[0]->tMissionDes;
     $vVisionTitle = $aboutus_data[0]->vVisionTitle;
     $tVisionDes = $aboutus_data[0]->tVisionDes;
+    $vName = $aboutus_data[0]->vName;
+    $tDeanDetails = $aboutus_data[0]->tDeanDetails;
     $tDeanMsg = $aboutus_data[0]->tDeanMsg;
     $cEnable = $aboutus_data[0]->cEnable;
 } else {
@@ -13,6 +15,8 @@ if ($cSaveStatus == "E") {
     $tMissionDes = '';
     $vVisionTitle = '';
     $tVisionDes = "";
+    $vName = "";
+    $tDeanDetails= "";
     $tDeanMsg = "";
     $cEnable = '';
 }
@@ -124,6 +128,25 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Shared Values<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
                                        <input type="text" id="vVisionTitle" name="vVisionTitle" value="<?php echo $vVisionTitle; ?>" class="form-control col-md-7 col-xs-12" required>  
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Dean's Name<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required>  
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Dean's Details<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="6" name="tDeanDetails" id="tDeanDetails" class="form-control col-md-7 col-xs-12" required><?php echo $tDeanDetails; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tDeanDetails); ?>
                                     </div>
                                 </div>
                             </div>
