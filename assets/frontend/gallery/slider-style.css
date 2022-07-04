@@ -1,0 +1,33 @@
+
+
+
+/*
+ * Layout
+ */
+/*#page {
+  margin: 0 auto;
+  width: 800px;
+  padding: 50px 20px;
+  clear: both;
+}*/
+
+@media all and (max-width: 800px) {
+  #page { width: 100%; }
+}
+
+
+
+
+.demonstrations { float: left; clear: both; width: 100%;  }
+.demonstrations a {
+	float: left;
+	width: auto;
+	height: auto;
+	margin-top: 0;
+	margin-left: 0;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.demonstrations a img { float: left; }
+.demonstrations .rightmost { margin-right: 0; }
+

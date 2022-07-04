@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Sony Sketch EF';
+    src: url('SonySketchEF.woff2') format('woff2'),
+        url('SonySketchEF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
