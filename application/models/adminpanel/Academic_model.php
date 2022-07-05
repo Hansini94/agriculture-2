@@ -3,11 +3,11 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class International_model extends CI_Model {
+class Academic_model extends CI_Model {
 
-    public function get_overview_data() {
+    public function get_bsc_agtech_data() {
 
-        $this->db->from('tbl_overview');
+        $this->db->from('tbl_bsc_agtech_mgt');
 		$this->db->where('id', 1);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -18,9 +18,9 @@ class International_model extends CI_Model {
         }
     }
 
-    public function get_visiting_professor_list() {
+    public function get_bsc_core_programme_structure_list() {
 
-        $this->db->from('tbl_visiting_professor');
+        $this->db->from('tbl_bsc_core_programme_structure');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -30,9 +30,9 @@ class International_model extends CI_Model {
         }
     }
 
-    public function get_edit_visiting_professor($id) {
+    public function get_edit_bsc_core_programme_structure($id) {
 
-        $this->db->from('tbl_visiting_professor');
+        $this->db->from('tbl_bsc_core_programme_structure');
         $this->db->where('id', $id);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -43,10 +43,9 @@ class International_model extends CI_Model {
         }
     }
 
-    public function get_tor_data() {
+    public function get_agtech_course_sequence_list() {
 
-        $this->db->from('tbl_terms_of_reference');
-		$this->db->where('id', 1);
+        $this->db->from('tbl_agtech_course_sequence');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -56,34 +55,9 @@ class International_model extends CI_Model {
         }
     }
 
-    public function get_study_abroad_pro_data() {
+    public function get_edit_agtech_course_sequence($id) {
 
-        $this->db->from('tbl_study_abroad');
-		$this->db->where('id', 1);
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-    
-    public function get_current_foreign_student_list() {
-
-        $this->db->from('tbl_foreign_student');
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-
-    public function get_edit_current_foreign_student($id) {
-
-        $this->db->from('tbl_foreign_student');
+        $this->db->from('tbl_agtech_course_sequence');
         $this->db->where('id', $id);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -94,10 +68,9 @@ class International_model extends CI_Model {
         }
     }
 
-    public function get_study_abroad_opportunity_data() {
+    public function get_advance_programme_structure_list() {
 
-        $this->db->from('tbl_study_abroad_opportunity');
-		$this->db->where('id', 1);
+        $this->db->from('tbl_agtech_adv_prog_structure');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -107,10 +80,10 @@ class International_model extends CI_Model {
         }
     }
 
-    public function get_information_foreign_student() {
+    public function get_edit_advance_programme_structure($id) {
 
-        $this->db->from('tbl_information_foreign_student');
-		$this->db->where('id', 1);
+        $this->db->from('tbl_agtech_adv_prog_structure');
+        $this->db->where('id', $id);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
