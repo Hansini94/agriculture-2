@@ -56,6 +56,45 @@ class International_model extends CI_Model {
         }
     }
 
+    public function get_study_abroad_pro_data() {
+
+        $this->db->from('tbl_study_abroad');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+    
+    public function get_current_foreign_student_list() {
+
+        $this->db->from('tbl_foreign_student');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_current_foreign_student($id) {
+
+        $this->db->from('tbl_foreign_student');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+
     ###############################
 
 }
