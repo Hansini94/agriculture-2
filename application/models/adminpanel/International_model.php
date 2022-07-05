@@ -107,6 +107,19 @@ class International_model extends CI_Model {
         }
     }
 
+    public function get_information_foreign_student() {
+
+        $this->db->from('tbl_information_foreign_student');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
     ###############################
 
 }
