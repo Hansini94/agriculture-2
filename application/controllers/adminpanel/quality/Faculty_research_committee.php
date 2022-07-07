@@ -3,15 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-/* date : 04-07-2022
+/* date : 06-07-2022
  * author : Karshan
  */
 
-Class Members_of_fqac extends CI_Controller {
+Class Faculty_research_committee extends CI_Controller {
 
-    private $table_name = "tbl_members_of_fqac";
-    private $page_id = "53";
-    private $redirect_path = "adminpanel/quality/members_of_fqac";
+    private $table_name = "tbl_faculty_research_committee";
+    private $page_id = "55";
+    private $redirect_path = "adminpanel/quality/faculty_research_committee";
 
     public function __construct() {
         parent::__construct();
@@ -22,28 +22,16 @@ Class Members_of_fqac extends CI_Controller {
         $this->load->helper('ckeditor');
         $this->load->model('adminpanel/common_model');
         $this->load->model('adminpanel/quality_model');
-        set_title("Functions of FoAQAC");
+        set_title("Faculty Research Committee");
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
 
     public function index() {	
         
-        $data['ckeditor_tContent1'] = array(
+        $data['ckeditor_tDescription'] = array(
             //ID of the textarea that will be replaced
-            'id' => 'tContent1',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tContent2'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContent2',
+            'id' => 'tDescription',
             'path' => 'assets/js/ckeditor',
             //Optionnal values
             'config' => array(
@@ -55,36 +43,36 @@ Class Members_of_fqac extends CI_Controller {
 
         $data['cSaveStatus']= 'E';
 		
-        $data['members_of_fqac_data'] = $this->quality_model->get_members_of_fqac_data();
+        $data['faculty_research_committee_data'] = $this->quality_model->get_faculty_research_committee_data();
 		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/quality/members_of_fqac_view', $data);
+        $this->load->view('adminpanel/quality/faculty_research_committee_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 	
 
-    public function save_members_of_fqac($data = '') {
+    public function save_faculty_research_committee($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_members_of_fqac')) {
+            if ($this->common_model->update_saved_data('tbl_faculty_research_committee')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/quality/members_of_fqac');
+                redirect(base_url() . 'adminpanel/quality/faculty_research_committee');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/quality/members_of_fqac');
+                redirect(base_url() . 'adminpanel/quality/faculty_research_committee');
             }
         } else {
-            if ($this->common_model->save_data('tbl_members_of_fqac')) {
+            if ($this->common_model->save_data('tbl_faculty_research_committee')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/quality/members_of_fqac');
+                redirect(base_url() . 'adminpanel/quality/faculty_research_committee');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/quality/members_of_fqac');
+                redirect(base_url() . 'adminpanel/quality/faculty_research_committee');
             }
         }
     }
