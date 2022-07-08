@@ -183,6 +183,31 @@ class Academic_model extends CI_Model {
         }
     }
 
+    public function get_bsc_asf_course_sequence_list() {
+
+        $this->db->from('tbl_bsc_asf_course_sequence');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_bsc_asf_course_sequence($id) {
+
+        $this->db->from('tbl_bsc_asf_course_sequence');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
     ###############################
 
 }
