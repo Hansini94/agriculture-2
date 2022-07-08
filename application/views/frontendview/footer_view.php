@@ -1,366 +1,193 @@
-<!--=============================================-->
-    <!--===================footer====================-->
-
-
-    <!--footer section-->
-
-    <div class="row margin_auto footer_row">
-
-        <div class="container">
-
-            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 footer_logo_col">
-                <img src="<?php echo base_url("assets/frontend/images/logo_2.svg"); ?>" alt="" class="img-responsive footer_logo" data-aos="fade-up">
-                <br>
-                <!-- contact div -->
-                <div class="footer_contact_div hidden-xs">
-                    <p data-aos="fade-up">
-                        <a href="tel:<?php echo $contact_us[0]->vTele; ?>"><?php echo $contact_us[0]->vTele; ?></a> |
-                        <a href="mailto:<?php echo $contact_us[0]->vEmail; ?>"><?php echo $contact_us[0]->vEmail; ?></a>
-                    </p>
-
-                    <!-- ==== -->
-
-                    <!-- socila media icon -->
-                    <p class="hidden-xs footer_social_icon" data-aos="fade-up">
-                        <a href="<?php echo $contact_us[0]->vFacebook; ?>" target="_blank" class="fa fa-facebook"></a>
-                        <a href="<?php echo $contact_us[0]->vTwitter; ?>" class="fa fa-twitter"></a>
-                        <a href="<?php echo $contact_us[0]->vInstagram; ?>" class="fa fa-instagram"></a>
-                        <a href="<?php echo $contact_us[0]->vYoutube; ?>" class="fa fa-youtube"></a>
-                    </p>
-                    <!-- socila media icon -->
-                </div>
-                <br>
-                <p class="hidden-xs" style="margin-bottom: 0px;"><small>© 2022 Kelani Cables PLC. All Rights Reserved. </small>
-                </p>
-                <p class="tg_link hidden-xs"><small>Solution by <a href="https://www.tekgeeks.net/" target="_blank" style="color: #999999;">TekGeeks </a></small></p>
-                <!-- contact div -->
-            </div>
-
-
-            <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 visible-xs">
-                        <p style="color: #14f78d;">
-                        <?php echo $contact_us[0]->vTitle; ?><br> <?php echo $contact_us[0]->vAddress1; ?><br> <?php echo $contact_us[0]->vAddress2; ?>
-                            <br> <?php echo $contact_us[0]->vAddress3; ?>
-                        </p>
-                        <br>
-                        <a href="tel:<?php echo $contact_us[0]->vTele; ?>">
-                            <p style="color: #14f78d;"><?php echo $contact_us[0]->vTele; ?></p>
-                        </a>
-                        <a href="mailto:<?php echo $contact_us[0]->vEmail; ?>">
-                            <p style="color: #14f78d;"><?php echo $contact_us[0]->vEmail; ?></p>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 link_col">
-                        <h3>About Us</h3>
-                        <a href="<?php echo base_url('company-overview') ?>">
-                            <p>Company Overview</p>
-                        </a>
-                        <?php /*<a href="<?php echo base_url('board-of-directors') ?>">
-                            <p>Board of Directors</p>
-                        </a> */ ?>
-                        <a href="<?php echo base_url('customer') ?>">
-                            <p>Customers</p>
-                        </a>
-                        <a href="<?php echo base_url('technology') ?>">
-                            <p>Technology</p>
-                        </a>
-                        <a href="<?php echo base_url('awards') ?>">
-                            <p>Awards & Achievements</p>
-                        </a>
-                        <a href="<?php echo base_url('announcements/view') ?>">
-                            <p>Announcements</p>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 link_col">
-                        <h3>Financial Information</h3>
-                        <a href="<?php echo base_url('annual-reports') ?>">
-                            <p>Annual Reports</p>
-                        </a>
-                        <a href="<?php echo base_url('quarterly-reports') ?>">
-                            <p>Quarterly Reports</p>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs">
-                        <p style="color: #14f78d;">
-                        <?php echo $contact_us[0]->vTitle; ?><br> <?php echo $contact_us[0]->vAddress1; ?><br> <?php echo $contact_us[0]->vAddress2; ?>
-                            <br> <?php echo $contact_us[0]->vAddress3; ?>
-                        </p>
-                        <br>
-                        <a href="tel:<?php echo $contact_us[0]->vTele; ?>">
-                            <p style="color: #14f78d;"><?php echo $contact_us[0]->vTele; ?></p>
-                        </a>
-                        <a href="mailto:<?php echo $contact_us[0]->vEmail; ?>">
-                            <p style="color: #14f78d;"><?php echo $contact_us[0]->vEmail; ?></p>
-                        </a>
-                    </div>
-
-                    <div class="clearfix"></div>
-                    <br>
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 link_col">
-                        <h3>Projects</h3>
-                        <a href="<?php echo base_url('local-projects') ?>">
-                            <p>Local Projects</p>
-                        </a>
-                        <a href="<?php echo base_url('international-projects') ?>">
-                            <p>International Projects</p>
-                        </a>
-
-                        <div class="clearfix"></div>
-                        <br>
-
-                        <h3>Resources</h3>
-                        <a href="<?php echo base_url('brochures') ?>">
-                            <p>Brochures</p>
-                        </a>
-                        <!--<a href="<?php echo base_url('technical-information') ?>">-->
-                        <!--    <p>Technical Information</p>-->
-                        <!--</a>-->
-                        <a href="<?php echo base_url('certificates') ?>">
-                            <p>Certificates</p>
-                        </a>
-                        <a href="<?php echo base_url('video-gallery') ?>">
-                            <p>Video Gallery</p>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 link_col">
-                        <h3>Contact Us</h3>
-                        <a href="<?php echo base_url('contact-details') ?>">
-                            <p>Contact details</p>
-                        </a>
-                        <a href="<?php echo base_url('distributors') ?>">
-                            <p>Distributor Listing</p>
-                        </a>
-                        <a href="<?php echo base_url('quick-sales-contacts') ?>">
-                            <p>Quick Sales Contacts</p>
-                        </a>
-                        <a href="<?php echo base_url('technical-and-other') ?>">
-                            <p>Technical and Other</p>
-                        </a>
-                        <a href="<?php echo base_url('sales-contacts') ?>">
-                            <p>Sales Contacts</p>
-                        </a>
-                        <a href="<?php echo base_url('export-contacts') ?>">
-                            <p>Export Contacts</p>
-                        </a>
-
-                        <div class="clearfix visible-xs"></div>
-                        <br class="visible-xs">
-
-                        <div class="visible-xs">
-                            <h3>Other</h3>
-                            <a href="<?php echo base_url('product-catalogue') ?>">
-                                <p>Product catalogue</p>
-                            </a>
-                            <a href="<?php echo base_url('news/view') ?>">
-                                <p>News & Updates </p>
-                            </a>
-                            <a href="<?php echo base_url('csr') ?>">
-                                <p>CSR </p>
-                            </a>
-                            <a href="<?php echo base_url('quality-assuarance') ?>">
-                                <p>Quality Assurance </p>
-                            </a>
-                            <a href="<?php echo base_url('research-development') ?>">
-                                <p>Research & Development</p>
-                            </a>
-                            <a href="<?php echo base_url('careers') ?>">
-                                <p>Careers</p>
-                            </a>
+     <!-- logo slider  -->
+     <div class="container" data-aos="fade-down">
+        <h1 class="heading">Quick Links</h1>
+        <h1 class="sub_heading">Website links for our partner websites</h1>
+      <div class="slider">
+                <div class="owl-carousel">
+                    <div class="slider-card">
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo01.jpg" class="img-fluid">
                         </div>
-
                     </div>
-
-                    <br class="visible-xs">
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 link_col hidden-xs">
-                        <h3>Other</h3>
-                        <a href="<?php echo base_url('product-catalogue') ?>">
-                            <p>Product catalogue</p>
-                        </a>
-                        <a href="<?php echo base_url('news/view') ?>">
-                            <p>News & Updates </p>
-                        </a>
-                        <a href="<?php echo base_url('csr') ?>">
-                            <p>CSR </p>
-                        </a>
-                        <a href="<?php echo base_url('quality-assuarance') ?>">
-                            <p>Quality Assurance </p>
-                        </a>
-                        <a href="<?php echo base_url('research-development') ?>">
-                            <p>Research & Development</p>
-                        </a>
-                        
-                        <a href="<?php echo base_url('careers') ?>">
-                            <p>Careers</p>
-                        </a>
+                    <div class="slider-card">
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo02.jpg" class="img-fluid">
+                        </div>
                     </div>
-
+                    <div class="slider-card">
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo03.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo04.jpg" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
-
             </div>
+  </div>
+
+    <!-- logo slider -->
 
 
+      <!--=============================================-->
+  <!--===================body====================-->
+  
+  <!--=============================================-->
+  <!--===================footer====================-->
 
-            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 footer_logo_col visible-xs">
-                <br>
-                <!-- contact div -->
-                <div class="footer_contact_div">
-                    <p data-aos="fade-up">
-                        <a href="tel:<?php echo $contact_us[0]->vTele; ?>"><?php echo $contact_us[0]->vTele; ?></a> |
-                        <a href="mailto:<?php echo $contact_us[0]->vEmail; ?>"><?php echo $contact_us[0]->vEmail; ?></a>
-                    </p>
+  <div class="container-fluid no_padding footer_row angled-top-right">
+    
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 footer_logo_col">
+          <a href="index.html">
+            <img src="<?php echo base_url("assets/frontend/"); ?>images/logo.png" alt="" class="d-block w-100 footer_logo">
+          </a>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+          </p>
 
-                    <!-- ==== -->
-
-                    <!-- socila media icon -->
-                    <p class="footer_social_icon" data-aos="fade-up">
-                        <a href="<?php echo $contact_us[0]->vFacebook; ?>" class="fa fa-facebook"></a>
-                        <a href="<?php echo $contact_us[0]->vTwitter; ?>" class="fa fa-twitter"></a>
-                        <a href="<?php echo $contact_us[0]->vInstagram; ?>" class="fa fa-instagram"></a>
-                        <a href="<?php echo $contact_us[0]->vYoutube; ?>" class="fa fa-youtube"></a>
-                    </p>
-                    <!-- socila media icon -->
-                </div>
-                <br>
-                <p style="margin-bottom: 0px;"><small>© 2022 Kelani Cables PLC. All Rights Reserved. </small></p>
-                <p class="tg_link"><small>Solution by <a href="https://www.tekgeeks.net/" target="_blank" style="color: #999999;">TekGeeks </a></small></p>
-                <!-- contact div -->
-            </div>
+          <p style="color: #999999;" class="d-none d-lg-block">
+            <small>Copyright ©2022 Faculty of Agriculture - University of Peradeniya. <br>
+All Rights Reserved</small>
+          </p>
 
         </div>
 
+        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12">
+          
+          <div class="row">
+
+              <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 footer_link_col">
+                <a href=""><p>Home  </p></a>
+                <a href=""><p>About us</p></a>
+                <a href=""><p>University</p></a>
+                <a href=""><p>Faculty</p></a>
+                <a href=""><p>Academics </p></a>
+                <a href=""><p>Research</p></a>
+              </div>
+
+              <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 footer_link_col">
+                 <a href=""><p>International</p></a>
+                <a href=""><p>Students </p></a>
+                <a href=""><p>Quality   </p></a>
+                <a href=""><p>Engagement</p></a>
+                <a href=""><p>Services</p></a>
+              </div>
+
+              <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 footer_link_col">
+                 <a href=""><p>Alumni</p></a>
+                <a href=""><p>Downloads   </p></a>
+                <a href=""><p>Extranet   </p></a>
+                <a href=""><p>FAQ</p></a>
+                <a href=""><p>Quick Links</p></a>
+              </div>
+
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                <p>
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;<a href="tel:+94 81 239 5012">+94 81 239 5012</a>  |  <a href="+94 81 238 8041">+94 81 238 8041</a>
+                </p>
+
+                 <p>
+                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;<a href="mailto:deanagri@pdn.ac.lk">deanagri@pdn.ac.lk</a> 
+                </p>
+
+                <p>
+                   <i class="fa fa-internet-explorer" aria-hidden="true"></i> &nbsp;&nbsp;<a href="aragri@pdn.ac.lk">aragri@pdn.ac.lk</a> 
+                </p>
+
+                <p><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;&nbsp;+94 81 238 8041</p>
+
+                 <p class="social_icon">
+                    <a href="" target="_blank" class="fa fa-facebook animate__animated animate__fadeInLeft"></a>
+                    <a href="" target="_blank" class="fa fa-instagram animate__animated animate__fadeInLeft"></a>
+                    <a href="" target="_blank" class="fa fa-twitter animate__animated animate__fadeInLeft"></a>
+                    <a href="" target="_blank" class="fa fa-linkedin animate__animated animate__fadeInLeft"></a>
+                </p>
+
+              </div>
+
+                 <p style="color: #999999;" class="d-block d-md-block d-lg-none">
+                  <small>Copyright ©2022 Faculty of Agriculture - University of Peradeniya. <br>
+      All Rights Reserved</small>
+                </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
     </div>
 
-    <!--footer section-->
+  </div>
+
+  <div class="container">
+      
+      <div class="row" style="padding-top: 5px; padding-bottom: 5px; font-size: 12px;">
+
+        <div class="col sol_text">
+           <small>Solution by <a href="https://www.tekgeeks.net/" target="_blank" style="color: #f68b2e;">TekGeeks</a></small>
+        </div>
+       
+      </div>
+
+  </div>
 
 
-    <!--=============================================-->
-    <!--===================footer====================-->
+  <!--=============================================-->
+  <!--===================footer====================-->
 
 
-    <!--=============================================-->
-    <!--===================scroll top====================-->
+  <!--=============================================-->
+  <!--===================scroll top====================-->
 
-    <div class="scroll-top-wrapper">
-        <span class="scroll-top-inner">
-      <i class="glyphicon glyphicon-arrow-up"></i>
-    </span>
-    </div>
+  <button class="scroll-top">
+    <div class="arrow up"></div>
+  </button>
 
-    <!--=============================================-->
-    <!--===================scroll top====================-->
+  <!--=============================================-->
+  <!--===================scroll top====================-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url("assets/frontend/js/jquery.min.js"); ?>"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo base_url("assets/frontend/js/bootstrap.min.js"); ?>"></script>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
-    </script>
 
-    <!-- scroll top -->
-    <script src="<?php echo base_url("assets/frontend/js/scroll-top.js"); ?>" src="js/scroll-top.js"></script>
-    <!-- scroll top -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="<?php echo base_url("assets/frontend/"); ?>js/jquery-3.2.1.min.js"></script>
+      <script src="<?php echo base_url("assets/frontend/"); ?>js/popper.min.js" ></script> 
+      <script src="<?php echo base_url("assets/frontend/"); ?>js/bootstrap.min.js" ></script>
+
+      <!-- drop down menu -->
+      <script src="<?php echo base_url("assets/frontend/"); ?>js/scroll-top.js"></script>
+      <!-- drop down menu -->
+
+
+      <!-- scroll top -->
+      <script src="<?php echo base_url("assets/frontend/"); ?>js/drop_down_menu.js"></script>
+      <!-- scroll top -->
+
 
     <!--loading effects-->
-    <script src="<?php echo base_url("assets/frontend/js/aos.js"); ?>"></script>
-    <script src="<?php echo base_url("assets/frontend/js/highlight.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/frontend/"); ?>js/aos.js"></script>
 
     <script>
-        AOS.init({
-            easing: 'ease-out-back',
+    AOS.init({
+    easing: 'ease-out-back',
             duration: 1000
-        });
-    </script>
+    });</script>
 
-    <script>
-        $('.hero__scroll').on('click', function(e) {
-            $('html, body').animate({
-                scrollTop: $(window).height()
-            }, 1200);
-        });
-    </script>
     <!--loading effects-->
 
-    <!--owl carousel-->
-    <script src="<?php echo base_url("assets/frontend/owl/owl.carousel.min.js"); ?>"></script>
-    <script src="<?php echo base_url("assets/frontend/owl/owl.js"); ?>"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js'></script>
-    <!--owl carousel-->
-
-    <!--jarallax js-->
-    <script src="<?php echo base_url("assets/frontend/css/jarallax/jarallax_js.js"); ?>"></script>
-    <!--jarallax js-->
-
-    <!--jarallax-->
-    <script type="text/javascript">
-        /* init Jarallax */
-        $('.jarallax').jarallax({
-            speed: 0.5,
-            imgWidth: 1366,
-            imgHeight: 768
-        })
-    </script>
-    <!--jarallax-->
-
-    <!-- menu -->
-    <script src="<?php echo base_url("assets/frontend/css/menu/gsap.min.js"); ?>"></script>
-    <script src="<?php echo base_url("assets/frontend/css/menu/script.js"); ?>"></script>
-    <!-- menu -->
-
-    <!--  scroll down menu-->
-    <script>
-        (function($) {
-            $(document).ready(function() {
-
-                // hide .navbar first
-                $(".navbar02").hide();
-
-                // fade in .navbar
-                $(function() {
-                    $(window).scroll(function() {
-                        // set distance user needs to scroll before we fadeIn navbar
-                        if ($(this).scrollTop() > 100) {
-                            $('.navbar02').fadeIn();
-                        } else {
-                            $('.navbar02').fadeOut();
-                        }
-                    });
+    <!-- owl carousel -->
+    <script src="<?php echo base_url("assets/frontend/"); ?>owl/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url("assets/frontend/"); ?>owl/owl_js.js"></script>
+    <!-- owl carousel -->
 
 
-                });
-
-            });
-        }(jQuery));
-    </script>
-    <!--  scroll down menu-->
-
-    <!-- SEARCH -->
-
-    <script>
-
-    // function buttonUp() {
-    //     var inputVal = $('.search_text').val();
-    //     inputVal = $.trim(inputVal).length;
-    //     if (inputVal !== 0) {
-    //         $('.searchbox-icon').css('display', 'none');
-    //     } else {
-    //         $('.searchbox-input').val('');
-    //         $('.searchbox-icon').css('display', 'block');
-    //     }
-    // }
-
-    </script>
+  </body>
+</html>
