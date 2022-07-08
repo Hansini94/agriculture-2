@@ -93,6 +93,45 @@ class Academic_model extends CI_Model {
         }
     }
 
+    public function get_module_name($id) {
+
+        $this->db->from('tbl_agtech_adv_prog_structure');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_advance_programme_course_list($id) {
+
+        $this->db->from('tbl_agtech_adv_prog_course');
+        $this->db->where('iAdvProgId', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_advance_programme_course_list($id) {
+
+        $this->db->from('tbl_agtech_adv_prog_course');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
     ###############################
 
 }

@@ -1,15 +1,19 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_adv_prog_structure[0]->id;  
-    $vName = $edit_adv_prog_structure[0]->vName; 
-    $vDepartment = $edit_adv_prog_structure[0]->vDepartment;  
-    $iOrder = $edit_adv_prog_structure[0]->iOrder;
-    $cEnable = $edit_adv_prog_structure[0]->cEnable;
+    $id = $edit_adv_prog_course[0]->id;  
+    $iAdvProgId = $edit_adv_prog_course[0]->iAdvProgId; 
+    $vCourseType = $edit_adv_prog_course[0]->vCourseType;  
+    $vCourseCode = $edit_adv_prog_course[0]->vCourseCode;  
+    $vCourseName = $edit_adv_prog_course[0]->vCourseName;  
+    $iOrder = $edit_adv_prog_course[0]->iOrder;
+    $cEnable = $edit_adv_prog_course[0]->cEnable;
 	
 } else {
     $id = "";      
-    $vName = "";  
-    $vDepartment = "";   
+    $iAdvProgId = "";  
+    $vCourseType = "";  
+    $vCourseCode = "";  
+    $vCourseName = "";   
     $iOrder = "";  
     $cEnable = "Y";
 }
@@ -61,13 +65,13 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>The Structure of the Advanced Programmes</h2>
+                            <h2>Courses - <?php echo $module_name[0]->vName; ?></h2>
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">                           
                             <?php if($cSaveStatus == "E") { ?>
-                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/academics/agtech_advance_programme_structure'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Module</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/academics/agtech_adv_prog_course'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Course</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } else { ?>
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Module</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Course</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -79,26 +83,49 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_adv_prog_structure" name="edit_adv_prog_structure" action="<?php echo base_url('adminpanel/academics/agtech_advance_programme_structure/save_adv_prog_structure'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_adv_prog_course" name="edit_adv_prog_course" action="<?php echo base_url('adminpanel/academics/agtech_adv_prog_course/save_adv_prog_course'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                            
                             <div class="col-md-6 col-sm-6 col-xs-12">
 
+                                <?php
+                                    if($cSaveStatus == "E") {
+                                        $moduleID = $this->uri->segment(6);
+                                    } else {
+                                        $moduleID = $this->uri->segment(5);
+                                    }
+                                ?>
+
+                                <input type="text" id="iAdvProgId" name="iAdvProgId" value="<?php echo $moduleID; ?>" class="form-control col-md-7 col-xs-12" required>
+
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Name of the Module<span class="required">*</span></label>
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Course Type <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <select name="vCourseType" id="vCourseType" class="form-control" required>
+                                            <option value="">Select Course Type</option>
+                                            <option value="C" <?php if($vCourseType == "C") { ?> selected <?php } ?>>Compulsory</option>
+                                            <option value="O" <?php if($vCourseType == "O") { ?> selected <?php } ?>>Optional</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Department<span class="required">*</span></label>
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Course Code<span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vDepartment" name="vDepartment" value="<?php echo $vDepartment; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="text" id="vCourseCode" name="vCourseCode" value="<?php echo $vCourseCode; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
 
                             </div>
+                            
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Course Name<span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <input type="text" id="vCourseName" name="vCourseName" value="<?php echo $vCourseName; ?>" class="form-control col-md-7 col-xs-12" required>
+                                    </div>
+                                </div>
 
                                 <div class="item form-group">
                                     <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Display Order <span class="required">*</span></label>
@@ -119,7 +146,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/agtech_advance_programme_structure'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/agtech_adv_prog_course'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -135,10 +162,10 @@ if ($cSaveStatus == "E") {
                             <thead>
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
-                                    <th style="width:50px;text-align:center;">No </th>
-                                    <th>Module Name </th>            
-                                    <th>Department </th>
-                                    <th>Courses</th>                            
+                                    <th style="width:50px;text-align:center;">No </th>           
+                                    <th>Course Type </th>
+                                    <th>Course Code </th>
+                                    <th>Course Name</th>                            
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -161,30 +188,35 @@ if ($cSaveStatus == "E") {
                                         }
 
                                         $recordid = $rowlist->id;
+                                        $moduleId = $rowlist->iAdvProgId;
                                         $cEnable = $rowlist->cEnable;
                                         if ($cEnable == 'Y') {
                                             $clicon = 'fa fa-check';
                                         } else {
                                             $clicon = 'fa fa-remove';
                                         }
+
+                                        if($rowlist->vCourseType == "C") {
+                                            $courseType = "Compulsory";
+                                        } else {
+                                            $courseType = "Optional";
+                                        }
                                         ?>
                                          
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vName;?></td>          
-                                            <td><?php echo $rowlist->vDepartment;?></td>    
-                                            <td class=" "><a href="<?php echo base_url() . "adminpanel/academics/agtech_adv_prog_course/add_course/$recordid" ?>" target="_blank">
-                                                <i class="fa fa-plus-circle"></i></a>
-                                            </td>                                  
+                                            <td><?php echo $courseType;?></td>          
+                                            <td><?php echo $rowlist->vCourseCode;?></td>    
+                                            <td><?php echo $rowlist->vCourseName;?></td>                                 
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/academics/agtech_advance_programme_structure/edit_adv_prog_structure/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/academics/agtech_adv_prog_course/edit_adv_prog_course/$recordid/$moduleId" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/agtech_advance_programme_structure/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/agtech_adv_prog_course/change_status/status/$recordid/$moduleId" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/agtech_advance_programme_structure/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/agtech_adv_prog_course/delete_record/delete/$recordid/$moduleId" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>
