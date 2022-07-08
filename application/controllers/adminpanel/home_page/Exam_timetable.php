@@ -3,15 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-/* date : 07-07-2022
+/* date : 08-07-2022
  * author : Karshan
  */
 
-Class News_updates extends CI_Controller {
+Class Exam_timetable extends CI_Controller {
 
-    private $table_name = "tbl_news_updates";
-    private $page_id = "72";
-    private $redirect_path = "adminpanel/home_page/news_updates";
+    private $table_name = "tbl_exam_timetable";
+    private $page_id = "74";
+    private $redirect_path = "adminpanel/home_page/exam_timetable";
 
     public function __construct() {
         parent::__construct();
@@ -39,15 +39,27 @@ Class News_updates extends CI_Controller {
                 'height' => '200px', //Setting a custom height
             ),            
         );
+
+        $data['ckeditor_tContent2'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent2',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
 		
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/home_page/news_updates_view', $data);
+        $this->load->view('adminpanel/home_page/exam_timetable_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
-    public function save_news($data = '') {
+    public function save_exam($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
@@ -55,20 +67,20 @@ Class News_updates extends CI_Controller {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/home_page/news_updates');
+                redirect(base_url() . 'adminpanel/home_page/exam_timetable');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/home_page/news_updates');
+                redirect(base_url() . 'adminpanel/home_page/exam_timetable');
             }
         } else {
             if ($this->common_model->save_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/home_page/news_updates');
+                redirect(base_url() . 'adminpanel/home_page/exam_timetable');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/home_page/news_updates');
+                redirect(base_url() . 'adminpanel/home_page/exam_timetable');
             }
         }
     }
@@ -85,13 +97,25 @@ Class News_updates extends CI_Controller {
                 'height' => '200px', //Setting a custom height
             ),            
         );
-		
+
+		$data['ckeditor_tContent2'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent2',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
         $data['cSaveStatus']= 'E';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
 		$recId = $this->uri->segment(5);
 		$data['edit_data'] = $this->common_model->get_edit_data($recId, $this->table_name);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/home_page/news_updates_view', $data);
+        $this->load->view('adminpanel/home_page/exam_timetable_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
