@@ -87,6 +87,125 @@ class Quality_model extends CI_Model {
             return true;
         }
     }
+
+    public function get_faculty_research_committee_data(){
+        $this->db->from('tbl_faculty_research_committee');
+        $this->db->where('id', 1);
+        $query = $this->db->get();
+        //echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_research_committee_composition_list(){
+        $this->db->from('tbl_research_committee_composition');
+        $query = $this->db->get();
+        //echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_research_committee_composition($id) {
+
+        $this->db->from('tbl_research_committee_composition');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_data($tbl){
+        $this->db->from($tbl);
+        $this->db->where('id', 1);
+        $query = $this->db->get();
+        //echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_period_list($tbl){
+        $this->db->from($tbl);
+        $query = $this->db->get();
+        //echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_period($id, $tbl){
+        $this->db->from($tbl);
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_composition_list($period, $tbl){
+        $this->db->from($tbl);
+        $this->db->where('iPeriodId', $period);
+        $query = $this->db->get();
+        //echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_composition($id, $tbl){
+        $this->db->from($tbl);
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+    
+    public function get_faculty_proposal_data(){
+        $this->db->from('tbl_faculty_proposal');
+        $this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_data_list($tbl){
+        $this->db->from($tbl);
+        $query = $this->db->get();
+        //echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
 }
 
 ?>
