@@ -2,28 +2,26 @@
 if ($cSaveStatus == "E") {
     $id = $introduction_data[0]->id;
     $vHeading = $introduction_data[0]->vHeading;
+    $tIntroduction = $introduction_data[0]->tIntroduction;
     $vSubHeading1 = $introduction_data[0]->vSubHeading1;
     $tContent1 = $introduction_data[0]->tContent1;
-    $vTitleFigure1 = $introduction_data[0]->vTitleFigure1;
-    $fFigure1 = $introduction_data[0]->fFigure1;
     $vSubHeading2 = $introduction_data[0]->vSubHeading2;
     $tContent2 = $introduction_data[0]->tContent2;
-    $tContent3 = $introduction_data[0]->tContent3;
-    $vTitleFigure2 = $introduction_data[0]->vTitleFigure2;
-    $fFigure2 = $introduction_data[0]->fFigure2;
+    $vCourseSeqHeading = $introduction_data[0]->vCourseSeqHeading;
+    $tCourseSeqNotice = $introduction_data[0]->tCourseSeqNotice;
+    $fPdf = $introduction_data[0]->fPdf;
     $cEnable = $introduction_data[0]->cEnable;
 } else {
     $id = '';
     $vHeading = '';
+    $tIntroduction = '';
     $vSubHeading1 = '';
     $tContent1 = '';
-    $vTitleFigure1 = '';
-    $fFigure1 = '';
     $vSubHeading2 = '';
     $tContent2 = '';
-    $tContent3 = '';
-    $vTitleFigure2 = '';
-    $fFigure2 = '';
+    $vCourseSeqHeading = '';
+    $tCourseSeqNotice = '';
+    $fPdf = '';
     $cEnable = '';
 }
 ?>
@@ -98,7 +96,7 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>B.Sc. Degree in Agricultural Technology and Management Introduction</h2>
+                            <h2>B.Sc. Degree in Food Science and Technology</h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -109,13 +107,23 @@ if ($cSaveStatus == "E") {
                                             }
                                             ?>>
                         <br />
-                        <form id="edit_excellence_award" name="edit_excellence_award" action="<?php echo base_url('adminpanel/academics/bsc_agtech_introduction/save_bsc_agtech'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_excellence_award" name="edit_excellence_award" action="<?php echo base_url('adminpanel/academics/bsc_fst_introduction/save_bsc_fst'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
                                        <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Introduction<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tIntroduction" id="tIntroduction" class="form-control col-md-7 col-xs-12" required><?php echo $tIntroduction; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tIntroduction); ?>
                                     </div>
                                 </div>
                             </div>
@@ -131,42 +139,11 @@ if ($cSaveStatus == "E") {
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">First Section Content<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 1<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent1" id="tContent1" class="form-control col-md-7 col-xs-12" required><?php echo $tContent1; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent1); ?>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Title (Figure 1)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vTitleFigure1" name="vTitleFigure1" value="<?php echo $vTitleFigure1; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image (Figure 1)<br>
-                                    </label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fFigure1" name="fFigure1" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>                                    
-                                </div> 
-                                
-                                <div class="item form-group">
-                                    <?php if($fFigure1!=''){ ?>
-                                
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fFigure1;?>" style="height:75px;"   />
-                                        <!-- <a href="<?php echo base_url().'adminpanel/awards/research_committee/remove_image/'.$id.'/fChairmenImage/'.$fChairmenImage;?>">Remove image</a>  -->
-                                    </div>
-                               
-								    <?php } ?>
                                 </div>
                             </div>
 
@@ -181,7 +158,7 @@ if ($cSaveStatus == "E") {
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Second Section Content<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 1<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent2" id="tContent2" class="form-control col-md-7 col-xs-12" required><?php echo $tContent2; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent2); ?>
@@ -190,44 +167,49 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Second Section Content 2<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent3" id="tContent3" class="form-control col-md-7 col-xs-12" required><?php echo $tContent3; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent3); ?>
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Course Sequence Heading<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vCourseSeqHeading" name="vCourseSeqHeading" value="<?php echo $vCourseSeqHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Title (Figure 2)<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Course Sequence Special Notice<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vTitleFigure2" name="vTitleFigure2" value="<?php echo $vTitleFigure2; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                       <textarea id="tCourseSeqNotice" name="tCourseSeqNotice" class="form-control col-md-7 col-xs-12" required><?php echo $tCourseSeqNotice; ?></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image (Figure 2)<br>
-                                    </label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fFigure2" name="fFigure2" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>                                    
-                                </div> 
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 
-                                <div class="item form-group">
-                                    <?php if($fFigure2!=''){ ?>
-                                
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fFigure2;?>" style="height:75px;"   />
-                                        <!-- <a href="<?php echo base_url().'adminpanel/awards/research_committee/remove_image/'.$id.'/fChairmenImage/'.$fChairmenImage;?>">Remove image</a>  -->
+                                <div class="item form-group">                                    
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Document<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fPdf" name="fPdf" >
                                     </div>
-                               
-								    <?php } ?>
                                 </div>
+
+                                <?php 
+								if($fPdf){
+
+										?>
+                                <div class="form-group" id="pdf_delete_<?php echo $id; ?>">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">&nbsp;</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                    <a href="<?php echo base_url().'front_img/'.$fPdf;?>" target="_blank"> View Document</a>
+                                        
+                                    </div>
+                                    <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
+                                        <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_pdf('<?php echo $id; ?>');" title="Delete Link"></span>
+                                    </div> -->
+                                </div>
+                                <?php }
+                                ?>
+
                             </div>
                         
                             <div style="clear:both;"></div>
@@ -240,7 +222,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/bsc_agtech_introduction'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/bsc_fst_introduction'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>

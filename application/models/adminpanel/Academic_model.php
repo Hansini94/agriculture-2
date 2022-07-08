@@ -132,6 +132,19 @@ class Academic_model extends CI_Model {
         }
     }
 
+    public function get_bsc_fst_introduction_data() {
+
+        $this->db->from('tbl_bsc_fst_introduction');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
     ###############################
 
 }
