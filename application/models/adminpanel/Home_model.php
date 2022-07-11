@@ -158,10 +158,77 @@ public function get_careers_content_list() {
         }
     }
 
+    public function active_record($recID, $recFld, $tblName) {
 
+        $data = array(
+            $recFld => 'Y'
+        );
 
+        $this->db->trans_start();
+        $this->db->where('id', $recID);
+        $this->db->update($tblName, $data);
 
-	
+        $this->db->trans_complete();
+
+        if ($this->db->trans_status() === FALSE) {
+            $this->session->set_flashdata('message', 'Request failed.');
+            return false;
+        } else {
+            $this->session->set_flashdata('message', 'Data successfully activated.');
+            $tDes = "Record has been activated";
+            $this->load->model('common_model');
+            $this->common_model->add_log($tDes);
+            return true;
+        }
+    }
+
+    public function deactive_record($recID, $recFld, $tblName) {
+
+        $data = array(
+            $recFld => 'N'
+        );
+
+        $this->db->trans_start();
+        $this->db->where('id', $recID);
+        $this->db->update($tblName, $data);
+
+        $this->db->trans_complete();
+
+        if ($this->db->trans_status() === FALSE) {
+            $this->session->set_flashdata('message', 'Request failed.');
+            return false;
+        } else {
+            $this->session->set_flashdata('message', 'Data successfully deactivated.');
+            $tDes = "Record has been deactivated";
+            $this->load->model('common_model');
+            $this->common_model->add_log($tDes);
+            return true;
+        }
+    }
+
+    public function get_question_list($recId,$tbl){
+        $this->db->from($tbl);
+        $this->db->where('iFaqId', $recId);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+	public function get_download_list($recId,$tbl){
+        $this->db->from($tbl);
+        $this->db->where('icttId', $recId);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
 
 }
 
