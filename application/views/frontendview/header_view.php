@@ -1,541 +1,595 @@
-<?php
-//echo "hi11"; echo "</br>";
-//var_dump($this->cart->contents());
-//      exit();
-?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <!-- <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <?php
-    if (activate_menu('Home') == 'active') {
-        $meta = get_meta('Home');
-    } else if (activate_menu('Company_overview') == 'active') {
-        $meta = get_meta('Company_overview');
-    } else if (activate_menu('board_of_directors') == 'active') {
-        $meta = get_meta('board_of_directors');
-    } else if (activate_menu('customer') == 'active') {
-        $meta = get_meta('customer');
-    } else if (activate_menu('technology') == 'active') {
-        $meta = get_meta('technology');
-    } else if (activate_menu('awards') == 'active') {
-        $meta = get_meta('awards');
-    } else if (activate_menu('annual_reports') == 'active') {
-        $meta = get_meta('annual_reports');
-    } else if (activate_menu('quarterly_reports') == 'active') {
-        $meta = get_meta('quarterly_reports');
-    } else if (activate_menu('product_categories') == 'active') {
-        $meta = get_meta('product_categories');
-    } else if (activate_menu('completed_projects') == 'active') {
-        $meta = get_meta('completed_projects');
-    } else if (activate_menu('ongoing_projects') == 'active') {
-        $meta = get_meta('ongoing_projects');
-    } else if (activate_menu('news') == 'active') {
-        $meta = get_meta('news');
-    } else if (activate_menu('csr') == 'active') {
-        $meta = get_meta('csr');
-    } else if (activate_menu('quality_assuarance') == 'active') {
-        $meta = get_meta('quality_assuarance');
-    } else if (activate_menu('research_development') == 'active') {
-        $meta = get_meta('research_development');
-    } else if (activate_menu('brochures') == 'active') {
-        $meta = get_meta('brochures');
-    } else if (activate_menu('technical_information') == 'active') {
-        $meta = get_meta('technical_information');
-    } else if (activate_menu('certificates') == 'active') {
-        $meta = get_meta('certificates');
-    } else if (activate_menu('factory_tours') == 'active') {
-        $meta = get_meta('factory_tours');
-    } else if (activate_menu('careers') == 'active') {
-        $meta = get_meta('careers');
-    } else if (activate_menu('contact_us') == 'active') {
-        $meta = get_meta('contact_us');
-    } else if (activate_menu('distributors') == 'active') {
-        $meta = get_meta('distributors');
-    } else if (activate_menu('cables') == 'active') {
-        $meta = get_meta('cables');
-    } else if (activate_menu('lighting') == 'active') {
-        $meta = get_meta('lighting');
-    } else if (activate_menu('switchgear') == 'active') {
-        $meta = get_meta('switchgear');
-    } else if (activate_menu('other_product') == 'active') {
-        $meta = get_meta('other_product');
-    } else if (activate_menu('quick_sales_contacts') == 'active') {
-        $meta = get_meta('quick_sales_contacts');
-    } else if (activate_menu('technical_and_other') == 'active') {
-        $meta = get_meta('technical_and_other');
-    } else if (activate_menu('sales_contacts') == 'active') {
-        $meta = get_meta('sales_contacts');
-    } else if (activate_menu('export_contacts') == 'active') {
-        $meta = get_meta('export_contacts');
-    } else {
-        $meta = get_meta('home');
-    }
-    ?>
-
-
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="<?php echo $meta[0]->vMeta_description; ?>" />
-    <link rel="canonical" href="<?php echo $meta[0]->vOg_url; ?>" />
-    <meta property="og:site_name" content="<?php echo $meta[0]->vTitle; ?> | <?php echo $meta[0]->vPage_name; ?>" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="<?php echo $meta[0]->vOg_title; ?>" />
-    <meta property="og:description" content="<?php echo $meta[0]->vOg_description; ?>" />
-    <meta property="og:url" content="<?php echo $meta[0]->vOg_url; ?>" />
-    <title><?php echo $meta[0]->vTitle; ?></title>
 
-    <!--favicon-->
-    <link rel="icon" href="<?php echo base_url("assets/frontend/images/favicon.png"); ?>" type="image/x-icon" />
-    <!--favicon-->
-
-    <!-- Bootstrap -->
-    <link href="<?php echo base_url("assets/frontend/css/bootstrap.min.css"); ?>" rel="stylesheet">
-    <!--bootstrap-->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link href="<?php echo base_url("assets/frontend/css/full-slider.css"); ?>" rel="stylesheet">
+    <link href="<?php echo base_url("assets/frontend/"); ?>css/agri_uni.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/frontend/"); ?>css/mediaquery.css" rel="stylesheet">
     <!-- Custom CSS -->
 
-    <!-- main css-->
-    <link href="<?php echo base_url("assets/frontend/css/kelani.css"); ?>" rel="stylesheet" type="text/css"
-        media="screen">
-    <!-- main css-->
+    <title>Faculty of Agriculture | Notices</title>
 
-    <!-- media query css-->
-    <link href="<?php echo base_url("assets/frontend/css/mediaquery.css"); ?>" rel="stylesheet" type="text/css"
-        media="screen">
-    <!-- media query css-->
-
-    <!-- full height slider CSS -->
-    <link  href="<?php echo base_url("assets/frontend/slider/engine1/style.css"); ?>" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?php echo base_url("assets/frontend/slider/engine1/jquery.js"); ?>"></script>
-    <!-- full height slider CSS -->
-
-    <!--jarallax js & css-->
-    <link href="<?php echo base_url("assets/frontend/css/jarallax/jarallax_css.css"); ?>" rel="stylesheet"
-    type="text/css" media="screen">
-    <!--jarallax js & css-->
-
-    <!--loading effect-->
-    <link href="<?php echo base_url("assets/frontend/css/loading_styles.css"); ?>" rel="stylesheet" type="text/css"
-        media="screen" />
-    <link href="<?php echo base_url("assets/frontend/css/aos.css"); ?>" rel="stylesheet" type="text/css"
-        media="screen" />
-    <!--loading effect-->
+    <!--favicon-->
+    <link rel="shortcut icon" href="<?php echo base_url("assets/frontend/"); ?>images/favicon.png" />
+    <!--favicon-->
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Add icon library -->
 
-    <!--Date Picker-->
-    <link href="<?php echo base_url("assets/frontend/css/datepicker/bootstrap-datepicker3.min.css"); ?>"
-        rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url("assets/frontend/css/datepicker/bootstrap-datepicker3.standalone.min.css"); ?>"
-        rel="stylesheet" type="text/css" />
-    <!--Date Picker end-->
+    <!--loading effect-->
+    <link rel="stylesheet" href="<?php echo base_url("assets/frontend/"); ?>css/loading_styles.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="<?php echo base_url("assets/frontend/"); ?>css/aos.css" type="text/css" media="screen"/>
+    <!--loading effect-->
 
-    <!--owl carousel-->
-    <link rel='stylesheet' href='<?php echo base_url("assets/frontend/owl/owl.carousel.min.css"); ?>'>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/frontend/owl/owl.css"); ?>" />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css'>
-    <!--owl carousel-->
+    <!-- owl carousel -->
+    <link href="<?php echo base_url("assets/frontend/"); ?>owl/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/frontend/"); ?>owl/owl_css.css">
+    <!-- owl carousel -->
 
-    <!-- menu -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="<?php echo base_url('assets/frontend/css/menu/style.css'); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url('assets/frontend/css/menu/menu_2.css'); ?>" rel="stylesheet" type="text/css" />
-    <!-- menu -->
-
-    <!-- search -->
-    <link href="<?php echo base_url("assets/frontend/css/search.css"); ?>" rel="stylesheet" type="text/css" />
-    <!-- search -->
-
-
-    <link href="<?php echo base_url('assets/frontend/css/bootstrapValidator.min.css'); ?>" rel="stylesheet"
-        type="text/css" media="screen">
-    <!--scroll bar style-->
 
     <!--scroll bar style-->
     <style>
-        /*================header angle div========================*/
-        .share_marcket_tag{
-            background-color: #14f78d;
-            color: #000000;
-            position: absolute;
-            font-weight: 700;
-            right: 0px;
-            top: 86px;
-            padding: 10px;
-            margin-bottom: 0px;
-            text-align: right;
-            width: auto;
-            z-index: 999;
-            padding-left: 110px;
-            /*border-bottom-left-radius: 3em;*/
-            background:-moz-linear-gradient(-240deg, transparent 70px, #14f78d 71px);
-            background:-o-linear-gradient(-240deg, transparent 70px, #14f78d 71px);
-            background:-webkit-linear-gradient(-240deg, transparent 70px, #14f78d 71px);
-            background:linear-gradient(-240deg, transparent 70px, #14f78d 71px);
-        }
+      ::-webkit-scrollbar {
+        background: #000000;
+        height: 5px;
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px #000000;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #005a2b;
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00b456;
+      }
     </style>
-
-</head>
-<?php
-## delete this
-$active = 'home';
-?>
+    <!--scroll bar style-->
 
 
-<body>
-    <?php 
-         if (activate_menu('home') == 'active') { 
-            $sharemarket = get_home_details();      
-    ?>
-            <!--share lable-->
-            <p class="share_marcket_tag">SHARE MARKET (KCL) - Rs <?php echo $sharemarket[0]->vMarketShare; ?></p>
-            <!--share lable-->
-    <?php } ?>
-    
-    <a href="http://188.40.133.160/~kelaniit/Kelanicablestekgeeks/contact-details/#contact_section" target="_blank">
-        <button id="btnViewEng" class="btn btn-primary spec_btn aos-init aos-animate side_quote_btn">Request a Quote</button>
-    </a>
+  </head>
+  <body>
 
-        <!-- mobile socila media icon -->
-    <p class="mobile_home_top_social_icon visible-xs">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-youtube"></a>
-    </p>
-    <!-- mobile socila media icon -->
-    <?php if (activate_menu('home') == '11active') { ?>
-    <!-- page loader -->
-    <div id="preloader">
-        <div id="status"><img src="<?php echo base_url("assets/frontend/images/main_logo.png"); ?>" alt=""
-                style="margin-top: -170px;"></div>
-    </div>
-    <!-- page loader -->
-    <?php } ?>
 
-    <!-- header start -->
+    <!--=============================================-->
+  <!--===================header====================-->
 
-    <?php
-    if (activate_menu('home') == 'active') {
-        $class = "";
-    } else {
-        $class = "iner_nav_bar";
-    }
-    ?>
+    <!-- header section -->
 
     <!-- Navigation -->
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <nav class="navbar navbar-default navbar-fixed-top <?php echo $class; ?>" style="position: absolute;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top desktop_menu d-none d-lg-block" style="position: absolute; background-color: #ffffff !important;">
+      <div class="container">
 
-        <div class="nav_bar_container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right manu_top_ul hidden-xs">
-                    <li class="<?php echo activate_menu('quality_assuarance'); ?>"><a href="<?php echo base_url("quality-assuarance"); ?>">Quality Assurance</a></li>
-                    <li class="<?php echo activate_menu('research_development'); ?>"><a href="<?php echo base_url("research-development"); ?>">Research and Developments</a></li>
-
-                    <li class="dropdown <?php
-                                                echo activate_menu('brochures');
-                                             // echo activate_menu('technical_information');
-                                                echo activate_menu('certificates');
-                                                echo activate_menu('factory_tours');
-                                                 ?>">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">Resources
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php echo activate_menu('brochures'); ?>"><a href="<?php echo base_url("brochures"); ?>">Brochures</a></li>
-                            <!-- <li class="<?php echo activate_menu('technical_information'); ?>"><a href="<?php echo base_url("technical_information"); ?>">Technical Information</a></li> -->
-                            <li class="<?php echo activate_menu('certificates'); ?>"><a href="<?php echo base_url("certificates"); ?>">Certificates</a></li>
-                            <li class="<?php echo activate_menu('factory_tours'); ?>"><a href="<?php echo base_url("video-gallery"); ?>">Video Gallery</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="<?php echo activate_menu('careers'); ?>"><a href="<?php echo base_url("careers"); ?>">Careers</a></li>
-
-                    <li class="dropdown <?php
-                                                echo activate_menu('contact_us');
-                                                echo activate_menu('distributors');
-                                                echo activate_menu('quick_sales_contacts');
-                                                echo activate_menu('technical_and_other');
-                                                echo activate_menu('sales_contacts');
-                                                echo activate_menu('export_contacts');
-                                                 ?>">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">Contact
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php echo activate_menu('contact_us'); ?>"><a href="<?php echo base_url("contact-details");?>">Contact Details</a></li>
-                            <li class="<?php echo activate_menu('distributors'); ?>"><a href="<?php echo base_url("distributors");?>">Distributor Listing with Map</a></li>
-                            <li class="<?php echo activate_menu('quick_sales_contacts'); ?>"><a href="<?php echo base_url("quick-sales-contacts");?>">Quick Sales Contacts</a></li>
-                            <li class="<?php echo activate_menu('technical_and_other'); ?>"><a href="<?php echo base_url("technical-and-other");?>">Technical and Other</a></li>
-                            <li class="<?php echo activate_menu('sales_contacts'); ?>"><a href="<?php echo base_url("sales-contacts");?>">Sales Contact</a></li>
-                            <li class="<?php echo activate_menu('export_contacts'); ?>"><a href="<?php echo base_url("export-contacts");?>">Export Contact</a></li>
-                            <!-- <li><a href="announcements.html">General Inquiry</a></li> -->
-                        </ul>
-                    </li>
-
-                    <li>
-                        <form action="<?php echo base_url('search/search-result'); ?>" class="search-form" method="post">
-                            <div class="form-group has-feedback" style="margin-bottom: 5px;">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="search" class="form-control search_text" name="search_text" id="search_text" placeholder="search">
-                                <input type="submit" class="form-control" value=" ">
-                                <span class="glyphicon glyphicon-search form-control-feedback">                                                                      
-                                </span>                                
-                            </div>
-                        </form>
-                    </li>
-                </ul>
-
-                <div class="clearfix"></div>
-
-                <ul class="nav navbar-nav navbar-right manu_ul">
-                    <li class="<?php echo activate_menu('home'); ?>"><a href="<?php echo base_url("home"); ?>">Home</a></li>
-                    <li class="dropdown <?php
-                                                echo activate_menu('company_overview');
-                                                echo activate_menu('board_of_directors');
-                                                echo activate_menu('customer');
-                                                echo activate_menu('technology');
-                                                echo activate_menu('awards');
-                                                echo activate_menu('announcements');
-                                                 ?>">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">About Us
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php echo activate_menu('company_overview'); ?>"><a href="<?php echo base_url("company-overview"); ?>">Company Overview </a></li>
-                            <!-- <li class="<?php echo activate_menu('board_of_directors'); ?>"><a href="<?php echo base_url("board-of-directors"); ?>">Board of Directors</a></li> -->
-                            <li class="<?php echo activate_menu('customer'); ?>"><a href="<?php echo base_url("customer"); ?>">Customers</a></li>
-                            <!-- <li><a href="#">Senior Management</a></li> -->
-                            <li class="<?php echo activate_menu('technology'); ?>"><a href="<?php echo base_url("technology"); ?>">Technology</a></li>
-                            <!-- <li><a href="#">History & Milestones</a></li> -->
-                            <li class="<?php echo activate_menu('awards'); ?>"><a href="<?php echo base_url("awards"); ?>">Awards & Achievements</a></li>
-                            <li class="<?php echo activate_menu('announcements'); ?>"><a href="<?php echo base_url("announcements/view"); ?>">Announcements</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown <?php
-                                                echo activate_menu('annual_reports');
-                                                echo activate_menu('quarterly_reports');
-                                                 ?>">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">Financial
-                            Information
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a href="#">Company Information</a></li> -->
-                            <li class="<?php echo activate_menu('annual_reports'); ?>"><a href="<?php echo base_url("annual-reports"); ?>">Annual Reports</a></li>
-                            <li class="<?php echo activate_menu('quarterly_reports'); ?>"><a href="<?php echo base_url("quarterly-reports"); ?>">Quarterly Reports</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="<?php echo activate_menu('product_categories'); ?>"><a href="<?php echo base_url("product-catalogue"); ?>">Product catalogue</a></li>
-
-                    <li class="dropdown <?php
-                                                echo activate_menu('completed_projects');
-                                                echo activate_menu('ongoing_projects');
-                                               
-                                                 ?>" >
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">Projects
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php echo activate_menu('ongoing_projects'); ?>"><a href="<?php echo base_url("local-projects"); ?>">Local Projects </a></li>
-                            <li class="<?php echo activate_menu('completed_projects'); ?>"><a href="<?php echo base_url("international-projects"); ?>">International Projects </a></li>
-                        </ul>
-                    </li>
-
-                    <li class="<?php echo activate_menu('news'); ?>"><a href="<?php echo base_url("news/view"); ?>">News & Updates</a></li>
-                    <li class="<?php echo activate_menu('csr'); ?>"><a href="<?php echo base_url("csr"); ?>">CSR</a></li>
-                </ul>
-
-                <!-- mobile menu show -->
-                <ul class="nav navbar-nav navbar-right manu_top_ul visible-xs">
-                    <li class="<?php echo activate_menu('quality-assuarance'); ?>"><a href="<?php echo base_url("quality-assuarance"); ?>">Quality Assurance</a></li>
-                    <li class="<?php echo activate_menu('research-development'); ?>"><a href="<?php echo base_url("research-development"); ?>">Research and Developments</a></li>
-
-                    <li class="dropdown <?php
-                                                echo activate_menu('brochures');
-                                            // echo activate_menu('technical_information');
-                                                echo activate_menu('certificates');
-                                                echo activate_menu('factory_tours');
-                                                 ?>">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">Resources
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php echo activate_menu('brochures'); ?>"><a href="<?php echo base_url("brochures"); ?>">Brochures</a></li>
-                            <!-- <li class="<?php echo activate_menu('technical_information'); ?>"><a href="<?php echo base_url('technical-information'); ?>">Technical Information</a></li> -->
-                            <li class="<?php echo activate_menu('certificates'); ?>"><a href="<?php echo base_url('certificates'); ?>">Certificates</a></li>
-                            <li class="<?php echo activate_menu('factory_tours'); ?>"><a href="<?php echo base_url('video-gallery') ?>">Video Gallery</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="<?php echo activate_menu('careers'); ?>"><a href="<?php echo base_url("careers"); ?>">Careers</a></li>
-
-                    <li class="dropdown <?php
-                                                echo activate_menu('contact_us');
-                                                echo activate_menu('distributors');
-                                                echo activate_menu('quick_sales_contacts');
-                                                echo activate_menu('technical_and_other');
-                                                echo activate_menu('sales_contacts');
-                                                echo activate_menu('export_contacts');
-                                                 ?>">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">Contact
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php echo activate_menu('contact_us'); ?>"><a href="<?php echo activate_menu('contact-details') ?>">Contact details</a></li>
-                            <li class="<?php echo activate_menu('brochures'); ?>"><a href="<?php echo activate_menu('distributors') ?>">Distributor listing with map</a></li>
-                            <li class="<?php echo activate_menu('quick_sales_contacts'); ?>"><a href="<?php echo base_url("quick-sales-contacts");?>">Quick Sales Contacts</a></li>
-                            <li class="<?php echo activate_menu('technical_and_other'); ?>"><a href="<?php echo base_url("technical-and-other");?>">Technical and Other</a></li>
-                            <li class="<?php echo activate_menu('sales_contacts'); ?>"><a href="<?php echo base_url("sales-contacts");?>">Sales Contact</a></li>
-                            <li class="<?php echo activate_menu('export_contacts'); ?>"><a href="<?php echo base_url("export-contacts");?>">Export Contact</a></li>
-                            <!-- <li><a href="announcements.html">General Inquiry</a></li> -->
-                        </ul>
-                    </li>
-
-                    <li>
-                        <form action="" class="search-form">
-                            <div class="form-group has-feedback" style="margin-bottom: 5px;">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search"
-                                    placeholder="search">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
-                <!-- mobile menu show -->
-            </div>
-        </div>
-    </nav>
-
-    <!-- scroll down nav bar -->
-    <!-- partial:index.partial.html -->
-    <div id="wrapper">
-
-        <!-- logo -->
-        <a href="<?php echo base_url("home"); ?>"><img src="<?php echo base_url("assets/frontend/images/logo_2.svg"); ?>" alt=""
-                class="img-responsive scroll_down_logo navbar02"></a>
-        <!-- logo -->
-
-        <button class="scroll_down_menu_toggle navbar02" id="scroll_down_menu_toggle" type="button">
-            <svg viewBox="0 0 100 100" width="60">
-                <path class="line top"
-                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-                <path class="line middle" d="m 30,50 h 40" />
-                <path class="line bottom"
-                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-            </svg>
+        <a class="navbar-brand" href="index.html"><img src="<?php echo base_url("assets/frontend/"); ?>images/logo.png" alt="" class="d-block w-100 top_logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="scroll_down_menu">
-            <ul class="panel-group" id="accordion">
-                <li><a data-text="1" href="<?php echo base_url("home"); ?>">Home</a></li>
-                <li><a data-text="2" data-toggle="collapse" data-parent="#accordion" href="#collapse1">About Us </a></li>
-                <div class="panel panel-default" style="background-color: inherit;border: none;">
-                    <div id="collapse1" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("company-overview"); ?>">Company Overview </a></li>
-                            <!-- <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("board-of-directors"); ?>">Board of Directors</a></li> -->
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("customer"); ?>">Customers</a></li>
-                            <!-- <li class="scroll_down_menu_sub_menu"><a href="#">Senior Management</a></li> -->
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("technology"); ?>">Technology</a></li>
-                            <!-- <li class="scroll_down_menu_sub_menu"><a href="#">History & Milestones</a></li> -->
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("awards"); ?>">Awards & Achievements</a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("announcements/view"); ?>">Announcements</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarResponsive">
 
 
-                <li><a data-text="3" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse2">Financial Information</a>
+          <ul class="navbar-nav ms-auto first_nav_bar">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Alumni</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Downloads
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href=".html" style="text-align: left;">Examination Claim Form</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: left;"> Advance Payment Request Form &raquo; </a>
+                   <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href=".html" style="text-align: left;">PDF Format </a></li>
+                    <li><a class="dropdown-item" href=".html" style="text-align: left;">Word Format</a></li>
+                 </ul>
                 </li>
-                <div class="panel panel-default" style="background-color: inherit;border: none;">
-                    <div id="collapse2" class="panel-collapse collapse">
-                        <!-- <li class="scroll_down_menu_sub_menu"><a href="#">Company Information</a></li> -->
-                        <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("annual-reports"); ?>">Annual
-                                Reports</a></li>
-                        <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("quarterly-reports"); ?>">Quarterly
-                                Reports</a></li>
-                        </li>
-                    </div>
-                </div>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Quick Links</a>
+            </li>
+            <li class="nav-item">
+              <div class="input-group search_bar">
+                  <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="button" style="height: 30px;">
+                          <i class="fa fa-search" style="position: relative; top: -4px;"></i>
+                      </button>
+                  </span>
+              </div>
+            </li>
 
-                <li><a data-text="4" href="<?php echo base_url("product-catalogue"); ?>">Product catalogue </a></li>
-                <li><a data-text="5" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse3">Projects </a></li>
-                <div class="panel panel-default" style="background-color: inherit;border: none;">
-                    <div id="collapse3" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("local-projects"); ?>">Local Projects </a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("international-projects"); ?>">International Projects</a></li>
-                        </div>
-                    </div>
-                </div>
+          </ul>
 
-                <li><a data-text="6" href="<?php echo base_url("news/view"); ?>">News & Updates </a></li>
-                <li ><a data-text="7" href="<?php echo base_url("csr"); ?>">CSR</a></li>
-                <li><a data-text="8" href="<?php echo base_url("quality-assuarance"); ?>">Quality Assurance</a></li>
-                <li><a data-text="9" href="<?php echo base_url("research-development"); ?>">Research and Developments</a></li>
+            <!-- ============== -->
+            <div class="clearfix"></div>
 
-                <li><a data-text="10" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse4">Resources </a></li>
-                <div class="panel panel-default" style="background-color: inherit;border: none;">
-                    <div id="collapse4" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("brochures"); ?>">Brochures</a>
-                            </li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("technical-information"); ?>">Technical
-                                    Information</a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("video-gallery"); ?>">Video Gallery</a></li>
-                        </div>
-                    </div>
-                </div>
 
-                <li><a data-text="11" href="<?php echo base_url("careers"); ?>">Careers</a></li>
+          <ul class="navbar-nav ms-auto second_nav_bar">
 
-                <li><a data-text="12" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse5">Contact Us </a></li>
-                <div class="panel panel-default" style="background-color: inherit;border: none;">
-                    <div id="collapse5" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("contact-us"); ?>">Contact details</a>
-                            </li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("distributors"); ?>">Distributor listing with map</a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("quick-sales-contacts");?>">Quick Sales Contacts</a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("technical-and-other");?>">Technical and Other</a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("sales-contacts");?>">Sales Contact</a></li>
-                            <li class="scroll_down_menu_sub_menu"><a href="<?php echo base_url("export-contacts");?>">Export Contact</a></li>
-                            <!-- <li class="scroll_down_menu_sub_menu"><a href="announcements.html">General Inquiry</a></li> -->
-                        </div>
-                    </div>
-                </div>
-            </ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
 
+                <li><a class="dropdown-item" href="#"> Faculty Statistics &raquo; </a>
+                   <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="fac_stats.html">Undergraduates </a></li>
+                    <li><a class="dropdown-item" href="ac_staff.html">Academic Staff</a></li>
+
+                    <!-- <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                    </li> -->
+
+                 </ul>
+                </li>
+
+                <li><a class="dropdown-item" href="dean_office.html">Dean’s Office</a></li>
+                <li><a class="dropdown-item" href="fac_board.html">Faculty Board</a></li>
+                <li><a class="dropdown-item" href="history.html">History</a></li>
+                <li><a class="dropdown-item" href="fac_org.html">Faculty Organization</a></li>
+                <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
+                <li><a class="dropdown-item" href="map.html">Map & direction </a></li>
+
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                University
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Faculty
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Academics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="under_pro.html">Undergraduate Programs </a></li>
+                <li><a class="dropdown-item" href="http://www.pgia.pdn.ac.lk/" target="_blank">Postgraduate Programme </a></li>
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Research
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="fac_research.html">Faculty Research Committee </a></li>
+                <li><a class="dropdown-item" href="review_commit.html">Ethical Review Committee</a></li>
+                <li><a class="dropdown-item" href="research_commi.html">Research Stories</a></li>
+
+                <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
+                   <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="cvcd_award.html">CVCD Excellence Award </a></li>
+                    <li><a class="dropdown-item" href="presi_award.html">Presidents’ Award</a></li>
+                    <li><a class="dropdown-item" href="calling_application.html">Calling Application – 2018</a></li>
+                    <li><a class="dropdown-item" href="award.html">Awards - 2018</a></li>
+
+                    <!-- <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                    </li> -->
+
+                 </ul>
+                </li>
+
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                International
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="overview.html">Overview</a></li>
+                <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/Sustainable%20Tropical%20Agricultural%20Systems%20of%20Sri%20Lanka.html" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
+                <li><a class="dropdown-item" href="fore_stud.html">Current Foreign Students</a></li>
+                <li><a class="dropdown-item" href="opp_study_abroad.html">Opportunities for Study Abroad</a></li>
+                <li><a class="dropdown-item" href="info_fore_stud.html">Information for Foreign Students</a></li>
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Students
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="student_societies.html">Agriculture Faculty Chess Club</a></li>
+              </ul>
+            </li>
+
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Quality
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="ffq.html">Faculty Quality Assurance Cell (FQAC) </a></li>
+                <li><a class="dropdown-item" href="frc.html">Faculty Sub Committees </a></li>
+                <li><a class="dropdown-item" href="fp.html">AHEAD Projects  </a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Engagement
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item d-lg-none d-xl-none d-xxl-none">
+              <div class="input-group search_bar">
+                  <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="button" style="height: 30px;">
+                          <i class="fa fa-search" style="position: relative; top: -4px;"></i>
+                      </button>
+                  </span>
+              </div>
+            </li>
+
+          </ul>
         </div>
-        <div id="bg-circle"></div>
+      </div>
+    </nav>
+
+
+
+    <!-- ============================= -->
+    <!-- mobile menu section -->
+    <!-- ============================= -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html"><img src="<?php echo base_url("assets/frontend/"); ?>images/logo.png" alt="" class="d-block w-100 top_logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarResponsive">
+
+
+          <ul class="navbar-nav ms-auto first_nav_bar">
+
+           <li class="nav-item">
+              <a class="nav-link" href="#">Alumni</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Downloads
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href=".html" style="text-align: left;">Examination Claim Form</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: left;"> Advance Payment Request Form &raquo; </a>
+                   <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href=".html" style="text-align: left;">PDF Format </a></li>
+                    <li><a class="dropdown-item" href=".html" style="text-align: left;">Word Format</a></li>
+                 </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Quick Links</a>
+            </li>
+
+          </ul>
+
+            <!-- ============== -->
+            <div class="clearfix"></div>
+
+
+          <ul class="navbar-nav ms-auto second_nav_bar">
+
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="about.html">About Us</a></li>
+
+                  <li><a class="dropdown-item" href="#"> Faculty Statistics &raquo; </a>
+                     <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="fac_stats.html">Undergraduates </a></li>
+                      <li><a class="dropdown-item" href="ac_staff.html">Academic Staff</a></li>
+
+                      <!-- <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                        <ul class="submenu dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                          <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul>
+                      </li> -->
+
+                   </ul>
+                  </li>
+
+                  <li><a class="dropdown-item" href="dean_office.html">Dean’s Office</a></li>
+                  <li><a class="dropdown-item" href="fac_board.html">Faculty Board</a></li>
+                  <li><a class="dropdown-item" href="history.html">History</a></li>
+                  <li><a class="dropdown-item" href="fac_org.html">Faculty Organization</a></li>
+                  <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
+                  <li><a class="dropdown-item" href="map.html">Map & direction </a></li>
+
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  University
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Faculty
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Academics
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="under_pro.html">Undergraduate Programs </a></li>
+                  <li><a class="dropdown-item" href="http://www.pgia.pdn.ac.lk/" target="_blank">Postgraduate Programme </a></li>
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Research
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="fac_research.html">Faculty Research Committee </a></li>
+                  <li><a class="dropdown-item" href="review_commit.html">Ethical Review Committee</a></li>
+                  <li><a class="dropdown-item" href="research_commi.html">Research Stories</a></li>
+
+                  <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
+                     <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="cvcd_award.html">CVCD Excellence Award </a></li>
+                      <li><a class="dropdown-item" href="presi_award.html">Presidents’ Award</a></li>
+                      <li><a class="dropdown-item" href="calling_application.html">Calling Application – 2018</a></li>
+                      <li><a class="dropdown-item" href="award.html">Awards - 2018</a></li>
+
+                      <!-- <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                        <ul class="submenu dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                          <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul>
+                      </li> -->
+
+                   </ul>
+                  </li>
+
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  International
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="overview.html">Overview</a></li>
+                  <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/Sustainable%20Tropical%20Agricultural%20Systems%20of%20Sri%20Lanka.html" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
+                  <li><a class="dropdown-item" href="fore_stud.html">Current Foreign Students</a></li>
+                  <li><a class="dropdown-item" href="opp_study_abroad.html">Opportunities for Study Abroad</a></li>
+                  <li><a class="dropdown-item" href="info_fore_stud.html">Information for Foreign Students</a></li>
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Students
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="student_societies.html">Agriculture Faculty Chess Club</a></li>
+                </ul>
+              </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Quality
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="ffq.html">Faculty Quality Assurance Cell (FQAC) </a></li>
+                  <li><a class="dropdown-item" href="frc.html">Faculty Sub Committees </a></li>
+                  <li><a class="dropdown-item" href="fp.html">AHEAD Projects  </a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Engagement
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </li>
+
+
+            <li class="nav-item">
+              <div class="input-group search_bar">
+                  <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="button" style="height: 30px;">
+                          <i class="fa fa-search" style="position: relative; top: -4px;"></i>
+                      </button>
+                  </span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ============================= -->
+    <!-- mobile menu section -->
+    <!-- ============================= -->
+
+    <header>
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg')">
+            <div class="container carousel-caption">
+              <div class="row">
+                <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
+                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('<?php echo base_url("assets/frontend/"); ?>images/slider02.jpg')">
+            <div class="container carousel-caption">
+              <div class="row">
+                <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
+                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('<?php echo base_url("assets/frontend/"); ?>images/slider03.jpg')">
+            <div class="container carousel-caption">
+              <div class="row">
+                <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
+                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+      </div>
+    </header>
+
+    <!-- header section -->
+
+    <!--=============================================-->
+  <!--===================header====================-->
+  
+    <!--=============================================-->
+  <!--===================body====================-->
+
+
+    <!-- mobile slider section -->
+    <div class="container-fluid no_padding d-none">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="<?php echo base_url("assets/frontend/"); ?>images/slider02.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="<?php echo base_url("assets/frontend/"); ?>images/slider03.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
-    <!-- partial -->
-    <!-- scroll down nav bar end -->
-
-    
-
-    <!-- header end-->
-
-    <!-- resrt password -->
-
+    <!-- mobile slider section -->

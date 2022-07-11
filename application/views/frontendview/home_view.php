@@ -1,960 +1,829 @@
- <!--main slider start-->
+    <div class="container top_box_con">
+      <div class="row">
 
- <!-- Full Page Image Background Carousel Header -->
+        <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12">
+          
+          <div class="row">
+            
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 top_box">
+              <div class="top_box_div">
 
- <?php if($main_slider_video[0]->cEnable == "Y") { ?>
- <!--video slider-->
-    <video muted loop autoplay class="hidden-xs">
-        <source src="<?php echo base_url("front_img/").$main_slider_video[0]->fVideo; ?>" type="video/mp4">
-      </video>
-  <!--video slider-->
+                <div id="container" class="angled-top-right" style="position: relative; z-index: 99999; background-color: #ad9d8e;">
 
-<?php } else { ?>
-    <!-- Start WOWSlider.com BODY section -->
-    <div id="wowslider-container1" class="hidden-xs">
-        <div class="ws_images">
-            <ul>
-                <?php
-                    foreach($main_slider as $slider) {
-                ?>
-                <li>
-                    <img src="<?php echo base_url("front_img").'/'.$slider->fImage; ?>" alt="slider"
-                        class="pull-right" title="" id="wows1_<?php echo $slider->id; ?>" />  
-                        <!-- <?php echo $slider->id ?> -->
-                </li>
-                <?php } ?>
-            </ul>
+                  <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/f_student.png" alt="" class="d-block w-100" data-aos="fade-down">
+                    </div>
+
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
+                      <h1>
+                        Future <br>
+                        Students
+                      </h1>
+                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Explore More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 top_box">
+              <div class="top_box_div skew_top_box_div_2">
+                
+                 <div id="container" class="angled-top-right" style="position: relative; z-index: 99999; background-color: #d5b79f;">
+                  
+                  <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/cu_student.png" alt="" class="d-block w-100" data-aos="fade-down">
+                    </div>
+
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
+                      <h1>
+                        Current <br>
+                        Students
+                      </h1>
+                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Explore More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 top_box">
+              <div class="top_box_div skew_top_box_div_3">
+                
+                <div id="container" class="angled-top-right" style="position: relative; z-index: 99999; background-color: #ddc1bd;">
+                  
+                  <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/get_around.png" alt="" class="d-block w-100" data-aos="fade-down">
+                    </div>
+
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
+                      <h1>
+                        Getting <br>
+                        Around
+                      </h1>
+                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Explore More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 top_box">
+              <div id="container" class="top_box_div" style="background-color: #c4df9b;">
+                
+                 <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/fac_staff.png" alt="" class="d-block w-100" data-aos="fade-down">
+                    </div>
+
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
+                      <h1>
+                        Faclty & <br>
+                        Staff
+                      </h1>
+                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Explore More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 top_box">
+              <div id="container" class="top_box_div" style="background-color: #b8e0d2;">
+                
+                 <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/alumni.png" alt="" class="d-block w-100" data-aos="fade-down">
+                    </div>
+
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
+                      <h1>
+                        alumni
+                      </h1>
+                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Explore More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 top_box">
+              <div id="container" class="top_box_div" style="background-color: #c8cfe9;">
+                
+                 <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/s_life.png" alt="" class="d-block w-100" data-aos="fade-down">
+                    </div>
+
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 col-9 text_col">
+                      <h1>
+                        student <br>
+                        life
+                      </h1>
+                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Explore More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="w-100 d-none d-md-block"></div>
+            <br>
+            <br>
+
+            <!-- uni about section -->
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 hidden_item">
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/uni_logo.png" alt="" class="d-block w-100 align-self-center">
+            </div>
+
+            <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-8 hidden_item">
+              <h1 class="heading">Faculty of Agriculture</h1>
+              <p data-aos="fade-up">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into eletron
+ic typesetting, remaining essentially unchanged. 
+              </p>
+
+              <p data-aos="fade-up">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it tto make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+            <!-- uni about section -->
+
+          </div>
+
         </div>
 
-        <div class="ws_script" style="position:absolute;left:-99%"></div>
-        <div class="ws_shadow"></div>
-    </div>
-<?php } ?>
- <script type="text/javascript" src="<?php echo base_url("assets/frontend/slider/engine1/wowslider.js"); ?>"></script>
- <script type="text/javascript" src="<?php echo base_url("assets/frontend/slider/engine1/script.js"); ?>"></script>
- <!-- End WOWSlider.com BODY section -->
- </div>
- <!-- top slider section -->
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 top_box">
+          <div class="top_box_div skew_top_box_div_4">
+            
+            <div id="container" class="rag_har_div angled-top-right" style="position: relative; z-index: 99999; background-color: #84121f;">
+              
+              <div class="row ms-auto">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2 col-sm-3 col-3">
+                      <img src="<?php echo base_url("assets/frontend/"); ?>images/rag.png" alt="" class="d-block w-100">
+                    </div>
 
- <!-- mobile main slider -->
- <div id="myCarousel" class="carousel slide visible-xs" data-ride="carousel">
-     <!-- Indicators -->
-     <!-- <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol> -->
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
+                      <h1 style="text-transform: capitalize; font-size: 17px;">
+                        Rag & Harassment <br>
+                        Complaint Portal
+                      </h1>
+                    </div>
 
-     <!-- Wrapper for slides -->
-     <div class="carousel-inner">
-         <?php 
-            $count = 0;
-            foreach ($mobile_slider as $slider) { 
-                if($count == 0) {
-                    $active = "active";
-                } else {
-                    $active = "";
-                }
-        ?>
-         <div class="item <?php echo $active; ?>">
-             <img src="<?php echo base_url("front_img").'/'.$slider->fImage; ?>" alt=""
-                 class="img-responsive center-block">
-         </div>
-         <?php $count++; } ?>
-     </div>
- </div>
- <!-- mobile main slider -->
+                     <p style="margin-top: 10px;"><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</small></p>
 
-
- <!-- slider top shape section -->
- <div class="home_blue_shape_section">
-     <!-- logo -->
-     <a href="<?php echo base_url('home'); ?>"><img src="<?php echo base_url("assets/frontend/images/logo.svg"); ?>" alt=""
-             class="img-responsive top_logo"></a>
-     <!-- logo -->
-
-     <!-- contact div -->
-     <div class="home_top_contact_div">
-         <p>
-             <a href="tel:<?php echo $contact_us[0]->vTele; ?>"><?php echo $contact_us[0]->vTele; ?></a> |
-             <a href="mailto:<?php echo $contact_us[0]->vEmail; ?>"><?php echo $contact_us[0]->vEmail; ?></a>
-         </p>
-
-         <!-- ==== -->
-
-         <!-- socila media icon -->
-         <p class="home_top_social_icon">
-             <a href="<?php echo $contact_us[0]->vFacebook; ?>" class="fa fa-facebook"></a>
-             <a href="<?php echo $contact_us[0]->vTwitter; ?>" class="fa fa-twitter"></a>
-             <a href="<?php echo $contact_us[0]->vInstagram; ?>" class="fa fa-instagram"></a>
-             <a href="<?php echo $contact_us[0]->vYoutube; ?>" class="fa fa-youtube"></a>
-         </p>
-         <!-- socila media icon -->
-     </div>
-     <!-- contact div -->
- </div>
- <!-- slider top shape section -->
-
- <!-- ============ -->
-
- <!-- slider top green shape section -->
- <div class="home_green_shape_section hidden-xs"></div>
- <!-- slider top green shape section -->
-
-
-
- <!--=============================================-->
- <!--===================header====================-->
-
- <br>
- <!--=============================================-->
- <!--===================body====================-->
-
-
- <!-- body sec_one start-->
- <!-- about img -->
- <img src="<?php echo base_url("assets/frontend/images/about01.png"); ?>" alt="" class="img-responsive home_about_img"
-     data-aos="fade-right">
- <!-- about img -->
-
- <input type="hidden" name="language" id="language" class="language" value="<?php echo $this->uri->segment(1); ?>">
-
- <div class="col-lg-offset-4 col-lg-7 col-md-12 col-sm-12 col-xs-12 home_about_text_col">
-     <h1 id="titleEng" class="heading"><?php echo $home_details->vTitle; ?></h1>
-     <h1 id="titleChinese" class="heading"><?php echo $home_details->vTitleChinese; ?></h1>
-     <div id="desc_eng"><p><?php echo $home_details->tDescription; ?></p></div>
-     <div id="desc_chinese"><p><?php echo $home_details->tDescriptionChinese; ?></p></div>
-
-     <div class="clearfix"></div>
-
-     <!-- read more btn -->
-     <div id="btnReadEng" class="button"><a href="<?php echo base_url('company-overview'); ?>" class="link">Read More</a></div>
-     <div id="btnReadChinese" class="button"><a href="<?php echo base_url('company-overview/chinese'); ?>" class="link">阅读更多</a></div>
-     <!-- read more btn -->
-
-     <div class="clearfix"></div>
-
-     <!-- profile btn section -->
-     <div class="profile_btn_div">
-         <button id="btnViewEngs" class="btn btn-primary spec_btn" data-aos="fade-up">View Company Profile</button>
-        <button id="btnViewChinese" class="btn btn-primary spec_btn" data-aos="fade-down">查看我们的公司简介</button>
-     </div>
-     <!-- profile btn section -->
-
- </div>
-
- <!-- product section -->
- <div class="row product_section margin_auto">
-
-     <!-- <div class="jarallax" style="background-image: url(images/product_bg.jpg); position: relative; z-index: 2;"> -->
-
-     <div class="container">
-
-         <div class="col-lg-offset-2 col-lg-10 col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
-
-             <div class="row">
-
-                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                     <h1 class="heading">OUR PRODUCT CATEGORIES</h1>
-                     <p><?php echo $home_details->tProductCatDesc; ?></p>
-                     <br>
-                     <a href="<?php echo base_url("products/cables"); ?>">
-                        <div class="product_div bg_product_div_1" data-aos="fade-right">
-                            <div class="product_div_1" style="background-image:url('front_img/<?php echo $product_category->fImageCable; ?>');"></div>
-
-                            <div class="product_div_text">
-                                <p style="text-transform: upperase;">Electric Cables</p>
-                                <!-- read more btn -->
-                                <div class="button">
-                                    <a href="<?php echo base_url('product_categories') ?>" class="link">All Product</a>
-                                </div>
-                                <!-- read more btn -->
-                            </div>
-
-                        </div>
-                    </a>
-                 </div>
-
-                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                     <div class="row">
-
-                         <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 no_padding">
-
-                                <a href="<?php echo base_url("products/enameled_winding_wires"); ?>">
-                                    <div class="product_div bg_product_div_2" data-aos="fade-up">
-                                        <div class="product_div_2" style="background-image:url('front_img/<?php echo $product_category->fImageEnameledWire; ?>');"></div>
-
-                                        <div class="product_div_text">
-                                            <p style="text-transform: upperase;">Enameled Winding</p>
-                                            <!-- read more btn -->
-                                            <div class="button">
-                                                <a href="<?php echo base_url('product_categories') ?>" class="link">All Product</a>
-                                            </div>
-                                            <!-- read more btn -->
-                                        </div>
-                                    </div>
-                                </a>
-
-                             <div class="clearfix"></div>
-
-                             <a href="<?php echo base_url("products/lightings"); ?>">
-                                    <div class="product_div bg_product_div_3" data-aos="fade-down">
-                                         <div class="product_div_3" style="background-image:url('front_img/<?php echo $product_category->fImageLighting; ?>');"></div>
-                                        <div class="product_div_text">
-                                            <p style="text-transform: upperase;">Lighting</p>
-                                            <!-- read more btn -->
-                                            <div class="button">
-                                                <a href="<?php echo base_url('product_categories') ?>" class="link">All Product</a>
-                                            </div>
-                                            <!-- read more btn -->
-                                        </div>
-                                    </div>
-                                </a>
-                             
-                              <div class="clearfix"></div>
-
-                             <a href="<?php echo base_url("products/switchgears"); ?>">
-                                    <div class="product_div bg_product_div_3" data-aos="fade-down">
-                                        <div class="product_div_3" style="background-image:url('front_img/<?php echo $product_category->fImageSwitchgear; ?>');"></div>
-
-                                        <div class="product_div_text">
-                                            <p style="text-transform: upperase;">Switchgear</p>
-                                            <!-- read more btn -->
-                                            <div class="button">
-                                                <a href="<?php echo base_url('product_categories') ?>" class="link">All Product</a>
-                                            </div>
-                                            <!-- read more btn -->
-                                        </div>
-                                    </div>
-                                </a>
-
-                         </div>
-
-                         <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
-                             <a href="<?php echo base_url("products/switches-sockets"); ?>">
-                                    <div class="product_div product_devicec_div bg_product_div_4" data-aos="fade-down">
-                                         <div class="product_div_4" style="background-image:url('front_img/<?php echo $product_category->fImageSwitchSocket; ?>');"></div>
-
-                                        <div class="product_div_text">
-                                            <p style="text-transform: upperase;">Switches and Sockets</p>
-                                            <!-- read more btn -->
-                                            <div class="button">
-                                                <a href="<?php echo base_url('product_categories') ?>" class="link">All Product</a>
-                                            </div>
-                                            <!-- read more btn -->
-                                        </div>
-
-                                    </div>
-
-                                </a>
-                             
-                             <!--==========================-->
-                             
-                              <a href="<?php echo base_url("products/fans"); ?>">
-                                    <div class="product_div product_devicec_div bg_product_div_5" data-aos="fade-down" style="margin-top: 0px;">
-                                         <div class="product_div_5" style="background-image:url('front_img/<?php echo $product_category->fImageFan; ?>');"></div>
-
-                                        <div class="product_div_text">
-                                            <p style="text-transform: upperase;">Fan</p>
-                                            <!-- read more btn -->
-                                            <div class="button">
-                                                <a href="<?php echo base_url('product_categories') ?>" class="link">All Product</a>
-                                            </div>
-                                            <!-- read more btn -->
-                                        </div>
-
-                                    </div>
-
-                                </a>
-
-                            <!--==========================-->
-
-                           <a href="<?php echo base_url("products/other-products"); ?>">
-                                 <div class="product_div product_devicec_div bg_product_div_5" data-aos="fade-down" style="margin-top: 0px;">
-                                     <div class="product_div_5" style="background-image:url('front_img/<?php echo $product_category->fImageOtherCat; ?>');"></div>
-
-                                     <div class="product_div_text">
-                                         <p style="text-transform: upperase;">Other Products</p>
-                                         <!-- read more btn -->
-                                         <div class="button">
-                                             <a href="<?php echo base_url('product-catalogue') ?>" class="link">All Product</a>
-                                         </div>
-                                         <!-- read more btn -->
-                                     </div>
-
-                                 </div>
-
-                             </a>
-                         </div>
-
+                     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                      <a href="">
+                        <button class="btn btn-outline-secondary ms-n5 orange_btn" type="button" style="margin-top: 10px; margin-bottom: 15px;" data-aos="fade-down">
+                            &nbsp;Click Here&nbsp;
+                        </button>
+                      </a>
                      </div>
-                 </div>
+                      
+                  </div>
 
-             </div>
-
-         </div>
-
-     </div>
- </div>
- <!-- product section -->
-
- <!-- featured product and award section -->
- <div class="row award_section margin_auto bg_row" style="background-image: url(assets/frontend/images/award_bg.jpg);">
-
-<div class="jarallax" style="background-image: url(assets/frontend/images/award_bg.jpg); position: relative; z-index: 2;">
-    <br>
-    <br>
-
-    <div class="row margin_auto">
-
-        <div class="row margin_auto">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
-                <h1 class="heading">featured products</h1>
-                <p><?php echo $home_details->tFeaturedProDesc; ?></p>
             </div>
-        </div>
 
-        <div class="row margin_auto">
-            <div class="carousel-wrap" data-aos="fade-up">
-                <div class="owl-carousel owl-two owl-theme">
-                    <?php foreach($featured_products as $product ) { ?>
-                    <a href="<?php echo base_url('products/').$product->link; ?>">
-                        <div class="item product_item">
-                            <div class="product_img_div">
-                                <?php if($product->fImage != "") { ?>
-                                <img src="<?php echo base_url("front_img").'/'.$product->fImage; ?>" alt="" class="img-responsive center-block">
-                                <?php } else { ?>
-                                <img src="<?php echo base_url("assets/frontend/images/1200_800_no_image.png"); ?>" alt="" class="img-responsive center-block">
-                                <?php } ?>
-                            </div>
-                            <p><?php echo $product->vTitle; ?></p>
-                        </div>
-                    </a>    
-                    <?php } ?>                
+          </div>
+
+          <!-- links -->
+          <div class="top_box_div">
+            <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #e3e3e3; margin-top: -30px; height: auto;">
+              
+              <a href="">
+                <div class="quick_links_div">
+                  <p class="quick_links" data-aos="fade-up">Special notices</p>
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
+              </a>
+
+              <a href="">
+                <div class="quick_links_div">
+                  <p class="quick_links" data-aos="fade-up">Student notices</p>
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+                </div>
+                
+              </a>
+
+              <a href="">
+                <div class="quick_links_div">
+                  <p class="quick_links" data-aos="fade-up">Examination timetables</p>
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+                </div>
+              </a>
+
+              <a href="">
+                <div class="quick_links_div">
+                  <p class="quick_links" data-aos="fade-up">Class timetables</p>
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+                </div>
+              </a>
+
+              <a href="">
+                <div class="quick_links_div">
+                   <p class="quick_links" data-aos="fade-up">Student information system (SIS)</p>
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+                </div>
+              </a>
+
             </div>
+          </div>
+          <!-- links -->
+
+          <!-- covid update -->
+          <div class="top_box_div">
+            <div id="container" style="position: relative; z-index: 99999; background-color: #faced6; margin-top: 5px; height: auto;">
+              
+              <a href="">
+                <div class="row">
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                    <img src="<?php echo base_url("assets/frontend/"); ?>images/covid.png" alt="" class="d-block w-100 float-md-end" style="width: 70px !important;">
+                  </div>
+
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="border-left: 1px solid #999999; padding-top: 15px;">
+                    <h1 style="text-transform: capitalize; font-size: 17px; color: #f82525;">
+                      PANDEMIC<br>
+                      INFORMATION
+                    </h1>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+          <!-- covid update -->
+
+
         </div>
 
+        <div class="w-100 d-none d-md-block"></div>
+
+      </div>
     </div>
 
-    <div class="clearfix"></div>
-    <br class="hidden-xs">
-    <br class="hidden-xs">
-
-
-    <!-- award item section -->
-    <div class="row margin_auto hidden-sm hidden-xs">
-
-        <div class="col-lg-offset-2 col-lg-10 col-md-offset-1 col-md-11 col-sm-12 col-xs-12 award_text_section">
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="position: relative; z-index: 9999;">
-                <h1 class="heading" style="color: #283897;">ACHIEVEMENTS</h1>
-                <p><?php echo $home_details->tAcheiveDesc; ?></p>
-                <!-- read more btn -->
-                <div class="button">
-                    <a href="<?php echo base_url('awards'); ?>" class="link">Discover More</a>
-                </div>
-                <!-- read more btn -->
-            </div>
-
-        </div>
-
-        <!-- award item section -->
-        <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-12 col-xs-12 award_item_section">
-
-
-            <div class="row">
-
-                <div class="col-lg-offset-3 col-lg-8 col-md-offset-3 col-md-9 col-sm-12 col-xs-12">
-
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_1">
-                        <a href="<?php echo base_url('awards'); ?>">
-                            <div class="award_item" data-aos="fade-right">
-                                <div class="product_img_div">
-                                    <img src="<?php echo base_url("front_img").'/'.$awards[0]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <p><?php echo $awards[0]->vTitle;?></p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_2">
-                        <a href="<?php echo base_url('awards'); ?>">
-                            <div class="award_item" data-aos="fade-up">
-                                <div class="product_img_div">
-                                    <img src="<?php echo base_url("front_img").'/'.$awards[1]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <p><?php echo $awards[1]->vTitle;?></p>
-                            </div>
-                        </a>
-
-                        <!-- ===== -->
-
-                        <a href="<?php echo base_url('awards'); ?>">
-                            <div class="award_item" data-aos="fade-down">
-                                <div class="product_img_div">
-                                    <img src="<?php echo base_url("front_img").'/'.$awards[2]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <p><?php echo $awards[2]->vTitle;?></p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_3">
-                        <a href="<?php echo base_url('awards'); ?>">
-                            <div class="award_item" data-aos="fade-up">
-                                <div class="product_img_div">
-                                    <img src="<?php echo base_url("front_img").'/'.$awards[3]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <p><?php echo $awards[3]->vTitle;?>
-                                </p>
-                            </div>
-                        </a>
-
-                        <!-- ===== -->
-
-                        <a href="<?php echo base_url('awards'); ?>">
-                            <div class="award_item" data-aos="fade-down">
-                                <div class="product_img_div">
-                                    <img src="<?php echo base_url("front_img").'/'.$awards[4]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <p><?php echo $awards[4]->vTitle;?></p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_4">
-                        <a href="<?php echo base_url('awards'); ?>">
-                            <div class="award_item" data-aos="fade-up">
-                                <div class="product_img_div">
-                                    <img src="<?php echo base_url("front_img").'/'.$awards[5]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <p><?php echo $awards[5]->vTitle;?></p>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-        <!-- award item section -->
-
-    </div>
-    <!-- award item section -->
-
 
     <br>
     <br>
-    <br>
 
-</div>
+    <!-- news section -->
+    <div class="container-fluid" style="background-color: #eaf6f2;">
+      <br>
+      <br>
+      <div class="container">
 
-
-</div>
-<!-- featured product and award section -->
-
-    <!-- mobile award item section -->
-    <div class="row margin_auto visible-sm visible-xs">
-
-        <div class="col-md-12 col-sm-12 col-xs-12 award_text_section">
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="position: relative; z-index: 9999;">
-                <h1 class="heading" style="color: #283897;">ACHIEVEMENTS</h1>
-                <p><?php echo $home_details->tAcheiveDesc; ?></p>
-                <!-- read more btn -->
-                <div class="button">
-                    <a class="link">Discover More</a>
-                </div>
-                <!-- read more btn -->
+        <!-- mobile show -->
+        <div class="row d-lg-none d-xl-none d-xxl-none" style="margin-bottom: 30px;">
+            <!-- uni about section -->
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/uni_logo.png" alt="" class="d-block w-100 align-self-center">
             </div>
 
-            <div class="clearfix"></div>
-            <br class="hidden-xs">
-            <br class="hidden-xs">
+            <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-8">
+              <h1 class="heading">Faculty of Agriculture</h1>
+              <p data-aos="fade-up">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into eletron
+ic typesetting, remaining essentially unchanged. 
+              </p>
 
-            <!-- award item section -->
-            <div class="col-md-12 col-sm-12 col-xs-12 award_item_section">
-
-                <div class="row hidden-xs">
-
-                    <div class="col-lg-offset-3 col-lg-8 col-md-offset-3 col-md-9 col-sm-12 col-xs-12">
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_1">
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="award_item" data-aos="fade-right">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[0]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[0]->vTitle;?></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_2">
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="award_item" data-aos="fade-up">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[1]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[1]->vTitle;?></p>
-                                </div>
-                            </a>
-
-                            <!-- ===== -->
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="award_item" data-aos="fade-down">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[2]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[2]->vTitle;?></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_3">
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="award_item" data-aos="fade-up">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[3]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[3]->vTitle;?>
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- ===== -->
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="award_item" data-aos="fade-down">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[4]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[4]->vTitle;?></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 award_item_col award_item_col_4">
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="award_item" data-aos="fade-up">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[5]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[5]->vTitle;?></p>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- mobile award slider section -->
-                <div class="row visible-xs">
-                    <div class="carousel-wrap" data-aos="fade-up">
-                        <div class="owl-carousel owl-two owl-theme">
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="item award_item">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[0]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[0]->vTitle;?></p>
-                                </div>
-                            </a>
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="item award_item">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[1]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[1]->vTitle;?></p>
-                                </div>
-                            </a>
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="item award_item">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[3]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[2]->vTitle;?>
-                                    </p>
-                                </div>
-                            </a>
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="item award_item">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[4]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[3]->vTitle;?></p>
-                                </div>
-                            </a>
-
-                            <a href="<?php echo base_url('awards'); ?>">
-                                <div class="item award_item">
-                                    <div class="product_img_div">
-                                        <img src="<?php echo base_url("front_img").'/'.$awards[5]->fImageinner; ?>" alt="" class="img-responsive center-block">
-                                    </div>
-                                    <p><?php echo $awards[4]->vTitle;?></p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- mobile award slider section -->
-
-
+              <p data-aos="fade-up">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it tto make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
             </div>
-            <!-- award item section -->
-
+            <!-- uni about section -->
         </div>
+        <!-- mobile show -->
+        
+        <div class="row"> 
 
-    </div>
-    <!-- mobile award item section -->
+          <h1 class="heading mb-3">News & Updates</h1>
 
-    <div class="clearfix"></div>
-
-    <!-- featured project section -->
-
-    <div class="row margin_auto f_project_row">
-
-        <div class="col-lg-offset-1 col-lg-11 col-md-12 col-sm-12 col-xs-12 f_project_slider_col">
-
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 project_des_col white_bg_div">
-                <h1 class="heading" style="color: #283897;" data-aos="fade-up">OUR featured projects</h1>
-                <p style="color: #000000;" data-aos="fade-down"><?php echo $home_details->tFeaturedProjDesc; ?></p>
-            </div>
-
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 f_project_slider_col">
-
+          <!-- news carousel -->
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="height: auto;">
 
                 <div class="row">
-                    <div class="carousel-wrap" style="margin-top: 0px;">
-                        <div class="owl-carousel owl-one owl-theme">
-                            <?php foreach($projects as $project) { ?>
-                            <a href="<?php if($project->cType == "O") { echo base_url('ongoing-projects/project-details/').$project->id; } else { echo base_url('completed-projects/project-details/').$project->id; } ?>">
-                                <div class="project_des_div">
-                                    <h1>
-                                        <?php echo $project->vTitle; ?>
-                                    </h1>
-                                    <p>
-                                    <?php echo substr($project->tDescription,0,90); ?>
-                                    </p>
-                                    <img src="<?php echo base_url("front_img").'/'.$project->fImage; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                            </a>
-                            <?php } ?>
-                        </div>
-                    </div>
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
+                  </div>
+
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                    <h1 class="sub_heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+                    <p data-aos="fade-up">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industr
+      y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into eletron
+      ic typesetting, remaining essentially unchanged. 
+                    </p>
+
+                    <p data-aos="fade-up">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it tto make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+
+                    <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Read More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                  </div>
                 </div>
 
+                
+              </div>
+
+              <!-- ================= -->
+
+              <div class="carousel-item" style="height: auto;">
+                <div class="row">
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
+                  </div>
+
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                    <h1 class="sub_heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+                    <p data-aos="fade-up">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industr
+      y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into eletron
+      ic typesetting, remaining essentially unchanged. 
+                    </p>
+
+                    <p data-aos="fade-up">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it tto make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+
+                    <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Read More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= -->
+
+              <div class="carousel-item" style="height: auto;">
+                <div class="row">
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
+                  </div>
+
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                    <h1 class="sub_heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+                    <p data-aos="fade-up">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industr
+      y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into eletron
+      ic typesetting, remaining essentially unchanged. 
+                    </p>
+
+                    <p data-aos="fade-up">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it tto make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+
+                    <!-- arrow link -->
+                        <a class='animated-arrow' href=''>
+                        <span class='the-arrow -left'>
+                          <span class='shaft'></span>
+                        </span>
+                        <span class='main'>
+                          <span class='text'>
+                            Read More
+                          </span>
+                          <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                          </span>
+                        </span>
+                      </a>
+                      <!-- arrow link -->
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- news carousel -->
 
         </div>
 
+      </div>
+      <br>
     </div>
+    <!-- news section -->
 
-    <!-- featured project section -->
-    <div class="clearfix"></div>
-    <br>
-    <br>
-    <br>
+    <div class="w-100 d-none d-md-block"></div>
     <br>
 
-    <!-- newx section -->
-
+    <!-- sub news section -->
     <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-
-                <div class="row margin_auto">
-
-                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 visible-xs">
-                        <h1 class="heading" style="margin-top: 0px;">NEWS & UPDATES</h1>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 hidden-xs">
-                        <h1 class="heading">NEWS & UPDATES</h1>
-                        <br>
-                        <br>
-                        <div class="main_news_div white_bg_div" data-aos="fade-right">
-
-                            <h1>
-                               <?php echo $news[0]->vTitle; ?>
-                            </h1>
-                            <p style="color: #000000;">
-                                <?php echo substr($news[0]->tDescription,0,150).'..'; ?>
-                            </p>
-
-                            <div class="clearfix"></div>
-
-                            <!-- read more btn -->
-                            <div class="button">
-                                <a href="<?php echo base_url('news/').'news_detail/'.$news[0]->id; ?>" class="link" style="color: #000000;">Continue Reading</a>
-                            </div>
-                            <!-- read more btn -->
-
-                        </div>
-                    </div>
-
-                    <!-- news slider section -->
-                    <div class="col-lg-offset-5 col-lg-7 col-md-offset-5 col-md-7 col-sm-offset-6 col-sm-6 col-xs-12 main_news_slider_col">
-                        <div id="myCarouselmaheen" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <?php
-                                    $gallary_items = get_gallery_images($news[0]->id);
-                                ?>
-                            <ol class="carousel-indicators">
-                                <?php 
-                                    $count = 0;
-                                    $mm=0;
-                                    foreach($gallary_items as $gallary) { ?>
-                                
-                                
-                                <li data-target="#myCarouselmaheen" data-slide-to="<?php echo $mm; ?>" class="<?php if($count==0) { echo 'active'; } ?>"></li>
-                                <?php $count++; $mm++; } ?>
-                                
-                                
-                            </ol>
-                                
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <?php 
-                                    $count = 0;
-                                    foreach($gallary_items as $gallary) {
-                                        if($count == 0) {
-                                            $active = "active";
-                                        } else {
-                                            $active = "";
-                                        }
-                                ?>
-                                <div class="item <?php echo $active; ?>">
-                                    <img src="<?php echo base_url("front_img").'/'.$gallary->fImage; ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <?php $count++; } ?>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- news slider section -->
-
-                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 visible-xs">
-
-                        <div class="main_news_div" data-aos="fade-right">
-
-                            <h1>
-                                <?php echo $news[0]->vTitle; ?>
-                            </h1>
-                            <p style="color: #000000;">
-                                <?php echo substr($news[0]->tDescription,0,150); ?>
-                            </p>
-
-                            <div class="clearfix"></div>
-
-                            <!-- read more btn -->
-                            <div class="button">
-                                <a href="<?php echo base_url('news/').'news_detail/'.$news[0]->id; ?>" class="link" style="color: #000000;">Continue Reading</a>
-                            </div>
-                            <!-- read more btn -->
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 home_sub_news_main_col">
-
-                <?php foreach($latest_news as $news_latest) { ?>
-
-                    <a href="<?php echo base_url('news/').'news_detail/'.$news_latest->id; ?>">
-                        <div class="sub_news_col hover-underline-animation" data-aos="fade-up">
-                            <h1>
-                                <?php echo $news_latest->vTitle; ?>
-                            </h1>
-                            <p>
-                            <?php echo substr($news_latest->tDescription,0,150).'..'; ?>
-                            </p>
-                            <img src="<?php echo base_url("assets/frontend/images/arrow.png"); ?>" alt="" class="img-responsive pull-right sub_news_arrow">
-                        </div>
-                    </a>
-
-                <?php } ?>
-
-                <!-- read more btn -->
-                <div class="sub_news_col_btn">
-                    <div class="button">
-                        <a href="<?php echo base_url('news/view'); ?>" class="link">View All</a>
-                    </div>
-                </div>
-                <!-- read more btn -->
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- newx section -->
-
-    <div class="clearfix"></div>
-    <br>
-    <br>
-
-    <div class="clearfix"></div>
-
-    <!--=============================================-->
-    <!--=============================================-->
-
-    <!-- club section -->
-    <div class="row club_section margin_auto">
-
-        <div class="container">
-
-            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-
-                <div class="row">
-
-                    <div class="col-lg-6 col-md-7 col-sm-9 col-xs-12 club_intro_div white_bg_div">
-                        <h1 class="heading" style="color: #283897;" data-aos="fade-right">ELECTRICIAN CLUB</h1>
-                        <!--<a href="http://eclub.kelanicables.com/" target="_blank" class="btn btn-primary spec_btn" data-aos="fade-up">Login</a>-->
-                        <?php echo substr($electrician_club_content[0]->tDescription,0,140); ?>
-  
-                        <!-- read more btn -->
-
-                        <a href="http://eclub.kelanicables.com/" class="link" style="color: #000000;" target="_blank"><button class="btn btn-primary spec_btn" data-aos="fade-up">LOGIN</button></a>
-                        <a href="<?php echo base_url('electrician-club'); ?>" class="link" style="color: #000000;"><button class="btn btn-primary spec_btn" data-aos="fade-down">Discover More</button></a>
-                        <!--<a href="<?php echo base_url('electrician-club'); ?>">-->
-                        <!--    <div class="button" style="float: right;">-->
-                        <!--        <a href="<?php echo base_url('electrician-club'); ?>" class="link" style="color: #000000;">Discover More</a>-->
-                        <!--    </div>-->
-                        <!--</a>-->
-                        <!-- read more btn -->
-
-                        <!-- club elec -->
-                        <img src="<?php echo base_url("assets/frontend/images/club_elec.png"); ?>" alt="" class="img-responsive club_elec_img" data-aos="fade-down">
-                        <!-- club elec -->
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clearfix"></div>
-            <br>
-            <br>
-
-            <!-- banner section -->
+      
+      <div class="row">
+        
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+          <div class="news_div">
+            
             <div class="row">
-
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                    <img src="<?php echo base_url("front_img").'/'.$research_development[0]->fImage4; ?>" alt="" class="img-responsive center-block" data-aos="fade-up">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
                 </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <img src="<?php echo base_url("front_img").'/'.$research_development[0]->fImage5; ?>"` alt="" class="img-responsive center-block" data-aos="fade-down">
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                  <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                   <h1 class="sub_heading">Lorem Ipsum is simply dummy text Printing And Type</h1>
+                    <!-- arrow link -->
+                    <a class='animated-arrow' href=''>
+                    <span class='the-arrow -left'>
+                      <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                      <span class='text'>
+                        Read More
+                      </span>
+                      <span class='the-arrow -right'>
+                        <span class='shaft'></span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- arrow link -->
                 </div>
-
             </div>
-            <!-- banner section -->
 
+          </div>
+ 
         </div>
 
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
+          <div class="news_div">
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+            <h1 class="sub_heading">Lorem Ipsum is simply dummy text of the printing and type setting</h1>
+            <p data-aos="fade-up">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </p>
+            <!-- arrow link -->
+                <a class='animated-arrow' href=''>
+                <span class='the-arrow -left'>
+                  <span class='shaft'></span>
+                </span>
+                <span class='main'>
+                  <span class='text'>
+                    Read More
+                  </span>
+                  <span class='the-arrow -right'>
+                    <span class='shaft'></span>
+                  </span>
+                </span>
+              </a>
+              <!-- arrow link -->
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+          
+          <div class="news_div">
+            
+            <div class="row">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                  <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                   <h1 class="sub_heading">Lorem Ipsum is simply dummy text Printing And Type</h1>
+                    <!-- arrow link -->
+                    <a class='animated-arrow' href=''>
+                    <span class='the-arrow -left'>
+                      <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                      <span class='text'>
+                        Read More
+                      </span>
+                      <span class='the-arrow -right'>
+                        <span class='shaft'></span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- arrow link -->
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <div class="clearfix"></div>
+        <!-- ============================== -->
+
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+          <div class="news_div">
+            
+            <div class="row">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                  <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                   <h1 class="sub_heading">Lorem Ipsum is simply dummy text Printing And Type</h1>
+                    <!-- arrow link -->
+                    <a class='animated-arrow' href=''>
+                    <span class='the-arrow -left'>
+                      <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                      <span class='text'>
+                        Read More
+                      </span>
+                      <span class='the-arrow -right'>
+                        <span class='shaft'></span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- arrow link -->
+                </div>
+            </div>
+
+          </div>
+ 
+        </div>
+
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
+          <div class="news_div">
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+            <h1 class="sub_heading">Lorem Ipsum is simply dummy text of the printing and type setting</h1>
+            <p data-aos="fade-up">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </p>
+            <!-- arrow link -->
+                <a class='animated-arrow' href=''>
+                <span class='the-arrow -left'>
+                  <span class='shaft'></span>
+                </span>
+                <span class='main'>
+                  <span class='text'>
+                    Read More
+                  </span>
+                  <span class='the-arrow -right'>
+                    <span class='shaft'></span>
+                  </span>
+                </span>
+              </a>
+              <!-- arrow link -->
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+          
+          <div class="news_div">
+            
+            <div class="row">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                  <img src="<?php echo base_url("assets/frontend/"); ?>images/news01.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                  <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small>07-Feb-2022</small></p>
+                   <h1 class="sub_heading">Lorem Ipsum is simply dummy text Printing And Type</h1>
+                    <!-- arrow link -->
+                    <a class='animated-arrow' href=''>
+                    <span class='the-arrow -left'>
+                      <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                      <span class='text'>
+                        Read More
+                      </span>
+                      <span class='the-arrow -right'>
+                        <span class='shaft'></span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- arrow link -->
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
-    <!-- club section -->
+    <!-- sub news section -->
 
-<!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-        FB.init({
-        xfbml : true,
-        version : 'v10.0'
-        });
-        };
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat plugin code -->
-    <div class="fb-customerchat"
-    attribution="biz_inbox"
-    page_id="121948475106">
+        <div class="w-100 d-none d-md-block"></div>
+    <br>
+
+
+    <!-- shortcut links -->
+    <div class="container-fluid">
+      
+      <div class="row">
+        
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
+          <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url("assets/frontend/"); ?>images/bg_st_life.jpg);">
+            <h1 class="heading">STUDENT <br>LIFE</h1>
+            <p data-aos="fade-up">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </p>
+            <!-- arrow link -->
+              <a class='animated-arrow' href=''>
+              <span class='the-arrow -left'>
+                <span class='shaft'></span>
+              </span>
+              <span class='main'>
+                <span class='text'>
+                  Ecplore More
+                </span>
+                <span class='the-arrow -right'>
+                  <span class='shaft'></span>
+                </span>
+              </span>
+            </a>
+            <!-- arrow link -->
+          </div>
+        </div>
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
+          <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("assets/frontend/"); ?>images/lab_bg.jpg) !important; background-position:center top;"></div>
+
+           <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
+            <h1 class="heading">Our students create a vibrant and inclusive community</h1>
+            <p data-aos="fade-up">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </p>
+            <!-- arrow link -->
+              <a class='animated-arrow' href=''>
+              <span class='the-arrow -left'>
+                <span class='shaft'></span>
+              </span>
+              <span class='main'>
+                <span class='text'>
+                  Ecplore More
+                </span>
+                <span class='the-arrow -right'>
+                  <span class='shaft'></span>
+                </span>
+              </span>
+            </a>
+            <!-- arrow link -->
+          </div>
+        </div>
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
+          <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url("assets/frontend/"); ?>images/test_bg.jpg); background-position:center top;"></div>
+            <div class="short_link_div_text_div">
+              <h1 class="heading" style="text-transform: uppercase; color: #ffffff;">Lorem Ipsum is simply 
+dummy text of the printing 
+and typesetting industry</h1>
+            <p data-aos="fade-up" style="color: #ffffff;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </p>
+            </div>
+        </div>
+
+      </div>
+
     </div>
-
-<!-- Messenger Chat plugin Code -->
-
-
-        <!--=============================================-->
-    <!--===================body====================-->
-
-<script type="text/javascript">
-    $(document).ready(function() {
-
-        var language = $('#language').val();
-
-        if(language == "chinese" ) {
-
-            $('#titleChinese').show();
-            $('#desc_chinese').show();
-            $('#btnReadChinese').show();
-            $('#btnViewEngs').show();
-
-            $('#titleEng').hide();
-            $('#desc_eng').hide();
-            $('#btnReadEng').hide();
-            $('#btnViewChinese').hide();
-
-        } else {
-
-            $('#titleEng').show();
-            $('#desc_eng').show();
-            $('#btnReadEng').show();
-            $('#btnViewChinese').show();
-
-            $('#titleChinese').hide();
-            $('#desc_chinese').hide();
-            $('#btnReadChinese').hide();
-            $('#btnViewEngs').hide();
-        }
+    <!-- shortcut links -->
 
 
-        $('#btnViewChinese').on('click', function(){
-                $('#titleEng').hide();
-                $('#desc_eng').hide();
-                $('#btnReadEng').hide();
-                $('#btnViewChinese').hide();
-
-                $('#titleChinese').slideDown( 800 ).delay( 100 ).fadeIn( 400 ).show();
-                $('#desc_chinese').slideUp( 800 ).delay( 100 ).fadeIn( 400 ).show();
-                $('#btnReadChinese').slideUp( 800 ).delay( 100 ).fadeIn( 400 ).show();
-                $('#btnViewEngs').slideUp( 800 ).delay( 100 ).fadeIn( 400 ).show();
-        });
-
-        $('#btnViewEngs').on('click', function(){
-            $('#titleChinese').hide();
-            $('#desc_chinese').hide();
-            $('#btnReadChinese').hide();
-            $('#btnViewEngs').hide();
-
-            $('#titleEng').slideDown( 800 ).delay( 100 ).fadeIn( 400 ).show();
-            $('#desc_eng').slideUp( 800 ).delay( 100 ).fadeIn( 400 ).show();
-            $('#btnReadEng').slideUp( 800 ).delay( 100 ).fadeIn( 400 ).show();
-            $('#btnViewChinese').slideUp( 800 ).delay( 100 ).fadeIn( 400 ).show();
-
-
-        });
-    });
-</script>
+        <div class="w-100 d-none d-md-block"></div>
+    <br>
+    <br>
