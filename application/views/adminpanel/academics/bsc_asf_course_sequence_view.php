@@ -1,15 +1,19 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_adv_prog_structure[0]->id;  
-    $vName = $edit_adv_prog_structure[0]->vName; 
-    $vDepartment = $edit_adv_prog_structure[0]->vDepartment;  
-    $iOrder = $edit_adv_prog_structure[0]->iOrder;
-    $cEnable = $edit_adv_prog_structure[0]->cEnable;
+    $id = $edit_course_sequence[0]->id;  
+    $vSemester = $edit_course_sequence[0]->vSemester; 
+    $tNotation = $edit_course_sequence[0]->tNotation;  
+    $tCourse = $edit_course_sequence[0]->tCourse; 
+    $iCredit = $edit_course_sequence[0]->iCredit;  
+    $iOrder = $edit_course_sequence[0]->iOrder;
+    $cEnable = $edit_course_sequence[0]->cEnable;
 	
 } else {
     $id = "";      
-    $vName = "";  
-    $vDepartment = "";   
+    $vSemester = "";  
+    $tNotation = "";  
+    $tCourse = "";  
+    $iCredit = "";   
     $iOrder = "";  
     $cEnable = "Y";
 }
@@ -61,13 +65,13 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>The Structure of the Advanced Programmes</h2>
+                            <h2>Course Sequence</h2>
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">                           
                             <?php if($cSaveStatus == "E") { ?>
-                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/academics/agtech_advance_programme_structure'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Module</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/academics/bsc_asf_course_sequence'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Course Sequence</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } else { ?>
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Module</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Course Sequence</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -79,20 +83,20 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_adv_prog_structure" name="edit_adv_prog_structure" action="<?php echo base_url('adminpanel/academics/agtech_advance_programme_structure/save_adv_prog_structure'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_course_sequence" name="edit_course_sequence" action="<?php echo base_url('adminpanel/academics/bsc_asf_course_sequence/save_course_sequence'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             <div class="col-md-6 col-sm-6 col-xs-12">
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Name of the Module<span class="required">*</span></label>
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Semester<span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="number" id="vSemester" name="vSemester" value="<?php echo $vSemester; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Department<span class="required">*</span></label>
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Credit<span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vDepartment" name="vDepartment" value="<?php echo $vDepartment; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="number" id="iCredit" name="iCredit" value="<?php echo $iCredit; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
 
@@ -109,6 +113,30 @@ if ($cSaveStatus == "E") {
 
                             </div>
 
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Notation<span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <textarea rows="15" name="tNotation" id="tNotation" class="form-control col-md-7 col-xs-12" required><?php echo $tNotation; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tNotation); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Course and Credit Hours<span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <textarea rows="15" name="tCourse" id="tCourse" class="form-control col-md-7 col-xs-12" required><?php echo $tCourse; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tCourse); ?>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div style="clear:both;"></div>
                             <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
                             
@@ -119,7 +147,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/agtech_advance_programme_structure'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/bsc_asf_course_sequence'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -136,9 +164,10 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:50px;text-align:center;">No </th>
-                                    <th>Module Name </th>            
-                                    <th>Department </th>
-                                    <th>Courses</th>                            
+                                    <th>Semester </th>            
+                                    <th>Notation </th>    
+                                    <th>Courses and Credit Hours </th>       
+                                    <th>Credit </th>                   
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -172,19 +201,18 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vName;?></td>          
-                                            <td><?php echo $rowlist->vDepartment;?></td>    
-                                            <td class=" "><a href="<?php echo base_url() . "adminpanel/academics/agtech_adv_prog_course/add_course/$recordid" ?>" target="_blank">
-                                                <i class="fa fa-plus-circle"></i></a>
-                                            </td>                                  
+                                            <td><?php echo $rowlist->vSemester;?></td>          
+                                            <td><?php echo $rowlist->tNotation;?></td>  
+                                            <td><?php echo $rowlist->tCourse;?></td>     
+                                            <td><?php echo $rowlist->iCredit;?></td>                                      
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/academics/agtech_advance_programme_structure/edit_adv_prog_structure/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/academics/bsc_asf_course_sequence/edit_course_sequence/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/agtech_advance_programme_structure/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/bsc_asf_course_sequence/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/agtech_advance_programme_structure/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/academics/bsc_asf_course_sequence/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>
