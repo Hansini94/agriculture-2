@@ -1,30 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_undergraduate[0]->id;  
-	$iDegree = $edit_undergraduate[0]->iDegree;  
-	$iStudentType = $edit_undergraduate[0]->iStudentType;  
-	$vYear = $edit_undergraduate[0]->vYear;  
-    $vBatch = $edit_undergraduate[0]->vBatch;  
-    $iMale = $edit_undergraduate[0]->iMale;  
-    $iFemale = $edit_undergraduate[0]->iFemale;  
+	$iDegree = $edit_undergraduate[0]->iDegree;    
+    $tContent = $edit_undergraduate[0]->tContent; 
     $cEnable = $edit_undergraduate[0]->cEnable;
-    $id = $edit_undergraduate_conferred[0]->id;  
-	$iDegree = $edit_undergraduate_conferred[0]->iDegree;  
-	$iStudentType = $edit_undergraduate[0]->iStudentType;  
-	$vYear = $edit_undergraduate_conferred[0]->vYear;  
-    $vBatch = $edit_undergraduate_conferred[0]->vBatch;  
-    $iMale = $edit_undergraduate_conferred[0]->iMale;  
-    $iFemale = $edit_undergraduate_conferred[0]->iFemale;  
-    $cEnable = $edit_undergraduate_conferred[0]->cEnable;
 	
 } else {
     $id = "";    
 	$iDegree = "";  
-	$iStudentType = "";    
-    $vYear = "";  
-    $vBatch = "";  
-    $iMale = "";
-    $iFemale = "";
+    $tContent = "";  
     $cEnable = "Y";
 }
 ?>
@@ -96,7 +80,7 @@ if ($cSaveStatus == "E") {
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
+                <div class="x_panel">                    
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <h2>Faculty Statistics</h2>
@@ -106,166 +90,56 @@ if ($cSaveStatus == "E") {
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-
+                                
                     <div class="x_content" <?php
-                                            if ($cSaveStatus != "E") {
-                                                echo 'style="display:none;"';
-                                            }
-                                            ?>>
+                    if ($cSaveStatus != "E") {
+                        echo 'style="display:none;"';
+                    }
+                    ?>>
                         <br />
                         <form id="edit_meeting_schedule" name="edit_meeting_schedule" action="<?php echo base_url('adminpanel/about_us/undergraduate/save_undergraduate'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" id="iDegree" name="iDegree" value="<?php echo $iDegree; ?>" class="form-control col-md-7 col-xs-12" required>
 
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Degree <span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                        <input type="text" id="iDegree" name="iDegree" value="<?php echo $edit_undergraduate[0]->vName; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="text" id="iDegree" name="iDegree" value="<?php echo $edit_undergraduate[0]->vName; ?>" class="form-control col-md-7 col-xs-12" disabled>
                                     </div>
                                 </div>
-
-                                <?php if($edit_undergraduate[0]->iStudentType == 1) { ?>
-
-                                <div class="item form-group">
-                                    <!-- <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Student Type <span class="required">*</span></label> -->
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="hidden" id="iStudentType" name="iStudentType[]" value="<?php if($edit_undergraduate[0]->iStudentType == 1) { echo "Current"; } else { echo "Conferred"; } ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-
-                                <div class="row" style="padding-left: 50px;">
-                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Batch</label>
-                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Male</label>
-                                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="vProTitle">Female</label>
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
                                     </div>
-                            </div>
-                        
-                                <?php foreach($edit_undergraduate as $undergraduate) { ?>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="row" style="padding-left: 50px;"> 
-                                
-                                    <input type="hidden" id="id" name="id[]" value="<?php echo $undergraduate->id; ?>" class="form-control col-md-7 col-xs-12">
-
-                                    <label class="input">                                            
-                                        <input type="text" id="vBatch" name="vBatch[]" value="<?php echo $undergraduate->vBatch; ?>" class="form-control col-md-4 col-sm-3 col-xs-12" required>
-                                    </label>
-
-                                    <label class="input">
-                                        <input type="text" id="iMale" name="iMale[]" value="<?php echo $undergraduate->iMale; ?>" class="form-control col-md-4 col-sm-3 col-xs-12" required>
-                                    </label>
-
-                                    <label class="input">
-                                        <input type="text" id="Female" name="Female[]" value="<?php echo $undergraduate->iFemale; ?>" class="form-control col-md-4 col-sm-3 col-xs-12" required>
-                                    </label>
-
-                                    <!-- <div class="item form-group">
-                                        <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Batch <span class="required">*</span></label>
-                                        <div class="col-md-3 col-sm-7 col-xs-12">
-                                            <input type="text" id="vBatch" name="vBatch[]" value="<?php echo $undergraduate->vBatch; ?>" class="form-control col-md-4 col-xs-12" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="item form-group">
-                                        <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Male <span class="required">*</span></label>
-                                        <div class="col-md-3 col-sm-7 col-xs-12">
-                                            <input type="number" id="iMale" name="iMale[]" value="<?php echo $undergraduate->iMale; ?>" class="form-control col-md-4 col-xs-12" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="item form-group">
-                                        <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Female <span class="required">*</span></label>
-                                        <div class="col-md-3 col-sm-7 col-xs-12">
-                                            <input type="text" id="iFemale" name="iFemale[]" value="<?php echo $undergraduate->iFemale; ?>" class="form-control col-md-4 col-xs-12" required>
-                                        </div>
-                                    </div> -->
-
                                 </div>
-                                </div>
-
-                                <?php } } ?>
-
-                                <br /><br /><br />
-                                <div class="x_title">
-                                    <div class="col-md-9 col-sm-9 col-xs-9">
-                                        <h2>Conferred</h2>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                    <div class="item form-group">
-                                        <!-- <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Student Type <span class="required">*</span></label> -->
-                                        <div class="col-md-8 col-sm-7 col-xs-12">
-                                            <input type="hidden" id="iStudentType" name="iStudentType[]" value="<?php if($edit_undergraduate_conferred[0]->iStudentType == 1) { echo "Current"; } else { echo "Conferred"; } ?>" class="form-control col-md-7 col-xs-12" readon>
-                                        </div>
-                                    </div>
-
-                                    <div class="row" style="padding-left: 50px;">
-                                        <label class="control col-md-4 col-sm-3 col-xs-12" for="vProTitle">Batch</label>
-                                        <label class="control col-md-4 col-sm-3 col-xs-12" for="vProTitle">Male</label>
-                                        <label class="control col-md-4 col-sm-3 col-xs-12" for="vProTitle">Female</label>
-                                    </div>
-
-                                    
-
-                                    <?php 
-                                        if($edit_undergraduate_conferred[0]->iStudentType == 2) {
-                                    foreach($edit_undergraduate_conferred as $undergraduate) { ?>
-                                    <div class="row" style="padding-left: 50px;"> 
-                                    
-                                        <input type="hidden" id="id" name="id[]" value="<?php echo $undergraduate->id; ?>" class="form-control col-md-7 col-xs-12">
-
-                                        <label class="input">                                            
-                                            <input type="text" id="vBatch" name="vBatch[]" value="<?php echo $undergraduate->vBatch; ?>" class="form-control col-md-4 col-sm-3 col-xs-12" required>
-                                        </label>
-
-                                        <label class="input">
-                                            <input type="text" id="iMale" name="iMale[]" value="<?php echo $undergraduate->iMale; ?>" class="form-control col-md-4 col-sm-3 col-xs-12" required>
-                                        </label>
-
-                                        <label class="input">
-                                            <input type="text" id="Female" name="Female[]" value="<?php echo $undergraduate->iFemale; ?>" class="form-control col-md-4 col-sm-3 col-xs-12" required>
-                                        </label>
-
-
-                                        <!-- <div class="item form-group">
-                                            <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Batch <span class="required">*</span></label>
-                                            <div class="col-md-3 col-sm-7 col-xs-12">
-                                                <input type="text" id="vBatch" name="vBatch[]" value="<?php echo $undergraduate->vBatch; ?>" class="form-control col-md-4 col-xs-12" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="item form-group">
-                                            <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Male <span class="required">*</span></label>
-                                            <div class="col-md-3 col-sm-7 col-xs-12">
-                                                <input type="number" id="iMale" name="iMale[]" value="<?php echo $undergraduate->iMale; ?>" class="form-control col-md-4 col-xs-12" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="item form-group">
-                                            <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Female <span class="required">*</span></label>
-                                            <div class="col-md-3 col-sm-7 col-xs-12">
-                                                <input type="text" id="iFemale" name="iFemale[]" value="<?php echo $undergraduate->iFemale; ?>" class="form-control col-md-4 col-xs-12" required>
-                                            </div>
-                                        </div> -->
-
-                                    </div>
-
-                                <?php } } ?>
-                                </div>
-                        
-                          </div>
-
                             </div>
 
-                                
-                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="clear:both;"></div>
+                            <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
+                            
+                            <div class="form-group" style="margin-bottom:0px;">
+                                <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+
+                                    <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
+                                    <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
+                                    <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/about_us/undergraduate'); ?>';">Cancel</button>
+                                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel" style=" padding-top:0px;">
                     <div class="x_content">
                         <table id="example" class="table table-striped responsive-utilities jambo_table">
@@ -273,7 +147,7 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:50px;text-align:center;">No </th>
-                                    <th>Degree </th>                              
+                                    <th>Degree </th>                             
                                     <th style="width:80px; text-align:center">Edit </th>
                                 </tr>
                             </thead>
@@ -307,7 +181,7 @@ if ($cSaveStatus == "E") {
                                             <td><?php echo $rowlist->vName;?></td>   
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/about_us/undergraduate/edit_undergraduate/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
-                                            </td>
+                                            </td>                                            
                                         </tr>
                                         <?php
                                     }
@@ -315,27 +189,6 @@ if ($cSaveStatus == "E") {
                                 ?>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-                            
-
-                            <div style="clear:both;"></div>
-                            <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
-                            
-                            <div class="form-group" style="margin-bottom:0px;">
-                                <div class="col-md-12 col-sm-6 col-xs-12">
-                                    <!-- <input type="hidden" id="id" name="id" value="<?php echo $id; ?>"> -->
-
-                                    <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
-                                    <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
-                                    <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/about_us/meeting_schedule'); ?>';">Cancel</button>
-                                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
-
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>

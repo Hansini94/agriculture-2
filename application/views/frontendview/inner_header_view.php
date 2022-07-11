@@ -5,8 +5,10 @@
   <?php
     if (activate_menu('Home') == 'active') {
         $meta = get_meta('Home');
-    } else if (activate_menu('about-us') == 'active') {
-        $meta = get_meta('about-us');
+    } else if (activate_menu('about_us') == 'active') {
+        $meta = get_meta('about_us');
+    } else if (activate_menu('faculty_statistic_undergraduate') == 'active') {
+      $meta = get_meta('faculty_statistic_undergraduate');
     } else {
         $meta = get_meta('home');
     }
@@ -139,6 +141,7 @@
             </li>
              <li class="nav-item dropdown <?php
                                                 echo activate_menu('about_us');
+                                                echo activate_menu('faculty_statistic_undergraduate');
                                                  ?>">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 About Us
@@ -148,7 +151,7 @@
 
                 <li><a class="dropdown-item" href="#"> Faculty Statistics &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="fac_stats.html">Undergraduates </a></li>
+                    <li <?php echo activate_menu('faculty_statistic_undergraduate'); ?>><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
                     <li><a class="dropdown-item" href="ac_staff.html">Academic Staff</a></li>
 
                     <!-- <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>

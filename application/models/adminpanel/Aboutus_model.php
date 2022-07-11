@@ -215,7 +215,6 @@ class Aboutus_model extends CI_Model {
         $this->db->from('tbl_undergraduate');
         $this->db->join('tbl_degree', 'tbl_degree.id = tbl_undergraduate.iDegree');
         $this->db->where('tbl_undergraduate.iDegree', $id);
-        $this->db->where('tbl_undergraduate.iStudentType', 1);
         $query = $this->db->get();
     //    echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -224,66 +223,6 @@ class Aboutus_model extends CI_Model {
             return array();
         }
     }
-
-    public function get_edit_undergraduate_conferred($id) {
-
-        $this->db->select('tbl_undergraduate.*, tbl_degree.vName');
-        $this->db->from('tbl_undergraduate');
-        $this->db->join('tbl_degree', 'tbl_degree.id = tbl_undergraduate.iDegree');
-        $this->db->where('tbl_undergraduate.iDegree', $id);
-        $this->db->where('tbl_undergraduate.iStudentType', 2);
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-
-    public function update_undergraduate_data($table, $save_status)
-	{  
-		// $data = array(
-		// 	'vStoreName' => $this->input->post('vStoreName', TRUE),
-		// 	'vAddress' => $this->input->post('vAddress', TRUE),
-		// 	'vMapLink' => $this->input->post('vMapLink', TRUE),
-		// 	'vTele' => $this->input->post('vTele', TRUE),
-		// 	'vEmail' => $this->input->post('vTele', TRUE),
-		// 	'iOrder' => $this->input->post('iOrder', TRUE),
-		// 	'dSaveadte' => date('Y-m-d H:i:s'),
-		// 	'cEnable' => 'Y'
-		// );
-
-        $id = $this->input->post('id', TRUE);
-
-        $undCount = count($id);
-
-        for($i=0; $i<$undCount; $i++) {
-            $id = $_POST['id'][$i];
-            $data['vBatch'] = $_POST['vBatch'][$i];
-            $data['iMale'] = $_POST['iMale'][$i];
-            $data['iFemale'] = $_POST['iFemale'][$i];
-
-
-			$this->db->where('id', $id);
-            $query =  $this->db->update($table, $data);
-           
-        }
-
-        // print_r($this->db->last_query());      exit();
-
-        // for($i=0; )
-        $this->db->trans_complete();
-
-        if ($this->db->trans_status() === FALSE) {
-            return false;
-        } else {
-            return true;
-        }
-
-	//print_r($this->db->last_query());      exit();
-
-	}
 
     public function get_academic_staff_list() {
 
