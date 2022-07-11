@@ -91,6 +91,7 @@ if ($cSaveStatus == "E") {
                                         <input type="file" id="fImage" name="fImage">
                                     </div>
                                 </div>
+                                
                                 <?php if($fImage!=''){ ?>
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >&nbsp;</label>
@@ -99,26 +100,25 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
 								<?php } ?> 
-                               <div class="form-group">
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Caption </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                       <textarea id="vCaption" name="vCaption" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $vCaption; ?></textarea>
+                                       
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Display Order </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                
-                                <!-- <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Caption </label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                       <textarea id="vCaption" name="vCaption" class="form-control col-md-7 col-xs-12"><?php echo $vCaption; ?></textarea>
-                                       
-                                    </div>
-                                </div> -->
-                                
-                                
-                                
                                 
                             </div>
                             
@@ -191,7 +191,7 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/home_page/main_slider/edit_main_slider/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/main_slider/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/main_slider/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/main_slider/delete_record/$recordid" ?>" onclick="return confirm('Are you sure?')">
