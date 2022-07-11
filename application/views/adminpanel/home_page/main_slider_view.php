@@ -2,15 +2,19 @@
 if ($cSaveStatus == "E") {
     $id = $edit_main_slider[0]->id;    
     $fImage = $edit_main_slider[0]->fImage;
-    $iOrder = $edit_main_slider[0]->iOrder;
+    $vTitle = $edit_main_slider[0]->vTitle;
     $vCaption = $edit_main_slider[0]->vCaption;
+    $vUrl = $edit_main_slider[0]->vUrl;
+    $iOrder = $edit_main_slider[0]->iOrder;
     $cEnable = $edit_main_slider[0]->cEnable;
 	
 } else {
     $id = "";    
     $fImage = "";
-    $iOrder = "";
+    $vTitle = "";
     $vCaption ="";
+    $vUrl = "";
+    $iOrder = "";
     $cEnable = "Y";
 }
 ?>
@@ -100,7 +104,16 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
 								<?php } ?> 
+                                
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
 
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Caption Title </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
 
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Caption </label>
@@ -109,9 +122,14 @@ if ($cSaveStatus == "E") {
                                        
                                     </div>
                                 </div>
-                                
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Read More </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
+
 
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Display Order </label>
