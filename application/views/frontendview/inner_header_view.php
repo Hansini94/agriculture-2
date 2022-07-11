@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
+
+  <?php
+    if (activate_menu('Home') == 'active') {
+        $meta = get_meta('Home');
+    } else if (activate_menu('about-us') == 'active') {
+        $meta = get_meta('about-us');
+    } else {
+        $meta = get_meta('home');
+    }
+  ?>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -123,15 +134,17 @@
 
           <ul class="navbar-nav ms-auto second_nav_bar">
 
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-             <li class="nav-item dropdown">
+             <li class="nav-item dropdown <?php
+                                                echo activate_menu('about_us');
+                                                 ?>">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 About Us
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li class="<?php echo activate_menu('about_us'); ?>"><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">About Us</a></li>
 
                 <li><a class="dropdown-item" href="#"> Faculty Statistics &raquo; </a>
                    <ul class="submenu dropdown-menu">

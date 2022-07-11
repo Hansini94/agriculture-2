@@ -21,6 +21,7 @@ class Aboutus_model extends CI_Model {
     public function get_quick_links_list() {
 
         $this->db->from('tbl_quick_links');
+        $this->db->order_by('iOrder', 'ASC');
         $query = $this->db->get();
         //echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {

@@ -83,63 +83,8 @@ $route['default_controller'] = "home";
 $route['adminpanel'] = 'adminpanel/login';
 $route['login'] = 'adminpanel/login';
 
+$route['about-us'] = 'about_us';
 
-
-//$route['loginkasun'] = 'adminpanel/login';
-
-//$route['adminpanel/managedashboard/(:any)'] = 'adminpanel/addproperty';
-
-//$route['managedashboard'] = "adminpanel/login";
-
-//$route['master1/user1/update_user1/(:num)'] = "master/user/update_user/$1";
-
-$route['company-overview'] = 'Company_overview';
-$route['customer'] = 'Customer';
-$route['technology'] = 'Technology';
-$route['awards'] = 'Awards';
-$route['awards-and-achievements'] = 'Awards';
-$route['annual-reports'] = 'Annual_reports';
-$route['quarterly-reports'] = 'Quarterly_reports';
-$route['announcements'] = 'Announcements';
-$route['product-catalogue'] = 'Product_categories';
-$route['international-projects'] = 'Completed_projects';
-$route['international-projects/project-details/(:num)'] = 'Completed_projects/view_details';
-$route['local-projects'] = 'Ongoing_projects';
-$route['local-projects/project-details/(:num)'] = 'Ongoing_projects/project_details';
-$route['news/view/(:num)'] = 'News/view';
-$route['news/news_detail/(:num)'] = 'News/view_more';
-$route['csr/(:any)/(:num)'] = 'Csr/csr_detail';
-$route['quality-assuarance'] = 'Quality_assuarance';
-$route['research-development'] = 'Research_development';
-$route['electrician-club'] = 'Electrician_club';
-$route['technical-information'] = 'Technical_information';
-$route['certificates'] = 'Certificates';
-$route['video-gallery'] = 'Factory_tours';
-$route['contact-details'] = 'Contact_us';
-$route['distributors'] = 'Distributors';
-$route['quick-sales-contacts'] = 'Quick_sales_contacts';
-$route['technical-and-other'] = 'Technical_and_other';
-$route['sales-contacts'] = 'Sales_contacts';
-$route['export-contacts'] = 'Export_contacts';
-$route['search/search-result'] = 'Search/search_result';
-$route['search/search-result/(:num)'] = 'Search/search_result';
-
-$route['csr/(:num)'] = 'Csr';
-// $route['news/view/(:num)'] = 'News';
-$route['search-result/(:any)/(:num)'] = 'Search';
-$route['distributors/(:num)'] = 'Distributors';
-$route['distributors/filter/(:any)/(:num)'] = 'Distributors';
-$route['home/chinese'] = 'Home';
-$route['chinese'] = 'Home';
-$route['company-overview/chinese'] = 'Company_overview';
-$route['company-overview/chinese/(:num)'] = 'Company_overview';
-$route['products/(:any)'] = 'Products';
-$route['products/(:any)/(:num)'] = 'Products';
-$route['products/(:any)/(:any)/(:num)'] = 'Products/view_details';
-$route['products/(:any)/(:any)/(:num)/(:num)'] = 'Products/view_details';
-$route['quick-sales-contacts/(:num)'] = 'Quick_sales_contacts';
-$route['technical-and-other/(:num)'] = 'Technical_and_other';
-$route['sales-contacts/(:num)'] = 'Sales_contacts';
 $route['404_override'] = '';
 
 

@@ -98,7 +98,7 @@ if ($cSaveStatus == "E") {
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="item form-group">                                    
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="first-name" >Image<br>(800*1200)
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="first-name" >Logo (200*100px)
                                     </label>
                                     <div class="col-md-8 col-sm-7 col-xs-12" style="padding-top:8px;">
                                         <input type="file" id="fImage" name="fImage"<?php

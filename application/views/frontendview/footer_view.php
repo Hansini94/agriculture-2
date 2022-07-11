@@ -1,34 +1,34 @@
-     <!-- logo slider  -->
-     <div class="container" data-aos="fade-down">
-        <h1 class="heading">Quick Links</h1>
-        <h1 class="sub_heading">Website links for our partner websites</h1>
-      <div class="slider">
-                <div class="owl-carousel">
-                    <div class="slider-card">
-                        <div class="d-flex justify-content-center align-items-center mb-4">
-                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo01.jpg" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="slider-card">
-                        <div class="d-flex justify-content-center align-items-center mb-4">
-                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo02.jpg" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="slider-card">
-                        <div class="d-flex justify-content-center align-items-center mb-4">
-                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo03.jpg" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="slider-card">
-                        <div class="d-flex justify-content-center align-items-center mb-4">
-                              <img src="<?php echo base_url("assets/frontend/"); ?>images/logo04.jpg" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- logo slider  -->
+<div class="container" data-aos="fade-down">
+  <h1 class="heading">Quick Links</h1>
+  <h1 class="sub_heading">Website links for our partner websites</h1>
+  <div class="slider">
+    <div class="owl-carousel">
+      <div class="slider-card">
+          <div class="d-flex justify-content-center align-items-center mb-4">
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo01.jpg" class="img-fluid">
+          </div>
+      </div>
+      <div class="slider-card">
+          <div class="d-flex justify-content-center align-items-center mb-4">
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo02.jpg" class="img-fluid">
+          </div>
+      </div>
+      <div class="slider-card">
+          <div class="d-flex justify-content-center align-items-center mb-4">
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo03.jpg" class="img-fluid">
+          </div>
+      </div>
+      <div class="slider-card">
+          <div class="d-flex justify-content-center align-items-center mb-4">
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo04.jpg" class="img-fluid">
+          </div>
+      </div>
+    </div>
   </div>
+</div>
 
-    <!-- logo slider -->
+<!-- logo slider -->
 
 
       <!--=============================================-->
