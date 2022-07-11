@@ -2,20 +2,26 @@
 if ($cSaveStatus == "E") {
     $id = $aboutus_data[0]->id;
     $vMissionTitle = $aboutus_data[0]->vMissionTitle;
+    $fMissionIcon = $aboutus_data[0]->fMissionIcon;
     $tMissionDes = $aboutus_data[0]->tMissionDes;
     $vVisionTitle = $aboutus_data[0]->vVisionTitle;
+    $fVisionIcon = $aboutus_data[0]->fVisionIcon;
     $tVisionDes = $aboutus_data[0]->tVisionDes;
     $vName = $aboutus_data[0]->vName;
+    $fDeanImg = $aboutus_data[0]->fDeanImg;
     $tDeanDetails = $aboutus_data[0]->tDeanDetails;
     $tDeanMsg = $aboutus_data[0]->tDeanMsg;
     $cEnable = $aboutus_data[0]->cEnable;
 } else {
     $id = '';
     $vMissionTitle = '';
+    $fMissionIcon = '';
     $tMissionDes = '';
     $vVisionTitle = '';
+    $fVisionIcon = '';
     $tVisionDes = "";
     $vName = "";
+    $fDeanImg = "";
     $tDeanDetails= "";
     $tDeanMsg = "";
     $cEnable = '';
@@ -113,6 +119,25 @@ if ($cSaveStatus == "E") {
                                 </div>
                             </div>
 
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Mission Icon<br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fMissionIcon" name="fMissionIcon" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fMissionIcon!=''){ ?>                                
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
+                                        <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fMissionIcon;?>" style="height:75px;"   />
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Mission Content<span class="required">*</span></label>
@@ -125,9 +150,38 @@ if ($cSaveStatus == "E") {
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Shared Values<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Shared Values (Heading)<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
                                        <input type="text" id="vVisionTitle" name="vVisionTitle" value="<?php echo $vVisionTitle; ?>" class="form-control col-md-7 col-xs-12" required>  
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Shared Values Icon<br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fVisionIcon" name="fVisionIcon" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fVisionIcon!=''){ ?>                                
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
+                                        <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fVisionIcon;?>" style="height:75px;"   />
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Shared Value Content<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="6" name="tVisionDes" id="tVisionDes" class="form-control col-md-7 col-xs-12" required><?php echo $tVisionDes; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tVisionDes); ?>
                                     </div>
                                 </div>
                             </div>
@@ -141,22 +195,31 @@ if ($cSaveStatus == "E") {
                                 </div>
                             </div>
 
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Dean's Image (500*500px)<br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fDeanImg" name="fDeanImg" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fDeanImg!=''){ ?>                                
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
+                                        <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fDeanImg;?>" style="height:75px;"   />
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Dean's Details<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="6" name="tDeanDetails" id="tDeanDetails" class="form-control col-md-7 col-xs-12" required><?php echo $tDeanDetails; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tDeanDetails); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Shared Value Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="6" name="tVisionDes" id="tVisionDes" class="form-control col-md-7 col-xs-12" required><?php echo $tVisionDes; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tVisionDes); ?>
                                     </div>
                                 </div>
                             </div>
