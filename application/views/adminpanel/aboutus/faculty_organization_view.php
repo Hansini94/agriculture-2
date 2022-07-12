@@ -1,13 +1,13 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $faculty_org_data[0]->id;
-    $vMap = $faculty_org_data[0]->vMap;
+    $fMap = $faculty_org_data[0]->fMap;
     $tSubComContent = $faculty_org_data[0]->tSubComContent;
     $tOtheruniContent = $faculty_org_data[0]->tOtheruniContent;
     $cEnable = $faculty_org_data[0]->cEnable;
 } else {
     $id = '';
-    $vMap = '';
+    $fMap = '';
     $tSubComContent = '';
     $tOtheruniContent = '';
     $cEnable = '';
@@ -102,15 +102,15 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Map<br>
                                     </label>
                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="vMap" name="vMap" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                        <input type="file" id="fMap" name="fMap" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
                                     </div>                                    
                                 </div>  
 
                                 <div class="form-group">
-                                    <?php if($vMap!=''){ ?>                                
+                                    <?php if($fMap!=''){ ?>                                
                                         <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
                                         <div class="col-md-5 col-sm-5 col-xs-12">
-                                            <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$vMap;?>" style="height:75px;"   />
+                                            <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fMap;?>" style="height:75px;"   />
                                         </div>
                                     <?php } ?>
                                 </div>
