@@ -9,7 +9,7 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="<?php echo base_url('about-us'); ?>">About Us</a></li>
-                <li class="breadcrumb-item"><a href="<?php echo base_url('faculty-statistic-undergraduate'); ?>">Faculty Statistics</a></li>t
+                <li class="breadcrumb-item"><a href="<?php echo base_url('faculty-statistic-undergraduate'); ?>">Faculty Statistics</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Undergraduate</b></li>
               </ol>
             </nav>

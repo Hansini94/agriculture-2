@@ -28,6 +28,28 @@ class About_us_model extends CI_Model {
         }
     }
 
+    public function get_faculty_stat_aca_staff_data() {
+        $this->db->from('tbl_academic_staff');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_faculty_stat_non_aca_staff_data() {
+        $this->db->from('tbl_non_academic_staff');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
     #################################################	
 }
 

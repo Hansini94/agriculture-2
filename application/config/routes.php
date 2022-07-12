@@ -85,6 +85,7 @@ $route['login'] = 'adminpanel/login';
 
 $route['about-us'] = 'about_us';
 $route['faculty-statistic-undergraduate'] = 'faculty_statistic_undergraduate';
+$route['faculty-statistic-academic-staff'] = 'faculty_statistic_academic_staff';
 
 
 $route['404_override'] = '';

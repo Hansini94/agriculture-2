@@ -224,9 +224,10 @@ class Aboutus_model extends CI_Model {
         }
     }
 
-    public function get_academic_staff_list() {
+    public function get_academic_staff_data() {
 
         $this->db->from('tbl_academic_staff');
+        $this->db->where('id', 1);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -236,35 +237,10 @@ class Aboutus_model extends CI_Model {
         }
     }
 
-    public function get_edit_academic_staff($id) {
-
-        $this->db->from('tbl_academic_staff');
-        $this->db->where('id', $id);
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-
-    public function get_non_academic_staff_list() {
+    public function get_non_academic_staff_data() {
 
         $this->db->from('tbl_non_academic_staff');
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-
-    public function get_edit_non_academic_staff($id) {
-
-        $this->db->from('tbl_non_academic_staff');
-        $this->db->where('id', $id);
+        $this->db->where('id', 1);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
