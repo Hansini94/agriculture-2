@@ -230,7 +230,7 @@ if ($cSaveStatus == "E") {
                                             $designation = "Senior Staff Assistant";
                                         } else if($rowlist->iDesignation == 5) {
                                             $designation = "Staff Assistant";
-                                        } else if($rowlist->iDesignation == 5) {
+                                        } else if($rowlist->iDesignation == 6) {
                                             $designation = "CAA";
                                         } else {
                                             $designation = "AV Technical Officer";

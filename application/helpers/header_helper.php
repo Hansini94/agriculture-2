@@ -48,19 +48,6 @@ if (!function_exists('get_top_banner_tbl')) {
 
 }
 
-if (!function_exists('get_slider')) {
-
-    function get_slider($iFacilityID) {
-
-        $ci = & get_instance();
-        $ci->load->database();
-        $sql = " SELECT * FROM tbl_theater_facilities_images where iFacilityID='$iFacilityID' ";
-        $q = $ci->db->query($sql);
-        return $q->result();
-    }
-
-}
-
 if (!function_exists('get_contact')) {
 
     function get_contact() {
@@ -74,17 +61,21 @@ if (!function_exists('get_contact')) {
 
 }
 
-if (!function_exists('load_home_detail')) {
+/************************AYODHYA****************************** */
 
-    function load_home_detail() {
+if (!function_exists('get_dean_officers')) {
+
+    function get_dean_officers($designation) {
+
         $ci = & get_instance();
         $ci->load->database();
-        $sql = " SELECT * FROM tbl_home_detail where id='1' ";
+        $sql = " SELECT * FROM tbl_dean_office_officer WHERE iDesignation = $designation ";
         $q = $ci->db->query($sql);
-        return $q->row();
+        return $q->result();
     }
 
 }
+
 
 //}
 ?>

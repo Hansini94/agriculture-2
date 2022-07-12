@@ -50,6 +50,40 @@ class About_us_model extends CI_Model {
         }
     }
 
+    public function get_dean_office_data() {
+        $this->db->from('tbl_dean_office');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_dean_officer_designation_data() {
+        $this->db->from('tbl_dean_office_officer');
+        $this->db->group_by('iDesignation');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_dean_office_officer_data() {
+        $this->db->from('tbl_dean_office_officer');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
     #################################################	
 }
 

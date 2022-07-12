@@ -11,6 +11,8 @@
       $meta = get_meta('faculty_statistic_undergraduate');
     } else if (activate_menu('faculty_statistic_academic_staff') == 'active') {
       $meta = get_meta('faculty_statistic_academic_staff');
+    } else if (activate_menu('Dean_office') == 'active') {
+      $meta = get_meta('Dean_office');
     } else {
         $meta = get_meta('home');
     }
@@ -145,6 +147,7 @@
                                                 echo activate_menu('about_us');
                                                 echo activate_menu('faculty_statistic_undergraduate');
                                                 echo activate_menu('faculty_statistic_academic_staff');
+                                                echo activate_menu('Dean_office');
                                                  ?>">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 About Us
@@ -167,7 +170,7 @@
                  </ul>
                 </li>
 
-                <li><a class="dropdown-item" href="dean_office.html">Dean’s Office</a></li>
+                <li class="<?php echo activate_menu('Dean_office'); ?>"><a class="dropdown-item" href="<?php echo base_url('dean-office') ?>">Dean’s Office</a></li>
                 <li><a class="dropdown-item" href="fac_board.html">Faculty Board</a></li>
                 <li><a class="dropdown-item" href="history.html">History</a></li>
                 <li><a class="dropdown-item" href="fac_org.html">Faculty Organization</a></li>
