@@ -88,6 +88,7 @@ $route['faculty-statistic-undergraduate'] = 'Faculty_statistic_undergraduate';
 $route['faculty-statistic-academic-staff'] = 'Faculty_statistic_academic_staff';
 $route['dean-office'] = 'Dean_office';
 $route['faculty-board'] = 'Faculty_board';
+$route['history'] = 'History';
 
 
 $route['404_override'] = '';

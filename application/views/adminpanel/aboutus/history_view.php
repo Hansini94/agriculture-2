@@ -3,11 +3,13 @@ if ($cSaveStatus == "E") {
     $id = $history_data[0]->id;
     $vTitle = $history_data[0]->vTitle;
     $tContent = $history_data[0]->tContent;
+    $fImage = $history_data[0]->fImage;
     $cEnable = $history_data[0]->cEnable;
 } else {
     $id = '';
     $vTitle = '';
     $tContent = '';
+    $fImage = '';
     $cEnable = '';
 }
 ?>
@@ -110,6 +112,25 @@ if ($cSaveStatus == "E") {
                                         <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent); ?>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image (1200*800px)<br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fImage" name="fImage" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fImage!=''){ ?>                                
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
+                                        <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage;?>" style="height:75px;"   />
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         

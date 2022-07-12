@@ -15,6 +15,8 @@
       $meta = get_meta('Dean_office');
     } else if (activate_menu('Faculty_board') == 'active') {
       $meta = get_meta('Faculty_board');
+    } else if (activate_menu('History') == 'active') {
+      $meta = get_meta('History');
     } else {
         $meta = get_meta('home');
     }
@@ -175,7 +177,7 @@
 
                 <li class="<?php echo activate_menu('Dean_office'); ?>"><a class="dropdown-item" href="<?php echo base_url('dean-office') ?>">Dean’s Office</a></li>
                 <li class="<?php echo activate_menu('Faculty_board'); ?>"><a class="dropdown-item" href="<?php echo base_url('faculty-board') ?>">Faculty Board</a></li>
-                <li><a class="dropdown-item" href="history.html">History</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('history'); ?>">History</a></li>
                 <li><a class="dropdown-item" href="fac_org.html">Faculty Organization</a></li>
                 <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
                 <li><a class="dropdown-item" href="map.html">Map & direction </a></li>
