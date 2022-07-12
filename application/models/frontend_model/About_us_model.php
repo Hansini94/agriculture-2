@@ -122,6 +122,44 @@ class About_us_model extends CI_Model {
         }
     }
 
+    public function get_faculty_brochure_data() {
+        $this->db->from('tbl_faculty_brochure');
+        $this->db->where('id', 1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_faculty_brochure_top_img() {
+        $this->db->from('tbl_brochure_images');
+        $this->db->where('iPosition', 1);
+        $this->db->order_by('iOrder', 'ASC');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_faculty_brochure_bottom_img() {
+        $this->db->from('tbl_brochure_images');
+        $this->db->where('iPosition', 2);
+        $this->db->order_by('iOrder', 'ASC');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
     // public function get_dean_officer_designation_data() {
     //     $this->db->from('tbl_dean_office_officer');
     //     $this->db->group_by('iDesignation');

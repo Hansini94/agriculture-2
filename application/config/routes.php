@@ -90,6 +90,7 @@ $route['dean-office'] = 'Dean_office';
 $route['faculty-board'] = 'Faculty_board';
 $route['history'] = 'History';
 $route['faculty-organization'] = 'Faculty_organization';
+$route['faculty-brochure'] = 'Faculty_brochure';
 
 
 $route['404_override'] = '';

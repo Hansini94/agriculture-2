@@ -179,7 +179,7 @@
                 <li class="<?php echo activate_menu('Faculty_board'); ?>"><a class="dropdown-item" href="<?php echo base_url('faculty-board') ?>">Faculty Board</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('history'); ?>">History</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('faculty-organization'); ?>">Faculty Organization</a></li>
-                <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('faculty-brochure'); ?>">Faculty Brochures</a></li>
                 <li><a class="dropdown-item" href="map.html">Map & direction </a></li>
 
               </ul>
