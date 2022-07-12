@@ -85,46 +85,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <?php 
-                            for($i=0; $i<count($dean_designation_data); $i++) { 
-                                if($dean_designation_data[$i]->iDesignation == 1) {
-                                    $designation = "Dean";
-                                } else if($dean_designation_data[$i]->iDesignation == 2) {
-                                    $designation = "Assistant Registrar";
-                                } else if($dean_designation_data[$i]->iDesignation == 3) {
-                                    $designation = "Assistant Bursar";
-                                } else if($dean_designation_data[$i]->iDesignation == 4) {
-                                    $designation = "Senior Staff Assistant";
-                                } else if($dean_designation_data[$i]->iDesignation == 5) {
-                                    $designation = "Staff Assistant";
-                                } else if($dean_designation_data[$i]->iDesignation == 6) {
-                                    $designation = "CAA";
-                                } else {
-                                    $designation = "AV Technical Officer";
-                                }
-
-                                $officerlist = get_dean_officers($dean_designation_data[$i]->iDesignation);
-
-                                for($c=0; $c<count($officerlist); $c++) {
-
-                        ?>
-                        <tr>
-                            <th scope="row">
-                                <figcaption class="blockquote-footer">
-                                <?php echo $designation; ?>
-                                </figcaption>
-                                <p><?php echo $officerlist[$c]->vTitle.' '.$officerlist[$c]->vName; ?></p>
-                            </th>
-                            <td>
-                            <p><a href="tel: 0812395010">0812395010 (O)</a></p>
-                            <p><a href="tel: 0714933591">0714933591 (M)</a></p>
-                            </td>
-                            <td>
-                            <p><a href="mailto: deanagri@pdn.ac.lk">deanagri@pdn.ac.lk</a></p>
-                            <p><a href="mailto: ngpkumara63@gmail.com">ngpkumara63@gmail.com</a></p>
-                            </td>
-                        </tr>
-                        <?php } } ?>
+                        
                     </tbody>
                   </table> -->
                 </div>

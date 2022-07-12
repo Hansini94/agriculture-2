@@ -1,20 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_meeting_schedule[0]->id;  
-	$vYear = $edit_meeting_schedule[0]->vYear ;  
-	$vMonth = $edit_meeting_schedule[0]->vMonth;  
-	$vMeetingNo = $edit_meeting_schedule[0]->vMeetingNo;  
-    $dDate = $edit_meeting_schedule[0]->dDate;  
-    $vStatus = $edit_meeting_schedule[0]->vStatus;  
+	$vTitle = $edit_meeting_schedule[0]->vTitle ;  
+	$vUrl = $edit_meeting_schedule[0]->vUrl;    
     $cEnable = $edit_meeting_schedule[0]->cEnable;
 	
 } else {
     $id = "";    
-	$vYear = "";  
-	$vMonth = "";    
-    $vMeetingNo = "";  
-    $dDate = "";  
-    $vStatus = "";
+	$vTitle = "";  
+	$vUrl = "";    
     $cEnable = "Y";
 }
 ?>
@@ -69,9 +63,9 @@ if ($cSaveStatus == "E") {
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">
                             <?php if($cSaveStatus == "E") { ?>
-                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/about_us/meeting_schedule'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Meeting</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/about_us/meeting_schedule'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Meeting Schedule</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } else { ?>
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Meeting</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Meeting Schedule</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -88,64 +82,23 @@ if ($cSaveStatus == "E") {
                             <div class="col-md-6 col-sm-6 col-xs-12">
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Year <span class="required">*</span></label>
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Title <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vYear" name="vYear" value="<?php echo $vYear; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
 
-                                <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Month <span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <select name="vMonth" id="vMonth" class="form-control" required>
-                                            <option value="">Select a Month</option>
-                                            <option value="January" <?php if($vMonth == "January") { ?> selected <?php } ?>>January</option>
-                                            <option value="February" <?php if($vMonth == "February") { ?> selected <?php } ?>>February</option>
-                                            <option value="March" <?php if($vMonth == "March") { ?> selected <?php } ?>>March</option>
-                                            <option value="April" <?php if($vMonth == "April") { ?> selected <?php } ?>>April</option>
-                                            <option value="May" <?php if($vMonth == "May") { ?> selected <?php } ?>>May</option>
-                                            <option value="June" <?php if($vMonth == "June") { ?> selected <?php } ?>>June</option>
-                                            <option value="July" <?php if($vMonth == "July") { ?> selected <?php } ?>>July</option>
-                                            <option value="August" <?php if($vMonth == "August") { ?> selected <?php } ?>>August</option>
-                                            <option value="September" <?php if($vMonth == "September") { ?> selected <?php } ?>>September</option>
-                                            <option value="October" <?php if($vMonth == "October") { ?> selected <?php } ?>>October</option>
-                                            <option value="November" <?php if($vMonth == "November") { ?> selected <?php } ?>>November</option>
-                                            <option value="December" <?php if($vMonth == "December") { ?> selected <?php } ?>>December</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Meeting No.<span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vMeetingNo" name="vMeetingNo" value="<?php echo $vMeetingNo; ?>" class="form-control col-md-7 col-xs-12" required>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="first-name" >Date<span class="required">*</span></label>
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <!-- <div class="control-group">
-                                            <div class="controls"> -->
-                                                <div class="col-md-11 xdisplay_inputx  has-feedback" style="padding-left:0px; padding-right:0px;">
-                                                    <input type="text" required class="form-control has-feedback-left" id="dDate"  name="dDate" placeholder="Date" aria-describedby="inputSuccess2Status" value="<?php echo $dDate ?>" autocomplete="off" required>
-                                                    <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-                                                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                                </div>
-                                            <!-- </div>
-                                        </div> -->
+                                        <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
 
-                                <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Status</label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <textarea class="form-control col-md-7 col-xs-12" rows="5" name="vStatus"><?php echo $vStatus; ?></textarea>
-                                    </div>
-                                </div>
                             </div>
 
                             <div style="clear:both;"></div>
@@ -174,11 +127,8 @@ if ($cSaveStatus == "E") {
                             <thead>
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
-                                    <th style="width:50px;text-align:center;">No </th>
-                                    <th>Year </th>      
-                                    <th>Month </th> 
-                                    <th>Meeting No</th>       
-                                    <th>Date</th>                           
+                                    <th style="width:100px;text-align:center;">No </th>
+                                    <th>Title </th>                                
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
                                     <th style="width:80px; text-align:center">Delete </th>
@@ -211,10 +161,7 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vYear;?></td> 
-                                            <td><?php echo $rowlist->vMonth;?></td>                                            
-                                            <td><?php echo $rowlist->vMeetingNo;?></td>   
-                                            <td><?php echo $rowlist->dDate;?></td>   
+                                            <td><?php echo $rowlist->vTitle;?></td> 
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/about_us/meeting_schedule/edit_meeting_schedule/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>

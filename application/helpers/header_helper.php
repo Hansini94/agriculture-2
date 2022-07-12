@@ -61,21 +61,5 @@ if (!function_exists('get_contact')) {
 
 }
 
-/************************AYODHYA****************************** */
-
-if (!function_exists('get_dean_officers')) {
-
-    function get_dean_officers($designation) {
-
-        $ci = & get_instance();
-        $ci->load->database();
-        $sql = " SELECT * FROM tbl_dean_office_officer WHERE iDesignation = $designation ";
-        $q = $ci->db->query($sql);
-        return $q->result();
-    }
-
-}
-
-
 //}
 ?>

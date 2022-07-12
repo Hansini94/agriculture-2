@@ -61,9 +61,8 @@ class About_us_model extends CI_Model {
         }
     }
 
-    public function get_dean_officer_designation_data() {
-        $this->db->from('tbl_dean_office_officer');
-        $this->db->group_by('iDesignation');
+    public function get_faculty_board_data() {
+        $this->db->from('tbl_faculty_board');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -73,8 +72,10 @@ class About_us_model extends CI_Model {
         }
     }
 
-    public function get_dean_office_officer_data() {
-        $this->db->from('tbl_dean_office_officer');
+    public function get_meeting_schedule_data() {
+        $this->db->from('tbl_meeting_schedule');
+        $this->db->order_by('id', 'DESC');
+        $this->db->limit(4);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -83,6 +84,29 @@ class About_us_model extends CI_Model {
             return array();
         }
     }
+
+    // public function get_dean_officer_designation_data() {
+    //     $this->db->from('tbl_dean_office_officer');
+    //     $this->db->group_by('iDesignation');
+    //     $result = $this->db->get();
+    //     //echo $this->db->last_query();  exit();  
+    //     if ($result->num_rows() > 0) {
+    //         return $result->result();
+    //     } else {
+    //         return array();
+    //     }
+    // }
+
+    // public function get_dean_office_officer_data() {
+    //     $this->db->from('tbl_dean_office_officer');
+    //     $result = $this->db->get();
+    //     //echo $this->db->last_query();  exit();  
+    //     if ($result->num_rows() > 0) {
+    //         return $result->result();
+    //     } else {
+    //         return array();
+    //     }
+    // }
 
     #################################################	
 }
