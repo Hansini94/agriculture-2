@@ -305,7 +305,7 @@ class Common_model extends CI_Model {
 
         $field_name = $field;
         $config['upload_path'] = $path;
-        $config['allowed_types'] = 'gif|jpg|png|pdf|doc|docs|mp3|wav|ogg|mp4';
+        $config['allowed_types'] = 'gif|jpg|png|pdf|doc|docs|mp3|wav|ogg|mp4|docx';
 
         $config['max_size'] = '99999999900000000';
 
