@@ -183,8 +183,8 @@ if ($cSaveStatus == "E") {
                                     <th style="width:8%; text-align:center">Order</th>                       
                                     <th style="width:8%; text-align:center">Edit </th>
                                     <th style="width:8%; text-align:center">Status </th>
-                                    <th style="width:8%; text-align:center">Slider </th>
-                                    <th style="width:8%; text-align:center">Featured </th>
+                                    <!-- <th style="width:8%; text-align:center">Slider </th> -->
+                                    <!-- <th style="width:8%; text-align:center">Featured </th> -->
                                     <th style="width:8%; text-align:center">Delete </th>
                                 </tr>
                             </thead>
@@ -205,8 +205,8 @@ if ($cSaveStatus == "E") {
 
                                         $recordid = $rowlist->id;
                                         $cEnable = $rowlist->cEnable;
-                                        $cFeatured = $rowlist->cFeatured;
-                                        $cSlider = $rowlist->cSlider;
+                                        // $cFeatured = $rowlist->cFeatured;
+                                        // $cSlider = $rowlist->cSlider;
                                         if ($cEnable == 'Y') {
                                             $clicon = 'fa fa-check';
                                         } else {
@@ -226,7 +226,7 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/news_updates/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td style="text-align:center; vertical-align: middle;">
+                                            <!-- <td style="text-align:center; vertical-align: middle;">
                                                 <div style="margin-top: 0px;">
                                                     <label class="switch" for="slider_<?php echo $recordid; ?>"> 
                                                         <input type="checkbox" id="slider_<?php echo $recordid; ?>"  <?php if ($cSlider == 'Y') {echo 'checked="checked"';} ?>>
@@ -244,8 +244,8 @@ if ($cSaveStatus == "E") {
                                                     });
 
                                                 </script>
-                                            </td>
-                                            <td style="text-align:center; vertical-align: middle;">
+                                            </td> -->
+                                            <!-- <td style="text-align:center; vertical-align: middle;">
                                                 <div style="margin-top: 0px;">
                                                     <label class="switch" for="featured_<?php echo $recordid; ?>"> 
                                                         <input type="checkbox" id="featured_<?php echo $recordid; ?>"  <?php if ($cFeatured == 'Y') {echo 'checked="checked"';} ?>>
@@ -263,7 +263,7 @@ if ($cSaveStatus == "E") {
                                                     });
 
                                                 </script>
-                                            </td>
+                                            </td> -->
                                             <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/news_updates/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
