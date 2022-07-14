@@ -13,14 +13,12 @@ if ($cSaveStatus == "E") {
     $tContent4 = $introduction_data[0]->tContent4;
     $vSubHeading5 = $introduction_data[0]->vSubHeading5;
     $tContent5 = $introduction_data[0]->tContent5;
-    $vSubHeading6 = $introduction_data[0]->vSubHeading6;
     $tContent6 = $introduction_data[0]->tContent6;
-    $vOutlineHeading = $introduction_data[0]->vOutlineHeading;
-    $tOutlineSpeNotice = $introduction_data[0]->tOutlineSpeNotice;
+    $tDegreeOutline = $introduction_data[0]->tDegreeOutline;
     $vSubHeading7 = $introduction_data[0]->vSubHeading7;
     $tContent7 = $introduction_data[0]->tContent7;
-    $vCourseSeqHeading = $introduction_data[0]->vCourseSeqHeading;
-    $tCourseSpeNotice = $introduction_data[0]->tCourseSpeNotice;
+    $tCourseSequence = $introduction_data[0]->tCourseSequence;
+    $tCalendarDate = $introduction_data[0]->tCalendarDate;
     $fPdf = $introduction_data[0]->fPdf;
     $cEnable = $introduction_data[0]->cEnable;
 } else {
@@ -37,14 +35,12 @@ if ($cSaveStatus == "E") {
     $tContent4 = '';
     $vSubHeading5 = '';
     $tContent5 = '';
-    $vSubHeading6 = '';
     $tContent6 = '';
-    $vOutlineHeading = '';
-    $tOutlineSpeNotice = '';
+    $tDegreeOutline = '';
     $vSubHeading7 = '';
     $tContent7 = '';
-    $vCourseSeqHeading = '';
-    $tCourseSpeNotice = '';
+    $tCourseSequence = '';
+    $tCalendarDate = '';
     $fPdf = '';
     $cEnable = '';
 }
@@ -248,17 +244,8 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 6<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading6" name="vSubHeading6" value="<?php echo $vSubHeading6; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 6<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content (Structure of the Curriculum)<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent6" id="tContent6" class="form-control col-md-7 col-xs-12" required><?php echo $tContent6; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent6); ?>
@@ -267,20 +254,11 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading (Outline of the degree)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vOutlineHeading" name="vOutlineHeading" value="<?php echo $vOutlineHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Degree Outline Special Notice<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content (Outline of the Degree)<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tOutlineSpeNotice" id="tOutlineSpeNotice" class="form-control col-md-7 col-xs-12" required><?php echo $tOutlineSpeNotice; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tOutlineSpeNotice); ?>
+                                        <textarea rows="15" name="tDegreeOutline" id="tDegreeOutline" class="form-control col-md-7 col-xs-12" required><?php echo $tDegreeOutline; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tDegreeOutline); ?>
                                     </div>
                                 </div>
                             </div>
@@ -305,20 +283,21 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading (Course sequence)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vOutlineHeading" name="vOutlineHeading" value="<?php echo $vOutlineHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content (Course Sequence)<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tCourseSequence" id="tCourseSequence" class="form-control col-md-7 col-xs-12" required><?php echo $tCourseSequence; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tCourseSequence); ?>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Course Sequence Special Notice<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Calendar of Dates<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tCourseSpeNotice" id="tCourseSpeNotice" class="form-control col-md-7 col-xs-12" required><?php echo $tCourseSpeNotice; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tCourseSpeNotice); ?>
+                                        <textarea rows="15" name="tCalendarDate" id="tCalendarDate" class="form-control col-md-7 col-xs-12" required><?php echo $tCalendarDate; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tCalendarDate); ?>
                                     </div>
                                 </div>
                             </div>

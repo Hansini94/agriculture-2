@@ -65,6 +65,30 @@ Class Bsc_fst_introduction extends CI_Controller {
             ),            
         );
 
+        $data['ckeditor_tCourseSeq'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tCourseSeq',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tCalendarDate'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tCalendarDate',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
         $data['cSaveStatus']= 'E';
 		
         $data['introduction_data'] = $this->academic_model->get_bsc_fst_introduction_data();

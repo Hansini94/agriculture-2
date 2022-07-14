@@ -210,7 +210,7 @@
                 Academics
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="under_pro.html">Undergraduate Programs </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('undergraduate-programme') ?>">Undergraduate Programs </a></li>
                 <li><a class="dropdown-item" href="http://www.pgia.pdn.ac.lk/" target="_blank">Postgraduate Programme </a></li>
               </ul>
             </li>

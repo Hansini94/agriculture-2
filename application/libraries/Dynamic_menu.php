@@ -36,7 +36,6 @@ ORDER BY
 tbl_dyn_menu.parent_order ASC";
             $query = $this->ci->db->query($query_string);
 
-
             $html_out = "";
 
 
