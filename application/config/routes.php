@@ -91,7 +91,10 @@ $route['faculty-board'] = 'Faculty_board';
 $route['history'] = 'History';
 $route['faculty-organization'] = 'Faculty_organization';
 $route['faculty-brochure'] = 'Faculty_brochure';
-$route['quality/FoFQAC'] = 'Quality/index';
+$route['quality/functions_of_foaqac'] = 'Quality/index';
+$route['quality/foaqac'] = 'Quality/foaqac';
+$route['quality/member_of_foaqac'] = 'Quality/member_of_foaqac';
+$route['quality/schedule_of_meetings'] = 'Quality/schedule_of_meetings';
 
 $route['undergraduate-programme'] = 'Undergraduate_programme';
 
