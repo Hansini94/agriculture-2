@@ -11,6 +11,12 @@ if ($cSaveStatus == "E") {
     $tContent3 = $introduction_data[0]->tContent3;
     $vTitleFigure2 = $introduction_data[0]->vTitleFigure2;
     $fFigure2 = $introduction_data[0]->fFigure2;
+    $tCoreProStructure = $introduction_data[0]->tCoreProStructure;
+    $tCoreProSequence = $introduction_data[0]->tCoreProSequence;
+    $tAdvProStructure = $introduction_data[0]->tAdvProStructure;
+    $tAdvProModule = $introduction_data[0]->tAdvProModule;
+    $tCalendarDate = $introduction_data[0]->tCalendarDate;
+    $fPdf = $introduction_data[0]->fPdf;
     $cEnable = $introduction_data[0]->cEnable;
 } else {
     $id = '';
@@ -24,6 +30,12 @@ if ($cSaveStatus == "E") {
     $tContent3 = '';
     $vTitleFigure2 = '';
     $fFigure2 = '';
+    $tCoreProStructure = '';
+    $tCoreProSequence = '';
+    $tAdvProStructure = '';
+    $tAdvProModule = '';
+    $tCalendarDate = '';
+    $fPdf = '';
     $cEnable = '';
 }
 ?>
@@ -228,6 +240,80 @@ if ($cSaveStatus == "E") {
                                
 								    <?php } ?>
                                 </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Core Programme Structure<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tCoreProStructure" id="tCoreProStructure" class="form-control col-md-7 col-xs-12" required><?php echo $tCoreProStructure; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tCoreProStructure); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Core Programme Course Sequence<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tCoreProSequence" id="tCoreProSequence" class="form-control col-md-7 col-xs-12" required><?php echo $tCoreProSequence; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tCoreProSequence); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Advanced Programme Structure<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tAdvProStructure" id="tAdvProStructure" class="form-control col-md-7 col-xs-12" required><?php echo $tAdvProStructure; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tAdvProStructure); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 mb-3">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Advanced Programme Modules<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tAdvProModule" id="tAdvProModule" class="form-control col-md-7 col-xs-12" required><?php echo $tAdvProModule; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tAdvProModule); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 mb-3">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Calendar of Dates<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tCalendarDate" id="tCalendarDate" class="form-control col-md-7 col-xs-12" required><?php echo $tCalendarDate; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tCalendarDate); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12 col-sm-12 col-xs-12 mt-2">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12">Document</label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <!--<label class="btn btn-upload" for="fImage" title="Upload image file">-->
+                                        <input  id="fPdf" name="fPdf" type="file"  >
+                                        <!--</label>-->
+                                    </div>
+                                    <?php
+                                    if ($cSaveStatus == 'E') {
+                                        if ($fPdf != '' && $fPdf != 0) {
+                                    ?>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                
+                                        <a href="<?php echo base_url("front_img/" . $fPdf . "");?>" target="_blank">View Document</a> 
+                                                    <!--</label>-->
+                                    </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                </div> 
                             </div>
                         
                             <div style="clear:both;"></div>

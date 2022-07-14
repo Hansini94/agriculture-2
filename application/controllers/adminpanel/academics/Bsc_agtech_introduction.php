@@ -65,6 +65,67 @@ Class Bsc_agtech_introduction extends CI_Controller {
             ),            
         );
 
+        $data['ckeditor_tCoreProStructure'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tCoreProStructure',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '300px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tCoreProSequence'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tCoreProSequence',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '300px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tAdvProStructure'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tAdvProStructure',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '300px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tAdvProModule'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tAdvProModule',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '300px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tCalendarDate'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tCalendarDate',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '300px', //Setting a custom height
+            ),            
+        );
+
+
         $data['cSaveStatus']= 'E';
 		
         $data['introduction_data'] = $this->academic_model->get_bsc_agtech_data();

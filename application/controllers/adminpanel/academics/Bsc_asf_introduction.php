@@ -137,9 +137,33 @@ Class Bsc_asf_introduction extends CI_Controller {
             ),            
         );
 
-        $data['ckeditor_tCourseSpeNotice'] = array(
+        $data['ckeditor_tCourseSequence'] = array(
             //ID of the textarea that will be replaced
-            'id' => 'tCourseSpeNotice',
+            'id' => 'tCourseSequence',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tDegreeOutline'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tDegreeOutline',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
+        $data['ckeditor_tCalendarDate'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tCalendarDate',
             'path' => 'assets/js/ckeditor',
             //Optionnal values
             'config' => array(
