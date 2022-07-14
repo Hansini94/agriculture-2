@@ -23,10 +23,24 @@ Class Academic_staff extends CI_Controller {
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
 
-    public function index() {
+    public function index() {		
 		
-        $data['cSaveStatus']= 'A';
-        $data['list_data'] = $this->aboutus_model->get_academic_staff_list();
+		$data['ckeditor_tContent'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
+        $data['cSaveStatus']= 'E';
+		
+        $data['academic_staff_data'] = $this->aboutus_model->get_academic_staff_data();
+		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
         $this->load->view('adminpanel/aboutus/academic_staff_view', $data);
         $this->load->view('adminpanel/footer_view');
@@ -55,38 +69,6 @@ Class Academic_staff extends CI_Controller {
                 $this->session->set_flashdata('message_error', 'Save fail!');
                 redirect(base_url() . 'adminpanel/about_us/academic_staff');
             }
-        }
-    }
-	
-	public function edit_academic_staff() {
-		
-        $data['cSaveStatus']= 'E';
-        $data['list_data'] = $this->aboutus_model->get_academic_staff_list();
-		$acaStaffId = $this->uri->segment(5);
-		$data['edit_academic_staff'] = $this->aboutus_model->get_edit_academic_staff($acaStaffId);
-        $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/aboutus/academic_staff_view', $data);
-        $this->load->view('adminpanel/footer_view');
-    }
-
-    public function change_status() {
-
-        $this->common_library->check_privilege('p_edit');
-        if ($this->common_library->check_privilege('p_edit')) {
-            $this->common_library->flexigrid_change_status($this->redirect_path, $this->table_name);
-        } else {
-            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
-            redirect(base_url() . $this->redirect_path);
-        }
-    }
-
-    public function delete_record() {
-        $this->common_library->check_privilege('p_edit');
-        if ($this->common_library->check_privilege('p_delete')) {
-            $this->common_library->flexigrid_delete_record($this->redirect_path, $this->table_name);
-        } else {
-            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
-            redirect(base_url() . $this->redirect_path);
         }
     }
 

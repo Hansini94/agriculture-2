@@ -41,6 +41,17 @@ Class Dean_office extends CI_Controller {
             ),            
         );
 
+        $data['ckeditor_tContactDetails'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContactDetails',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
 
         $data['cSaveStatus']= 'E';
 		

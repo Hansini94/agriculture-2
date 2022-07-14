@@ -9,6 +9,14 @@
         $meta = get_meta('about_us');
     } else if (activate_menu('faculty_statistic_undergraduate') == 'active') {
       $meta = get_meta('faculty_statistic_undergraduate');
+    } else if (activate_menu('faculty_statistic_academic_staff') == 'active') {
+      $meta = get_meta('faculty_statistic_academic_staff');
+    } else if (activate_menu('Dean_office') == 'active') {
+      $meta = get_meta('Dean_office');
+    } else if (activate_menu('Faculty_board') == 'active') {
+      $meta = get_meta('Faculty_board');
+    } else if (activate_menu('History') == 'active') {
+      $meta = get_meta('History');
     } else {
         $meta = get_meta('home');
     }
@@ -142,6 +150,9 @@
              <li class="nav-item dropdown <?php
                                                 echo activate_menu('about_us');
                                                 echo activate_menu('faculty_statistic_undergraduate');
+                                                echo activate_menu('faculty_statistic_academic_staff');
+                                                echo activate_menu('Dean_office');
+                                                echo activate_menu('Faculty_board');
                                                  ?>">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 About Us
@@ -151,8 +162,8 @@
 
                 <li><a class="dropdown-item" href="#"> Faculty Statistics &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li <?php echo activate_menu('faculty_statistic_undergraduate'); ?>><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
-                    <li><a class="dropdown-item" href="ac_staff.html">Academic Staff</a></li>
+                    <li class="<?php echo activate_menu('faculty_statistic_undergraduate'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
+                    <li class="<?php echo activate_menu('faculty_statistic_academic_staff'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
 
                     <!-- <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
                       <ul class="submenu dropdown-menu">
@@ -164,11 +175,11 @@
                  </ul>
                 </li>
 
-                <li><a class="dropdown-item" href="dean_office.html">Dean’s Office</a></li>
-                <li><a class="dropdown-item" href="fac_board.html">Faculty Board</a></li>
-                <li><a class="dropdown-item" href="history.html">History</a></li>
-                <li><a class="dropdown-item" href="fac_org.html">Faculty Organization</a></li>
-                <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
+                <li class="<?php echo activate_menu('Dean_office'); ?>"><a class="dropdown-item" href="<?php echo base_url('dean-office') ?>">Dean’s Office</a></li>
+                <li class="<?php echo activate_menu('Faculty_board'); ?>"><a class="dropdown-item" href="<?php echo base_url('faculty-board') ?>">Faculty Board</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('history'); ?>">History</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('faculty-organization'); ?>">Faculty Organization</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('faculty-brochure'); ?>">Faculty Brochures</a></li>
                 <li><a class="dropdown-item" href="map.html">Map & direction </a></li>
 
               </ul>

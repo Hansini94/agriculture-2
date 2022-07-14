@@ -65,6 +65,18 @@ Class Faculty_board extends CI_Controller {
             ),            
         );
 
+        $data['ckeditor_tMeetingSchedule'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tMeetingSchedule',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
         $data['cSaveStatus']= 'E';
 		
         $data['faculty_board_data'] = $this->aboutus_model->get_faculty_board_data();

@@ -7,6 +7,8 @@ if ($cSaveStatus == "E") {
     $vAddLine2 = $dean_office_data[0]->vAddLine2;
     $vAddLine3 = $dean_office_data[0]->vAddLine3;
     $vPostalCode = $dean_office_data[0]->vPostalCode;
+    $vTitle2 = $dean_office_data[0]->vTitle2;
+    $tContactDetails = $dean_office_data[0]->tContactDetails;
     $cEnable = $dean_office_data[0]->cEnable;
 } else {
     $id = '';
@@ -16,6 +18,8 @@ if ($cSaveStatus == "E") {
     $vAddLine2 = '';
     $vAddLine3 = '';
     $vPostalCode = '';
+    $vTitle2 = '';
+    $tContactDetails = '';
     $cEnable = '';
 }
 ?>
@@ -153,6 +157,25 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Postal Code</label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
                                        <input type="text" id="vPostalCode" name="vPostalCode" value="<?php echo $vPostalCode; ?>" class="form-control col-md-7 col-xs-12"> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading 2</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vTitle2" name="vTitle2" value="<?php echo $vTitle2; ?>" class="form-control col-md-7 col-xs-12"> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Contact Details of Officers<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContactDetails" id="tContactDetails" class="form-control col-md-7 col-xs-12" required><?php echo $tContactDetails; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContactDetails); ?>
                                     </div>
                                 </div>
                             </div>
