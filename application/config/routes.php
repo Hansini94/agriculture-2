@@ -92,6 +92,8 @@ $route['history'] = 'History';
 $route['faculty-organization'] = 'Faculty_organization';
 $route['faculty-brochure'] = 'Faculty_brochure';
 
+$route['quality/FoFQAC'] = 'Quality/index';
+
 
 $route['404_override'] = '';
 
