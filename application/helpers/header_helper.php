@@ -61,5 +61,25 @@ if (!function_exists('get_contact')) {
 
 }
 
+/* Karshan 15-07-2022 */
+if (!function_exists('get_faq_list')) {
+    function get_faq_list($faq_id) {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from('tbl_faq');
+        $ci->db->where('iFaqId', $faq_id);
+        $ci->db->where('tbl_faq.cEnable', 'Y');
+        $ci->db->order_by('tbl_faq.iOrder', 'asc');
+        $result = $ci->db->get();
+        //echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+}
+
 //}
 ?>
