@@ -54,61 +54,67 @@
             <![endif]-->
             
             <style>
-                .btn-dark {background-image: linear-gradient(to right, #00c183 0%, #006185  51%, #00c183  100%)}
+                /*.btn-dark {background-image: linear-gradient(to right, #00c183 0%, #006185  51%, #00c183  100%)}*/
                 .btn-dark {
-                    font-size: 12px;
-                    padding: 15px 25px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    transition: 0.5s;
-                    background-size: 200% auto;
-                    color: white;            
-                    border-radius: 5px;
-                    /*display: block;*/
+                    background-color: #818181;
+                        font-size: 12px;
+                        padding: 15px 25px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                        background-size: 200% auto;
+                        color: white;            
+                        border-radius: 5px;
+                        /*display: block;*/
                 }
                 
                 .btn-dark:hover {
-                    background-position: right center; /* change the direction of the change here */
-                    color: #fff;
-                    text-decoration: none;
+                    background-color: #ffd400;
+                        background-position: right center; /* change the direction of the change here */
+                        color: #000000 !important;
+                        text-decoration: none;
                 }
                 
-                .btn-primary {background-image: linear-gradient(to right, #00c183 0%, #006185  51%, #00c183  100%)}
-                .btn-primary {
-                    font-size: 12px;
-                    padding: 15px 25px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    transition: 0.5s;
-                    background-size: 200% auto;
-                    color: white;            
-                    border-radius: 5px;
-                    /*display: block;*/
-                }
+                /*.btn-primary {background-image: linear-gradient(to right, #c8cfe9 0%, #b8e0d2  51%, #c4df9b  100%)}*/
+                    .btn-primary {
+                        background-color: #818181;
+                        font-size: 12px;
+                        padding: 15px 25px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                        background-size: 200% auto;
+                        color: white;            
+                        border-radius: 5px;
+                        /*display: block;*/
+                    }
+                    
+                    .btn-primary:hover {
+                        background-color: #ffd400;
+                        background-position: right center; /* change the direction of the change here */
+                        color: #000000 !important;
+                        text-decoration: none;
+                    }
                 
-                .btn-primary:hover {
-                    background-position: right center; /* change the direction of the change here */
-                    color: #fff;
-                    text-decoration: none;
-                }
-                
-                .btn-default {background-image: linear-gradient(to right, #eabbbd 0%, #ff959a  51%, #fe363f  100%)}
+                /*.btn-default {background-image: linear-gradient(to right, #eabbbd 0%, #ff959a  51%, #fe363f  100%)}*/
                 .btn-default {
-                    font-size: 12px;
-                    padding: 15px 25px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    transition: 0.5s;
-                    background-size: 200% auto;
-                    color: white;            
-                    border-radius: 5px;
-                    /*display: block;*/
+                    background-color: #ff6666;
+                        font-size: 12px;
+                        padding: 15px 25px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                        background-size: 200% auto;
+                        color: white;            
+                        border-radius: 5px;
+                        /*display: block;*/
                 }
                 
                 .btn-default:hover {
-                    background-position: right center; /* change the direction of the change here */
-                    color: #fff;
-                    text-decoration: none;
+                    background-color: #000000;
+                        background-position: right center; /* change the direction of the change here */
+                        color: #ffffff !important;
+                        text-decoration: none;
                 }
                 .switch {
                 position: relative;
