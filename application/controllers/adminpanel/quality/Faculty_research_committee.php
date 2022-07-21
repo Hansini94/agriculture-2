@@ -77,6 +77,23 @@ Class Faculty_research_committee extends CI_Controller {
         }
     }
 
+    public function remove_image() {
+        if ($this->common_library->check_privilege('p_edit')) {
+            $imageID = $this->security->xss_clean($this->uri->segment(5));
+            $field = $this->security->xss_clean($this->uri->segment(6));
+            $path = 'front_img/';
+            $img = $this->security->xss_clean($this->uri->segment(7));
+            $this->load->model('adminpanel/common_model');
+            $postimage_delete = $this->common_model->delete_image($imageID, $field, $this->table_name, $path, $img);
+            if ($postimage_delete == TRUE) {
+                redirect(base_url() . "adminpanel/quality/faculty_research_committee");
+            } else {
+                $this->session->set_flashdata('message_error', 'Delete fail!');
+                redirect(base_url() . "adminpanel/quality/faculty_research_committee");
+            }
+        }
+    }
+
 }
 
 ?>

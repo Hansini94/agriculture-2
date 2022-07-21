@@ -1,14 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
-    $periodId = $this->uri->segment(6);
-    $id = $edit_composition[0]->id;   
-	$vDesignation = $edit_composition[0]->vDesignation;  
-    $tName = $edit_composition[0]->tName; 
-	$iOrder = $edit_composition[0]->iOrder;   
-    $cEnable = $edit_composition[0]->cEnable;
+    $committeeId = $this->uri->segment(6);
+    $id = $edit_member[0]->id;   
+	$vDesignation = $edit_member[0]->vDesignation;  
+    $tName = $edit_member[0]->tName; 
+	$iOrder = $edit_member[0]->iOrder;   
+    $cEnable = $edit_member[0]->cEnable;
 	
 } else {
-    $periodId = $this->uri->segment(5);
+    $committeeId = $this->uri->segment(5);
     $id = "";    
 	$vDesignation = "";  
     $tName = "";  
@@ -17,7 +17,7 @@ if ($cSaveStatus == "E") {
 }
 ?>
 <div class="right_col" role="main">
-    <div class="">
+    <div class=""> 
         <div class="clearfix"></div>
         <div style="text-align:center;">
             <div id="dialog" title="Error" style="display: none;">
@@ -63,14 +63,14 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">                    
                     <div class="x_title">
                     <div class="col-md-9 col-sm-12 col-xs-12">
-                            <h2>Time Table Committee</h2>
+                            <h2>Composition</h2>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/quality/time_table_committee_composition/add_composition/'.$periodId); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Composition</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/quality/time_table_committee/composition/'.$committeeId); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Member</span>&nbsp;</a></li>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Composition</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Member</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -83,7 +83,7 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_composition" name="edit_composition" action="<?php echo base_url('adminpanel/quality/time_table_committee_composition/save_data_composition'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_member" name="edit_member" action="<?php echo base_url('adminpanel/quality/time_table_committee/save_data_composition'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
@@ -119,9 +119,9 @@ if ($cSaveStatus == "E") {
 
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
-                                    <input type="hidden" id="iPeriodId" name="iPeriodId" value="<?php echo $periodId ?>">
+                                    <input type="hidden" id="iCommitteeId" name="iCommitteeId" value="<?php echo $committeeId ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/quality/time_table_committee_composition/add_composition/'.$periodId); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/quality/time_table_committee/composition/'.$committeeId); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -162,7 +162,7 @@ if ($cSaveStatus == "E") {
                                         }
 
                                         $recordid = $rowlist->id;
-                                        $iPeriodId = $rowlist->iPeriodId;
+                                        $iCommitteeId = $rowlist->iCommitteeId;
                                         $cEnable = $rowlist->cEnable;
                                         if ($cEnable == 'Y') {
                                             $clicon = 'fa fa-check';
@@ -177,13 +177,13 @@ if ($cSaveStatus == "E") {
                                             <td><?php echo $rowlist->vDesignation; ?></td> 
                                             <td><?php echo $rowlist->tName; ?></td>                                         
                                             <td><?php echo $rowlist->iOrder;?></td>   
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/quality/time_table_committee_composition/edit_composition/$recordid/$iPeriodId" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/quality/time_table_committee/edit_member/$recordid/$iCommitteeId" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/time_table_committee_composition/change_status_composition/status/$recordid/$iPeriodId" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/time_table_committee/change_status_member/status/$recordid/$iCommitteeId" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/time_table_committee_composition/delete_record_composition/delete/$recordid/$iPeriodId" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/time_table_committee/delete_record_composition/delete/$recordid/$iCommitteeId" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

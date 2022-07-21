@@ -121,7 +121,7 @@ if ($cSaveStatus == "E") {
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >Chairman Image (500 * 500px) </label>
                                     <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
-                                        <input type="file" id="fImgChairman" name="fImgChairman" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                        <input type="file" id="fImgChairman" name="fImgChairman" >
                                     </div>                                    
                                 </div>                                
                                 
@@ -132,6 +132,7 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">&nbsp;</label>
                                     <div class="col-md-7 col-sm-6 col-xs-10">
                                         <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImgChairman;?>"  style="width:100px;" />
+                                        <a onclick="return confirm('Are you sure?')" href="<?php echo base_url().'adminpanel/quality/faculty_research_committee/remove_image/'.$id.'/fImgChairman/'.$fImgChairman;?>">Remove image</a> 
                                     </div>
                                     <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
                                         <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_image('<?php echo $id; ?>');" title="Delete Link"></span>
@@ -153,7 +154,7 @@ if ($cSaveStatus == "E") {
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >Secretary Image (500 * 500px) </label>
                                     <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
-                                        <input type="file" id="fImgSecretary" name="fImgSecretary" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                        <input type="file" id="fImgSecretary" name="fImgSecretary" >
                                     </div>                                    
                                 </div>                                
                                 
@@ -164,6 +165,7 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">&nbsp;</label>
                                     <div class="col-md-7 col-sm-6 col-xs-10" >
                                         <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImgSecretary;?>"  style="width:100px;"/>
+                                        <a onclick="return confirm('Are you sure?')" href="<?php echo base_url().'adminpanel/quality/faculty_research_committee/remove_image/'.$id.'/fImgSecretary/'.$fImgSecretary;?>">Remove image</a> 
                                     </div>
                                     <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
                                         <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_image('<?php echo $id; ?>');" title="Delete Link"></span>
