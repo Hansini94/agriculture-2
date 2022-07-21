@@ -98,6 +98,13 @@ $route['quality/schedule_of_meetings'] = 'Quality/schedule_of_meetings';
 
 $route['undergraduate-programme'] = 'Undergraduate_programme';
 
+$route['international'] = 'International/index';
+$route['international/current-foreign-students'] = 'International/current_foreign_students';
+$route['international/info-for-foreign-students'] = 'International/info_for_foreign_students';
+$route['international/opportunities-study-abroad'] = 'International/opportunities_study_abroad';
+$route['research/faculty-research'] = 'Research/index';
+$route['research/ethical-clearance-committee'] = 'Research/ethical_clearance_committee';
+$route['research/faculty-research-committee'] = 'Research/faculty_research_committee';
 
 $route['404_override'] = '';
 

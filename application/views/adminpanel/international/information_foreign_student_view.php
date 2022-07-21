@@ -1,14 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $information_foreign_student_data[0]->id;
-    $fMoreDetailsPdf = $information_foreign_student_data[0]->fMoreDetailsPdf;
-    $fStudentHandBook = $information_foreign_student_data[0]->fStudentHandBook;
+    $vMoreDetailsPdf = $information_foreign_student_data[0]->vMoreDetailsPdf;
+    $vStudentHandBook = $information_foreign_student_data[0]->vStudentHandBook;
     $tContent = $information_foreign_student_data[0]->tContent;
     $cEnable = $information_foreign_student_data[0]->cEnable;
 } else {
     $id = '';
-    $fMoreDetailsPdf = '';
-    $fStudentHandBook = '';
+    $vMoreDetailsPdf = '';
+    $vStudentHandBook = '';
     $tContent = '';
     $cEnable = '';
 }
@@ -97,6 +97,23 @@ if ($cSaveStatus == "E") {
                         <br />
                         <form id="edit_information_foreign_student" name="edit_information_foreign_student" action="<?php echo base_url('adminpanel/international/information_foreign_student/save_information_foreign_student'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">For More Details<span class="required">*</span></label>
+                                        <div class="col-md-9 col-sm-12 col-xs-12">
+                                        <input type="text" id="vMoreDetailsPdf" name="vMoreDetailsPdf" value="<?php echo $vMoreDetailsPdf; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Foreign Students Handbook<span class="required">*</span></label>
+                                        <div class="col-md-9 col-sm-12 col-xs-12">
+                                        <input type="text" id="vStudentHandBook" name="vStudentHandBook" value="<?php echo $vStudentHandBook; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php /* ?>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 
                                 <div class="item form-group">                                    
@@ -106,7 +123,6 @@ if ($cSaveStatus == "E") {
                                         if ($cSaveStatus != "E") {?> required  <?php } ?>>
                                     </div>
                                 </div>
-
                                 <?php 
 								if($fMoreDetailsPdf){
 
@@ -121,7 +137,7 @@ if ($cSaveStatus == "E") {
                                         <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_pdf('<?php echo $id; ?>');" title="Delete Link"></span>
                                     </div> -->
                                 </div>
-                                <?php }
+                                <?php } 
                                 ?>
 
                             </div>
@@ -150,11 +166,11 @@ if ($cSaveStatus == "E") {
                                         <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_pdf('<?php echo $id; ?>');" title="Delete Link"></span>
                                     </div> -->
                                 </div>
-                                <?php }
+                                <?php } 
                                 ?>
 
                             </div>
-
+                            <?php */?>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>

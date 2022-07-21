@@ -7,12 +7,6 @@ if ($cSaveStatus == "E") {
     $tShortTermVisitContent = $study_opportunity_data[0]->tShortTermVisitContent;
     $vLongTermVisitHeading = $study_opportunity_data[0]->vLongTermVisitHeading;
     $tLongTermVisitContent = $study_opportunity_data[0]->tLongTermVisitContent;
-    $vStudentName1 = $study_opportunity_data[0]->vStudentName1;
-    $tTestimonial1 = $study_opportunity_data[0]->tTestimonial1;
-    $vStudentName2 = $study_opportunity_data[0]->vStudentName2;
-    $tTestimonial2 = $study_opportunity_data[0]->tTestimonial2;
-    $fImage1 = $study_opportunity_data[0]->fImage1;
-    $fImage2 = $study_opportunity_data[0]->fImage2;
     $cEnable = $study_opportunity_data[0]->cEnable;
 } else {
     $id = '';
@@ -22,10 +16,6 @@ if ($cSaveStatus == "E") {
     $tShortTermVisitContent = '';
     $vLongTermVisitHeading = '';
     $tLongTermVisitContent = '';
-    $tTestimonial1 = '';
-    $tTestimonial2 = '';
-    $fImage1 = '';
-    $fImage2 = '';
     $cEnable = '';
 }
 ?>
@@ -68,7 +58,7 @@ if ($cSaveStatus == "E") {
                 <div style="color:#096;">
                     <?php echo $this->session->flashdata('message_saved'); ?>
                 </div>
-            <?php
+            <?php 
             }
             ?>
             <?php
@@ -99,8 +89,13 @@ if ($cSaveStatus == "E") {
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <div class="col-md-9 col-sm-9 col-xs-9">
+                        <div class="col-md-9 col-sm-12 col-xs-12">
                             <h2>Study Abroad Opportunities</h2>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                        <ul class="nav navbar-right ">
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/international/study_abroad_opportunity/testimonials'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add testimonial</span>&nbsp;</a></li>
+                        </ul>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -154,7 +149,7 @@ if ($cSaveStatus == "E") {
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Long Term Visit Heading<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vShortTermVisitHeading" name="vShortTermVisitHeading" value="<?php echo $vShortTermVisitHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                       <input type="text" id="vLongTermVisitHeading" name="vLongTermVisitHeading" value="<?php echo $vLongTermVisitHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
@@ -169,87 +164,7 @@ if ($cSaveStatus == "E") {
                                 </div>
                             </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Student Name 1<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vStudentName1" name="vStudentName1" value="<?php echo $vStudentName1; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Testimonial 1<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tTestimonial1" id="tTestimonial1" class="form-control col-md-7 col-xs-12" required><?php echo $tTestimonial1; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tTestimonial1); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Student Name 2<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vStudentName2" name="vStudentName2" value="<?php echo $vStudentName2; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Testimonial 2<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tTestimonial2" id="tTestimonial2" class="form-control col-md-7 col-xs-12" required><?php echo $tTestimonial2; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tTestimonial2); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image 1<br>
-                                    </label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fImage1" name="fImage1" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>                                    
-                                </div> 
-                                
-                                <div class="item form-group">
-                                    <?php if($fImage1!=''){ ?>
-                                
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage1;?>" style="height:75px;"   />
-                                        <!-- <a href="<?php echo base_url().'adminpanel/awards/research_committee/remove_image/'.$id.'/fChairmenImage/'.$fChairmenImage;?>">Remove image</a>  -->
-                                    </div>
-                               
-								    <?php } ?>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image 2<br>
-                                    </label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fImage2" name="fImage2" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>                                    
-                                </div> 
-                                
-                                <div class="item form-group">
-                                    <?php if($fImage2!=''){ ?>
-                                
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage2;?>" style="height:75px;"   />
-                                        <!-- <a href="<?php echo base_url().'adminpanel/awards/research_committee/remove_image/'.$id.'/fChairmenImage/'.$fChairmenImage;?>">Remove image</a>  -->
-                                    </div>
-                               
-								    <?php } ?>
-                                </div>
-                            </div>
+                            
                         
                             <div style="clear:both;"></div>
                             <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
