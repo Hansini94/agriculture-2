@@ -74,6 +74,200 @@ Class Quality extends CI_Controller {
         $this->load->view('frontendview/footer_view', $data_header);
        
     }
+
+    public function frc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_faculty_research_committee();
+        $data['members'] = $this->quality_model->get_members('tbl_research_committee_composition');
+        // var_dump($data);exit();
+
+        $this->load->view('frontendview/inner_header_view',$data_header);
+        $this->load->view('frontendview/quality/frc_view',$data);
+        $this->load->view('frontendview/footer_view', $data_header);
+       
+    }
+
+    public function cdc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_curriculum_development_committee');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/cdc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/cdc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function ltc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_language_teaching_committee');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/ltc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/ltc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function lc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_library_committee');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/lc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/lc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function pprc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_public_relations_committee');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/pprc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/pprc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function elcumc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_computer_unit');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/elcumc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/elcumc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function ttc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_time_table_committee');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/ttc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/ttc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function tmu() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_teaching_method_unit');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/tmu_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/tmu_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
+    public function sawc() {
+
+        $this->load->model('frontend_model/quality_model');
+
+        $data = array();
+        $data_header = array();
+
+        $data['committee'] = $this->quality_model->get_committee('tbl_welfare_committee');
+        // var_dump($data);exit();
+
+        if($this->uri->segment(3)){
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/sawc_previous_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        } else {
+            $this->load->view('frontendview/inner_header_view',$data_header);
+            $this->load->view('frontendview/quality/sawc_view',$data);
+            $this->load->view('frontendview/footer_view', $data_header);
+        }
+       
+    }
+
 }
 
 ?>

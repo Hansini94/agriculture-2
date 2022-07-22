@@ -91,10 +91,10 @@ $route['faculty-board'] = 'Faculty_board';
 $route['history'] = 'History';
 $route['faculty-organization'] = 'Faculty_organization';
 $route['faculty-brochure'] = 'Faculty_brochure';
-$route['quality/functions_of_foaqac'] = 'Quality/index';
+$route['quality/functions-of-foaqac'] = 'Quality/index';
 $route['quality/foaqac'] = 'Quality/foaqac';
-$route['quality/member_of_foaqac'] = 'Quality/member_of_foaqac';
-$route['quality/schedule_of_meetings'] = 'Quality/schedule_of_meetings';
+$route['quality/member-of-foaqac'] = 'Quality/member_of_foaqac';
+$route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
 
 $route['undergraduate-programme'] = 'Undergraduate_programme';
 
@@ -105,6 +105,23 @@ $route['international/opportunities-study-abroad'] = 'International/opportunitie
 $route['research/faculty-research'] = 'Research/index';
 $route['research/ethical-clearance-committee'] = 'Research/ethical_clearance_committee';
 $route['research/faculty-research-committee'] = 'Research/faculty_research_committee';
+$route['quality/frc'] = 'Quality/frc';
+$route['quality/cdc'] = 'Quality/cdc';
+$route['quality/cdc/(:any)'] = 'Quality/cdc';
+$route['quality/ltc'] = 'Quality/ltc';
+$route['quality/ltc/(:any)'] = 'Quality/ltc';
+$route['quality/lc'] = 'Quality/lc';
+$route['quality/lc/(:any)'] = 'Quality/lc';
+$route['quality/pprc'] = 'Quality/pprc';
+$route['quality/pprc/(:any)'] = 'Quality/pprc';
+$route['quality/elcumc'] = 'Quality/elcumc';
+$route['quality/elcumc/(:any)'] = 'Quality/elcumc';
+$route['quality/ttc'] = 'Quality/ttc';
+$route['quality/ttc/(:any)'] = 'Quality/ttc';
+$route['quality/tmu'] = 'Quality/tmu';
+$route['quality/tmu/(:any)'] = 'Quality/tmu';
+$route['quality/sawc'] = 'Quality/sawc';
+$route['quality/sawc/(:any)'] = 'Quality/sawc';
 
 $route['404_override'] = '';
 

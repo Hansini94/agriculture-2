@@ -81,5 +81,24 @@ if (!function_exists('get_faq_list')) {
     }
 }
 
+if (!function_exists('get_committee_members')) {
+    function get_committee_members($recid, $tbl) {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from($tbl);
+        $ci->db->where('cEnable', 'Y');
+        $ci->db->where('iCommitteeId', $recid);
+        $ci->db->order_by('iOrder', 'asc');
+        $result = $ci->db->get();
+        //echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+}
+
 //}
 ?>
