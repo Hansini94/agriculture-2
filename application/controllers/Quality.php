@@ -103,10 +103,14 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_development_committee_composition');
+
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/cdc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_development_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/cdc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -125,10 +129,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_teaching_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/ltc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_teaching_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/ltc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -147,10 +153,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_library_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/lc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_library_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/lc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -169,10 +177,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_public_relations_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/pprc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_public_relations_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/pprc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -191,10 +201,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_computer_unit_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/elcumc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_computer_unit_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/elcumc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -213,10 +225,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_time_table_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/ttc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_time_table_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/ttc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -235,10 +249,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_teaching_method_unit_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/tmu_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_teaching_method_unit_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/tmu_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
@@ -257,10 +273,12 @@ Class Quality extends CI_Controller {
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][1]->id, 'tbl_welfare_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/sawc_previous_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);
         } else {
+            $data['members'] = $this->quality_model->get_committee_members($data['committee'][0]->id, 'tbl_welfare_committee_composition');
             $this->load->view('frontendview/inner_header_view',$data_header);
             $this->load->view('frontendview/quality/sawc_view',$data);
             $this->load->view('frontendview/footer_view', $data_header);

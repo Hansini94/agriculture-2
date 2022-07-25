@@ -160,7 +160,6 @@
                 <br>
 
                 <h1 class="heading mb-3">Composition In <?php echo $committee[1]->vYear; ?></h1>
-                <?php $members = get_committee_members($committee[1]->id, 'tbl_teaching_method_unit_composition'); ?>
                  <!-- table-->
                <div class="table-responsive">
                   <table class="table table-hover">

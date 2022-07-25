@@ -90,6 +90,20 @@ class Quality_model extends CI_Model {
         }
     }
 
+    public function get_committee_members($recid, $tbl) {
+        $this->db->from($tbl);
+        $this->db->where('cEnable', 'Y');
+        $this->db->where('iCommitteeId', $recid);
+        $this->db->order_by('iOrder', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
 }
 
 ?>
