@@ -10,6 +10,7 @@ if (!defined('BASEPATH'))
 Class Welfare_committee extends CI_Controller {
 
     private $table_name = "tbl_welfare_committee";
+    private $table_name2 = "tbl_welfare_committee_composition";
     private $page_id = "67";
     private $redirect_path = "adminpanel/quality/welfare_committee";
 
@@ -41,9 +42,8 @@ Class Welfare_committee extends CI_Controller {
             ),            
         );
 
-        $data['cSaveStatus']= 'E';
-		
-        $data['welfare_committee_data'] = $this->quality_model->get_data($this->table_name);
+        $data['cSaveStatus']= 'A';
+        $data['list_data'] = $this->quality_model->get_committee_list($this->table_name);
 		// echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
         $this->load->view('adminpanel/quality/welfare_committee_view', $data);
@@ -73,6 +73,137 @@ Class Welfare_committee extends CI_Controller {
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
                 redirect(base_url() . 'adminpanel/quality/welfare_committee');
+            }
+        }
+    }
+
+    public function edit() {
+
+		$data['ckeditor_tDescription'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tDescription',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
+        $data['cSaveStatus']= 'E';
+        $data['list_data'] = $this->quality_model->get_committee_list($this->table_name);
+		$recId = $this->uri->segment(5);
+		$data['edit_data'] = $this->quality_model->get_edit_committee($recId, $this->table_name);
+        $this->load->view('adminpanel/header_view');
+        $this->load->view('adminpanel/quality/welfare_committee_view', $data);
+        $this->load->view('adminpanel/footer_view');
+    }
+
+    public function change_status() {
+
+        $this->common_library->check_privilege('p_edit');
+        if ($this->common_library->check_privilege('p_edit')) {
+            $this->common_library->flexigrid_change_status($this->redirect_path, $this->table_name);
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
+            redirect(base_url() . $this->redirect_path);
+        }
+    }
+
+    public function delete_record() {
+        $this->common_library->check_privilege('p_edit');
+        if ($this->common_library->check_privilege('p_delete')) {
+            $this->common_library->flexigrid_delete_record($this->redirect_path, $this->table_name);
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
+            redirect(base_url() . $this->redirect_path);
+        }
+    }
+
+    public function composition(){
+        $data['cSaveStatus']= 'A';
+        $recId = $this->uri->segment(5);
+        $data['list_data'] = $this->quality_model->get_composition_list($recId, $this->table_name2);
+        $this->load->view('adminpanel/header_view');
+        $this->load->view('adminpanel/quality/welfare_committee_composition_view', $data);
+        $this->load->view('adminpanel/footer_view');
+    }
+
+    public function save_data_composition($data = '') {
+        $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
+        $iCommitteeId = $this->input->post('iCommitteeId', TRUE);
+        $id = $this->input->post('id', TRUE);
+        if ($cSaveStatus === 'E') {
+            if ($this->common_model->update_saved_data($this->table_name2)) {
+                //$tDes = "saved data has been updated";
+                //$this->common_model->add_log($tDes);
+                $this->session->set_flashdata('message_saved', 'Saved successfully.');
+                redirect(base_url() . 'adminpanel/quality/welfare_committee/composition/'.$iCommitteeId);
+            } else {
+                $this->session->set_flashdata('message_error', 'Save fail!');
+                redirect(base_url() . 'adminpanel/quality/welfare_committee/composition/'.$iCommitteeId);
+            }
+        } else {
+            if ($this->common_model->save_data($this->table_name2)) {
+                //$tDes = "saved data has been updated";
+                //$this->common_model->add_log($tDes);
+                $this->session->set_flashdata('message_saved', 'Saved successfully.');
+                redirect(base_url() . 'adminpanel/quality/welfare_committee/composition/'.$iCommitteeId);
+            } else {
+                $this->session->set_flashdata('message_error', 'Save fail!');
+                redirect(base_url() . 'adminpanel/quality/welfare_committee/composition/'.$iCommitteeId);
+            }
+        }
+    }
+	
+	public function edit_member() {
+		
+        $data['cSaveStatus']= 'E';
+        $recId = $this->uri->segment(6);
+        $data['list_data'] = $this->quality_model->get_composition_list($recId, $this->table_name2);
+		$compositionId = $this->uri->segment(5);
+		$data['edit_member'] = $this->quality_model->get_edit_member($compositionId, $this->table_name2);
+        $this->load->view('adminpanel/header_view');
+        $this->load->view('adminpanel/quality/welfare_committee_composition_view', $data);
+        $this->load->view('adminpanel/footer_view');
+    }
+
+    public function change_status_member() {
+        $iCommitteeId = $this->uri->segment(7);
+        $this->common_library->check_privilege('p_edit');
+        if ($this->common_library->check_privilege('p_edit')) {
+            $this->common_library->flexigrid_change_status('adminpanel/quality/welfare_committee/composition/'.$iCommitteeId, $this->table_name2);
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
+            redirect(base_url() . 'adminpanel/quality/welfare_committee/composition/'.$iCommitteeId);
+        }
+    }
+
+    public function delete_record_composition() {
+        $iCommitteeId = $this->uri->segment(7);
+        $this->common_library->check_privilege('p_edit');
+        if ($this->common_library->check_privilege('p_delete')) {
+            $this->common_library->flexigrid_delete_record('adminpanel/quality/welfare_committee/composition/'.$iCommitteeId, $this->table_name2);
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
+            redirect(base_url() . 'adminpanel/quality/welfare_committee/composition/'.$iCommitteeId);
+        }
+    }
+
+    public function remove_image() {
+        if ($this->common_library->check_privilege('p_edit')) {
+            $imageID = $this->security->xss_clean($this->uri->segment(5));
+            $field = $this->security->xss_clean($this->uri->segment(6));
+            $path = 'front_img/';
+            $img = $this->security->xss_clean($this->uri->segment(7));
+            $this->load->model('adminpanel/common_model');
+            $postimage_delete = $this->common_model->delete_image($imageID, $field, $this->table_name, $path, $img);
+            if ($postimage_delete == TRUE) {
+                redirect(base_url() . "adminpanel/quality/welfare_committee/edit/".$imageID);
+            } else {
+                $this->session->set_flashdata('message_error', 'Delete fail!');
+                redirect(base_url() . "adminpanel/quality/welfare_committee/edit/".$imageID);
             }
         }
     }

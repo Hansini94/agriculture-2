@@ -4,7 +4,7 @@ if ($cSaveStatus == "E") {
 	$vTitle = $edit_composition[0]->vTitle;  
     $vName = $edit_composition[0]->vName; 
     $vDesignation = $edit_composition[0]->vDesignation; 
-    $vSection = $edit_composition[0]->vSection; 
+    // $vSection = $edit_composition[0]->vSection; 
     $iOrder = $edit_composition[0]->iOrder;
     $cEnable = $edit_composition[0]->cEnable;
 	
@@ -13,7 +13,7 @@ if ($cSaveStatus == "E") {
 	$vTitle = "";    
     $vName = "";  
     $vDesignation = "";  
-    $vSection = "";
+    // $vSection = "";
     $iOrder = "";  
     $cEnable = "Y";
 }
@@ -116,12 +116,12 @@ if ($cSaveStatus == "E") {
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 
-                                <div class="item form-group">
+                                <!-- <div class="item form-group">
                                     <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Position <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-7 col-xs-12">
                                         <input type="text" id="vSection" name="vSection" value="<?php echo $vSection; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="item form-group">
                                     <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Display Order <span class="required">*</span></label>
@@ -161,7 +161,7 @@ if ($cSaveStatus == "E") {
                                     <th style="width:50px;text-align:center;">No </th>
                                     <th>Designation </th>  
                                     <th>Name </th>            
-                                    <th>Section </th>                        
+                                    <!-- <th>Section </th>                         -->
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -197,7 +197,7 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><?php echo $rowlist->vDesignation;?></td>
                                             <td><?php echo $rowlist->vTitle.' '.$rowlist->vName;?></td>             
-                                            <td><?php echo $rowlist->vSection;?></td>                                     
+                                            <!-- <td><?php echo $rowlist->vSection;?></td>                                      -->
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/research/composition/edit_composition/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>

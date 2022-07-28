@@ -2,20 +2,20 @@
 
     body.nav-md .container.body .right_col{
         height: 100vh !important;
-        background-image:url('http://173.231.230.98/~tgcss/kelani_cables_css/images/product_bg.jpg') !important;
+        background-image:url('<?php echo base_url('front_img/product_bg.jpg'); ?>') !important;
         background-repeat:no-repeat !important;
         background-size:cover !important;
         background-position:center left !important;
     }
     
     .x_panel{
-        background-color: #998675;
-        background-image:url('http://173.231.230.98/~tgcss/kelani_cables_css/images/shape_bg.png') !important;
-        background-repeat:no-repeat !important;
-        background-size:cover !important;
-        background-position:center center !important;
-        border: 1px solid transparent;
-        border-radius: 5px;
+        background-color: #c8cfe9;
+        /*background-image:url('http://173.231.230.98/~tgcss/kelani_cables_css/images/shape_bg.png') !important;*/
+        /*background-repeat:no-repeat !important;*/
+        /*background-size:cover !important;*/
+        /*background-position:center center !important;*/
+        /*border: 1px solid transparent;*/
+        /*border-radius: 5px;*/
     }
 
     .dash_bg{
@@ -29,7 +29,7 @@
         display: flex;
 
         flex-direction: column;
-
+ 
         justify-content: center;
 
         text-align: center;

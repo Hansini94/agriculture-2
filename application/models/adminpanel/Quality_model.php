@@ -136,7 +136,7 @@ class Quality_model extends CI_Model {
         }
     }
 
-    public function get_period_list($tbl){
+    public function get_committee_list($tbl){
         $this->db->from($tbl);
         $query = $this->db->get();
         //echo $this->db->last_query();exit();
@@ -147,7 +147,7 @@ class Quality_model extends CI_Model {
         }
     }
 
-    public function get_edit_period($id, $tbl){
+    public function get_edit_committee($id, $tbl){
         $this->db->from($tbl);
         $this->db->where('id', $id);
         $query = $this->db->get();
@@ -159,9 +159,9 @@ class Quality_model extends CI_Model {
         }
     }
 
-    public function get_composition_list($period, $tbl){
+    public function get_composition_list($recid, $tbl){
         $this->db->from($tbl);
-        $this->db->where('iPeriodId', $period);
+        $this->db->where('iCommitteeId', $recid);
         $query = $this->db->get();
         //echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -171,7 +171,7 @@ class Quality_model extends CI_Model {
         }
     }
 
-    public function get_edit_composition($id, $tbl){
+    public function get_edit_member($id, $tbl){
         $this->db->from($tbl);
         $this->db->where('id', $id);
         $query = $this->db->get();

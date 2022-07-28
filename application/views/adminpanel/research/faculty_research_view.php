@@ -63,13 +63,13 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Research Committee</h2>
+                            <h2>Faculty Research</h2>
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">                           
                             <?php if($cSaveStatus == "E") { ?>
-                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/research/research_committee'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Research Committee</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/research/faculty_research'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Faculty Research</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } else { ?>
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Research Committee</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Faculty Research</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -81,7 +81,7 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_faculty_research" name="edit_faculty_research" action="<?php echo base_url('adminpanel/research/research_committee/save_research_committee'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_faculty_research" name="edit_faculty_research" action="<?php echo base_url('adminpanel/research/faculty_research/save_faculty_research'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Heading <span class="required">*</span></label>
@@ -155,7 +155,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/research/research_committee'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/research/faculty_research'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -208,13 +208,13 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><?php echo $rowlist->vTitle;?></td>                                            
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/research/research_committee/edit_faculty_research/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/research/faculty_research/edit_faculty_research/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/research_committee/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/faculty_research/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/research_committee/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/faculty_research/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

@@ -1,14 +1,18 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_period[0]->id;   
-	$vName = $edit_period[0]->vName;  
-	$iOrder = $edit_period[0]->iOrder;   
-    $cEnable = $edit_period[0]->cEnable;
+    $id = $edit_testimonial[0]->id;   
+	$vStudentName = $edit_testimonial[0]->vStudentName;  
+    $tTestimonial = $edit_testimonial[0]->tTestimonial; 
+	$fImage = $edit_testimonial[0]->fImage; 
+    $iOrder = $edit_testimonial[0]->iOrder;  
+    $cEnable = $edit_testimonial[0]->cEnable;
 	
 } else {
     $id = "";    
-	$vName = "";  
-    $iOrder = "";  
+	$vStudentName = "";  
+    $tTestimonial = "";  
+    $fImage = "";  
+    $iOrder = "";
     $cEnable = "Y";
 }
 ?>
@@ -59,14 +63,14 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">                    
                     <div class="x_title">
                     <div class="col-md-9 col-sm-12 col-xs-12">
-                            <h2>Library Committee</h2>
+                            <h2>Testimonial</h2>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/quality/library_committee_composition'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Period</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/international/study_abroad_opportunity/testimonials'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Testimonial</span>&nbsp;</a></li>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Period</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Testimonial</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -79,16 +83,50 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_period" name="edit_period" action="<?php echo base_url('adminpanel/quality/library_committee_composition/save_data'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_testimonial" name="edit_testimonial" action="<?php echo base_url('adminpanel/international/study_abroad_opportunity/save_testimonial'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Composition Title<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12">
-                                       <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Student Name <span class="required">*</span></label>
+                                        <div class="col-md-9 col-sm-12 col-xs-12">
+                                       <input type="text" id="vStudentName" name="vStudentName" value="<?php echo $vStudentName; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >Image (590 * 390px) <br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
+                                        <input type="file" id="fImage" name="fImage" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>                                    
+                                </div> 
+                                
+                                <div class="item form-group">
+                                    <?php if($fImage!=''){ ?>
+                                
+                                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">&nbsp;</label>
+                                    <div class="col-md-7 col-sm-6 col-xs-10" >
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage;?>" style="width:200px;"   />
+                                        <!-- <a href="<?php echo base_url().'adminpanel/awards/research_committee/remove_image/'.$id.'/fChairmenImage/'.$fChairmenImage;?>">Remove image</a>  -->
+                                    </div>
+                               
+								    <?php } ?>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Testimonial<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tTestimonial" id="tTestimonial" class="form-control col-md-7 col-xs-12" required><?php echo $tTestimonial; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tTestimonial); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
@@ -107,7 +145,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/quality/library_committee_composition'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/international/study_abroad_opportunity/testimonials'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -123,13 +161,12 @@ if ($cSaveStatus == "E") {
                             <thead>
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
-                                    <th style="width:10%;text-align:center;">No </th>     
+                                    <th style="width:50px;text-align:center;">No </th>    
                                     <th>Name </th> 
-                                    <th>Order</th>  
-                                    <th style="width:10%; text-align:center">Add composition </th>                              
-                                    <th style="width:10%; text-align:center">Edit </th>
-                                    <th style="width:10%; text-align:center">Status </th>
-                                    <th style="width:10%; text-align:center">Delete </th>
+                                    <th>Order</th>                                
+                                    <th style="width:80px; text-align:center">Edit </th>
+                                    <th style="width:80px; text-align:center">Status </th>
+                                    <th style="width:80px; text-align:center">Delete </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -159,18 +196,15 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vName; ?></td>                                         
+                                            <td><?php echo $rowlist->vStudentName	; ?></td>                                         
                                             <td><?php echo $rowlist->iOrder;?></td>   
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/quality/library_committee_composition/add_composition/$recordid" ?>" target="_blank">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/international/study_abroad_opportunity/edit_testimonial/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/quality/library_committee_composition/edit/$recordid" ?>">
-                                                    <i class="fa fa-edit"></i></a>
-                                            </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/library_committee_composition/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/international/study_abroad_opportunity/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/library_committee_composition/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/international/study_abroad_opportunity/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>
@@ -197,19 +231,6 @@ if ($cSaveStatus == "E") {
             border-style: none;
         }			
     </style>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#dDate').daterangepicker({
-                singleDatePicker: true,
-                calender_style: "picker_1",
-				format: 'YYYY-MM-DD'
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            
-        });
-    </script>
    
 
 </div>

@@ -43,7 +43,7 @@
             
             body{
                 height: 100vh !important;
-                background-image:url('<?php echo base_url("assets/frontend/images/award_bg.jpg"); ?>') !important;
+                background-image:url('<?php echo base_url("assets/frontend/images/login_bg.jpg"); ?>') !important;
                 background-repeat:no-repeat !important;
                 background-size:cover !important;
                 background-position:center center !important;
@@ -51,10 +51,11 @@
             
             #login {
                 z-index: 22;
-                background-image:url('<?php echo base_url("assets/images/login_bg.jpg"); ?>') !important;
-                background-repeat:no-repeat !important;
-                background-size:cover !important;
-                background-position:center bottom !important;
+                background-color: #d5b79f;
+                /*background-image:url('<?php echo base_url("assets/images/login_bg.jpg"); ?>') !important;*/
+                /*background-repeat:no-repeat !important;*/
+                /*background-size:cover !important;*/
+                /*background-position:center bottom !important;*/
             }
         
                     #extr-page #main {
@@ -157,8 +158,9 @@
                         white-space: normal;
                     }
                     
-                    .btn-primary {background-image: linear-gradient(to right, #00c183 0%, #006185  51%, #00c183  100%)}
+                    /*.btn-primary {background-image: linear-gradient(to right, #c8cfe9 0%, #b8e0d2  51%, #c4df9b  100%)}*/
                     .btn-primary {
+                        background-color: #818181;
                         font-size: 12px;
                         padding: 15px 25px;
                         text-align: center;
@@ -171,8 +173,9 @@
                     }
                     
                     .btn-primary:hover {
+                        background-color: #ffd400;
                         background-position: right center; /* change the direction of the change here */
-                        color: #fff;
+                        color: #000000;
                         text-decoration: none;
                     }
                     
@@ -211,7 +214,7 @@
                         position: absolute;
                         left: 100px;
                         bottom: 50px;
-                        width: 490px;
+                        width: 545px;
                     }
                     
                     </style>
@@ -224,12 +227,11 @@
             
              <div class="login_heading">
                 <h1 class="main_heading aos-init aos-animate" data-aos="fade-up" style="text-align: left;">
-                    CMS<br>
-                    AGRI
+                    CMS - 
+                    Faculty of Agriculture
                 </h1>
                 <p style="color: #ffffff;">
-Kelani Cables Ltd. was founded in 1969, as an import-substitute manufacturer during the controlled-economy era. Initially, components such as drawn wire were imported, but over time, the company commenced the manufacture of this commodity at its factory. Hence, Kelani is the pioneer in Sri Lanka’s wire drawing industry. In 1973, KCL was incorporated as a quoted public limited liability company for the manufacture of power cables, telecommunications cables, and enamelled winding wires in Sri Lanka.</p>
-            </div>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.             </div>
             
             <div id="wrapper">
                 <div id="login" class="animate form">
@@ -238,7 +240,7 @@ Kelani Cables Ltd. was founded in 1969, as an import-substitute manufacturer dur
                         echo form_open('adminpanel/login/login_validation');
                         ?>
                         <form>
-                            <img src="<?php echo base_url("assets/frontend/images/logo_2.svg"); ?>" alt="" class="img-responsive center-block" style="width: 170px; margin-bottom: 20px;">
+                            <img src="<?php echo base_url("assets/frontend/images/logo.png"); ?>" alt="" class="img-responsive center-block" style="margin-bottom: 20px;">
                             <div>
                                 <input class="form-control" style="border: 2px solid #ff7400; font-weight:500;" name="vUserName" placeholder="Username" type="text" value ="<?php echo set_value('vUserName') ?>" required />
                             </div>
@@ -271,7 +273,7 @@ Kelani Cables Ltd. was founded in 1969, as an import-substitute manufacturer dur
                                 <!--<div class="clearfix"></div>-->
                                 <!-- <br />-->
     <!--<h1><i class="fa fa-paw" style="font-size: 26px;"></i> Gentelella Alela!</h1>-->
-                                <p style="color:#FFFFFF; text-shadow:none; padding:5px;">Solution by <a href="http://www.tekgeeks.net" style="color:#f68b2e;" target="_blank">TekGeeks</a></p>
+                                <p style="color:#000000; text-shadow:none; padding:5px;">Solution by <a href="http://www.tekgeeks.net" style="color:#545454;" target="_blank">TekGeeks</a></p>
                             </div>
                             
                         </form>

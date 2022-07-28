@@ -36,7 +36,7 @@ Class Faculty_research extends CI_Controller {
         $this->load->view('adminpanel/footer_view');
     }
 
-    public function save_research_committee($data = '') {
+    public function save_faculty_research($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
