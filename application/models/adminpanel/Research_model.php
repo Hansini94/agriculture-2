@@ -94,7 +94,20 @@ class Research_model extends CI_Model {
     }
     
     ###############################
-	
+
+    // Faurs
+	public function get_faurs_data() {
+
+        $this->db->from('tbl_faurs');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
 }
 
 ?>
