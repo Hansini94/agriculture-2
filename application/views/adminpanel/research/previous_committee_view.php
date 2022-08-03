@@ -97,25 +97,25 @@ if ($cSaveStatus == "E") {
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Member Name<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Member Name<span class="required">*</span></label>
                                     <div class="col-md-9 col-sm-12 col-xs-12">
                                        <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
                                     <div class="col-md-9 col-sm-12 col-xs-12">
                                        <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >Image (1200 * 800px) </label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image (1200 * 800px) </label>
                                     <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
                                         <input type="file" id="fImg" name="fImg" >
                                     </div>                                    
@@ -125,7 +125,7 @@ if ($cSaveStatus == "E") {
 								    if($fImg){
 								?>
                                 <div class="form-group" id="image_delete_<?php echo $id; ?>">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">&nbsp;</label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">&nbsp;</label>
                                     <div class="col-md-7 col-sm-6 col-xs-10">
                                         <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImg;?>"  style="width:250px;" />
                                     </div>

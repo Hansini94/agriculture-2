@@ -92,10 +92,9 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                
+                            <div class="col-md-12 col-sm-12 col-xs-12">                                
                                <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >PDF
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" style="padding-top:8px;" for="first-name" >PDF
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="file" id="fFilePdf" name="fFilePdf">
@@ -104,18 +103,18 @@ if ($cSaveStatus == "E") {
                                 
                                 <?php if($fFilePdf!=''){ ?>
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <a href="<?php echo base_url().'/front_img/'.$fFilePdf;?>" target="_blank"><?php echo $fFilePdf; ?></a>
+                                    <a href="<?php echo base_url().'/front_img/'.$fFilePdf;?>" target="_blank">View</a>
                                     </div>
                                 </div>
 								<?php } ?> 
                                 
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 
                                <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Word
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" style="padding-top:8px;" for="first-name" >Word
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="file" id="fFileWord" name="fFileWord">
@@ -124,17 +123,17 @@ if ($cSaveStatus == "E") {
                                 
                                 <?php if($fFileWord!=''){ ?>
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <a href="<?php echo base_url().'/front_img/'.$fFileWord;?>" target="_blank"><?php echo $fFileWord; ?></a>
+                                    <a href="<?php echo base_url().'/front_img/'.$fFileWord;?>" target="_blank">View</a>
                                     </div>
                                 </div>
 								<?php } ?> 
                                 
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
                                     <div class="col-md-9 col-sm-12 col-xs-12">
                                        <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
