@@ -10,7 +10,7 @@ if (!defined('BASEPATH'))
 Class Faurs extends CI_Controller {
 
     private $table_name = "tbl_faurs";
-    private $page_id = "250";
+    private $page_id = "251";
     private $redirect_path = "adminpanel/research/faurs";
 
     public function __construct() {
