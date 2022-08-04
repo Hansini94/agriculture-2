@@ -1,16 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_data['id'];  
-    $vName = $edit_data['vName']; 
-    $vYear = $edit_data['vYear']; 
-	$fImage = $edit_data['fImage'];   
+    $vName = $edit_data['vName'];
+	$vUrl = $edit_data['vUrl'];    
     $cEnable = $edit_data['cEnable'];
     $iOrder = $edit_data['iOrder'];
 } else {
     $id = ""; 
     $vName = "";    
-	$vYear = "";    
-    $fImage = "";  
+	$vUrl = ""; 
     $cEnable = "Y";
     $iOrder = "";
 }
@@ -62,14 +60,14 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">                    
                     <div class="x_title">
                         <div class="col-md-9 col-sm-12 col-xs-12">
-                            <h2>Emeritus Professor</h2>
+                            <h2>Academic Staff</h2>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/home_page/emeritus_professor'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/faculty_staff/academic_staff'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Department</span>&nbsp;</a></li>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Department</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -82,51 +80,27 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/home_page/emeritus_professor/save_data'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/faculty_staff/academic_staff/save_department'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Name<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Department Name<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
                                        <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >Image (500 * 500px) </label>
-                                    <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
-                                        <input type="file" id="fImage" name="fImage" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>                                    
-                                </div>                                
-                                
-                                 <?php 
-								    if($fImage){
-								?>
-                                <div class="form-group" id="image_delete_<?php echo $id; ?>">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">&nbsp;</label>
-                                    <div class="col-md-7 col-sm-6 col-xs-10" >
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage;?>"  style="width:100px;"/>
-                                    </div>
-                                    <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
-                                        <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_image('<?php echo $id; ?>');" title="Delete Link"></span>
-                                    </div> -->
-                                </div>
-                                <?php }
-                                ?>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Year<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12">
-                                       <input type="text" id="vYear" name="vYear" value="<?php echo $vYear; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
                                     <div class="col-md-9 col-sm-12 col-xs-12">
                                        <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
@@ -142,7 +116,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/home_page/emeritus_professor'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/faculty_staff/academic_staff'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -159,8 +133,8 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:8%;text-align:center;">No </th>
-                                    <th style="width:35%;">Name </th>    
-                                    <th style="width:15%;">Year </th>     
+                                    <th style="width:35%;">Department Name </th>     
+                                    <th style="width:35%;">URL</th>  
                                     <th style="width:8%; text-align:center">Order</th>                       
                                     <th style="width:8%; text-align:center">Edit </th>
                                     <th style="width:8%; text-align:center">Status </th>
@@ -195,14 +169,17 @@ if ($cSaveStatus == "E") {
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><?php echo $rowlist->vName;?></td>   
-                                            <td><?php echo $rowlist->vYear;?></td> 
+                                            <td><?php echo $rowlist->vUrl;?></td>                                         
                                             <td><?php echo $rowlist->iOrder;?></td> 
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/home_page/emeritus_professor/edit/$recordid" ?>"><i class="fa fa-edit"></i></a></td>  
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/emeritus_professor/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/faculty_staff/academic_staff/edit/$recordid" ?>">
+                                                    <i class="fa fa-edit"></i></a>
+                                            </td>
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/faculty_staff/academic_staff/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/emeritus_professor/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/faculty_staff/academic_staff/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
+                                            </td>
                                         </tr>
                                         <?php
                                     }
