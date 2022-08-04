@@ -3,15 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-/* date : 03-08-2022
+/* date : 04-08-2022
  * author : Hansini
  */
 
-Class Competitions extends CI_Controller {
+Class Alumni_scholarships extends CI_Controller {
 
-    private $table_name = "tbl_competition";
-    private $page_id = "254";
-    private $redirect_path = "adminpanel/research/competitions";
+    private $table_name = "tbl_alumni_scholarships";
+    private $page_id = "268";
+    private $redirect_path = "adminpanel/alumni/alumni_scholarships";
 
     public function __construct() {
         parent::__construct();
@@ -21,8 +21,8 @@ Class Competitions extends CI_Controller {
         $this->load->helper('flexigrid');
         $this->load->helper('ckeditor');
         $this->load->model('adminpanel/common_model');
-        $this->load->model('adminpanel/research_model');
-        set_title("Competitions");
+        $this->load->model('adminpanel/alumni_model');
+        set_title("Scholarships");
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
@@ -41,39 +41,39 @@ Class Competitions extends CI_Controller {
         );
 		
         $data['cSaveStatus']= 'A';
-        $data['list_data'] = $this->research_model->get_competition_list();
+        $data['list_data'] = $this->alumni_model->get_alumni_scholarship_list();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/research/competition_view', $data);
+        $this->load->view('adminpanel/alumni/alumni_scholarships_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
-    public function save_competition($data = '') {
+    public function save_scholarship($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_competition')) {
+            if ($this->common_model->update_saved_data('tbl_alumni_scholarships')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/research/competitions');
+                redirect(base_url() . 'adminpanel/alumni/alumni_scholarships');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/research/competitions');
+                redirect(base_url() . 'adminpanel/alumni/alumni_scholarships');
             }
         } else {
-            if ($this->common_model->save_data('tbl_competition')) {
+            if ($this->common_model->save_data('tbl_alumni_scholarships')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/research/competitions');
+                redirect(base_url() . 'adminpanel/alumni/alumni_scholarships');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/research/competitions');
+                redirect(base_url() . 'adminpanel/alumni/alumni_scholarships');
             }
         }
     }
 	
-	public function edit_competition() {
+	public function edit_scholarship() {
         $data['ckeditor_tContent'] = array(
             //ID of the textarea that will be replaced
             'id' => 'tContent',
@@ -87,11 +87,11 @@ Class Competitions extends CI_Controller {
         );
 		
         $data['cSaveStatus']= 'E';
-        $data['list_data'] = $this->research_model->get_competition_list();
-		$competitionId = $this->uri->segment(5);
-		$data['edit_competition'] = $this->research_model->get_edit_competition($competitionId);
+        $data['list_data'] = $this->alumni_model->get_alumni_scholarship_list();
+		$scholId = $this->uri->segment(5);
+		$data['edit_data'] = $this->alumni_model->get_edit_alumni_scholarship($scholId);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/research/competition_view', $data);
+        $this->load->view('adminpanel/alumni/alumni_scholarships_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 

@@ -1,12 +1,12 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_data['id'];  
-    $vTitle = $edit_data['vTitle'];
-	$tContent = $edit_data['tContent'];   
-	$fThumbnail = $edit_data['fThumbnail'];  
-    $dRDate = $edit_data['dRDate'];  
-    $cEnable = $edit_data['cEnable'];
-    $iOrder = $edit_data['iOrder'];
+    $id = $edit_data[0]->id;  
+    $vTitle = $edit_data[0]->vTitle;
+	$tContent = $edit_data[0]->tContent;   
+	$fThumbnail = $edit_data[0]->fThumbnail;  
+    $dRDate = $edit_data[0]->dRDate;  
+    $cEnable = $edit_data[0]->cEnable;
+    $iOrder = $edit_data[0]->iOrder;
 } else {
     $id = ""; 
     $vTitle = "";    
@@ -64,14 +64,14 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">                    
                     <div class="x_title">
                         <div class="col-md-9 col-sm-12 col-xs-12">
-                            <h2>Research Stories</h2>
+                            <h2>Alumni Newsletters</h2>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/research/research_stories'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Story</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/alumni/alumni_newsletters'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Events</span>&nbsp;</a></li>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Story</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Events</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -84,7 +84,7 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/research/research_stories/save_stories'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/alumni/alumni_newsletters/save_newsletters'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
@@ -155,7 +155,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/research/research_stories'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/alumni/alumni_newsletters'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -210,14 +210,14 @@ if ($cSaveStatus == "E") {
                                             <td><?php echo $rowlist->vTitle;?></td> 
                                             <td><?php echo $rowlist->dRDate;?></td>                                            
                                             <td><?php echo $rowlist->iOrder;?></td> 
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/research/research_stories/edit/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/alumni/alumni_newsletters/edit/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/research_stories/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/alumni/alumni_newsletters/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/research_stories/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/alumni/alumni_newsletters/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>
