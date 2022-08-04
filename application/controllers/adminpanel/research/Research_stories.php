@@ -7,11 +7,11 @@ if (!defined('BASEPATH'))
  * author : Hansini
  */
 
-Class Previous_committee extends CI_Controller {
+Class Research_stories extends CI_Controller {
 
-    private $table_name = "tbl_faurs_committee_previous";
-    private $page_id = "253";
-    private $redirect_path = "adminpanel/research/previous_committee";
+    private $table_name = "tbl_research_stories";
+    private $page_id = "256";
+    private $redirect_path = "adminpanel/research/research_stories";
 
     public function __construct() {
         parent::__construct();
@@ -21,7 +21,8 @@ Class Previous_committee extends CI_Controller {
         $this->load->helper('flexigrid');
         $this->load->helper('ckeditor');
         $this->load->model('adminpanel/common_model');
-        set_title("Home");
+        $this->load->model('adminpanel/research_model');
+        set_title("Research Stories");
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
@@ -38,17 +39,15 @@ Class Previous_committee extends CI_Controller {
                 'height' => '200px', //Setting a custom height
             ),            
         );
-
-        
 		
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/research/previous_committee_view', $data);
+        $this->load->view('adminpanel/research/research_stories_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
-    public function save_previous($data = '') {
+    public function save_stories($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
@@ -56,20 +55,20 @@ Class Previous_committee extends CI_Controller {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/research/previous_committee');
+                redirect(base_url() . 'adminpanel/research/research_stories');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/research/previous_committee');
+                redirect(base_url() . 'adminpanel/research/research_stories');
             }
         } else {
             if ($this->common_model->save_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/research/previous_committee');
+                redirect(base_url() . 'adminpanel/research/research_stories');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/research/previous_committee');
+                redirect(base_url() . 'adminpanel/research/research_stories');
             }
         }
     }
@@ -92,7 +91,7 @@ Class Previous_committee extends CI_Controller {
 		$recId = $this->uri->segment(5);
 		$data['edit_data'] = $this->common_model->get_edit_data($recId, $this->table_name);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/research/previous_committee_view', $data);
+        $this->load->view('adminpanel/research/research_stories_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
@@ -116,6 +115,8 @@ Class Previous_committee extends CI_Controller {
             redirect(base_url() . $this->redirect_path);
         }
     }
+
+    
 
 }
 
