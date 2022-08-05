@@ -41,7 +41,7 @@
                 <!-- nav tabs btn section -->
                 <div class="nav flex-column nav-pills me-3 side_nav_btn" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-                  <a href="<?php echo base_url(); ?>quality/functions_of_foaqac">
+                  <a href="<?php echo base_url(); ?>quality/functions-of-foaqac">
                     <button class="nav-link">
                       Functions of FoAQAC
                     </button>
@@ -53,7 +53,7 @@
                     </button>
                   </a>
 
-                  <a href="<?php echo base_url(); ?>quality/schedule_of_meetings">
+                  <a href="<?php echo base_url(); ?>quality/schedule-of-meetings">
                     <button class="nav-link">
                       Schedule of Meetings 
                     </button>
