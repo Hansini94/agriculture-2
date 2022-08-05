@@ -86,7 +86,7 @@ if ($cSaveStatus == "E") {
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                         <ul class="nav navbar-right ">
-                            <!-- <li><a class="collapse-link" href="<?php echo base_url('adminpanel/home_page/code_of_conduct'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Composition</span>&nbsp;</a></li> -->
+                            <!-- <li><a class="collapse-link" href="<?php echo base_url('adminpanel/faculty_staff/code_of_conduct'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Composition</span>&nbsp;</a></li> -->
                         </ul>
                         </div>
                         <div class="clearfix"></div>
@@ -98,7 +98,7 @@ if ($cSaveStatus == "E") {
                                             }
                                             ?>>
                         <br />
-                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/home_page/code_of_conduct/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/faculty_staff/code_of_conduct/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
@@ -132,7 +132,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/home_page/code_of_conduct'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/faculty_staff/code_of_conduct'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
