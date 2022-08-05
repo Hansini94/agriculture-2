@@ -1,17 +1,19 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $postgraduate_programme_data[0]->id;
-    $fImg = $postgraduate_programme_data[0]->fImg;
-    $vTitle = $postgraduate_programme_data[0]->vTitle;
-    $tContent = $postgraduate_programme_data[0]->tContent;
-    $vUrl = $postgraduate_programme_data[0]->vUrl;
-    $cEnable = $postgraduate_programme_data[0]->cEnable;
+    $id = $faurs_page_date[0]->id;
+    $fImg = $faurs_page_date[0]->fImg;
+    $vTitle1 = $faurs_page_date[0]->vTitle1;
+    $tContent1 = $faurs_page_date[0]->tContent1;
+    $vTitle2 = $faurs_page_date[0]->vTitle2;
+    $tContent2 = $faurs_page_date[0]->tContent2;
+    $cEnable = $faurs_page_date[0]->cEnable;
 } else {
     $id = '';
     $fImg = '';
-    $vTitle = '';
-    $tContent = '';
-    $vUrl = '';
+    $vTitle1 = '';
+    $tContent1 = '';
+    $vTitle2 = '';
+    $tContent2 = '';
     $cEnable = '';
 }
 ?>
@@ -86,7 +88,7 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Postgraduate Programme</h2>
+                            <h2>Outreach Centers</h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -97,16 +99,8 @@ if ($cSaveStatus == "E") {
                                             }
                                             ?>>
                         <br />
-                        <form id="edit_postgraduate_programme" name="edit_postgraduate_programme" action="<?php echo base_url('adminpanel/academics/postgraduate_programme/save_postgraduate_programme'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-                            
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/services/outreach_centers/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                                                        
                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image<br>
@@ -129,23 +123,43 @@ if ($cSaveStatus == "E") {
                                 </div>
 
                             </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading Left<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vTitle1" name="vTitle1" value="<?php echo $vTitle1; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>
                             
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content Left<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
+                                        <textarea rows="15" name="tContent1" id="tContent1" class="form-control col-md-7 col-xs-12" required><?php echo $tContent1; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent1); ?>
                                     </div>
                                 </div>
                             </div>
-                                               
+
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading Below<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                       <input type="text" id="vTitle2" name="vTitle2" value="<?php echo $vTitle2; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content Below<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContent2" id="tContent2" class="form-control col-md-7 col-xs-12" required><?php echo $tContent2; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent2); ?>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +174,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/academics/postgraduate_programme'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/services/outreach_centers'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
