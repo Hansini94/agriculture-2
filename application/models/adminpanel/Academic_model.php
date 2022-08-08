@@ -377,6 +377,81 @@ class Academic_model extends CI_Model {
         }
     }
 
+    public function get_agtech_scholarship_list() {
+
+        $this->db->from('tbl_bsc_agtech_scholarship');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_agtech_scholarship($id) {
+
+        $this->db->from('tbl_bsc_agtech_scholarship');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+    //    echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_asf_scholarship_list() {
+
+        $this->db->from('tbl_bsc_asf_scholarship');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_asf_scholarship($id) {
+
+        $this->db->from('tbl_bsc_asf_scholarship');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+    //    echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_fst_scholarship_list() {
+
+        $this->db->from('tbl_bsc_fst_scholarship');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_fst_scholarship($id) {
+
+        $this->db->from('tbl_bsc_fst_scholarship');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+    //    echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
     ###############################
 
 }
