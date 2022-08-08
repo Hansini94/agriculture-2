@@ -5,6 +5,41 @@ if (!defined('BASEPATH'))
 
 class Alumni_model extends CI_Model {
 
+    public function get_main_slider_list() {
+
+        $this->db->from('tbl_alumni_main_slider');
+		$this->db->order_by('tbl_alumni_main_slider.iOrder','asc');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+	public function get_edit_main_slider($sliderid) {
+
+        $this->db->from('tbl_alumni_main_slider');
+		$this->db->where('id', $sliderid);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+
+    public function get_alumni_home_data() {
+
+        $this->db->from('tbl_home_content');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+    
+    
     public function get_current_committee_list() {
 
         $this->db->from('tbl_alumni_committee_current');

@@ -7,11 +7,11 @@ if (!defined('BASEPATH'))
  * author : Hansini
  */
 
-Class As_introduction extends CI_Controller {
+Class Ref_introduction extends CI_Controller {
 
-    private $table_name = "tbl_as_content";
-    private $page_id = "294";
-    private $redirect_path = "adminpanel/services/as_introduction";
+    private $table_name = "tbl_ref_content";
+    private $page_id = "297";
+    private $redirect_path = "adminpanel/services/ref_introduction";
 
     public function __construct() {
         parent::__construct();
@@ -56,10 +56,10 @@ Class As_introduction extends CI_Controller {
 
         $data['cSaveStatus']= 'E';
 		
-        $data['faurs_page_date'] = $this->services_model->get_as_intro_data();
+        $data['faurs_page_date'] = $this->services_model->get_ref_intro_data();
 		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/services/as_introduction_view', $data);
+        $this->load->view('adminpanel/services/ref_introduction_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 	
@@ -68,24 +68,24 @@ Class As_introduction extends CI_Controller {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_as_content')) {
+            if ($this->common_model->update_saved_data('tbl_ref_content')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/services/as_introduction');
+                redirect(base_url() . 'adminpanel/services/ref_introduction');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/services/as_introduction');
+                redirect(base_url() . 'adminpanel/services/ref_introduction');
             }
         } else {
-            if ($this->common_model->save_data('tbl_as_content')) {
+            if ($this->common_model->save_data('tbl_ref_content')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/services/as_introduction');
+                redirect(base_url() . 'adminpanel/services/ref_introduction');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/services/as_introduction');
+                redirect(base_url() . 'adminpanel/services/ref_introduction');
             }
         }
     }
@@ -99,10 +99,10 @@ Class As_introduction extends CI_Controller {
             $this->load->model('adminpanel/common_model');
             $postimage_delete = $this->common_model->delete_image($imageID, $field, $this->table_name, $path, $img);
             if ($postimage_delete == TRUE) {
-                redirect(base_url() . "adminpanel/services/as_introduction/update_details/".$imageID);
+                redirect(base_url() . "adminpanel/services/ref_introduction/update_details/".$imageID);
             } else {
                 $this->session->set_flashdata('message_error', 'Delete fail!');
-                redirect(base_url() . "adminpanel/services/as_introduction/update_details/".$imageID);
+                redirect(base_url() . "adminpanel/services/ref_introduction/update_details/".$imageID);
             }
         }
     }

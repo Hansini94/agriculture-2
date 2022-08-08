@@ -3,13 +3,13 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-/* date : 04-08-2022
+/* date : 08-08-2022
  * author : Hansini
  */
 
 Class Alumni_home extends CI_Controller {
 
-    // private $table_name = "tbl_aboutus_content";
+    private $table_name = "tbl_home_content";
     private $page_id = "261";
     private $redirect_path = "adminpanel/alumni/alumni_home";
 
@@ -27,91 +27,68 @@ Class Alumni_home extends CI_Controller {
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
 
-    public function index() {		
+    public function index() {	
+        
+        $data['ckeditor_tContent'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+
+        
+        $data['cSaveStatus']= 'E';
 		
-		// $data['ckeditor_tMissionDes'] = array(
-        //     //ID of the textarea that will be replaced
-        //     'id' => 'tMissionDes',
-        //     'path' => 'assets/js/ckeditor',
-        //     //Optionnal values
-        //     'config' => array(
-        //         'toolbar' => "Full", //Using the Full toolbar
-        //         'width' => "100%", //Setting a custom width
-        //         'height' => '200px', //Setting a custom height
-        //     ),            
-        // );
-
-        // $data['ckeditor_tVisionDes'] = array(
-        //     //ID of the textarea that will be replaced
-        //     'id' => 'tVisionDes',
-        //     'path' => 'assets/js/ckeditor',
-        //     //Optionnal values
-        //     'config' => array(
-        //         'toolbar' => "Full", //Using the Full toolbar
-        //         'width' => "100%", //Setting a custom width
-        //         'height' => '200px', //Setting a custom height
-        //     ),            
-        // );
-
-        // $data['ckeditor_tDeanDetails'] = array(
-        //     //ID of the textarea that will be replaced
-        //     'id' => 'tDeanDetails',
-        //     'path' => 'assets/js/ckeditor',
-        //     //Optionnal values
-        //     'config' => array(
-        //         'toolbar' => "Full", //Using the Full toolbar
-        //         'width' => "100%", //Setting a custom width
-        //         'height' => '200px', //Setting a custom height
-        //     ),            
-        // );
-
-        // $data['ckeditor_tDeanMsg'] = array(
-        //     //ID of the textarea that will be replaced
-        //     'id' => 'tDeanMsg',
-        //     'path' => 'assets/js/ckeditor',
-        //     //Optionnal values
-        //     'config' => array(
-        //         'toolbar' => "Full", //Using the Full toolbar
-        //         'width' => "100%", //Setting a custom width
-        //         'height' => '200px', //Setting a custom height
-        //     ),            
-        // );
-
-        // $data['cSaveStatus']= 'E';
-		
-        // $data['aboutus_data'] = $this->aboutus_model->get_aboutus_data();
+        $data['content_data'] = $this->alumni_model->get_alumni_home_data();
 		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/alumni/home_view');
+        $this->load->view('adminpanel/alumni/alumni_home_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 	
 
-    // public function save_aboutus($data = '') {
-    //     $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
-    //     $id = $this->input->post('id', TRUE);
-    //     if ($cSaveStatus === 'E') {
-    //         if ($this->common_model->update_saved_data('tbl_aboutus_content')) {
-    //             //$tDes = "saved data has been updated";
-    //             //$this->common_model->add_log($tDes);
-    //             $this->session->set_flashdata('message_saved', 'Saved successfully.');
-    //             redirect(base_url() . 'adminpanel/about_us/aboutus_content');
-    //         } else {
-    //             $this->session->set_flashdata('message_error', 'Save fail!');
-    //             redirect(base_url() . 'adminpanel/about_us/aboutus_content');
-    //         }
-    //     } else {
-    //         if ($this->common_model->save_data('tbl_aboutus_content')) {
-    //             //$tDes = "saved data has been updated";
-    //             //$this->common_model->add_log($tDes);
-    //             $this->session->set_flashdata('message_saved', 'Saved successfully.');
-    //             redirect(base_url() . 'adminpanel/about_us/aboutus_content');
-    //         } else {
-    //             $this->session->set_flashdata('message_error', 'Save fail!');
-    //             redirect(base_url() . 'adminpanel/about_us/aboutus_content');
-    //         }
-    //     }
-    // }
+    public function save_content($data = '') {
+        $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
+        $id = $this->input->post('id', TRUE);
+        if ($cSaveStatus === 'E') {
+            if ($this->common_model->update_saved_data('tbl_home_content')) {
+                //$tDes = "saved data has been updated";
+                //$this->common_model->add_log($tDes);
+                $this->session->set_flashdata('message_saved', 'Saved successfully.');
+                redirect(base_url() . 'adminpanel/alumni/alumni_home');
+            } else {
+                $this->session->set_flashdata('message_error', 'Save fail!');
+                redirect(base_url() . 'adminpanel/alumni/alumni_home');
+            }
+        } else {
+            if ($this->common_model->save_data('tbl_home_content')) {
+                //$tDes = "saved data has been updated";
+                //$this->common_model->add_log($tDes);
+                $this->session->set_flashdata('message_saved', 'Saved successfully.');
+                redirect(base_url() . 'adminpanel/alumni/alumni_home');
+            } else {
+                $this->session->set_flashdata('message_error', 'Save fail!');
+                redirect(base_url() . 'adminpanel/alumni/alumni_home');
+            }
+        }
+    }
+
+
+    public function update_details() {
+        if ($this->common_library->check_privilege('p_edit')) {
+            $data = $this->common_library->flexigrid_update_user($this->table_name);
+            $this->index();
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission..');
+            redirect(base_url() . $this->redirect_path);
+        }
+    }
+
 
 }
 
