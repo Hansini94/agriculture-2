@@ -17,7 +17,32 @@ class Services_model extends CI_Model {
             return array();
         }
     }
+    
+    public function get_as_intro_data() {
 
+        $this->db->from('tbl_as_content');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_ref_intro_data() {
+
+        $this->db->from('tbl_ref_content');
+		$this->db->where('id', 1);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
     
     // public function get_competition_list() {
 
