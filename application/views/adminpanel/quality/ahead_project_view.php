@@ -1,20 +1,18 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_quick_link[0]->id; 
-    $vHeading = $edit_quick_link[0]->vHeading;   
-    $tContent = $edit_quick_link[0]->tContent;  
-	$vUrlLink = $edit_quick_link[0]->vUrlLink;  
-    $fImage = $edit_quick_link[0]->fImage; 
-    $iOrder = $edit_quick_link[0]->iOrder;
-    $cEnable = $edit_quick_link[0]->cEnable;
+    $id = $edit_ahead_project[0]->id;  
+    $vMHeading = $edit_ahead_project[0]->vMHeading;    
+    $vHeading = $edit_ahead_project[0]->vHeading;  
+    $tContent = $edit_ahead_project[0]->tContent; 
+    $iOrder = $edit_ahead_project[0]->iOrder; 
+    $cEnable = $edit_ahead_project[0]->cEnable;
 	
 } else {
-    $id = "";    
-    $vHeading = "";  
+    $id = "";   
+    $vMHeading = "";  
+	$vHeading = "";  
     $tContent = "";  
-	$vUrlLink = "";   
-	$fImage = "";      
-    $iOrder = "";
+    $iOrder = "";  
     $cEnable = "Y";
 }
 ?>
@@ -65,13 +63,13 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Quick Links</h2>
+                            <h2>AHEAD Projects</h2>
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">                           
                             <?php if($cSaveStatus == "E") { ?>
-                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/about_us/quick_links'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Quick Link</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/quality/ahead_project'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add AHEAD Project</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } else { ?>
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Quick Link</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add AHEAD Project</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -83,16 +81,23 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_quick_links" name="edit_quick_links" action="<?php echo base_url('adminpanel/about_us/quick_links/save_quick_links'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_ahead_project" name="edit_ahead_project" action="<?php echo base_url('adminpanel/quality/ahead_project/save_ahead_project'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading <span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" required class="form-control col-md-7 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Main Heading<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vMHeading" name="vMHeading" value="<?php echo $vMHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
@@ -102,41 +107,11 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">                                    
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Logo (200*100px)
-                                    </label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fImage" name="fImage"<?php
-                                        if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>
-                                </div>
-                                
                                 <div class="form-group">
-                                    <?php if($fImage!=''){ ?>                                
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage;?>" style="height:75px;" />
-                                    </div>                                
-								<?php } ?>
-                            	</div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <input type="text" id="vUrlLink" name="vUrlLink" value="<?php echo $vUrlLink; ?>" required class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Display Order </label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-12 col-xs-12">
+                                       <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +126,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/about_us/quick_links'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/quality/ahead_project'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -167,9 +142,9 @@ if ($cSaveStatus == "E") {
                             <thead>
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
-                                    <th style="width:50px;text-align:center;">No </th>
-                                    <th>URL </th>   
-                                    <th>Image</th>                                 
+                                    <th style="width:50px;text-align:center;">No </th>  
+                                    <th>Main Heading</th> 
+                                    <th>Heading</th>                                 
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -202,17 +177,17 @@ if ($cSaveStatus == "E") {
                                          
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
-                                            <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vUrlLink;?></td>                                            
-                                            <td><img height="75" src="<?php echo base_url().'/front_img/'.$rowlist->fImage;?>"   /></td>
+                                            <td style="text-align:center;"><?php echo $no_count; ?></td>     
+                                            <td><?php echo $rowlist->vMHeading;?></td>    
+                                            <td><?php echo $rowlist->vHeading;?></td>                                         
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/about_us/quick_links/edit_quick_links/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/quality/ahead_project/edit_ahead_project/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/about_us/quick_links/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/ahead_project/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/about_us/quick_links/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/ahead_project/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

@@ -1,19 +1,15 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_quick_link[0]->id; 
-    $vHeading = $edit_quick_link[0]->vHeading;   
-    $tContent = $edit_quick_link[0]->tContent;  
-	$vUrlLink = $edit_quick_link[0]->vUrlLink;  
-    $fImage = $edit_quick_link[0]->fImage; 
-    $iOrder = $edit_quick_link[0]->iOrder;
-    $cEnable = $edit_quick_link[0]->cEnable;
+    $id = $edit_download[0]->id;  
+	$vHeading = $edit_download[0]->vHeading;  
+    $fPdf = $edit_download[0]->fPdf; 
+    $iOrder = $edit_download[0]->iOrder;
+    $cEnable = $edit_download[0]->cEnable;
 	
 } else {
     $id = "";    
-    $vHeading = "";  
-    $tContent = "";  
-	$vUrlLink = "";   
-	$fImage = "";      
+	$vHeading = "";   
+	$fPdf = "";      
     $iOrder = "";
     $cEnable = "Y";
 }
@@ -65,13 +61,13 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Quick Links</h2>
+                            <h2>Download</h2>
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">                           
                             <?php if($cSaveStatus == "E") { ?>
-                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/about_us/quick_links'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Quick Link</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/quality/download'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Download</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } else { ?>
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Quick Link</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Download</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                             <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
@@ -83,63 +79,48 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_quick_links" name="edit_quick_links" action="<?php echo base_url('adminpanel/about_us/quick_links/save_quick_links'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form id="edit_downloads" name="edit_downloads" action="<?php echo base_url('adminpanel/quality/download/save_download'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading <span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Heading <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
                                         <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" required class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">                                    
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Logo (200*100px)
-                                    </label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fImage" name="fImage"<?php
-                                        if ($cSaveStatus != "E") {?> required  <?php } ?>>
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <?php if($fImage!=''){ ?>                                
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage;?>" style="height:75px;" />
-                                    </div>                                
-								<?php } ?>
-                            	</div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <input type="text" id="vUrlLink" name="vUrlLink" value="<?php echo $vUrlLink; ?>" required class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Display Order </label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Display Order </label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
                                         <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12">PDF </label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <input  id="fPdf" name="fPdf" type="file" <?php
+                                        if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php
+                                        if ($cSaveStatus == 'E') {
+                                            if ($fPdf != '' && $fPdf != 0) {
+                                        ?>
+                                        <div class="col-md-8 col-sm-7 col-xs-12">
+                                                        
+                                            <a href="<?php echo base_url("front_img/" . $fPdf . "");?>" target="_blank">View Document</a> 
+                                                            <!--</label>-->
+                                        </div>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </div>  
+                                </div>
+                            </div>
+
 
                             <div style="clear:both;"></div>
                             <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
@@ -151,7 +132,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/about_us/quick_links'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/quality/download'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -168,8 +149,7 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:50px;text-align:center;">No </th>
-                                    <th>URL </th>   
-                                    <th>Image</th>                                 
+                                    <th>Heading </th>   
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -203,16 +183,15 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vUrlLink;?></td>                                            
-                                            <td><img height="75" src="<?php echo base_url().'/front_img/'.$rowlist->fImage;?>"   /></td>
+                                            <td><?php echo $rowlist->vHeading;?></td>                                            
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/about_us/quick_links/edit_quick_links/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/quality/download/edit_download/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/about_us/quick_links/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/download/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/about_us/quick_links/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/quality/download/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

@@ -3,15 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-/* date : 28-06-2022
+/* date : 08-08-2022
  * author : Ayodhya
  */
 
-Class Quick_links extends CI_Controller {
+Class Ahead_project extends CI_Controller {
 
-    private $table_name = "tbl_quick_links";
-    private $page_id = "7";
-    private $redirect_path = "adminpanel/about_us/quick_links";
+    private $table_name = "tbl_ahead_project";
+    private $page_id = "68";
+    private $redirect_path = "adminpanel/quality/ahead_project";
 
     public function __construct() {
         parent::__construct();
@@ -21,8 +21,8 @@ Class Quick_links extends CI_Controller {
         $this->load->helper('flexigrid');
         $this->load->helper('ckeditor');
         $this->load->model('adminpanel/common_model');
-        $this->load->model('adminpanel/aboutus_model');
-        set_title("Home");
+        $this->load->model('adminpanel/quality_model');
+        set_title("AHEAD Projects");
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
@@ -40,41 +40,42 @@ Class Quick_links extends CI_Controller {
                 'height' => '200px', //Setting a custom height
             ),            
         );
+
 		
         $data['cSaveStatus']= 'A';
-        $data['list_data'] = $this->aboutus_model->get_quick_links_list();
+        $data['list_data'] = $this->quality_model->get_ahead_project_list();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/aboutus/quick_links_view', $data);
+        $this->load->view('adminpanel/quality/ahead_project_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
-    public function save_quick_links($data = '') {
+    public function save_ahead_project($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_quick_links')) {
+            if ($this->common_model->update_saved_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/about_us/quick_links');
+                redirect(base_url() . 'adminpanel/quality/ahead_project');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/about_us/quick_links');
+                redirect(base_url() . 'adminpanel/quality/ahead_project');
             }
         } else {
-            if ($this->common_model->save_data('tbl_quick_links')) {
+            if ($this->common_model->save_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/about_us/quick_links');
+                redirect(base_url() . 'adminpanel/quality/ahead_project');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/about_us/quick_links');
+                redirect(base_url() . 'adminpanel/quality/ahead_project');
             }
         }
     }
 	
-	public function edit_quick_links() {
+	public function edit_ahead_project() {
 
         $data['ckeditor_tContent'] = array(
             //ID of the textarea that will be replaced
@@ -89,11 +90,11 @@ Class Quick_links extends CI_Controller {
         );
 		
         $data['cSaveStatus']= 'E';
-        $data['list_data'] = $this->aboutus_model->get_quick_links_list();
-		$quickLinkId = $this->uri->segment(5);
-		$data['edit_quick_link'] = $this->aboutus_model->get_quick_links($quickLinkId);
+        $data['list_data'] = $this->quality_model->get_ahead_project_list();
+		$schlId = $this->uri->segment(5);
+		$data['edit_ahead_project'] = $this->quality_model->get_edit_ahead_project($schlId);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/aboutus/quick_links_view', $data);
+        $this->load->view('adminpanel/quality/ahead_project_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
