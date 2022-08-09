@@ -24,6 +24,18 @@ Class Meeting_Schedule extends CI_Controller {
     }
 
     public function index() {
+
+        $data['ckeditor_tContent'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
 		
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->aboutus_model->get_schedule_list();
@@ -59,6 +71,18 @@ Class Meeting_Schedule extends CI_Controller {
     }
 	
 	public function edit_meeting_schedule() {
+
+        $data['ckeditor_tContent'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
 		
         $data['cSaveStatus']= 'E';
         $data['list_data'] = $this->aboutus_model->get_schedule_list();

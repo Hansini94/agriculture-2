@@ -4,26 +4,13 @@
   <h1 class="sub_heading">Website links for our partner websites</h1>
   <div class="slider">
     <div class="owl-carousel">
+      <?php foreach($quick_links as $quick_link) { ?>
       <div class="slider-card">
           <div class="d-flex justify-content-center align-items-center mb-4">
-                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo01.jpg" class="img-fluid">
+                <img src="<?php echo base_url("front_img/").$quick_link->fImg; ?>" class="img-fluid">
           </div>
       </div>
-      <div class="slider-card">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo02.jpg" class="img-fluid">
-          </div>
-      </div>
-      <div class="slider-card">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo03.jpg" class="img-fluid">
-          </div>
-      </div>
-      <div class="slider-card">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-                <img src="<?php echo base_url("assets/frontend/"); ?>images/logo04.jpg" class="img-fluid">
-          </div>
-      </div>
+      <?php } ?>
     </div>
   </div>
 </div>

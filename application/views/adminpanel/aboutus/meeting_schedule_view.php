@@ -1,14 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_meeting_schedule[0]->id;  
-	$vTitle = $edit_meeting_schedule[0]->vTitle ;  
-	$vUrl = $edit_meeting_schedule[0]->vUrl;    
+	$vYear = $edit_meeting_schedule[0]->vYear ;  
+	$tContent = $edit_meeting_schedule[0]->tContent;    
     $cEnable = $edit_meeting_schedule[0]->cEnable;
 	
 } else {
     $id = "";    
-	$vTitle = "";  
-	$vUrl = "";    
+	$vYear = "";  
+	$tContent = "";    
     $cEnable = "Y";
 }
 ?>
@@ -78,27 +78,23 @@ if ($cSaveStatus == "E") {
                     ?>>
                         <br />
                         <form id="edit_meeting_schedule" name="edit_meeting_schedule" action="<?php echo base_url('adminpanel/about_us/meeting_schedule/save_meeting_schedules'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                        
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Title <span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Year<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                        <input type="text" id="vYear" name="vYear" value="<?php echo $vYear; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
-
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div style="clear:both;"></div>
@@ -161,7 +157,7 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vTitle;?></td> 
+                                            <td><?php echo $rowlist->vYear;?></td> 
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/about_us/meeting_schedule/edit_meeting_schedule/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
