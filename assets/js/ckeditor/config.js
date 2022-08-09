@@ -17,5 +17,6 @@ CKEDITOR.editorConfig = function(config) {
     config.filebrowserUploadUrl = '/~acllk05/assets/js/kcfinder/upload.php?opener=ckeditor&type=files';
     config.filebrowserImageUploadUrl = '/~acllk05/assets/js/kcfinder/upload.php?opener=ckeditor&type=images';
     config.filebrowserFlashUploadUrl = '/~acllk05/assets/js/kcfinder/upload.php?opener=ckeditor&type=flash';
+    config.allowedContent = true;
 
 };
