@@ -270,7 +270,7 @@
                                         <p>Document</p>
                                     </blockquote>
                                     <!-- arrow link -->
-                                    <a class='animated-arrow' href=''>
+                                    <a class='animated-arrow' href='<?php echo base_url('front_img/').$undergraduate_asf_data[0]->fPdf; ?>' target="_blank">
                                         <span class='the-arrow -left'>
                                             <span class='shaft'></span>
                                         </span>
@@ -388,7 +388,7 @@
                                         <p>Document</p>
                                     </blockquote>
                                     <!-- arrow link -->
-                                    <a class='animated-arrow' href=''>
+                                    <a class='animated-arrow' href='<?php echo base_url('front_img/').$undergraduate_fst_data[0]->fPdf; ?>' target="_blank">
                                         <span class='the-arrow -left'>
                                             <span class='shaft'></span>
                                         </span>
