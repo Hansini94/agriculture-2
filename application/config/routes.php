@@ -98,6 +98,7 @@ $route['quality/member-of-foaqac'] = 'Quality/member_of_foaqac';
 $route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
 
 $route['undergraduate-programme'] = 'Undergraduate_programme';
+$route['postgraduate-programme'] = 'Postgraduate_programme';
 
 $route['international'] = 'International/index';
 $route['international/current-foreign-students'] = 'International/current_foreign_students';
