@@ -180,7 +180,7 @@
                  </ul>
                 </li>
 
-                <li><a class="dropdown-item" href="fac_broucher.html">Brochure</a></li>
+                <li class="<?php echo activate_menu('Faculty_brochure'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
                 <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/MI/" target="_blank">Sub Campus, MI </a></li>
 
                 <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
@@ -213,7 +213,7 @@
                  </ul>
                 </li>
 
-                 <li><a class="dropdown-item" href="fac_broucher.html">Agriculture Library </a></li>
+                 <li><a class="dropdown-item" href="http://www.lib.pdn.ac.lk/branches/agri" target="_blank">Agriculture Library </a></li>
 
                  <!--  <li><a class="dropdown-item" href="#">Downloads &raquo;</a>
                    <ul class="submenu dropdown-menu">
@@ -242,7 +242,7 @@
                 Academics
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="under_pro.html">Undergraduate Programs </a></li>
+                <li class="<?php echo activate_menu('Undergraduate_programme'); ?>"><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
                 <li><a class="dropdown-item" href="Postgraduate.html">Postgraduate Programme </a></li>
               </ul>
             </li>
@@ -453,7 +453,7 @@
                  </ul>
                 </li>
 
-                <li><a class="dropdown-item" href="fac_broucher.html">Brochure</a></li>
+                <li <?php echo activate_menu('Faculty_brochure'); ?>><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
                 <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/MI/" target="_blank">Sub Campus, MI </a></li>
 
                 <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
@@ -486,7 +486,7 @@
                  </ul>
                 </li>
 
-                 <li><a class="dropdown-item" href="fac_broucher.html">Agriculture Library </a></li>
+                 <li><a class="dropdown-item" href="http://www.lib.pdn.ac.lk/branches/agri" target="_blank">Agriculture Library </a></li>
 
                   <!-- <li><a class="dropdown-item" href="#">Downloads &raquo;</a>
                    <ul class="submenu dropdown-menu">
@@ -515,7 +515,7 @@
                 Academics
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="under_pro.html">Undergraduate Programs </a></li>
+                <li class="<?php echo activate_menu('Undergraduate_programme'); ?>"><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
                 <li><a class="dropdown-item" href="http://www.pgia.pdn.ac.lk/" target="_blank">Postgraduate Programme </a></li>
               </ul>
             </li>

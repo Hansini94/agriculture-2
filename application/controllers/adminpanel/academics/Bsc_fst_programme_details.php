@@ -3,15 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-/* date : 08-07-2022
+/* date : 10-08-2022
  * author : Ayodhya
  */
 
-Class Bsc_fst_course_sequence extends CI_Controller {
+Class Bsc_fst_programme_details extends CI_Controller {
 
-    private $table_name = "tbl_bsc_fst_course_sequence";
+    private $table_name = "tbl_bsc_fst_programme_details";
     private $page_id = "93";
-    private $redirect_path = "adminpanel/academics/bsc_fst_course_sequence";
+    private $redirect_path = "adminpanel/academics/bsc_fst_programme_details";
 
     public function __construct() {
         parent::__construct();
@@ -22,28 +22,16 @@ Class Bsc_fst_course_sequence extends CI_Controller {
         $this->load->helper('ckeditor');
         $this->load->model('adminpanel/common_model');
         $this->load->model('adminpanel/academic_model');
-        set_title("B.Sc. FST - Course Sequence");
+        set_title("B.Sc. FST - Programme Details");
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
 
     public function index() {
 
-        $data['ckeditor_tNotation'] = array(
+        $data['ckeditor_tContent'] = array(
             //ID of the textarea that will be replaced
-            'id' => 'tNotation',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tCourse'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tCourse',
+            'id' => 'tContent',
             'path' => 'assets/js/ckeditor',
             //Optionnal values
             'config' => array(
@@ -54,55 +42,43 @@ Class Bsc_fst_course_sequence extends CI_Controller {
         );
 		
         $data['cSaveStatus']= 'A';
-        $data['list_data'] = $this->academic_model->get_bsc_fst_course_sequence_list();
+        $data['list_data'] = $this->academic_model->get_bsc_fst_programme_details_list();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/academics/bsc_fst_course_sequence_view', $data);
+        $this->load->view('adminpanel/academics/bsc_fst_programme_details_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
-    public function save_course_sequence($data = '') {
+    public function save_programme_details($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_bsc_fst_course_sequence')) {
+            if ($this->common_model->update_saved_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/academics/bsc_fst_course_sequence');
+                redirect(base_url() . 'adminpanel/academics/bsc_fst_programme_details');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/academics/bsc_fst_course_sequence');
+                redirect(base_url() . 'adminpanel/academics/bsc_fst_programme_details');
             }
         } else {
-            if ($this->common_model->save_data('tbl_bsc_fst_course_sequence')) {
+            if ($this->common_model->save_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/academics/bsc_fst_course_sequence');
+                redirect(base_url() . 'adminpanel/academics/bsc_fst_programme_details');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/academics/bsc_fst_course_sequence');
+                redirect(base_url() . 'adminpanel/academics/bsc_fst_programme_details');
             }
         }
     }
 	
-	public function edit_course_sequence() {
+	public function edit_programme_details() {
 
-        $data['ckeditor_tNotation'] = array(
+        $data['ckeditor_tContent'] = array(
             //ID of the textarea that will be replaced
-            'id' => 'tNotation',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tCourse'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tCourse',
+            'id' => 'tContent',
             'path' => 'assets/js/ckeditor',
             //Optionnal values
             'config' => array(
@@ -113,11 +89,11 @@ Class Bsc_fst_course_sequence extends CI_Controller {
         );
 		
         $data['cSaveStatus']= 'E';
-        $data['list_data'] = $this->academic_model->get_bsc_fst_course_sequence_list();
+        $data['list_data'] = $this->academic_model->get_bsc_fst_programme_details_list();
 		$courseSeqId = $this->uri->segment(5);
-		$data['edit_course_sequence'] = $this->academic_model->get_edit_bsc_fst_course_sequence($courseSeqId);
+		$data['edit_programme_details'] = $this->academic_model->get_edit_bsc_fst_programme_details($courseSeqId);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/academics/bsc_fst_course_sequence_view', $data);
+        $this->load->view('adminpanel/academics/bsc_fst_programme_details_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
