@@ -12,26 +12,26 @@ Class Undergraduate_programme extends CI_Controller {
 
     public function index() {
 
-        $this->load->model('frontend_model/about_us_model');
+        $this->load->model('frontend_model/academics_model');
         $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         /*************************AGTECH********************************* */
-        $data['undergraduate_agtech_data'] = $this->about_us_model->get_undergraduate_agtech_data();
-        $data['agtech_programme_details'] = $this->about_us_model->get_agtech_programme_details_data();
-        $data['scholarship_agtech_details'] = $this->about_us_model->get_agtech_scholarship_data();
+        $data['undergraduate_agtech_data'] = $this->academics_model->get_undergraduate_agtech_data();
+        $data['agtech_programme_details'] = $this->academics_model->get_agtech_programme_details_data();
+        $data['scholarship_agtech_details'] = $this->academics_model->get_agtech_scholarship_data();
 
         /*************************ASF********************************* */
-        $data['undergraduate_asf_data'] = $this->about_us_model->get_undergraduate_asf_data();
-        $data['asf_programme_details'] = $this->about_us_model->get_asf_programme_details_data();
-        $data['scholarship_asf_details'] = $this->about_us_model->get_asf_scholarship_data();
+        $data['undergraduate_asf_data'] = $this->academics_model->get_undergraduate_asf_data();
+        $data['asf_programme_details'] = $this->academics_model->get_asf_programme_details_data();
+        $data['scholarship_asf_details'] = $this->academics_model->get_asf_scholarship_data();
 
         /*************************FST********************************* */
-        $data['undergraduate_fst_data'] = $this->about_us_model->get_undergraduate_fst_data();
-        $data['fst_programme_details'] = $this->about_us_model->get_fst_programme_details_data();
-        $data['scholarship_fst_details'] = $this->about_us_model->get_fst_scholarship_data();
+        $data['undergraduate_fst_data'] = $this->academics_model->get_undergraduate_fst_data();
+        $data['fst_programme_details'] = $this->academics_model->get_fst_programme_details_data();
+        $data['scholarship_fst_details'] = $this->academics_model->get_fst_scholarship_data();
 
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
