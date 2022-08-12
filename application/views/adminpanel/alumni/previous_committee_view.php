@@ -1,7 +1,6 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_data[0]->id;  
-    $vTitle = $edit_data[0]->vTitle;
     $fImg = $edit_data[0]->fImg;   
     $vName = $edit_data[0]->vName;     
 	$tContent = $edit_data[0]->tContent;  	
@@ -10,7 +9,6 @@ if ($cSaveStatus == "E") {
 
 } else {
     $id = ""; 
-    $vTitle = "";
     $fImg = ""; 
     $vName = "";    
 	$tContent = "";  
@@ -87,14 +85,7 @@ if ($cSaveStatus == "E") {
                         <br />
                         <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/alumni/previous_committee/save_committee'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Main Heading<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Member Name<span class="required">*</span></label>

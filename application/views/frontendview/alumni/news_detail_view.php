@@ -4,11 +4,11 @@
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
-              <h1 class="heading" data-aos="fade-up">Community Engagements</h1>
+              <h1 class="heading" data-aos="fade-up">ALUMNI</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><b>Community Engagements</b></li>
+                <li class="breadcrumb-item active" aria-current="page"><b>Alumni News</b></li>
               </ol>
             </nav>
             </div>
@@ -46,8 +46,8 @@
           </div>
 
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $detail->dDate; ?></small></p>
-            <h1 class="sub_heading"><?php echo $detail->vName; ?></h1>
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $detail->dRDate; ?></small></p>
+            <h1 class="sub_heading"><?php echo $detail->vTitle; ?></h1>
             <p data-aos="fade-up">
               
               <?php 
@@ -116,7 +116,7 @@
       
       <div class="row">
 
-        <h1 class="heading">Related Communities</h1>
+        <h1 class="heading">Related News</h1>
 
         <div class="slider">
           <div class="owl-carousel">
@@ -132,8 +132,8 @@
                       <div class="clearfix"></div>
 
                       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $all_data->dDate; ?></small></p>
-                         <h1 class="sub_heading"><?php echo $all_data->vName; ?></h1>
+                        <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $all_data->dRDate; ?></small></p>
+                         <h1 class="sub_heading"><?php echo $all_data->vTitle; ?></h1>
                          <p data-aos="fade-up">
                          <?php 
                             if(strlen($all_data->tContent) > 100){
@@ -145,7 +145,7 @@
                           ?>
                           </p>
                           <!-- arrow link -->
-                          <a class='animated-arrow' href='<?php echo base_url('engagement/com_detail/'.$all_data->id) ?>'>
+                          <a class='animated-arrow' href='<?php echo base_url('alumni_news/news_detail/'.$all_data->id) ?>'>
                           <span class='the-arrow -left'>
                             <span class='shaft'></span>
                           </span>
