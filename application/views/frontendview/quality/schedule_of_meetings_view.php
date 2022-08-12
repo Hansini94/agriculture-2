@@ -72,28 +72,7 @@
                 <?php echo $schedule_of_meetings->tDescription ?>
                 </p>
 
-                <!-- table-->
-               <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Month</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach($schedules as $value){ ?>
-                      <tr>
-                        <th scope="row"><?php echo $value->vMonth; ?></th>
-                        <td><?php if($value->dDate != ''){ echo date("d/m/Y", strtotime($value->dDate)); } else { echo 'No Meeting'; } ?></td>
-                        <td><?php echo $value->vStatus; ?></td>
-                      </tr>
-                       <?php } ?>
-                    </tbody>
-                  </table>
-                </div>
-               <!-- table -->
+                <?php echo $schedule_of_meetings->tContent; ?>
 
               </div>
 

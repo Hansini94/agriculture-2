@@ -105,34 +105,61 @@ if ($cSaveStatus == "E") {
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Title <span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $edit_schedule[0]->vTitle; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
 
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Description <span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                        <input type="text" id="tDescription" name="tDescription" value="<?php echo $tDescription; ?>" class="form-control col-md-7 col-xs-12" required>
+                                        <input type="text" id="tDescription" name="tDescription" value="<?php echo $edit_schedule[0]->tDescription; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 50px;" >
+
+                                <div class="row" >
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Month</label>
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="vProTitle">Date</label>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="vProTitle">Status</label>
                                     </div>
                                 </div>
-                            </div>
+                                <?php foreach($list_data as $value) { ?>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 50px;">
+                                <div class="row" > 
+                                 
+                                    <input type="hidden" id="id" name="id[]" value="<?php echo $value->id; ?>" class="form-control col-md-4 col-sm-4 col-xs-12">
+
+                                    <label class="input">                                            
+                                        <input type="text" id="vMonth" name="vMonth[]" value="<?php echo $value->vMonth; ?>" readonly class="form-control col-md-4 col-sm-4 col-xs-12">
+                                    </label>
+
+                                    <label class="input">
+                                    <div class="col-md-11 xdisplay_inputx  has-feedback" style="padding-left:0px; padding-right:0px;">
+                                    <input type="text" class="form-control has-feedback-left dDate" id="dDate"  name="dDate[]" aria-describedby="inputSuccess2Status" value="<?php echo $value->dDate; ?>" autocomplete="off">
+                                                    <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                                                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                </div>
+                                                </label>
+
+                                    <label class="input">
+                                        <input type="text" id="vStatus" name="vStatus[]" value="<?php echo $value->vStatus; ?>" class="form-control col-md-4 col-sm-4 col-xs-12">
+                                    </label>
+
+                                </div>
+                                </div>
+
+                                <?php } ?>
+
+                                <br />
 
                             <div style="clear:both;"></div>
                             <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
                             
                             <div class="form-group" style="margin-bottom:0px;">
                                 <div class="col-md-12 col-sm-6 col-xs-12">
-                                    <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+                                    <!-- <input type="hidden" id="id" name="id" value="<?php echo $id; ?>"> -->
 
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">

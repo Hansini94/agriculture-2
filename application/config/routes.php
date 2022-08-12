@@ -104,9 +104,13 @@ $route['international'] = 'International/index';
 $route['international/current-foreign-students'] = 'International/current_foreign_students';
 $route['international/info-for-foreign-students'] = 'International/info_for_foreign_students';
 $route['international/opportunities-study-abroad'] = 'International/opportunities_study_abroad';
+
 $route['research/faculty-research'] = 'Research/index';
 $route['research/ethical-clearance-committee'] = 'Research/ethical_clearance_committee';
 $route['research/faculty-research-committee'] = 'Research/faculty_research_committee';
+$route['excellence-award'] = 'Excellence_award';
+$route['president-award'] = 'President_award';
+
 $route['quality/frc'] = 'Quality/frc';
 $route['quality/cdc'] = 'Quality/cdc';
 $route['quality/cdc/(:any)'] = 'Quality/cdc';

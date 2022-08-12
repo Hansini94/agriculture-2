@@ -29,21 +29,9 @@ Class Schedule_of_meetings extends CI_Controller {
 
     public function index() {	
 
-        $data['ckeditor_tContent'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContent',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
         $data['cSaveStatus']= 'E';
 
-        // $data['list_data'] = $this->quality_model->get_schedule_list();
+        $data['list_data'] = $this->quality_model->get_schedule_list();
         $data['edit_schedule'] = $this->quality_model->get_schedule_data();
 		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
@@ -52,12 +40,10 @@ Class Schedule_of_meetings extends CI_Controller {
     }
 
     public function save_schedule($data = '') {
-
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            // die('23');
-            if ($this->common_model->update_saved_data('tbl_schedule_of_meetings')) {
+            if ($this->quality_model->update_schedule_data()) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
@@ -66,18 +52,18 @@ Class Schedule_of_meetings extends CI_Controller {
                 $this->session->set_flashdata('message_error', 'Save fail!');
                 redirect(base_url() . 'adminpanel/quality/schedule_of_meetings');
             }
-        } else {
-            die('34');
-            if ($this->common_model->save_data('tbl_schedule_of_meetings')) {
-                //$tDes = "saved data has been updated";
-                //$this->common_model->add_log($tDes);
-                $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/quality/schedule_of_meetings');
-            } else {
-                $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/quality/schedule_of_meetings');
-            }
-        }
+        } 
+        // else {
+        //     if ($this->common_model->save_data('tbl_schedule_of_meetings')) {
+        //         //$tDes = "saved data has been updated";
+        //         //$this->common_model->add_log($tDes);
+        //         $this->session->set_flashdata('message_saved', 'Saved successfully.');
+        //         redirect(base_url() . 'adminpanel/quality/schedule_of_meetings');
+        //     } else {
+        //         $this->session->set_flashdata('message_error', 'Save fail!');
+        //         redirect(base_url() . 'adminpanel/quality/schedule_of_meetings');
+        //     }
+        // }
     }
 
 }
