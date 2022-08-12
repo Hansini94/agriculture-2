@@ -146,6 +146,45 @@ class Research_model extends CI_Model {
             return array();
         }
     }
+    
+    /*****************AWARDS******************* */
+
+    public function get_excellence_awards() {
+        $this->db->from('tbl_cvcd_excellence_award');
+        $this->db->where('id', 1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_president_awards() {
+        $this->db->from('tbl_president_award');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'ASC');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_awards() {
+        $this->db->from('tbl_research_excellence_award');
+        $this->db->where('id', 1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
 }
 
 ?>
