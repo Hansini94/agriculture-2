@@ -72,7 +72,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top desktop_menu d-none d-lg-block" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -356,7 +356,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -631,36 +631,23 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div> -->
         <div class="carousel-inner">
-          <div class="carousel-item active" style="background-image: url('<?php echo base_url("assets/frontend/images/slider01.jpg"); ?>')">
+          <?php
+            $mainSliders = get_main_sliders();
+            $count = 0;
+            foreach($mainSliders as $slider) {
+
+          ?>
+          <div class="carousel-item <?php if($count == 0) { echo "active"; } ?>" style="background-image: url('<?php echo base_url("front_img/").$slider->fImage; ?>')">
             <div class="container carousel-caption">
               <div class="row">
                 <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                  <h5><?php echo $slider->vTitle; ?></h5>
+                  <p><?php echo $slider->vCaption; ?></p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url('<?php echo base_url("assets/frontend/images/slider02.jpg"); ?>')">
-            <div class="container carousel-caption">
-              <div class="row">
-                <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" style="background-image: url('<?php echo base_url("assets/frontend/images/slider03.jpg"); ?>')">
-            <div class="container carousel-caption">
-              <div class="row">
-                <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php $count++; } ?>
         </div>
         <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -692,15 +679,16 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg" class="d-block w-100" alt="...">
+          <?php
+            $mobileSliders = get_mobile_sliders();
+            $count = 0;
+            foreach($mobileSliders as $mobSlider) {
+
+          ?>
+          <div class="carousel-item <?php if($count==0) { echo "active"; } ?>">
+            <img src="<?php echo base_url("front_img/").$mobSlider->fImage; ?>" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="<?php echo base_url("assets/frontend/"); ?>images/slider02.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="<?php echo base_url("assets/frontend/"); ?>images/slider03.jpg" class="d-block w-100" alt="...">
-          </div>
+          <?php $count++; } ?>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

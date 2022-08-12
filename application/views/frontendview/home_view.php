@@ -12,17 +12,16 @@
 
                   <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/f_student.png" alt="" class="d-block w-100" data-aos="fade-down">
+                      <img src="<?php echo base_url("front_img/").$home_details[0]->fTabIcon1; ?>" alt="" class="d-block w-100" data-aos="fade-down">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
                       <h1>
-                        Future <br>
-                        Students
+                        <?php echo $home_details[0]->vTabTitle1; ?>
                       </h1>
-                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                      <p><small><?php echo $home_details[0]->tTabContent1; ?></small></p>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php echo base_url('future-student'); ?>'>
                         <span class='the-arrow -left'>
                           <span class='shaft'></span>
                         </span>
@@ -51,17 +50,16 @@
                   
                   <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/cu_student.png" alt="" class="d-block w-100" data-aos="fade-down">
+                      <img src="<?php echo base_url("front_img/").$home_details[0]->fTabIcon2; ?>" alt="" class="d-block w-100" data-aos="fade-down">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
                       <h1>
-                        Current <br>
-                        Students
+                        <?php echo $home_details[0]->vTabTitle2; ?>
                       </h1>
-                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                      <p><small><?php echo $home_details[0]->tTabContent2; ?></small></p>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php echo base_url('current-student'); ?>'>
                         <span class='the-arrow -left'>
                           <span class='shaft'></span>
                         </span>
@@ -90,17 +88,16 @@
                   
                   <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/get_around.png" alt="" class="d-block w-100" data-aos="fade-down">
+                      <img src="<?php echo base_url("front_img/").$home_details[0]->fTabIcon3; ?>" alt="" class="d-block w-100" data-aos="fade-down">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
                       <h1>
-                        Getting <br>
-                        Around
+                        <?php echo $home_details[0]->vTabTitle3; ?>
                       </h1>
-                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                      <p><small><?php echo $home_details[0]->tTabContent3; ?></small></p>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php echo base_url('getting-around'); ?>'>
                         <span class='the-arrow -left'>
                           <span class='shaft'></span>
                         </span>
@@ -129,17 +126,16 @@
                 
                  <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/fac_staff.png" alt="" class="d-block w-100" data-aos="fade-down">
+                      <img src="<?php echo base_url('front_img/').$home_details[0]->fTabIcon4; ?>" alt="" class="d-block w-100" data-aos="fade-down">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
                       <h1>
-                        Faclty & <br>
-                        Staff
+                        <?php echo $home_details[0]->vTabTitle4; ?>
                       </h1>
-                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                      <p><small><?php echo $home_details[0]->tTabContent4; ?></small></p>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php echo base_url('faculty-staff'); ?>'>
                         <span class='the-arrow -left'>
                           <span class='shaft'></span>
                         </span>
@@ -164,16 +160,16 @@
                 
                  <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/alumni.png" alt="" class="d-block w-100" data-aos="fade-down">
+                      <img src="<?php echo base_url('front_img/').$home_details[0]->fTabIcon5; ?>" alt="" class="d-block w-100" data-aos="fade-down">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
                       <h1>
-                        alumni
+                      <?php echo $home_details[0]->vTabTitle5; ?>
                       </h1>
-                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                      <p><small><?php echo $home_details[0]->tTabContent5; ?></small></p>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php echo base_url('alumni'); ?>'>
                         <span class='the-arrow -left'>
                           <span class='shaft'></span>
                         </span>
@@ -198,17 +194,16 @@
                 
                  <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/s_life.png" alt="" class="d-block w-100" data-aos="fade-down">
+                      <img src="<?php echo base_url('front_img/').$home_details[0]->fTabIcon6; ?>" alt="" class="d-block w-100" data-aos="fade-down">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 col-9 text_col">
                       <h1>
-                        student <br>
-                        life
+                        <?php echo $home_details[0]->vTabTitle6; ?>
                       </h1>
-                      <p><small>Lorem Ipsum is simply typesetting industry.</small></p>
+                      <p><small><?php echo $home_details[0]->tTabContent6; ?></small></p>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php echo base_url('student-life'); ?>'>
                         <span class='the-arrow -left'>
                           <span class='shaft'></span>
                         </span>
@@ -234,20 +229,12 @@
 
             <!-- uni about section -->
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 hidden_item">
-              <img src="<?php echo base_url("assets/frontend/"); ?>images/uni_logo.png" alt="" class="d-block w-100 align-self-center">
+              <img src="<?php echo base_url("front_img/").$home_details[0]->fFacultyImage; ?>" alt="" class="d-block w-100 align-self-center">
             </div>
 
             <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-8 hidden_item">
-              <h1 class="heading">Faculty of Agriculture</h1>
-              <p data-aos="fade-up">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industr
-y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into eletron
-ic typesetting, remaining essentially unchanged. 
-              </p>
-
-              <p data-aos="fade-up">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it tto make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
+              <h1 class="heading"><?php echo $home_details[0]->vFacultyTitle; ?></h1>
+              <p data-aos="fade-up"><?php echo $home_details[0]->tFacultyContent; ?></p>
             </div>
             <!-- uni about section -->
 
@@ -262,20 +249,19 @@ ic typesetting, remaining essentially unchanged.
               
               <div class="row ms-auto">
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2 col-sm-3 col-3">
-                      <img src="<?php echo base_url("assets/frontend/"); ?>images/rag.png" alt="" class="d-block w-100">
+                      <img src="<?php echo base_url("front_img/").$home_details[0]->fRagIcon; ?>" alt="" class="d-block w-100">
                     </div>
 
                     <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 text_col">
                       <h1 style="text-transform: capitalize; font-size: 17px;">
-                        Rag & Harassment <br>
-                        Complaint Portal
+                        <?php echo $home_details[0]->vRagTitle; ?>
                       </h1>
                     </div>
 
-                     <p style="margin-top: 10px;"><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</small></p>
+                     <p style="margin-top: 10px;"><small><?php echo $home_details[0]->tRagContent; ?></small></p>
 
                      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                      <a href="">
+                      <a href="<?php echo base_url('rag-harassment-complaint-portal') ?>">
                         <button class="btn btn-outline-secondary ms-n5 orange_btn" type="button" style="margin-top: 10px; margin-bottom: 15px;" data-aos="fade-down">
                             &nbsp;Click Here&nbsp;
                         </button>
@@ -292,14 +278,14 @@ ic typesetting, remaining essentially unchanged.
           <div class="top_box_div">
             <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #e3e3e3; margin-top: -30px; height: auto;">
               
-              <a href="">
+              <a href="<?php echo base_url('special-notices') ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Special notices</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
 
-              <a href="">
+              <a href="<?php echo base_url('student-notices') ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Student notices</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -307,21 +293,21 @@ ic typesetting, remaining essentially unchanged.
                 
               </a>
 
-              <a href="">
+              <a href="<?php echo base_url('examination-timetables') ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Examination timetables</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
 
-              <a href="">
+              <a href="<?php echo base_url('class-timetables') ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Class timetables</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
 
-              <a href="">
+              <a href="http://agri.pdn.ac.lk/ext_student/index.php/Login" target="_blank">
                 <div class="quick_links_div">
                    <p class="quick_links" data-aos="fade-up">Student information system (SIS)</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -336,7 +322,7 @@ ic typesetting, remaining essentially unchanged.
           <div class="top_box_div">
             <div id="container" style="position: relative; z-index: 99999; background-color: #faced6; margin-top: 5px; height: auto;">
               
-              <a href="">
+              <a href="<?php echo base_url('pandemic-information') ?>">
                 <div class="row">
                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                     <img src="<?php echo base_url("assets/frontend/"); ?>images/covid.png" alt="" class="d-block w-100 float-md-end" style="width: 70px !important;">
