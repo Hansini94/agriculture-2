@@ -38,7 +38,7 @@ Class resources_for_student extends CI_Controller {
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
-        $this->load->view('frontendview/current_students/lab_video_view',$data);
+        $this->load->view('frontendview/current_students/lab_videos_view',$data);
         $this->load->view('frontendview/footer_view', $data_header);       
     }  
     
