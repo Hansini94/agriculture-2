@@ -13,11 +13,13 @@ Class Quality extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['functions_of_foaqac'] = $this->quality_model->get_functions_of_foaqac();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -29,11 +31,13 @@ Class Quality extends CI_Controller {
     public function member_of_foaqac() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['member_of_foaqac'] = $this->quality_model->get_member_of_foaqac();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -45,11 +49,13 @@ Class Quality extends CI_Controller {
     public function foaqac() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['member_of_foaqac'] = $this->quality_model->get_member_of_foaqac();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -61,12 +67,14 @@ Class Quality extends CI_Controller {
     public function schedule_of_meetings() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['schedule_of_meetings'] = $this->quality_model->get_schedule_of_meetings();
         $data['schedules'] = $this->quality_model->get_schedules();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -78,12 +86,14 @@ Class Quality extends CI_Controller {
     public function frc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_faculty_research_committee();
         $data['members'] = $this->quality_model->get_members('tbl_research_committee_composition');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -95,11 +105,13 @@ Class Quality extends CI_Controller {
     public function cdc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_curriculum_development_committee');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -121,11 +133,13 @@ Class Quality extends CI_Controller {
     public function ltc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_language_teaching_committee');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -145,11 +159,13 @@ Class Quality extends CI_Controller {
     public function lc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_library_committee');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -169,11 +185,13 @@ Class Quality extends CI_Controller {
     public function pprc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_public_relations_committee');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -193,11 +211,13 @@ Class Quality extends CI_Controller {
     public function elcumc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_computer_unit');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -217,11 +237,13 @@ Class Quality extends CI_Controller {
     public function ttc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_time_table_committee');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -241,11 +263,13 @@ Class Quality extends CI_Controller {
     public function tmu() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_teaching_method_unit');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){
@@ -265,11 +289,13 @@ Class Quality extends CI_Controller {
     public function sawc() {
 
         $this->load->model('frontend_model/quality_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['committee'] = $this->quality_model->get_committee('tbl_welfare_committee');
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         if($this->uri->segment(3)){

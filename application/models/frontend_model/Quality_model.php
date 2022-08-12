@@ -104,6 +104,31 @@ class Quality_model extends CI_Model {
         }
     }
 
+    public function get_ahead_projects() {
+        $this->db->from('tbl_ahead_project');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'ASC');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_ahead_projects_others($heading) {
+        $this->db->from('tbl_ahead_project');
+        $this->db->where('vMHeading', $heading);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
 }
 
 ?>

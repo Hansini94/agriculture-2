@@ -92,7 +92,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top desktop_menu d-none d-lg-block" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="images/logo.png" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -299,30 +299,32 @@
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="<?php echo base_url().'quality/functions-of-foaqac'; ?>">Faculty Quality Assurance Cell (FQAC) </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'quality/frc'; ?>">Faculty Sub Committees </a></li>
-                <li><a class="dropdown-item" href="fp.html">AHEAD Projects  </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'quality/ahead-project'; ?>">AHEAD Projects  </a></li>
 
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
 
                   <li><a class="dropdown-item" href="#"> Downloads &raquo; </a>
-                     <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in Agriculture </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in Food Science & Technology </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in  Livestock </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">Internal QA Manual </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">SLQF – 2016 </a></li>
-                   </ul>
+                      <ul class="submenu dropdown-menu">
+                          <?php
+                            $quality_downloads = get_quality_downloads();
+                            foreach($quality_downloads as $download) {
+                          ?>
+                          <li><a class="dropdown-item" href="<?php echo base_url('front_img/').$download->fPdf; ?>" target="_blank"><?php echo $download->vHeading; ?> </a></li>
+                          <?php } ?>
+                      </ul>
                   </li>
                 </ul>
 
                 <li><a class="dropdown-item" href="#">Downloads  &raquo; </a>
                    <ul class="submenu dropdown-menu desktop_menu_engage_sub_menu">
-                    <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in Agriculture </a></li>
-                    <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in <br>Food Science & Technology </a></li>
-                    <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in  Livestock </a></li>
-                    <li><a class="dropdown-item" href="" target="_blank">Internal QA Manual  </a></li>
-                    <li><a class="dropdown-item" href="" target="_blank">SLQF – 2016  </a></li>
+                    <?php
+                      $quality_downloads = get_quality_downloads();
+                      foreach($quality_downloads as $download) {
+                    ?>
+                    <li><a class="dropdown-item" href="<?php echo base_url('front_img/').$download->fPdf; ?>" target="_blank"><?php echo $download->vHeading; ?> </a></li>
+                    <?php } ?>
                  </ul>
-
+                </li>
               </ul>
             </li>
 
@@ -374,7 +376,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="images/logo.png" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -571,18 +573,19 @@
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="<?php echo base_url().'quality/functions-of-foaqac'; ?>">Faculty Quality Assurance Cell (FQAC) </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'quality/frc'; ?>">Faculty Sub Committees </a></li>
-                <li><a class="dropdown-item" href="fp.html">AHEAD Projects  </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'quality/ahead-project'; ?>">AHEAD Projects  </a></li>
 
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
 
                   <li><a class="dropdown-item" href="#"> Downloads &raquo; </a>
-                     <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in Agriculture </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in Food Science & Technology </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">Subject Benchmark Statement in  Livestock </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">Internal QA Manual </a></li>
-                      <li><a class="dropdown-item" href="" target="_blank">SLQF – 2016 </a></li>
-                   </ul>
+                    <!-- <ul class="submenu dropdown-menu">
+                      <?php
+                        $quality_downloads = get_quality_downloads();
+                        foreach($quality_downloads as $download) {
+                      ?>
+                      <li><a class="dropdown-item" href="<?php echo base_url('/').$download->fPdf; ?>" target="_blank"><?php echo $download->vHeading; ?> </a></li>
+                      <?php } ?>
+                    </ul> -->
                   </li>
                 </ul>
 
