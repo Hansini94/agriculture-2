@@ -95,7 +95,7 @@ if ($cSaveStatus == "E") {
                                                         
                             <div class="col-md-12 col-sm-12 col-xs-12">                                
                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" style="padding-top:8px;" for="first-name" >Excel
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" style="padding-top:8px;" for="first-name" >PDF
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="file" id="fPdfFile" name="fPdfFile">

@@ -95,7 +95,7 @@ if ($cSaveStatus == "E") {
                                             }
                                             ?>>
                         <br />
-                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/students/future_students/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/future_students/future_students/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                                                         
                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
                                 <div class="item form-group">
@@ -112,7 +112,7 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
                                     <div class="col-md-5 col-sm-5 col-xs-12">
                                         <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImg;?>" style="height:75px;"   />
-                                        <a href="<?php echo base_url().'adminpanel/research/faurs/remove_image/'.$id.'/fImg/'.$fImg;?>">Remove image</a> 
+                                        <a href="<?php echo base_url().'adminpanel/future_students/remove_image/'.$id.'/fImg/'.$fImg;?>">Remove image</a> 
                                     </div>
                                
 								    <?php } ?>
@@ -150,7 +150,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/students/future_students'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/future_students/future_students'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
