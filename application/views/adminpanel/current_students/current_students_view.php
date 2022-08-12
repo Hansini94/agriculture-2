@@ -1,14 +1,16 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $scholarship_data[0]->id;
-    $vTitle = $scholarship_data[0]->vTitle;
-    $tContent = $scholarship_data[0]->tContent;
-    $cEnable = $scholarship_data[0]->cEnable;
+    $id = $edit_date[0]->id;
+    $fImg = $edit_date[0]->fImg;
+    $vTitle = $edit_date[0]->vTitle;
+    $tContent = $edit_date[0]->tContent;
+    $cEnable = $edit_date[0]->cEnable;
 } else {
     $id = '';
+    $fImg = '';
     $vTitle = '';
     $tContent = '';
-    $cEnable = '';
+    $cEnable = 'Y';
 }
 ?>
 <script language="javascript" type="text/javascript">
@@ -82,7 +84,7 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Faculty Level Scholarship</h2>
+                            <h2>Current Students</h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -93,7 +95,31 @@ if ($cSaveStatus == "E") {
                                             }
                                             ?>>
                         <br />
-                        <form id="edit_scholarship" name="edit_scholarship" action="<?php echo base_url('adminpanel/students/faculty_level_scholarship/save_scholarship'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/current_students/current_students/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                                                        
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image<br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fImg" name="fImg">
+                                    </div>                                    
+                                </div> 
+                                
+                                <div class="item form-group">
+                                    <?php if($fImg!=''){ ?>
+                                
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImg;?>" style="height:75px;"   />
+                                        <a href="<?php echo base_url().'adminpanel/research/faurs/remove_image/'.$id.'/fImg/'.$fImg;?>">Remove image</a> 
+                                    </div>
+                               
+								    <?php } ?>
+                                </div>
+
+                            </div>
+
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
@@ -102,6 +128,7 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
+                            
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
@@ -123,7 +150,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/students/faculty_level_scholarship'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/current_students/current_students'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>

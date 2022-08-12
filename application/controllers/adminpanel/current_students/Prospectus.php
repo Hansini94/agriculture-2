@@ -7,11 +7,11 @@ if (!defined('BASEPATH'))
  * author : Hansini
  */
 
-Class Academic_calender extends CI_Controller {
+Class Prospectus extends CI_Controller {
 
-    private $table_name = "tbl_academic_calender";
-    private $page_id = "316";
-    private $redirect_path = "adminpanel/students/academic_calender";
+    private $table_name = "tbl_prospectus";
+    private $page_id = "315";
+    private $redirect_path = "adminpanel/current_students/prospectus";
 
     public function __construct() {
         parent::__construct();
@@ -28,24 +28,13 @@ Class Academic_calender extends CI_Controller {
     }
 
     public function index() {	
-        $data['ckeditor_tContent'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContent',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
                 
         $data['cSaveStatus']= 'E';
 		
-        $data['edit_date'] = $this->student_model->get_academic_calender_data();
+        $data['edit_date'] = $this->student_model->get_prospectus_data();
 		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/students/academic_calender_view', $data);
+        $this->load->view('adminpanel/current_students/prospectus_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 	
@@ -54,24 +43,24 @@ Class Academic_calender extends CI_Controller {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_academic_calender')) {
+            if ($this->common_model->update_saved_data('tbl_prospectus')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/academic_calender');
+                redirect(base_url() . 'adminpanel/current_students/prospectus');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/academic_calender');
+                redirect(base_url() . 'adminpanel/current_students/prospectus');
             }
         } else {
-            if ($this->common_model->save_data('tbl_academic_calender')) {
+            if ($this->common_model->save_data('tbl_prospectus')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/academic_calender');
+                redirect(base_url() . 'adminpanel/current_students/prospectus');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/academic_calender');
+                redirect(base_url() . 'adminpanel/current_students/prospectus');
             }
         }
     }
@@ -85,10 +74,10 @@ Class Academic_calender extends CI_Controller {
             $this->load->model('adminpanel/common_model');
             $postimage_delete = $this->common_model->delete_image($imageID, $field, $this->table_name, $path, $img);
             if ($postimage_delete == TRUE) {
-                redirect(base_url() . "adminpanel/students/academic_calender/update_details/".$imageID);
+                redirect(base_url() . "adminpanel/current_students/prospectus/update_details/".$imageID);
             } else {
                 $this->session->set_flashdata('message_error', 'Delete fail!');
-                redirect(base_url() . "adminpanel/students/academic_calender/update_details/".$imageID);
+                redirect(base_url() . "adminpanel/current_students/prospectus/update_details/".$imageID);
             }
         }
     }

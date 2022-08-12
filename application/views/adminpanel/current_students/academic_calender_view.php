@@ -1,11 +1,11 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_date[0]->id;
-    $fPdfFile = $edit_date[0]->fPdfFile;
+    $tContent = $edit_date[0]->tContent;
     $cEnable = $edit_date[0]->cEnable;
 } else {
     $id = '';
-    $fPdfFile = '';
+    $tContent = '';
     $cEnable = 'Y';
 }
 ?>
@@ -80,7 +80,7 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Current Students</h2>
+                            <h2>Academic Calender</h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -91,26 +91,16 @@ if ($cSaveStatus == "E") {
                                             }
                                             ?>>
                         <br />
-                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/students/prospectus/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/current_students/academic_calender/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                                                         
-                            <div class="col-md-12 col-sm-12 col-xs-12">                                
-                               <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" style="padding-top:8px;" for="first-name" >Excel
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="file" id="fPdfFile" name="fPdfFile">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
                                     </div>
                                 </div>
-                                
-                                <?php if($fPdfFile!=''){ ?>
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <a href="<?php echo base_url().'/front_img/'.$fPdfFile;?>" target="_blank">View</a>
-                                    </div>
-                                </div>
-								<?php } ?> 
-                                
                             </div>
                         
                             <div style="clear:both;"></div>
@@ -123,7 +113,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/students/prospectus'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/current_students/academic_calender'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>

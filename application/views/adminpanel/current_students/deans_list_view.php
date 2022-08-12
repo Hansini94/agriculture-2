@@ -1,12 +1,14 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_data[0]->id;  
-    $vUrl = $edit_data[0]->vUrl; 
+    $vTitle = $edit_data[0]->vTitle; 
+    $tContent = $edit_data[0]->tContent; 
     $cEnable = $edit_data[0]->cEnable;
     $iOrder = $edit_data[0]->iOrder;
 } else {
     $id = ""; 
-    $vUrl = "";    
+    $vTitle = "";    
+    $tContent = "";
     $cEnable = "Y";
     $iOrder = "";
 }
@@ -58,12 +60,12 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">                    
                     <div class="x_title">
                         <div class="col-md-9 col-sm-12 col-xs-12">
-                            <h2>Video on Safe Laboratory Practices</h2>
+                            <h2>Dean's List</h2>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/students/video_practices'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Video</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/students/deans_list'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Video</span>&nbsp;</a></li>
                                 <?php } else { ?>
                                 <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Video</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
@@ -78,13 +80,23 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/students/video_practices/save_data'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/current_students/deans_list/save_data'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Title<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                       <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +120,7 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
                                     <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/students/video_practices'); ?>';">Cancel</button>
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/current_students/deans_list'); ?>';">Cancel</button>
                                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                                 </div>
@@ -125,7 +137,7 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:8%;text-align:center;">No </th>
-                                    <th style="width:35%;">URL </th>      
+                                    <th style="width:35%;">Title </th>      
                                     <th style="width:8%; text-align:center">Order</th>                       
                                     <th style="width:8%; text-align:center">Edit </th>
                                     <th style="width:8%; text-align:center">Status </th>
@@ -159,16 +171,16 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vUrl;?></td>                                             
+                                            <td><?php echo $rowlist->vTitle;?></td>                                             
                                             <td><?php echo $rowlist->iOrder;?></td> 
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/students/video_practices/edit/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/students/deans_list/edit/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/students/video_practices/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/students/deans_list/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/students/video_practices/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/students/deans_list/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

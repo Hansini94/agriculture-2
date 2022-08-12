@@ -213,7 +213,7 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/research/research_stories/edit/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/research_stories/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/research/research_stories/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             

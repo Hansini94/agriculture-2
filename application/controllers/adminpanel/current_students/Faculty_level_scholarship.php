@@ -11,7 +11,7 @@ Class Faculty_level_scholarship extends CI_Controller {
 
     private $table_name = "tbl_faculty_level_schol";
     private $page_id = "318";
-    private $redirect_path = "adminpanel/students/faculty_level_scholarship";
+    private $redirect_path = "adminpanel/current_students/faculty_level_scholarship";
 
     public function __construct() {
         parent::__construct();
@@ -47,7 +47,7 @@ Class Faculty_level_scholarship extends CI_Controller {
         $data['scholarship_data'] = $this->student_model->get_scholarship_data();
 		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/students/faculty_level_scholarship_view', $data);
+        $this->load->view('adminpanel/current_students/faculty_level_scholarship_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 	
@@ -60,20 +60,20 @@ Class Faculty_level_scholarship extends CI_Controller {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/faculty_level_scholarship');
+                redirect(base_url() . 'adminpanel/current_students/faculty_level_scholarship');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/faculty_level_scholarship');
+                redirect(base_url() . 'adminpanel/current_students/faculty_level_scholarship');
             }
         } else {
             if ($this->common_model->save_data('tbl_faculty_level_schol')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/faculty_level_scholarship');
+                redirect(base_url() . 'adminpanel/current_students/faculty_level_scholarship');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/faculty_level_scholarship');
+                redirect(base_url() . 'adminpanel/current_students/faculty_level_scholarship');
             }
         }
     }
@@ -87,10 +87,10 @@ Class Faculty_level_scholarship extends CI_Controller {
             $this->load->model('adminpanel/common_model');
             $postimage_delete = $this->common_model->delete_image($imageID, $field, $this->table_name, $path, $img);
             if ($postimage_delete == TRUE) {
-                redirect(base_url() . "adminpanel/students/faculty_level_scholarship/update_details/".$imageID);
+                redirect(base_url() . "adminpanel/current_students/faculty_level_scholarship/update_details/".$imageID);
             } else {
                 $this->session->set_flashdata('message_error', 'Delete fail!');
-                redirect(base_url() . "adminpanel/students/faculty_level_scholarship/update_details/".$imageID);
+                redirect(base_url() . "adminpanel/current_students/faculty_level_scholarship/update_details/".$imageID);
             }
         }
     }
