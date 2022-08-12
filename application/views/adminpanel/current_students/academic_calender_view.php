@@ -1,11 +1,15 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_date[0]->id;
+    $vTitleMain = $edit_date[0]->vTitleMain;
+    $vTitleSub = $edit_date[0]->vTitleSub;
     $tContent = $edit_date[0]->tContent;
     $cEnable = $edit_date[0]->cEnable;
 } else {
     $id = '';
     $tContent = '';
+    $vTitleMain = '';
+    $vTitleSub = '';
     $cEnable = 'Y';
 }
 ?>
@@ -92,8 +96,23 @@ if ($cSaveStatus == "E") {
                                             ?>>
                         <br />
                         <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/current_students/academic_calender/save_data'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                                                        
-                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Main Heading<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vTitleMain" name="vTitleMain" value="<?php echo $vTitleMain; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vTitleSub" name="vTitleSub" value="<?php echo $vTitleSub; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>                           
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
