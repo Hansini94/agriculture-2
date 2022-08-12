@@ -11,7 +11,7 @@ Class Gpa_calculator extends CI_Controller {
 
     private $table_name = "tbl_gpa_cal";
     private $page_id = "314";
-    private $redirect_path = "adminpanel/students/gpa_calculator";
+    private $redirect_path = "adminpanel/current_students/gpa_calculator";
 
     public function __construct() {
         parent::__construct();
@@ -31,7 +31,7 @@ Class Gpa_calculator extends CI_Controller {
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/students/gpa_calculator_view', $data);
+        $this->load->view('adminpanel/current_students/gpa_calculator_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
@@ -43,20 +43,20 @@ Class Gpa_calculator extends CI_Controller {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/gpa_calculator');
+                redirect(base_url() . 'adminpanel/current_students/gpa_calculator');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/gpa_calculator');
+                redirect(base_url() . 'adminpanel/current_students/gpa_calculator');
             }
         } else {
             if ($this->common_model->save_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/gpa_calculator');
+                redirect(base_url() . 'adminpanel/current_students/gpa_calculator');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/gpa_calculator');
+                redirect(base_url() . 'adminpanel/current_students/gpa_calculator');
             }
         }
     }
@@ -68,7 +68,7 @@ Class Gpa_calculator extends CI_Controller {
 		$recId = $this->uri->segment(5);
 		$data['edit_data'] = $this->common_model->get_edit_data($recId, $this->table_name);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/students/gpa_calculator_view', $data);
+        $this->load->view('adminpanel/current_students/gpa_calculator_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 

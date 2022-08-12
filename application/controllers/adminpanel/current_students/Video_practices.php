@@ -11,7 +11,7 @@ Class Video_practices extends CI_Controller {
 
     private $table_name = "tbl_video_laboratory";
     private $page_id = "319";
-    private $redirect_path = "adminpanel/students/video_practices";
+    private $redirect_path = "adminpanel/current_students/video_practices";
 
     public function __construct() {
         parent::__construct();
@@ -32,7 +32,7 @@ Class Video_practices extends CI_Controller {
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->student_model->get_video_list();
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/students/video_practices_view', $data);
+        $this->load->view('adminpanel/current_students/video_practices_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
@@ -44,20 +44,20 @@ Class Video_practices extends CI_Controller {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/video_practices');
+                redirect(base_url() . 'adminpanel/current_students/video_practices');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/video_practices');
+                redirect(base_url() . 'adminpanel/current_students/video_practices');
             }
         } else {
             if ($this->common_model->save_data($this->table_name)) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
-                redirect(base_url() . 'adminpanel/students/video_practices');
+                redirect(base_url() . 'adminpanel/current_students/video_practices');
             } else {
                 $this->session->set_flashdata('message_error', 'Save fail!');
-                redirect(base_url() . 'adminpanel/students/video_practices');
+                redirect(base_url() . 'adminpanel/current_students/video_practices');
             }
         }
     }
@@ -69,7 +69,7 @@ Class Video_practices extends CI_Controller {
 		$recId = $this->uri->segment(5);
 		$data['edit_data'] = $this->student_model->get_edit_video($recId);
         $this->load->view('adminpanel/header_view');
-        $this->load->view('adminpanel/students/video_practices_view', $data);
+        $this->load->view('adminpanel/current_students/video_practices_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
 
