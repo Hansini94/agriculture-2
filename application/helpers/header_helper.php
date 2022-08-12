@@ -118,5 +118,41 @@ if (!function_exists('get_quality_downloads')) {
     }
 }
 
+if (!function_exists('get_main_sliders')) {
+    function get_main_sliders() {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from('tbl_main_slider');
+        $ci->db->where('cEnable', 'Y');
+        $ci->db->order_by('iOrder', 'asc');
+        $result = $ci->db->get();
+        // echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+}
+
+if (!function_exists('get_mobile_sliders')) {
+    function get_mobile_sliders() {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from('tbl_mobile_slider');
+        $ci->db->where('cEnable', 'Y');
+        $ci->db->order_by('iOrder', 'asc');
+        $result = $ci->db->get();
+        // echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+}
+
 //}
 ?>

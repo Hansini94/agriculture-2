@@ -83,6 +83,12 @@ $route['default_controller'] = "home";
 $route['adminpanel'] = 'adminpanel/login';
 $route['login'] = 'adminpanel/login';
 
+$route['special-notices'] = 'Special_notices';
+$route['student-notices'] = 'Student_notices';
+$route['examination-timetables'] = 'Examination_timetables';
+$route['class-timetables'] = 'Class_timetables';
+$route['pandemic-information'] = 'Pandemic_information';
+
 $route['about-us'] = 'about_us';
 $route['faculty-statistic-undergraduate'] = 'Faculty_statistic_undergraduate';
 $route['faculty-statistic-academic-staff'] = 'Faculty_statistic_academic_staff';

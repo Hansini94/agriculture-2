@@ -92,7 +92,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top desktop_menu d-none d-lg-block" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -376,7 +376,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

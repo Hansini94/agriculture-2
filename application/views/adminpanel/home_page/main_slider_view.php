@@ -169,7 +169,8 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:50px;text-align:center;">No </th>
-                                    <th>Image </th>                                    
+                                    <th>Image </th>       
+                                    <th>Title </th>                                  
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -204,7 +205,7 @@ if ($cSaveStatus == "E") {
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><img height="75" src="<?php echo base_url().'/front_img/'.$rowlist->fImage;?>"   /></td>                                            
-                                            
+                                            <td><?php echo $rowlist->vTitle; ?></td>
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/home_page/main_slider/edit_main_slider/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
