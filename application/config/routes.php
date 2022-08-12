@@ -128,7 +128,8 @@ $route['quality/tmu'] = 'Quality/tmu';
 $route['quality/tmu/(:any)'] = 'Quality/tmu';
 $route['quality/sawc'] = 'Quality/sawc';
 $route['quality/sawc/(:any)'] = 'Quality/sawc';
-
+$route['quality/ahead-project'] = 'Ahead_projects';
+$route['quality/ahead-project/(:any)'] = 'Ahead_projects/projects';
 $route['404_override'] = '';
 
 

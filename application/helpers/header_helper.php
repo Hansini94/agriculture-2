@@ -100,5 +100,23 @@ if (!function_exists('get_committee_members')) {
     }
 }
 
+if (!function_exists('get_quality_downloads')) {
+    function get_quality_downloads() {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from('tbl_quality_download');
+        $ci->db->where('cEnable', 'Y');
+        $ci->db->order_by('iOrder', 'asc');
+        $result = $ci->db->get();
+        // echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+}
+
 //}
 ?>
