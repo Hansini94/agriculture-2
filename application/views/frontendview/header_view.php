@@ -107,7 +107,7 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <div class="input-group search_bar">
                   <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
                   <span class="input-group-append">
@@ -116,8 +116,20 @@
                       </button>
                   </span>
               </div>
-            </li>
+            </li> -->
 
+            <li class="nav-item">
+              <form action="<?php echo base_url('search'); ?>" class="search-form" method="post">
+                <div class="input-group search_bar">
+                    <input class="form-control border-end-0 border" type="search" value="" id="example-search-input search_text" name="search_text" style="height: 30px; font-size: 13px;" placeholder="search">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="submit" style="height: 30px;">
+                            <i class="fa fa-search" style="position: relative; top: -4px;"></i>
+                        </button>
+                    </span>
+                </div>
+              </form>
+            </li>
           </ul>
 
             <!-- ============== -->
@@ -234,7 +246,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research'; ?>">Research Stories</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>
                 <li><a class="dropdown-item" href="faurs.html">Faurs</a></li>
 
@@ -509,7 +521,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research'; ?>">Research Stories</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>
 
                 <!-- <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
