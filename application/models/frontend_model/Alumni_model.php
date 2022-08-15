@@ -30,7 +30,19 @@ class Alumni_model extends CI_Model {
             return array();
         }
     }
-
+    
+    public function get_shortlinks_details() {
+        $this->db->from('tbl_alumni_short_links');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
      // ********************Alumni Committee*******************
     public function get_current_committee() {
         $this->db->from('tbl_alumni_committee_current');
