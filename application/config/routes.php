@@ -88,6 +88,8 @@ $route['student-notices'] = 'Student_notices';
 $route['examination-timetables'] = 'Examination_timetables';
 $route['class-timetables'] = 'Class_timetables';
 $route['pandemic-information'] = 'Pandemic_information';
+$route['rag-harassment'] = 'Rag_harassment';
+$route['rag-complaint'] = 'Rag_complaint';
 
 $route['about-us'] = 'about_us';
 $route['faculty-statistic-undergraduate'] = 'Faculty_statistic_undergraduate';
@@ -137,6 +139,9 @@ $route['quality/sawc/(:any)'] = 'Quality/sawc';
 $route['quality/ahead-project'] = 'Ahead_projects';
 $route['quality/ahead-project/(:any)'] = 'Ahead_projects/projects';
 $route['404_override'] = '';
+
+
+$route['partnership'] = 'Engagement/engagement_partnerships';
 
 
 

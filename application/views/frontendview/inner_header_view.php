@@ -125,7 +125,7 @@
               <a class="nav-link" href="faq.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engage_partner.html">Quick Links</a>
+              <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
             </li>
             <li class="nav-item">
               <div class="input-group search_bar">
@@ -334,7 +334,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="engage_over.html">Overview</a></li>
-                <li><a class="dropdown-item" href="engage_partner.html">Partnerships</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>
 
                 <li><a class="dropdown-item" href="#">Engagements &raquo; </a>
                    <ul class="submenu dropdown-menu desktop_menu_engage_sub_menu">
@@ -410,7 +410,7 @@
               <a class="nav-link" href="faq.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engage_partner.html">Quick Links</a>
+              <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
             </li>
 
           </ul>
@@ -598,7 +598,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="engage_over.html">Overview</a></li>
-                <li><a class="dropdown-item" href="engage_partner.html">Partnerships</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>
 
                 <li><a class="dropdown-item" href="#">Engagements &raquo; </a>
                    <ul class="submenu dropdown-menu">
