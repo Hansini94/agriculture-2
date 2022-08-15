@@ -123,6 +123,8 @@ $route['research-stories'] = 'Research_stories';
 $route['research-stories/story-detail/(:any)'] = 'Research_stories/story_detail';
 $route['excellence-award'] = 'Excellence_award';
 $route['president-award'] = 'President_award';
+$route['faurs'] = 'Faurs';
+$route['faurs-committee'] = 'Faurs_committee';
 
 $route['quality/frc'] = 'Quality/frc';
 $route['quality/cdc'] = 'Quality/cdc';
@@ -145,8 +147,28 @@ $route['quality/ahead-project'] = 'Ahead_projects';
 $route['quality/ahead-project/(:any)'] = 'Ahead_projects/projects';
 $route['404_override'] = '';
 
-
+$route['engagement-overview'] = 'Engagement';
+$route['research-engagements'] = 'Engagement/research_engagement';
+$route['student-engagements'] = 'Engagement/student_engagement';
+$route['community-engagements'] = 'Engagement/community_engagement';
 $route['partnership'] = 'Engagement/engagement_partnerships';
+
+$route['services/transcript-request'] = 'Services';
+$route['services/outreach-centers'] = 'Services/outreach_centers';
+$route['services/analytical-services'] = 'Services/analytical_services';
+$route['services/research-experimental-facilities'] = 'Services/Research_Experiemental_Facilities';
+
+$route['alumni'] = 'Alumni';
+$route['alumni-committee'] = 'Alumni_committee';
+$route['alumni-news'] = 'Alumni_news';
+$route['alumni-events'] = 'Alumni_events';
+$route['alumni-newsletter'] = 'Alumni_newsletter';
+$route['alumni-scholarships'] = 'Alumni_scholarships';
+$route['alumni-join-us'] = 'Alumni_joinus';
+
+$route['downloads-staff'] = 'Downloads_staff';
+$route['downloads-students'] = 'Downloads_students';
+$route['downloads-faculty'] = 'Downloads_faculty';
 
 $route['future-student'] = 'Future_students';
 $route['faculty-level-scholarship'] = 'Resources_for_student';
