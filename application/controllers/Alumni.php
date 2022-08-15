@@ -20,7 +20,6 @@ Class Alumni extends CI_Controller {
         $data['slider'] = $this->alumni_model->get_mainslider_details();
         $data['content'] = $this->alumni_model->get_home_content();
         $data['news_data'] = $this->alumni_model->get_news_list();
-        $data['news_latest'] = $this->alumni_model->get_latest_news();
         
         // var_dump($data);exit();
 
