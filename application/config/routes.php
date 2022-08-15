@@ -83,6 +83,9 @@ $route['default_controller'] = "home";
 $route['adminpanel'] = 'adminpanel/login';
 $route['login'] = 'adminpanel/login';
 
+$route['search'] = 'Search';
+$route['search/(:num)'] = 'Search';
+
 $route['special-notices'] = 'Special_notices';
 $route['student-notices'] = 'Student_notices';
 $route['examination-timetables'] = 'Examination_timetables';
@@ -116,6 +119,8 @@ $route['international/opportunities-study-abroad'] = 'International/opportunitie
 $route['research/faculty-research'] = 'Research/index';
 $route['research/ethical-clearance-committee'] = 'Research/ethical_clearance_committee';
 $route['research/faculty-research-committee'] = 'Research/faculty_research_committee';
+$route['research-stories'] = 'Research_stories';
+$route['research-stories/story-detail/(:any)'] = 'Research_stories/story_detail';
 $route['excellence-award'] = 'Excellence_award';
 $route['president-award'] = 'President_award';
 
