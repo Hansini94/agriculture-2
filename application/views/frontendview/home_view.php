@@ -59,7 +59,7 @@
                   </h1>
                   <p><small><?php echo $home_details[0]->tTabContent2; ?></small></p>
                   <!-- arrow link -->
-                  <a class='animated-arrow' href='<?php echo base_url('current-student'); ?>'>
+                  <a class='animated-arrow' href='<?php echo base_url('current-students'); ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
@@ -500,11 +500,12 @@
   <div class="row">
 
     <?php
-      $mm = 0;
-      $ss=0;
-      foreach($featured_news as $news) {
-        $mm++;
-        $ss++;
+      // $mm = 0;
+      // $ss=0;
+      // foreach($featured_news as $news) {
+      //   $mm++;
+
+      if(!empty($featured_news)) {
     ?>
 
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
@@ -513,15 +514,194 @@
         <div class="row">
           <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
             <?php 
-                      $timestamp = strtotime($news->dNewsdate);
+                      $timestamp = strtotime($featured_news[0]->dNewsdate);
                       $date = date('d-M-Y', $timestamp);
                 ?>
-            <img src="<?php echo base_url('front_img/').$news->fThumbnail; ?>" class="d-block w-100" alt="...">
+            <img src="<?php echo base_url('front_img/').$featured_news[0]->fThumbnail; ?>" class="d-block w-100" alt="...">
           </div>
 
           <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
             <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
-            <h1 class="sub_heading"><?php echo $news->vName; ?></h1>
+            <h1 class="sub_heading"><?php echo $featured_news[0]->vName; ?></h1>
+            <!-- arrow link -->
+            <a class='animated-arrow' href=''>
+              <span class='the-arrow -left'>
+                <span class='shaft'></span>
+              </span>
+              <span class='main'>
+                <span class='text'>
+                  Read More
+                </span>
+                <span class='the-arrow -right'>
+                  <span class='shaft'></span>
+                </span>
+              </span>
+            </a>
+            <!-- arrow link -->
+          </div>
+        </div>
+
+      </div>
+
+    </div> 
+
+    <?php if(!empty($featured_news[1])) { ?>
+      
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
+                 <?php 
+                      $timestamp = strtotime($featured_news[1]->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+      <div class="news_div">
+        <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+        <h1 class="sub_heading" style="min-height: 31px;"><?php echo $featured_news[1]->vName; ?></h1>
+          <?php echo substr($featured_news[1]->tContent, 0, 200).'..'; ?>
+
+        <a class='animated-arrow' href=''>
+          <span class='the-arrow -left'>
+            <span class='shaft'></span>
+          </span>
+          <span class='main'>
+            <span class='text'>
+              Read More
+            </span>
+            <span class='the-arrow -right'>
+              <span class='shaft'></span>
+            </span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+
+    <?php } if(!empty($featured_news[2])) { ?>
+
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+      <div class="news_div">
+
+        <div class="row">
+          <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+            <?php 
+                      $timestamp = strtotime($featured_news[2]->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+            <img src="<?php echo base_url('front_img/').$featured_news[2]->fThumbnail; ?>" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+            <h1 class="sub_heading"><?php echo $featured_news[2]->vName; ?></h1>
+            <!-- arrow link -->
+            <a class='animated-arrow' href=''>
+              <span class='the-arrow -left'>
+                <span class='shaft'></span>
+              </span>
+              <span class='main'>
+                <span class='text'>
+                  Read More
+                </span>
+                <span class='the-arrow -right'>
+                  <span class='shaft'></span>
+                </span>
+              </span>
+            </a>
+            <!-- arrow link -->
+          </div>
+        </div>
+
+      </div>
+
+    </div> 
+
+    <!-- ============================== -->
+    <div class="clearfix"></div>
+    <!-- ============================== -->
+
+    <?php } if(!empty($featured_news[3])) { ?>
+
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+      <div class="news_div">
+
+        <div class="row">
+          <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+            <?php 
+                      $timestamp = strtotime($featured_news[3]->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+            <img src="<?php echo base_url('front_img/').$featured_news[3]->fThumbnail; ?>" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+            <h1 class="sub_heading"><?php echo $featured_news[3]->vName; ?></h1>
+            <!-- arrow link -->
+            <a class='animated-arrow' href=''>
+              <span class='the-arrow -left'>
+                <span class='shaft'></span>
+              </span>
+              <span class='main'>
+                <span class='text'>
+                  Read More
+                </span>
+                <span class='the-arrow -right'>
+                  <span class='shaft'></span>
+                </span>
+              </span>
+            </a>
+            <!-- arrow link -->
+          </div>
+        </div>
+
+      </div>
+
+    </div> 
+
+    <?php } if(!empty($featured_news[4])) { ?>
+      
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
+                 <?php 
+                      $timestamp = strtotime($featured_news[4]->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+      <div class="news_div">
+        <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+        <h1 class="sub_heading" style="min-height: 31px;"><?php echo $featured_news[4]->vName; ?></h1>
+          <?php echo substr($featured_news[4]->tContent, 0, 200).'..'; ?>
+
+        <a class='animated-arrow' href=''>
+          <span class='the-arrow -left'>
+            <span class='shaft'></span>
+          </span>
+          <span class='main'>
+            <span class='text'>
+              Read More
+            </span>
+            <span class='the-arrow -right'>
+              <span class='shaft'></span>
+            </span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+
+    <?php } if(!empty($featured_news[5])) { ?>
+
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+      <div class="news_div">
+
+        <div class="row">
+          <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+            <?php 
+                      $timestamp = strtotime($featured_news[5]->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+            <img src="<?php echo base_url('front_img/').$featured_news[5]->fThumbnail; ?>" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+            <h1 class="sub_heading"><?php echo $featured_news[5]->vName; ?></h1>
             <!-- arrow link -->
             <a class='animated-arrow' href=''>
               <span class='the-arrow -left'>
@@ -544,38 +724,7 @@
 
     </div>
 
-    <?php if($ss=2) { $ss=0; ?> 
-      
-      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
-        <div class="news_div">
-          <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
-          <h1 class="sub_heading" style="min-height: 31px;"><?php echo $news->vName; ?></h1>
-            <?php echo substr($news->tContent, 0, 200).'..'; ?>
-
-          <a class='animated-arrow' href=''>
-            <span class='the-arrow -left'>
-              <span class='shaft'></span>
-            </span>
-            <span class='main'>
-              <span class='text'>
-                Read More
-              </span>
-              <span class='the-arrow -right'>
-                <span class='shaft'></span>
-              </span>
-            </span>
-          </a>
-
-        </div>
-      </div>
-      
-      <?php } ?>
-
-    <?php if($mm==3){ $mm=0; echo "<div class='clearfix'></div>"; } } ?>
-
-    <!-- ============================== -->
-    
-    <!-- ============================== -->
+    <?php } ?>
 
 
   </div>
@@ -583,7 +732,7 @@
 </div>
 <!-- sub news section -->
 
-
+<?php } ?>
 
 <div class="w-100 d-none d-md-block"></div>
 <br>
@@ -595,11 +744,10 @@
   <div class="row">
 
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-      <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url("assets/frontend/"); ?>images/bg_st_life.jpg);">
-        <h1 class="heading">STUDENT <br>LIFE</h1>
+      <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage1; ?>);">
+        <h1 class="heading"><?php echo $home_details[0]->vOtherTitle1; ?></h1>
         <p data-aos="fade-up">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industr
-          y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          <?php echo $home_details[0]->tOtherContent1; ?>
         </p>
         <!-- arrow link -->
         <a class='animated-arrow' href=''>
@@ -620,13 +768,12 @@
     </div>
 
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("assets/frontend/"); ?>images/lab_bg.jpg) !important; background-position:center top;"></div>
+      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage2; ?>) !important; background-position:center top;"></div>
 
       <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
-        <h1 class="heading">Our students create a vibrant and inclusive community</h1>
+        <h1 class="heading"><?php echo $home_details[0]->vOtherTitle2; ?></h1>
         <p data-aos="fade-up">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industr
-          y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          <?php echo $home_details[0]->tOtherContent3; ?>
         </p>
         <!-- arrow link -->
         <a class='animated-arrow' href=''>
@@ -647,14 +794,11 @@
     </div>
 
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-      <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url("assets/frontend/"); ?>images/test_bg.jpg); background-position:center top;"></div>
+      <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage3; ?>); background-position:center top;"></div>
       <div class="short_link_div_text_div">
-        <h1 class="heading" style="text-transform: uppercase; color: #ffffff;">Lorem Ipsum is simply
-          dummy text of the printing
-          and typesetting industry</h1>
+        <h1 class="heading" style="text-transform: uppercase; color: #ffffff;"><?php echo $home_details[0]->vOtherTitle3; ?></h1>
         <p data-aos="fade-up" style="color: #ffffff;">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industr
-          y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          <?php echo $home_details[0]->tOtherContent3; ?>
         </p>
       </div>
     </div>

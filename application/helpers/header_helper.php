@@ -154,5 +154,22 @@ if (!function_exists('get_mobile_sliders')) {
     }
 }
 
+if (!function_exists('get_contact_details')) {
+    function get_contact_details() {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from('tbl_contact_us');
+        $ci->db->where('id', 1);
+        $result = $ci->db->get();
+        // echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+    }
+}
+
 //}
 ?>

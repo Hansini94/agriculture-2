@@ -82,16 +82,16 @@
           <ul class="navbar-nav ms-auto first_nav_bar">
 
             <li class="nav-item">
-              <a class="nav-link" href="http://173.231.230.98/~tgcss/vibudha/agri_css/sub_site_css/alumni.html">Alumni</a>
+              <a class="nav-link" href="<?php echo base_url('alumni'); ?>">Alumni</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Downloads
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="staff_down.html" style="text-align: left;">Staff Downloads</a></li>
-                <li><a class="dropdown-item" href="stud_down.html" style="text-align: left;">Students Downloads</a></li>
-                <li><a class="dropdown-item" href="fac_down.html" style="text-align: left;">Faculty Downloads</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('downloads-staff'); ?>" style="text-align: left;">Staff Downloads</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('downloads-students'); ?>" style="text-align: left;">Students Downloads</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('downloads-faculty'); ?>" style="text-align: left;">Faculty Downloads</a></li>
                 <!-- <li><a class="dropdown-item" href="#" style="text-align: left;">Faculty Downloads &raquo;</a>
                    <ul class="submenu dropdown-menu">
                     <li><a class="dropdown-item" href="" style="text-align: left;">e-Newsletter</a></li>
@@ -102,12 +102,12 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
+              <a class="nav-link" href="<?php echo base_url('faq'); ?>">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <div class="input-group search_bar">
                   <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
                   <span class="input-group-append">
@@ -116,8 +116,20 @@
                       </button>
                   </span>
               </div>
-            </li>
+            </li> -->
 
+            <li class="nav-item">
+              <form action="<?php echo base_url('search'); ?>" class="search-form" method="post">
+                <div class="input-group search_bar">
+                    <input class="form-control border-end-0 border" type="search" value="" id="example-search-input search_text" name="search_text" style="height: 30px; font-size: 13px;" placeholder="search">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="submit" style="height: 30px;">
+                            <i class="fa fa-search" style="position: relative; top: -4px;"></i>
+                        </button>
+                    </span>
+                </div>
+              </form>
+            </li>
           </ul>
 
             <!-- ============== -->
@@ -234,9 +246,9 @@
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research'; ?>">Research Stories</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>
-                <li><a class="dropdown-item" href="faurs.html">Faurs</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('faurs'); ?>">Faurs</a></li>
 
                 <!-- <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
                    <ul class="submenu dropdown-menu">
@@ -255,7 +267,7 @@
                 International
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="<?php echo base_url().'international'; ?>">Overview</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
                 <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/Sustainable%20Tropical%20Agricultural%20Systems%20of%20Sri%20Lanka.html" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
@@ -313,14 +325,14 @@
                 Engagement
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="engage_over.html">Overview</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('engagement-overview'); ?>">Overview</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>
 
                 <li><a class="dropdown-item" href="#">Engagements &raquo; </a>
                    <ul class="submenu dropdown-menu desktop_menu_engage_sub_menu">
-                    <li><a class="dropdown-item" href="research_engage.html">Research Engagements</a></li>
-                    <li><a class="dropdown-item" href="research_engage.html">Student Engagements</a></li>
-                    <li><a class="dropdown-item" href="research_engage.html">Community Engagements</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url('research-engagements'); ?>">Research Engagements</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url('student-engagements'); ?>">Student Engagements</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url('community-engagements'); ?>">Community Engagements</a></li>
                  </ul>
                 </li>
 
@@ -334,10 +346,10 @@
                 Services
               </a>
               <ul class="dropdown-menu desktop_menu_services_dropdown" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="stud_down.html">Transcript Request (For students)</a></li>
-                <li><a class="dropdown-item" href="service_out_ce.html">Outreach Centres</a></li>
-                <li><a class="dropdown-item" href="service_analy_ser.html">Analytical Services</a></li>
-                <li><a class="dropdown-item" href="service_ex_faci.html">Research & Experimental Facilities</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/transcript-request'); ?>">Transcript Request (For students)</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/outreach-centers'); ?>">Outreach Centres</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/analytical-services'); ?>">Analytical Services</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/research-experimental-facilities'); ?>">Research & Experimental Facilities</a></li>
 
               </ul>
             </li>
@@ -367,16 +379,16 @@
           <ul class="navbar-nav ms-auto first_nav_bar">
 
            <li class="nav-item">
-              <a class="nav-link" href="http://173.231.230.98/~tgcss/vibudha/agri_css/sub_site_css/alumni.html">Alumni</a>
+              <a class="nav-link" href="<?php echo base_url('alumni'); ?>">Alumni</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Downloads
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="staff_down.html" style="text-align: left;">Staff Downloads</a></li>
-                <li><a class="dropdown-item" href="stud_down.html" style="text-align: left;">Students Downloads</a></li>
-                 <li><a class="dropdown-item" href="fac_down.html" style="text-align: left;">Faculty Downloads</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('downloads-staff'); ?>" style="text-align: left;">Staff Downloads</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('downloads-students'); ?>" style="text-align: left;">Students Downloads</a></li>
+                 <li><a class="dropdown-item" href="<?php echo base_url('downloads-faculty'); ?>" style="text-align: left;">Faculty Downloads</a></li>
                 <!-- <li><a class="dropdown-item" href="#">Faculty Downloads &raquo;</a>
                    <ul class="submenu dropdown-menu">
                     <li><a class="dropdown-item" href="">e-Newsletter</a></li>
@@ -387,7 +399,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
+              <a class="nav-link" href="<?php echo base_url('faq'); ?>">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
@@ -509,7 +521,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research'; ?>">Research Stories</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>
 
                 <!-- <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
@@ -529,7 +541,7 @@
                 International
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="<?php echo base_url().'international'; ?>">Overview</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
                 <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/Sustainable%20Tropical%20Agricultural%20Systems%20of%20Sri%20Lanka.html" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
@@ -577,14 +589,14 @@
                 Engagement
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="engage_over.html">Overview</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('engagement-overview'); ?>">Overview</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>
 
                 <li><a class="dropdown-item" href="#">Engagements &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="research_engage.html">Research Engagements</a></li>
-                    <li><a class="dropdown-item" href="research_engage.html">Student Engagements</a></li>
-                    <li><a class="dropdown-item" href="research_engage.html">Community Engagements</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url('research-engagements'); ?>">Research Engagements</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url('student-engagements'); ?>">Student Engagements</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url('community-engagements'); ?>">Community Engagements</a></li>
                  </ul>
                 </li>
 
@@ -597,10 +609,10 @@
                 Services
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="stud_down.html">Transcript Request (For students)</a></li>
-                <li><a class="dropdown-item" href="service_out_ce.html">Outreach Centres</a></li>
-                <li><a class="dropdown-item" href="service_analy_ser.html">Analytical Services</a></li>
-                <li><a class="dropdown-item" href="service_ex_faci.html">Research & Experimental Facilities</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/transcript-request'); ?>">Transcript Request (For students)</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/outreach-centers'); ?>">Outreach Centres</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/analytical-services'); ?>">Analytical Services</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('services/research-experimental-facilities'); ?>">Research & Experimental Facilities</a></li>
               </ul>
             </li>
 
