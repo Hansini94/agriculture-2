@@ -13,6 +13,7 @@ Class Downloads_faculty extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/downloads_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
@@ -20,6 +21,7 @@ Class Downloads_faculty extends CI_Controller {
         $data['enewsletter'] = $this->downloads_model->get_enewsletter_downloads();
         $data['faurs'] = $this->downloads_model->get_faurs_downloads();
         $data['hanthana'] = $this->downloads_model->get_hanthana_downloads();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
         // var_dump($data);exit();
 

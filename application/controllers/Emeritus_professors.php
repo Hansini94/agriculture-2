@@ -13,11 +13,13 @@ Class Emeritus_professors extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/faculty_n_staff_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
-        $data['emeritus'] = $this->faculty_n_staff_model->get_emeritus_professor();       
+        $data['emeritus'] = $this->faculty_n_staff_model->get_emeritus_professor();    
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();   
         
         // var_dump($data);exit();
 
