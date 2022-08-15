@@ -72,12 +72,38 @@ class About_us_model extends CI_Model {
         }
     }
 
-    public function get_meeting_schedule_data() {
+    public function get_meeting_schedule_latest_data() {
         $this->db->from('tbl_meeting_schedule');
         $this->db->order_by('id', 'DESC');
+        $this->db->limit(1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_meeting_schedule_data($id) {
+        $this->db->from('tbl_meeting_schedule');
+        $this->db->order_by('id', 'DESC');
+        $this->db->where_not_in('id', $id);
         $this->db->limit(4);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_meeting_schedule_detail_data($year) {
+        $this->db->from('tbl_meeting_schedule');
+        $this->db->where('vYear', $year);
+        $result = $this->db->get();
+        // echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
             return $result->result();
         } else {
@@ -159,19 +185,6 @@ class About_us_model extends CI_Model {
             return array();
         }
     }
-
-    public function get_undergraduate_data() {
-        $this->db->from('tbl_bsc_agtech_mgt');
-        $this->db->where('id', 1);
-        $result = $this->db->get();
-        //echo $this->db->last_query();  exit();  
-        if ($result->num_rows() > 0) {
-            return $result->result();
-        } else {
-            return array();
-        }
-    }
-
 
     #################################################	
 }

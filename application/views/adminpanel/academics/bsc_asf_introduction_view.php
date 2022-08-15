@@ -3,21 +3,9 @@ if ($cSaveStatus == "E") {
     $id = $introduction_data[0]->id;
     $vHeading = $introduction_data[0]->vHeading;
     $tIntroduction = $introduction_data[0]->tIntroduction;
-    $vSubHeading1 = $introduction_data[0]->vSubHeading1;
     $tContent1 = $introduction_data[0]->tContent1;
-    $vSubHeading2 = $introduction_data[0]->vSubHeading2;
     $tContent2 = $introduction_data[0]->tContent2;
-    $vSubHeading3 = $introduction_data[0]->vSubHeading3;
     $tContent3 = $introduction_data[0]->tContent3;
-    $vSubHeading4 = $introduction_data[0]->vSubHeading4;
-    $tContent4 = $introduction_data[0]->tContent4;
-    $vSubHeading5 = $introduction_data[0]->vSubHeading5;
-    $tContent5 = $introduction_data[0]->tContent5;
-    $tContent6 = $introduction_data[0]->tContent6;
-    $tDegreeOutline = $introduction_data[0]->tDegreeOutline;
-    $vSubHeading7 = $introduction_data[0]->vSubHeading7;
-    $tContent7 = $introduction_data[0]->tContent7;
-    $tCourseSequence = $introduction_data[0]->tCourseSequence;
     $tCalendarDate = $introduction_data[0]->tCalendarDate;
     $fPdf = $introduction_data[0]->fPdf;
     $cEnable = $introduction_data[0]->cEnable;
@@ -25,21 +13,9 @@ if ($cSaveStatus == "E") {
     $id = '';
     $vHeading = '';
     $tIntroduction = '';
-    $vSubHeading1 = '';
     $tContent1 = '';
-    $vSubHeading2 = '';
     $tContent2 = '';
-    $vSubHeading3 = '';
     $tContent3 = '';
-    $vSubHeading4 = '';
-    $tContent4 = '';
-    $vSubHeading5 = '';
-    $tContent5 = '';
-    $tContent6 = '';
-    $tDegreeOutline = '';
-    $vSubHeading7 = '';
-    $tContent7 = '';
-    $tCourseSequence = '';
     $tCalendarDate = '';
     $fPdf = '';
     $cEnable = '';
@@ -149,17 +125,8 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 1<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading1" name="vSubHeading1" value="<?php echo $vSubHeading1; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 1<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Degree Outline<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent1" id="tContent1" class="form-control col-md-7 col-xs-12" required><?php echo $tContent1; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent1); ?>
@@ -168,17 +135,8 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 2<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading2" name="vSubHeading2" value="<?php echo $vSubHeading2; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 2<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Courses Details<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent2" id="tContent2" class="form-control col-md-7 col-xs-12" required><?php echo $tContent2; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent2); ?>
@@ -187,107 +145,11 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 3<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading3" name="vSubHeading3" value="<?php echo $vSubHeading3; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 3<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Course Sequence<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent3" id="tContent3" class="form-control col-md-7 col-xs-12" required><?php echo $tContent3; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent3); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 4<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading4" name="vSubHeading4" value="<?php echo $vSubHeading4; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 4<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent4" id="tContent4" class="form-control col-md-7 col-xs-12" required><?php echo $tContent4; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent4); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 5<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading5" name="vSubHeading5" value="<?php echo $vSubHeading5; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 5<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent5" id="tContent5" class="form-control col-md-7 col-xs-12" required><?php echo $tContent5; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent5); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content (Structure of the Curriculum)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent6" id="tContent6" class="form-control col-md-7 col-xs-12" required><?php echo $tContent6; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent6); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content (Outline of the Degree)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tDegreeOutline" id="tDegreeOutline" class="form-control col-md-7 col-xs-12" required><?php echo $tDegreeOutline; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tDegreeOutline); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 7<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading7" name="vSubHeading7" value="<?php echo $vSubHeading7; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content 7<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent7" id="tContent7" class="form-control col-md-7 col-xs-12" required><?php echo $tContent7; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent7); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content (Course Sequence)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tCourseSequence" id="tCourseSequence" class="form-control col-md-7 col-xs-12" required><?php echo $tCourseSequence; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tCourseSequence); ?>
                                     </div>
                                 </div>
                             </div>

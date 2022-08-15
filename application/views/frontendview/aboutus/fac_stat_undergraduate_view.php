@@ -43,154 +43,25 @@
         <div class="row ms-auto">
         
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="padding-left: 0px !important;">
+            <?php 
+              $count=0;
+              foreach($undergraduate_data as $undergraduate) { 
+                // var_dump($count);exit();
+            ?>
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><p>BSc Agtech & Mgt</p></button>
+              <button class="nav-link <?php if($count==0) { echo "active"; } ?>" id="pills-home-tab_<?php echo $undergraduate->id; ?>" data-bs-toggle="pill" data-bs-target="#pills-home_<?php echo $undergraduate->id; ?>" type="button" role="tab" aria-controls="pills-home" aria-selected="<?php if($count==0) { echo 'true'; } else { echo 'false'; } ?>"><p><?php echo $undergraduate->vMHeading; ?></p></button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><p>Bsc ASF</p></button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-fst" type="button" role="tab" aria-controls="pills-fst" aria-selected="false"><p>Bsc FST</p></button>
-            </li>
+            <?php $count++; } ?>
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-               <h1 class="heading mb-1">Undergraduaters Students - B.Sc. Agricultural Technology and Management Degree</h1>
-               <?php echo $undergraduate_data[0]->tContent; ?>
+            <?php 
+              $count=0;
+              foreach($undergraduate_data as $undergraduate) { ?>
+            <div class="tab-pane fade show <?php if($count==0) { echo "active"; } ?>" id="pills-home_<?php echo $undergraduate->id; ?>" role="tabpanel" aria-labelledby="pills-home-tab_<?php echo $undergraduate->id; ?>">
+              <h1 class="heading mb-1"><?php echo $undergraduate->vHeading; ?></h1>
+              <?php echo $undergraduate->tContent; ?>
             </div>
-
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-               <h1 class="heading mb-1">Undergraduaters Students - B.Sc. Animal Science and Fisheries Degree</h1>
-               <h1 class="sub_heading mb-3">Current Students</h1>
-               <!-- table-->
-               <?php echo $undergraduate_data[1]->tContent; ?>
-               <!-- table -->
-            </div>
-
-             <div class="tab-pane fade" id="pills-fst" role="tabpanel" aria-labelledby="pills-fst-tab">
-               <h1 class="heading mb-1">UNDERGRADUATER STUDENTS - B.Sc. Food Science and Technology Degree</h1>
-               <h1 class="sub_heading mb-3">Current Students</h1>
-               <!-- table-->
-               <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Year</th>
-                        <th scope="col">Batch</th>
-                        <th scope="col">Male</th>
-                        <th scope="col">Female</th>
-                        <th scope="col">Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">New Admissions</th>
-                        <td>2018/19</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1st Year</th>
-                        <td>2017/18</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2nd Year</th>
-                        <td>2016/17</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3rd Year</th>
-                        <td>2015/16</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4th (Final) Year</th>
-                        <td>2014/15</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Total</th>
-                        <td></td>
-                        <td>256</td>
-                        <td>418</td>
-                        <td>674</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-               <!-- table -->
-               <br>
-               <h1 class="sub_heading mb-3">B Sc. Food Science and Technology Degrees Conferred</h1>
-               <!-- table-->
-               <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Year</th>
-                        <th scope="col">Batch</th>
-                        <th scope="col">Male</th>
-                        <th scope="col">Female</th>
-                        <th scope="col">Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">New Admissions</th>
-                        <td>2018/19</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1st Year</th>
-                        <td>2017/18</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2nd Year</th>
-                        <td>2016/17</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3rd Year</th>
-                        <td>2015/16</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4th (Final) Year</th>
-                        <td>2014/15</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Total</th>
-                        <td></td>
-                        <td>256</td>
-                        <td>418</td>
-                        <td>674</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-               <!-- table -->
-            </div>
+            <?php $count++; } ?>
           </div>
 
         </div>

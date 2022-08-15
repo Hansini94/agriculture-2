@@ -2,15 +2,19 @@
 if ($cSaveStatus == "E") {
     $id = $edit_mobile_slider[0]->id;    
     $fImage = $edit_mobile_slider[0]->fImage;
-    $iOrder = $edit_mobile_slider[0]->iOrder;
+    $vTitle = $edit_mobile_slider[0]->vTitle;
     $vCaption = $edit_mobile_slider[0]->vCaption;
+    $vUrl = $edit_mobile_slider[0]->vUrl;
+    $iOrder = $edit_mobile_slider[0]->iOrder;
     $cEnable = $edit_mobile_slider[0]->cEnable;
 	
 } else {
     $id = "";    
     $fImage = "";
-    $iOrder = "";
+    $vTitle = "";
     $vCaption ="";
+    $vUrl = "";
+    $iOrder = "";
     $cEnable = "Y";
 }
 ?>
@@ -108,17 +112,36 @@ if ($cSaveStatus == "E") {
                                 
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Caption Title </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
+
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Caption </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
-                                       <textarea id="vCaption" name="vCaption" class="form-control col-md-7 col-xs-12"><?php echo $vCaption; ?></textarea>
-                                       <!-- <input type="text" id="vCaption" name="vCaption" value="<?php echo $vCaption; ?>" class="form-control col-md-7 col-xs-12"> -->
+                                       <textarea id="vCaption" name="vCaption" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $vCaption; ?></textarea>
+                                       
                                     </div>
                                 </div>
-                                
-                                
-                                
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Read More </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Display Order </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
                                 
                             </div>
                             
@@ -151,7 +174,8 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:50px;text-align:center;">No </th>
-                                    <th>Image </th>                                    
+                                    <th>Image </th>             
+                                    <th>Title </th>                        
                                     <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
                                     <th style="width:80px; text-align:center">Status </th>
@@ -186,12 +210,12 @@ if ($cSaveStatus == "E") {
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><img height="75" src="<?php echo base_url().'/front_img/'.$rowlist->fImage;?>"   /></td>                                            
-                                            
+                                            <td><?php echo $rowlist->vTitle; ?></td>
                                             <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/edit_mobile_slider/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/delete_record/$recordid" ?>" onclick="return confirm('Are you sure?')">

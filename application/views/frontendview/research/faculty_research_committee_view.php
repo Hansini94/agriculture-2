@@ -1,7 +1,6 @@
 <header>
       <div class="inner_page_top_div">
         <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
-          
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
               <h1 class="heading" data-aos="fade-up">FACULTY RESEARCH COMMITTEE (FRC)</h1>

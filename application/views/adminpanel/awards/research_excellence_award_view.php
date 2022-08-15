@@ -1,12 +1,12 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $research_excellence_award_data[0]->id;
-    $vYear = $research_excellence_award_data[0]->vYear;
+    $vTitle = $research_excellence_award_data[0]->vTitle;
     $tContent = $research_excellence_award_data[0]->tContent;
     $cEnable = $research_excellence_award_data[0]->cEnable;
 } else {
     $id = '';
-    $vYear = '';
+    $vTitle = '';
     $tContent = '';
     $cEnable = '';
 }
@@ -99,7 +99,7 @@ if ($cSaveStatus == "E") {
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Year<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vYear " name="vYear" value="<?php echo $vYear; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                       <input type="text" id="vTitle " name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>

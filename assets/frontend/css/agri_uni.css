@@ -14,9 +14,7 @@ body{
     font-family: 'Sarabun' !important;
 }
 
-.ms-auto {
-    margin: auto!important;
-}
+
 
 .gray{
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -107,6 +105,21 @@ a{
 
 /*******common css*************/
 /******************************/
+
+.desktop_menu_services_dropdown[data-bs-popper] {
+  top: 100%;
+  right: 0;
+  left: auto;
+  margin-top: 0.125rem;
+}
+
+.desktop_menu_engage_sub_menu {
+    display: none;
+    position: absolute;
+    right: 100%;
+    left: auto !important;
+    top: -7px;
+}
 
 
 /* ============ desktop view ============ */
@@ -1018,6 +1031,56 @@ thead, th {
 
 /*========================*/
 
+/*========================*/
+
+.stud_life_short_link_div .animated-arrow {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.stud_life_short_link_div .the-arrow > .shaft {
+  background-color: #ffffff;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+  right: -9px;
+    top: 2px;
+}
+.stud_life_short_link_div .the-arrow > .shaft:before, .the-arrow > .shaft:after {
+  background-color: #ffffff;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+
+.stud_life_short_link_div .the-arrow > .shaft:after {
+  background-color: #ffffff;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+
+
+/*========================*/
+
 
 .the-arrow > .shaft {
   background-color: #4c4c4c;
@@ -1100,22 +1163,5 @@ thead, th {
   display: flex;
   align-items: center;
   transition: all 0.2s;
-}
-
-.page-item.active .page-link {
-    z-index: 3;
-    color: #fff;
-    background-color: #d5b79f;
-    border-color: #d5b79f;
-}
-
-.page-link {
-    position: relative;
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #d5b79f;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 /*////////////animate arrow/////////////*/

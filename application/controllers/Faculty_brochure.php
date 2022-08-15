@@ -13,6 +13,7 @@ Class Faculty_brochure extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/about_us_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
@@ -20,6 +21,8 @@ Class Faculty_brochure extends CI_Controller {
         $data['faculty_brochure_data'] = $this->about_us_model->get_faculty_brochure_data();
         $data['brochure_top_images'] = $this->about_us_model->get_faculty_brochure_top_img();
         $data['brochure_bottom_images'] = $this->about_us_model->get_faculty_brochure_bottom_img();
+
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
 
         // var_dump($data['brochure_bottom_images']);exit();
 

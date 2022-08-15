@@ -1,6 +1,8 @@
 <?php
 if ($cSaveStatus == "E") {
-    $id = $edit_quick_link[0]->id;  
+    $id = $edit_quick_link[0]->id; 
+    $vHeading = $edit_quick_link[0]->vHeading;   
+    $tContent = $edit_quick_link[0]->tContent;  
 	$vUrlLink = $edit_quick_link[0]->vUrlLink;  
     $fImage = $edit_quick_link[0]->fImage; 
     $iOrder = $edit_quick_link[0]->iOrder;
@@ -8,6 +10,8 @@ if ($cSaveStatus == "E") {
 	
 } else {
     $id = "";    
+    $vHeading = "";  
+    $tContent = "";  
 	$vUrlLink = "";   
 	$fImage = "";      
     $iOrder = "";
@@ -80,27 +84,30 @@ if ($cSaveStatus == "E") {
                     ?>>
                         <br />
                         <form id="edit_quick_links" name="edit_quick_links" action="<?php echo base_url('adminpanel/about_us/quick_links/save_quick_links'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="vUrlLink" name="vUrlLink" value="<?php echo $vUrlLink; ?>" required class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-
-                                <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Display Order </label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
-                                        <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading <span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" required class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
+                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">                                    
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="first-name" >Logo (200*100px)
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Logo (200*100px)
                                     </label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12" style="padding-top:8px;">
+                                    <div class="col-md-10 col-sm-10 col-xs-12" style="padding-top:8px;">
                                         <input type="file" id="fImage" name="fImage"<?php
                                         if ($cSaveStatus != "E") {?> required  <?php } ?>>
                                     </div>
@@ -108,12 +115,30 @@ if ($cSaveStatus == "E") {
                                 
                                 <div class="form-group">
                                     <?php if($fImage!=''){ ?>                                
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
                                         <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImage;?>" style="height:75px;" />
                                     </div>                                
 								<?php } ?>
                             	</div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <input type="text" id="vUrlLink" name="vUrlLink" value="<?php echo $vUrlLink; ?>" required class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Display Order </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
+                                    </div>
+                                </div>
                             </div>
 
                             <div style="clear:both;"></div>
