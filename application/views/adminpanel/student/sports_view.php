@@ -69,9 +69,9 @@ if ($cSaveStatus == "E") {
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/student/sports'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add News</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/student/sports'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Sports</span>&nbsp;</a></li>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add News</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Sports</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
