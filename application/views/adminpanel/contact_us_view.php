@@ -63,9 +63,7 @@
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTitle" name="vTitle" value="<?php echo $contact_us_data[0]->vTitle; ?>" required class="form-control col-md-7 col-xs-12">
                                     </div>
-                                </div>
-
-                                
+                                </div>                                
 								  <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Address line 1</label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
@@ -89,31 +87,10 @@
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vAddress4" name="vAddress4" value="<?php echo $contact_us_data[0]->vAddress4; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
-                                </div>   
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Map </label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                    <textarea name="tMap" rows="5" class="form-control col-md-7 col-xs-12" id="tMap" required><?php echo $contact_us_data[0]->tMap; ?></textarea>
-                                    <?php /*?><textarea rows="4" name="tMap" id="tMap" class="form-control col-md-7 col-xs-12"><?php echo $contact_us_data[0]->tMap; ?></textarea><?php */?>
-                                    </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Map Link </label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                    <input type="text" id="tMapLink" name="tMapLink" value="<?php echo $contact_us_data[0]->tMapLink; ?>" required class="form-control col-md-7 col-xs-12">
-                                    <?php /*?><textarea rows="4" name="tMap" id="tMap" class="form-control col-md-7 col-xs-12"><?php echo $contact_us_data[0]->tMap; ?></textarea><?php */?>
-                                    </div>
-                                </div>     
-                        
-                            </div>
-                            
-                            
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                
-
-                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Web Admin E-mail </label>
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Dean's E-mail </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vWaEmail" name="vWaEmail" value="<?php echo $contact_us_data[0]->vWaEmail; ?>" required class="form-control col-md-7 col-xs-12">
                                     </div>
@@ -140,6 +117,11 @@
                                         <input type="text" id="vTele2" name="vTele2" value="<?php echo $contact_us_data[0]->vTele2; ?>"  class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
+                        
+                            </div>
+                            
+                            
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Fax </label>
@@ -167,41 +149,19 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Youtube Link </label>
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Linkedin Link </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <input type="text" id="vYoutube" name="vYoutube" value="<?php echo $contact_us_data[0]->vYoutube; ?>" class="form-control col-md-7 col-xs-12">
+                                        <input type="text" id="vLinkedIn" name="vLinkedIn" value="<?php echo $contact_us_data[0]->vLinkedIn; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
 
                             </div>
                             
                             
-							<div style="clear:both;"></div>
-                            
-                            <div class="x_title">
-                                	<div class="col-md-9 col-sm-9 col-xs-9">
-                                    <h2>Export Map</h2>
-                                    </div>
-                                    
-                                    <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Export Map Link </label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <textarea name="tganlytics" rows="5" class="form-control col-md-7 col-xs-12" id="tganlytics" required><?php echo $contact_us_data[0]->tganlytics; ?></textarea>
-
-                                    </div>
-                                </div> 
-                            </div>
-                            
+							<div style="clear:both;"></div>                            
                             
                             <!-- <div class="col-md-6 col-sm-6 col-xs-12">
-                                
-   
-                                
-                                                            
-                                
+                                  
                             </div> -->
                             <!-- <div class="col-md-12 col-sm-12 col-xs-12">                               
                                 
