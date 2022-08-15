@@ -13,11 +13,13 @@ Class Downloads_staff extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/downloads_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['staff'] = $this->downloads_model->get_staff_downloads();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
         // var_dump($data);exit();
 

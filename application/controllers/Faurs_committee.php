@@ -13,12 +13,14 @@ Class Faurs_committee extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/research_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['current'] = $this->research_model->get_current_committee();
         $data['previous'] = $this->research_model->get_previous_committee();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
         // var_dump($data);exit();
 
