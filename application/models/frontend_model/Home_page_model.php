@@ -295,6 +295,21 @@ public function get_faq_category() {
         return array();
     }
 }
+
+
+ ######################FOOTER###########################	
+ public function get_quick_list() {
+    $this->db->from('tbl_engagement_partnerships');
+    $this->db->where('tbl_engagement_partnerships.cEnable', 'Y');
+    $this->db->order_by('tbl_engagement_partnerships.iOrder', 'asc');
+    $result = $this->db->get();
+    //echo $this->db->last_query();  exit();  
+    if ($result->num_rows() > 0) {
+        return $result->result();
+    } else {
+        return array();
+    }
+}
 }
 
 ?>
