@@ -59,7 +59,7 @@
                   </h1>
                   <p><small><?php echo $home_details[0]->tTabContent2; ?></small></p>
                   <!-- arrow link -->
-                  <a class='animated-arrow' href='<?php echo base_url('current-student'); ?>'>
+                  <a class='animated-arrow' href='<?php echo base_url('current-students'); ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>

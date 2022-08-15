@@ -102,7 +102,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
+              <a class="nav-link" href="<?php echo base_url('faq'); ?>">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
@@ -399,7 +399,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
+              <a class="nav-link" href="<?php echo base_url('faq'); ?>">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>

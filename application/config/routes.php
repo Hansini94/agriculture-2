@@ -170,9 +170,13 @@ $route['downloads-staff'] = 'Downloads_staff';
 $route['downloads-students'] = 'Downloads_students';
 $route['downloads-faculty'] = 'Downloads_faculty';
 
+$route['faq'] = 'Faq';
+
 $route['future-student'] = 'Future_students';
 $route['faculty-level-scholarship'] = 'Resources_for_student';
 $route['video-lab-practice'] = 'Resources_for_student/lab_videos';
+
+$route['current-students'] = 'Current_students';
 
 
 
