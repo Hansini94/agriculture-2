@@ -93,18 +93,18 @@
                   News and Events 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="http://173.231.230.98/~tgcss/vibudha/agri_css/css/alumni_news.html">News</a></li>
-                <li><a class="dropdown-item" href="http://173.231.230.98/~tgcss/vibudha/agri_css/css/alumni_news.html">Events </a></li>
-                <li><a class="dropdown-item" href="http://173.231.230.98/~tgcss/vibudha/agri_css/css/alumni_news.html">Newsletters</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_news">News</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_events">Events </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_newsletters">Newsletters</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="http://173.231.230.98/~tgcss/vibudha/agri_css/css/alumni_schol.html">  Scholarships </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni_scholarships">  Scholarships </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="http://173.231.230.98/~tgcss/vibudha/agri_css/css/alumni_join_us.html">  Join Us </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni_joinus">  Join Us </a>
             </li>
 
             <!-- <li class="nav-item dropdown">
@@ -141,11 +141,11 @@
           <ul class="navbar-nav ms-auto second_nav_bar">
 
                <li class="nav-item active">
-              <a class="nav-link" href="alumni.html">Home</a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni">Home</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="">Committee </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni_committee">Committee </a>
             </li>
 
              <li class="nav-item dropdown">
@@ -153,24 +153,18 @@
                   News and Events 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">News</a></li>
-                <li><a class="dropdown-item" href="#">Events </a></li>
-                <li><a class="dropdown-item" href="#">Newsletters</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_news">News</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_events">Events </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_newsletters">Newsletters</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="index.html">  Scholarships </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni_scholarships">  Scholarships </a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Join Us 
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Application form</a></li>
-                <li><a class="dropdown-item" href="#">Benefits </a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni_joinus">  Join us </a>
             </li>
 
           </ul>

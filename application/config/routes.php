@@ -143,8 +143,13 @@ $route['404_override'] = '';
 
 $route['partnership'] = 'Engagement/engagement_partnerships';
 
-
-
+$route['alumni'] = 'Alumni';
+$route['committee'] = 'Alumni_committee';
+$route['news'] = 'Alumni_news';
+$route['newsletters'] = 'Alumni_newsletters';
+$route['events'] = 'Alumni_events';
+$route['scholarships'] = 'Alumni_scholarships';
+$route['joinus'] = 'Alumni_joinus';
 
 
 /* End of file routes.php */

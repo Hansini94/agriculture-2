@@ -71,6 +71,20 @@ class Alumni_model extends CI_Model {
     }
 
     // ********************Alumni News*******************
+    public function get_latest_news() {
+        $this->db->from('tbl_alumni_news');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit(1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+    }
+
     public function get_news_list() {
         $this->db->from('tbl_alumni_news');
         $this->db->where('cEnable', 'Y');
