@@ -111,7 +111,7 @@ $route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
 $route['undergraduate-programme'] = 'Undergraduate_programme';
 $route['postgraduate-programme'] = 'Postgraduate_programme';
 
-$route['international'] = 'International/index';
+$route['international-overview'] = 'International/index';
 $route['international/current-foreign-students'] = 'International/current_foreign_students';
 $route['international/info-for-foreign-students'] = 'International/info_for_foreign_students';
 $route['international/opportunities-study-abroad'] = 'International/opportunities_study_abroad';
@@ -148,6 +148,9 @@ $route['404_override'] = '';
 
 $route['partnership'] = 'Engagement/engagement_partnerships';
 
+$route['future-student'] = 'Future_students';
+$route['faculty-level-scholarship'] = 'Resources_for_student';
+$route['video-lab-practice'] = 'Resources_for_student/lab_videos';
 
 
 
