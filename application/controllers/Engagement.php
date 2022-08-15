@@ -13,11 +13,13 @@ Class Engagement extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['overview'] = $this->engagement_model->get_overview();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
         // var_dump($data);exit();
 
@@ -30,11 +32,13 @@ Class Engagement extends CI_Controller {
     public function engagement_partnerships() {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['partnerships'] = $this->engagement_model->get_partnerships();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -48,12 +52,14 @@ Class Engagement extends CI_Controller {
     public function research_engagement() {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['latest'] = $this->engagement_model->get_latest_research();
         $data['all'] = $this->engagement_model->get_research_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -65,12 +71,14 @@ Class Engagement extends CI_Controller {
     public function rs_detail($id) {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['detail'] = $this->engagement_model->get_rs_detail($id);
         $data['all'] = $this->engagement_model->get_research_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -84,12 +92,14 @@ Class Engagement extends CI_Controller {
     public function student_engagement() {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['latest'] = $this->engagement_model->get_latest_ste();
         $data['all'] = $this->engagement_model->get_ste_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -101,12 +111,14 @@ Class Engagement extends CI_Controller {
     public function st_detail($id) {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['detail'] = $this->engagement_model->get_st_detail($id);
         $data['all'] = $this->engagement_model->get_ste_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -120,12 +132,14 @@ Class Engagement extends CI_Controller {
     public function community_engagement() {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['latest'] = $this->engagement_model->get_latest_com();
         $data['all'] = $this->engagement_model->get_com_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -137,12 +151,14 @@ Class Engagement extends CI_Controller {
     public function com_detail($id) {
 
         $this->load->model('frontend_model/engagement_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['detail'] = $this->engagement_model->get_com_detail($id);
         $data['all'] = $this->engagement_model->get_com_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
