@@ -30,6 +30,18 @@ class Faculty_staff_model extends CI_Model {
         }
     }
 
+    public function get_faculty_staff_data() {
+
+        $this->db->from('tbl_faculty_staff_content');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
         
 }
 

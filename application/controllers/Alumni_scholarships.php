@@ -13,12 +13,14 @@ Class Alumni_scholarships extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/alumni_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['scholarship'] = $this->alumni_model->get_scholarships_first();
         $data['schol_data'] = $this->alumni_model->get_scholarships_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -32,12 +34,14 @@ Class Alumni_scholarships extends CI_Controller {
         $newString = str_replace('_', ' ', $name);
 
         $this->load->model('frontend_model/alumni_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['scholarship'] = $this->alumni_model->get_scholarships_detail($newString);
         $data['schol_data'] = $this->alumni_model->get_scholarships_list();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);

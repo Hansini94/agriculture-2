@@ -13,12 +13,14 @@ Class Current_students extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/current_student_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['content'] = $this->current_student_model->get_cs_content();
-        $data['prospectus'] = $this->current_student_model->get_prospectus();       
+        $data['prospectus'] = $this->current_student_model->get_prospectus();     
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();  
         
         // var_dump($data);exit();
 

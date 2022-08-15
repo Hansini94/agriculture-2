@@ -13,11 +13,13 @@ Class Faurs extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/research_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['faurs'] = $this->research_model->get_faurs();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
         // var_dump($data);exit();
 
