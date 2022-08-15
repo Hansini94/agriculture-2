@@ -1,0 +1,231 @@
+<?php
+if ($cSaveStatus == "E") {
+    $id = $map_direction_data[0]->id;
+    $fFacultyMap = $map_direction_data[0]->fFacultyMap;
+    $fGrndFlrMap = $map_direction_data[0]->fGrndFlrMap;
+    $fFstFlrMap = $map_direction_data[0]->fFstFlrMap;
+    $fSecFlrMap = $map_direction_data[0]->fSecFlrMap;
+    $cEnable = $map_direction_data[0]->cEnable;
+} else {
+    $id = '';
+    $fFacultyMap = '';
+    $fGrndFlrMap = '';
+    $fFstFlrMap = '';
+    $fSecFlrMap = '';
+    $cEnable = '';
+}
+?>
+<script language="javascript" type="text/javascript">
+    var maxAmount = 300;
+
+    function textCounter(textField, showCountField) {
+        if (textField.value.length > maxAmount) {
+            textField.value = textField.value.substring(0, maxAmount);
+        } else {
+            showCountField.value = maxAmount - textField.value.length;
+        }
+    }
+</script>
+<style>
+    .noofCharactor {
+        background: #f00 none repeat scroll 0 0;
+        border: medium none #fff;
+        color: #fff;
+        font-size: 12px;
+        height: 15px;
+        line-height: 12px;
+        padding: 2px;
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+<div class="right_col" role="main">
+    <div class="">
+        <div class="clearfix"></div>
+        <div style="text-align:center;">
+            <div id="dialog" title="Error" style="display: none;">
+                <p>Please fill required information.</p>
+            </div>
+            <?php
+            $showinput = 1;
+            if ($this->session->flashdata('message_saved') != "") {
+                $showinput = 0;
+            ?>
+                <div style="color:#096;">
+                    <?php echo $this->session->flashdata('message_saved'); ?>
+                </div>
+            <?php
+            }
+            ?>
+            <?php
+            if ($this->session->flashdata('message_restricted') != "") {
+                $showinput = 0;
+            ?>
+                <div style="color:#F00;">
+                    <?php echo $this->session->flashdata('message_restricted'); ?>
+                </div>
+            <?php
+            }
+            ?>
+            <?php
+            if ($this->session->flashdata('message_error') != "" || validation_errors() != "") {
+                $showinput = 0;
+            ?>
+                <div style="color:#F00;">
+                    <?php
+                    echo validation_errors('<div style="height:22px; padding:0px; margin-bottom:5px; " class="alert alert-danger" role="alert">', '</div>');
+                    echo $this->session->flashdata('message_error');
+                    ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <h2>Map & Direction</h2>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="x_content" <?php
+                                            if ($cSaveStatus != "E") {
+                                                echo 'style="display:none;"';
+                                            }
+                                            ?>>
+                        <br />
+                        <form id="edit_map_direction" name="edit_map_direction" action="<?php echo base_url('adminpanel/getting_around/faculty_direction/save_map_direction'); ?>" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="item form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Faculty Map<br>
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fFacultyMap" name="fFacultyMap"<?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>
+                                    
+                                </div>  
+
+                                <div class="item form-group">
+                                <?php if($fFacultyMap!=''){ ?>
+                                
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-1" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fFacultyMap;?>" style="height:75px;"   />
+                                    </div>
+                               
+								<?php } ?>
+                            </div>
+
+                            <br /><br /><br />
+                            <div class="x_title">
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <h2>Administrative Building</h2>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Ground Floor<br>Map
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fGrndFlrMap" name="fGrndFlrMap"<?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>
+                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fGrndFlrMap!=''){ ?>
+                                
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fGrndFlrMap;?>" style="height:75px;"   />
+                                    </div>                               
+								    <?php } ?>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >First Floor<br>Map
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fFstFlrMap" name="fFstFlrMap"<?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>
+                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fFstFlrMap!=''){ ?>
+                                
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fFstFlrMap;?>" style="height:75px;"   />
+                                    </div>
+                               
+								    <?php } ?>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">                           
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Second Floor<br>Map
+                                    </label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fSecFlrMap" name="fSecFlrMap"<?php if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>
+                                    
+                                </div>  
+
+                                <div class="form-group">
+                                    <?php if($fSecFlrMap!=''){ ?>
+                                
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fSecFlrMap;?>" style="height:75px;"   />
+                                    </div>
+                               
+								    <?php } ?>
+                                </div>
+                            </div>
+
+                            <div style="clear:both;"></div>
+                            <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
+
+                            <div class="form-group" style="margin-bottom:0px;">
+                                <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+
+                                    <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
+                                    <input type="hidden" id="cEnable" name="cEnable" value="<?php echo $cEnable ?>">
+                                    <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/getting_around/faculty_direction'); ?>';">Cancel</button>
+                                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .DTTT_container {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        .alert {
+            margin-left: 161px;
+            border-style: none;
+        }
+    </style>
+
+
+</div>

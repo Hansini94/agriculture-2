@@ -62,16 +62,9 @@
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
         <div class="row ms-auto">
-         <h1 class="heading mb-1"><?php echo $faculty_board_data[0]->vHeading; ?></h1>
-       <h1 class="sub_heading mb-3">Names and Contact Details of Officers of the Dean’s Office are as follows:</h1>
-               
-               <!-- table-->
-               <div class="table-responsive">
-                  <?php echo $faculty_board_data[0]->tMeetingSchedule; ?>
-                </div>
-               <!-- table -->
-
-             </div>
+         <h1 class="heading mb-1">SCHEDULE OF MEETINGS - <?php echo $meeting_schedule_latest_data[0]->vYear; ?></h1>
+          <?php echo $meeting_schedule_latest_data[0]->tContent; ?>
+        </div>
 
       </div>
 
@@ -86,10 +79,10 @@
                 <div class="gray_text_div dean_des_div">
 
                 <blockquote class="blockquote" style="margin-bottom: 0px;">
-                    <p><?php echo $meeting_schedule->vTitle; ?></p>
+                    <p>SCHEDULE OF MEETINGS - <?php echo $meeting_schedule->vYear; ?></p>
                 </blockquote>
                 <!-- arrow link -->
-                <a class='animated-arrow' href='<?php echo $meeting_schedule->vUrl; ?>'>
+                <a class='animated-arrow' href='<?php echo base_url('faculty-board/').$meeting_schedule->vYear; ?>'>
                 <span class='the-arrow -left'>
                     <span class='shaft'></span>
                 </span>

@@ -65,7 +65,7 @@
                     </button>
                   </a>
 
-                  <a href="<a href="<?php echo base_url('quality/pprc'); ?>">">
+                  <a href="<?php echo base_url('quality/pprc'); ?>">
                     <button class="nav-link">
                       Publications & Public Relations Committee 
                     </button>

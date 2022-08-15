@@ -22,7 +22,7 @@ Class Bsc_asf_requirement extends CI_Controller {
         $this->load->helper('ckeditor');
         $this->load->model('adminpanel/common_model');
         $this->load->model('adminpanel/academic_model');
-        set_title("B.Sc. Agtech & Mgt - Undergraduate Programme");
+        set_title("B.Sc. ASF - Undergraduate Programme");
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
     }

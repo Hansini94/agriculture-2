@@ -13,12 +13,15 @@ Class History extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/about_us_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['history_data'] = $this->about_us_model->get_history_data();
         $data['former_deans_data'] = $this->about_us_model->get_former_deans_data();
+
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
 
         // var_dump($data['former_deans_data']);exit();
 

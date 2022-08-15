@@ -1,19 +1,21 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_data[0]->id;  
-    $vTitle = $edit_data[0]->vTitle;
-    $fImg = $edit_data[0]->fImg;       
-	$tContent = $edit_data[0]->tContent;  	
+    $vTitle = $edit_data[0]->vTitle;      
+	$tContent = $edit_data[0]->tContent;  
+    $vUrlLink = $edit_data[0]->vUrlLink;
+    $fImg = $edit_data[0]->fImg; 	
+    $iOrder = $edit_data[0]->iOrder;
     $cEnable = $edit_data[0]->cEnable;
-	$iOrder = $edit_data[0]->iOrder;
 
 } else {
     $id = ""; 
-    $vTitle = "";
-    $fImg = "";    
-	$tContent = "";  
-    $cEnable = "Y";
+    $vTitle = "";  
+	$tContent = ""; 
+    $vUrlLink = "";
+    $fImg = "";   
     $iOrder = "";
+    $cEnable = "Y";
 }
 ?>
 <div class="right_col" role="main">
@@ -87,42 +89,11 @@ if ($cSaveStatus == "E") {
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Main Heading<span class="required">*</span></label>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
                                        <input type="text" id="vTitle" name="vTitle" value="<?php echo $vTitle; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-12 col-xs-12">
-                                       <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
-                                <div class="form-group">
-                                    <label class="control-label  col-md-1 col-sm-1 col-xs-12" for="first-name" >Image (1200 * 800px) </label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12" style="padding-top:8px;">
-                                        <input type="file" id="fImg" name="fImg" >
-                                    </div>                                    
-                                </div>                                
-                                
-                                 <?php 
-								    if($fImg){
-								?>
-                                <div class="form-group" id="image_delete_<?php echo $id; ?>">
-                                    <label class="control-label  col-md-1 col-sm-1 col-xs-12" for="vProTitle">&nbsp;</label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImg;?>"  style="width:250px;" />
-                                    </div>
-                                    <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
-                                        <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_image('<?php echo $id; ?>');" title="Delete Link"></span>
-                                    </div> -->
-                                </div>
-                                <?php }
-                                ?>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
@@ -133,7 +104,43 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
-                            
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">                                    
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Logo (200*100px)</label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fImg" name="fImg"<?php
+                                        if ($cSaveStatus != "E") {?> required  <?php } ?>>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <?php if($fImg!=''){ ?>                                
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImg;?>" style="height:75px;" />
+                                    </div>                                
+								<?php } ?>
+                            	</div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vUrlLink" name="vUrlLink" value="<?php echo $vUrlLink; ?>" class="form-control col-md-7 col-xs-12"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Display Order<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-12 col-xs-12">
+                                       <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>
+                          
                             
 
                             <div style="clear:both;"></div>
@@ -164,6 +171,7 @@ if ($cSaveStatus == "E") {
                                     <th style="display:none;">ID </th>
                                     <th style="width:8%;text-align:center;">No </th>
                                     <th>Title </th>        
+                                    <th>Image</th> 
                                     <th style="width:8%; text-align:center">Order</th>                     
                                     <th style="width:8%; text-align:center">Edit </th>
                                     <th style="width:8%; text-align:center">Status </th>
@@ -198,11 +206,12 @@ if ($cSaveStatus == "E") {
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><?php echo $rowlist->vTitle;?></td> 
-                                            <td><?php echo $rowlist->iOrder;?></td> 
+                                            <td><img height="75" src="<?php echo base_url().'/front_img/'.$rowlist->fImg;?>"   /></td>
+                                            <td style="text-align: center;"><?php echo $rowlist->iOrder;?></td> 
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/engagement/partnerships/edit/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/engagement/partnerships/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/engagement/partnerships/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/engagement/partnerships/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">

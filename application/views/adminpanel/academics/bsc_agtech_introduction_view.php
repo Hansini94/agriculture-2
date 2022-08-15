@@ -2,11 +2,9 @@
 if ($cSaveStatus == "E") {
     $id = $introduction_data[0]->id;
     $vHeading = $introduction_data[0]->vHeading;
-    $vSubHeading1 = $introduction_data[0]->vSubHeading1;
     $tContent1 = $introduction_data[0]->tContent1;
     $vTitleFigure1 = $introduction_data[0]->vTitleFigure1;
     $fFigure1 = $introduction_data[0]->fFigure1;
-    $vSubHeading2 = $introduction_data[0]->vSubHeading2;
     $tContent2 = $introduction_data[0]->tContent2;
     $tContent3 = $introduction_data[0]->tContent3;
     $vTitleFigure2 = $introduction_data[0]->vTitleFigure2;
@@ -21,11 +19,9 @@ if ($cSaveStatus == "E") {
 } else {
     $id = '';
     $vHeading = '';
-    $vSubHeading1 = '';
     $tContent1 = '';
     $vTitleFigure1 = '';
     $fFigure1 = '';
-    $vSubHeading2 = '';
     $tContent2 = '';
     $tContent3 = '';
     $vTitleFigure2 = '';
@@ -133,15 +129,6 @@ if ($cSaveStatus == "E") {
                             </div>
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 1<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading1" name="vSubHeading1" value="<?php echo $vSubHeading1; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">First Section Content<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
@@ -179,15 +166,6 @@ if ($cSaveStatus == "E") {
                                     </div>
                                
 								    <?php } ?>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading 2<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubHeading2" name="vSubHeading2" value="<?php echo $vSubHeading2; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
                                 </div>
                             </div>
 

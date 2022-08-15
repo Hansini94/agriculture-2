@@ -197,9 +197,9 @@ class Aboutus_model extends CI_Model {
         }
     }
 
-    public function get_degree_list() {
+    public function get_undergraduate_list() {
 
-        $this->db->from('tbl_degree');
+        $this->db->from('tbl_undergraduate');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -211,10 +211,8 @@ class Aboutus_model extends CI_Model {
 
     public function get_edit_undergraduate($id) {
 
-        $this->db->select('tbl_undergraduate.*, tbl_degree.vName');
         $this->db->from('tbl_undergraduate');
-        $this->db->join('tbl_degree', 'tbl_degree.id = tbl_undergraduate.iDegree');
-        $this->db->where('tbl_undergraduate.iDegree', $id);
+        $this->db->where('id', $id);
         $query = $this->db->get();
     //    echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {

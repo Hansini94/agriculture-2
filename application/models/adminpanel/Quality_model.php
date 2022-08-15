@@ -206,6 +206,56 @@ class Quality_model extends CI_Model {
         }
     }
 
+    public function get_ahead_project_list() {
+
+        $this->db->from('tbl_ahead_project');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_ahead_project($id) {
+
+        $this->db->from('tbl_ahead_project');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+    //    echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_download_list() {
+
+        $this->db->from('tbl_quality_download');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_edit_download($id) {
+
+        $this->db->from('tbl_quality_download');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+    //    echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
 }
 
 ?>

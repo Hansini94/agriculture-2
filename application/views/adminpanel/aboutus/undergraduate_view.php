@@ -1,41 +1,21 @@
 <?php
 if ($cSaveStatus == "E") {
     $id = $edit_undergraduate[0]->id;  
-	$iDegree = $edit_undergraduate[0]->iDegree;    
+    $vMHeading = $edit_undergraduate[0]->vMHeading;   
+	$vHeading = $edit_undergraduate[0]->vHeading;    
     $tContent = $edit_undergraduate[0]->tContent; 
+    $iOrder = $edit_undergraduate[0]->iOrder; 
     $cEnable = $edit_undergraduate[0]->cEnable;
 	
 } else {
-    $id = "";    
-	$iDegree = "";  
+    $id = "";  
+    $vMHeading = "";    
+	$vHeading = "";  
     $tContent = "";  
+    $iOrder = "";  
     $cEnable = "Y";
 }
 ?>
-<script language="javascript" type="text/javascript">
-    var maxAmount = 300;
-
-    function textCounter(textField, showCountField) {
-        if (textField.value.length > maxAmount) {
-            textField.value = textField.value.substring(0, maxAmount);
-        } else {
-            showCountField.value = maxAmount - textField.value.length;
-        }
-    }
-</script>
-<style>
-    .noofCharactor {
-        background: #f00 none repeat scroll 0 0;
-        border: medium none #fff;
-        color: #fff;
-        font-size: 12px;
-        height: 15px;
-        line-height: 12px;
-        padding: 2px;
-        text-align: center;
-        vertical-align: middle;
-    }
-</style>
 <div class="right_col" role="main">
     <div class="">
         <div class="clearfix"></div>
@@ -47,46 +27,50 @@ if ($cSaveStatus == "E") {
             $showinput = 1;
             if ($this->session->flashdata('message_saved') != "") {
                 $showinput = 0;
-            ?>
-                <div style="color:#096;">
+                ?>
+                <div  style="color:#096;">
                     <?php echo $this->session->flashdata('message_saved'); ?>
                 </div>
-            <?php
+                <?php
             }
             ?>
             <?php
             if ($this->session->flashdata('message_restricted') != "") {
                 $showinput = 0;
-            ?>
-                <div style="color:#F00;">
+                ?>
+                <div  style="color:#F00;">
                     <?php echo $this->session->flashdata('message_restricted'); ?>
                 </div>
-            <?php
+                <?php
             }
             ?>
             <?php
             if ($this->session->flashdata('message_error') != "" || validation_errors() != "") {
                 $showinput = 0;
-            ?>
-                <div style="color:#F00;">
+                ?>
+                <div  style="color:#F00;">
                     <?php
                     echo validation_errors('<div style="height:22px; padding:0px; margin-bottom:5px; " class="alert alert-danger" role="alert">', '</div>');
                     echo $this->session->flashdata('message_error');
                     ?>
                 </div>
-            <?php
+                <?php
             }
             ?>
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">                    
+                <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Faculty Statistics</h2>
+                            <h2>Undergraduate</h2>
                         </div>
-                        <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">
-                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Edit Faculty Statistic</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                        <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">                           
+                            <?php if($cSaveStatus == "E") { ?>
+                            <li><a class="collapse-link" href="<?php echo base_url('adminpanel/about_us/undergraduate'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">Add Undergraduate</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <?php } else { ?>
+                            <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Undergraduate</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                            <?php } ?>
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -97,25 +81,37 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_meeting_schedule" name="edit_meeting_schedule" action="<?php echo base_url('adminpanel/about_us/undergraduate/save_undergraduate'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                        
-                            <input type="text" id="iDegree" name="iDegree" value="<?php echo $iDegree; ?>" class="form-control col-md-7 col-xs-12" required>
-
+                        <form id="edit_quick_links" name="edit_quick_links" action="<?php echo base_url('adminpanel/about_us/undergraduate/save_undergraduate'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Degree <span class="required">*</span></label>
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Tab Heading<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-6 col-xs-12">
-                                        <input type="text" id="iDegree" name="iDegree" value="<?php echo $edit_undergraduate[0]->vName; ?>" class="form-control col-md-7 col-xs-12" disabled>
+                                       <input type="text" id="vMHeading" name="vMHeading" value="<?php echo $vMHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tContent); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
+                                    <div class="col-md-10 col-sm-12 col-xs-12">
+                                       <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
                             </div>
@@ -147,8 +143,12 @@ if ($cSaveStatus == "E") {
                                 <tr class="headings">
                                     <th style="display:none;">ID </th>
                                     <th style="width:50px;text-align:center;">No </th>
-                                    <th>Degree </th>                             
+                                    <th>Tab Heading </th>   
+                                    <th>Heading</th>                                 
+                                    <th style="width:80px;text-align:center;">Order </th>
                                     <th style="width:80px; text-align:center">Edit </th>
+                                    <th style="width:80px; text-align:center">Status </th>
+                                    <th style="width:80px; text-align:center">Delete </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -178,10 +178,18 @@ if ($cSaveStatus == "E") {
                                         <tr class="<?php echo $oddeven; ?>">
                                             <td class="a-center " style="display:none;"><?php echo $no_count; ?></td>
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
-                                            <td><?php echo $rowlist->vName;?></td>   
+                                            <td><?php echo $rowlist->vMHeading;?></td>         
+                                            <td><?php echo $rowlist->vHeading;?></td>                                         
+                                            <td style="text-align:center;"><?php echo $rowlist->iOrder; ?></td>
                                             <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/about_us/undergraduate/edit_undergraduate/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
-                                            </td>                                            
+                                            </td>
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/about_us/undergraduate/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                                    <i class="<?php echo $clicon; ?>"></i></a>
+                                            </td>
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/about_us/undergraduate/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                                    <i class="fa fa-trash-o"></i></a></td>
+                                            </td>
                                         </tr>
                                         <?php
                                     }
@@ -195,16 +203,17 @@ if ($cSaveStatus == "E") {
         </div>
     </div>
     <style>
-        .DTTT_container {
-            display: none !important;
-            visibility: hidden !important;
+        .DTTT_container
+        {
+            display:none !important;
+            visibility:hidden !important;
         }
-
-        .alert {
+        .alert
+        {
             margin-left: 161px;
             border-style: none;
-        }
+        }			
     </style>
+   
 
-
-</div>///
+</div>

@@ -83,11 +83,20 @@ $route['default_controller'] = "home";
 $route['adminpanel'] = 'adminpanel/login';
 $route['login'] = 'adminpanel/login';
 
+$route['special-notices'] = 'Special_notices';
+$route['student-notices'] = 'Student_notices';
+$route['examination-timetables'] = 'Examination_timetables';
+$route['class-timetables'] = 'Class_timetables';
+$route['pandemic-information'] = 'Pandemic_information';
+$route['rag-harassment'] = 'Rag_harassment';
+$route['rag-complaint'] = 'Rag_complaint';
+
 $route['about-us'] = 'about_us';
 $route['faculty-statistic-undergraduate'] = 'Faculty_statistic_undergraduate';
 $route['faculty-statistic-academic-staff'] = 'Faculty_statistic_academic_staff';
 $route['dean-office'] = 'Dean_office';
 $route['faculty-board'] = 'Faculty_board';
+$route['faculty-board/(:any)'] = 'Faculty_board/meeting_schedule_detail';
 $route['history'] = 'History';
 $route['faculty-organization'] = 'Faculty_organization';
 $route['faculty-brochure'] = 'Faculty_brochure';
@@ -97,14 +106,19 @@ $route['quality/member-of-foaqac'] = 'Quality/member_of_foaqac';
 $route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
 
 $route['undergraduate-programme'] = 'Undergraduate_programme';
+$route['postgraduate-programme'] = 'Postgraduate_programme';
 
 $route['international'] = 'International/index';
 $route['international/current-foreign-students'] = 'International/current_foreign_students';
 $route['international/info-for-foreign-students'] = 'International/info_for_foreign_students';
 $route['international/opportunities-study-abroad'] = 'International/opportunities_study_abroad';
+
 $route['research/faculty-research'] = 'Research/index';
 $route['research/ethical-clearance-committee'] = 'Research/ethical_clearance_committee';
 $route['research/faculty-research-committee'] = 'Research/faculty_research_committee';
+$route['excellence-award'] = 'Excellence_award';
+$route['president-award'] = 'President_award';
+
 $route['quality/frc'] = 'Quality/frc';
 $route['quality/cdc'] = 'Quality/cdc';
 $route['quality/cdc/(:any)'] = 'Quality/cdc';
@@ -122,8 +136,12 @@ $route['quality/tmu'] = 'Quality/tmu';
 $route['quality/tmu/(:any)'] = 'Quality/tmu';
 $route['quality/sawc'] = 'Quality/sawc';
 $route['quality/sawc/(:any)'] = 'Quality/sawc';
-
+$route['quality/ahead-project'] = 'Ahead_projects';
+$route['quality/ahead-project/(:any)'] = 'Ahead_projects/projects';
 $route['404_override'] = '';
+
+
+$route['partnership'] = 'Engagement/engagement_partnerships';
 
 
 
