@@ -1,10 +1,10 @@
 <header>
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <!-- <div class="carousel-indicators">
+        <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> -->
+        </div>
         <?php foreach($slider as $slid){ ?>
         <div class="carousel-inner">
           <div class="carousel-item active" style="background-image: url('<?php echo base_url().'/front_img/'.$slid->fImage;?>')">
@@ -19,14 +19,14 @@
           </div>
         </div>
         <?php  } ?> 
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button> -->
+        </button>
       </div>
 </header>
 
@@ -431,13 +431,13 @@
 <div class="row">
 
 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-<div class="short_link_div short_link_div_full_height" style="background-image: url(images/bg_st_life.jpg);">
-  <h1 class="heading">STUDENT </h1>
+<div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url().'/front_img/'.$links[0]->fImage;?>);">
+  <h1 class="heading"><?php echo $links[0]->vTitle; ?> </h1>
   <p data-aos="fade-up">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  <?php echo $links[0]->vCaption; ?>
   </p>
   <!-- arrow link -->
-    <a class='animated-arrow' href=''>
+    <a class='animated-arrow' href='<?php echo base_url(); ?>student_life'>
     <span class='the-arrow -left'>
       <span class='shaft'></span>
     </span>
@@ -455,15 +455,15 @@
 </div>
 
 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-<div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(images/res_pub.jpg) !important; background-position:center top;"></div>
+<div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url().'/front_img/'.$links[1]->fImage;?>) !important; background-position:center top;"></div>
 
  <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
-  <h1 class="heading">Faculty research publication/stories</h1>
+  <h1 class="heading"><?php echo $links[1]->vTitle; ?></h1>
   <p data-aos="fade-up">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  <?php echo $links[1]->vCaption; ?>
   </p>
   <!-- arrow link -->
-    <a class='animated-arrow' href=''>
+    <a class='animated-arrow' href='<?php echo base_url(); ?>'>
     <span class='the-arrow -left'>
       <span class='shaft'></span>
     </span>
@@ -483,12 +483,12 @@
 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
 
  <div class="short_link_div short_link_div_middle_height" style="background-color: #d5b79f;">
-  <h1 class="heading">Visiting Professors/Fellows</h1>
+  <h1 class="heading"><?php echo $links[2]->vTitle; ?></h1>
   <p data-aos="fade-up">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  <?php echo $links[2]->vCaption; ?>
   </p>
   <!-- arrow link -->
-    <a class='animated-arrow' href=''>
+    <a class='animated-arrow' href='<?php echo base_url(); ?>'>
     <span class='the-arrow -left'>
       <span class='shaft'></span>
     </span>
@@ -504,7 +504,7 @@
   <!-- arrow link -->
 </div>
 
- <div class="short_link_div short_link_div_middle_height mt-2" style="background-image: url(images/prof.jpg) !important; background-position:center top;"></div>
+ <div class="short_link_div short_link_div_middle_height mt-2" style="background-image: url(<?php echo base_url().'/front_img/'.$links[2]->fImage;?>) !important; background-position:center top;"></div>
 
 </div>
 

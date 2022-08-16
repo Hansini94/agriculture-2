@@ -38,6 +38,27 @@ class Alumni_model extends CI_Model {
             return array();
         }
     }
+
+    public function get_short_links_list() {
+
+        $this->db->from('tbl_alumni_short_links');
+		$this->db->order_by('tbl_alumni_short_links.iOrder','asc');
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+	public function get_edit_short_links($linkid) {
+
+        $this->db->from('tbl_alumni_short_links');
+		$this->db->where('id', $linkid);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
     
     
     public function get_current_committee_list() {

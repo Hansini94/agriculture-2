@@ -24,7 +24,7 @@ Class Alumni_committee extends CI_Controller {
         
         // var_dump($data);exit();
 
-        $this->load->view('frontendview/inner_header_view',$data_header);
+        $this->load->view('frontendview/alumni/header_view',$data_header);
         $this->load->view('frontendview/alumni/committee_view',$data);
         $this->load->view('frontendview/footer_view', $data_header);
        
