@@ -45,10 +45,16 @@ class Engagement_model extends CI_Model {
         }
     }
 
-    public function get_research_list() {
+    public function get_count_research() 
+	{
+        return $this->db->count_all("tbl_engagement_research");
+    }
+
+    public function get_research_list($limit, $start) {
         $this->db->from('tbl_engagement_research');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -58,9 +64,9 @@ class Engagement_model extends CI_Model {
         }
     }
 
-    public function get_rs_detail($id) {
+    public function get_rs_detail($name) {
         $this->db->from('tbl_engagement_research');
-        $this->db->where('id', $id);
+        $this->db->where('vName', $name);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -86,10 +92,16 @@ class Engagement_model extends CI_Model {
         }
     }
 
-    public function get_ste_list() {
+    public function get_count_students() 
+	{
+        return $this->db->count_all("tbl_engagement_student");
+    }
+
+    public function get_ste_list($limit, $start) {
         $this->db->from('tbl_engagement_student');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -99,9 +111,9 @@ class Engagement_model extends CI_Model {
         }
     }
 
-    public function get_st_detail($id) {
+    public function get_st_detail($name) {
         $this->db->from('tbl_engagement_student');
-        $this->db->where('id', $id);
+        $this->db->where('vName', $name);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -127,10 +139,16 @@ class Engagement_model extends CI_Model {
         }
     }
 
-    public function get_com_list() {
+    public function get_count_community() 
+	{
+        return $this->db->count_all("tbl_engagement_community");
+    }
+
+    public function get_com_list($limit, $start) {
         $this->db->from('tbl_engagement_community');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -140,9 +158,9 @@ class Engagement_model extends CI_Model {
         }
     }
 
-    public function get_com_detail($id) {
+    public function get_com_detail($name) {
         $this->db->from('tbl_engagement_community');
-        $this->db->where('id', $id);
+        $this->db->where('vName', $name);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
