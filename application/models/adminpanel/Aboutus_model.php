@@ -159,31 +159,6 @@ class Aboutus_model extends CI_Model {
         }
     }
 
-    public function get_dean_officers_list() {
-
-        $this->db->from('tbl_dean_office_officer');
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-
-    public function get_edit_officers_dean($id) {
-
-        $this->db->from('tbl_dean_office_officer');
-        $this->db->where('id', $id);
-        $query = $this->db->get();
-       // echo $this->db->last_query();exit();
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return array();
-        }
-    }
-
     public function get_faculty_brochure_data() {
 
         $this->db->from('tbl_faculty_brochure');

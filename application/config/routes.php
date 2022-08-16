@@ -103,15 +103,11 @@ $route['faculty-board/(:any)'] = 'Faculty_board/meeting_schedule_detail';
 $route['history'] = 'History';
 $route['faculty-organization'] = 'Faculty_organization';
 $route['faculty-brochure'] = 'Faculty_brochure';
-$route['quality/functions-of-foaqac'] = 'Quality/index';
-$route['quality/foaqac'] = 'Quality/foaqac';
-$route['quality/member-of-foaqac'] = 'Quality/member_of_foaqac';
-$route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
 
 $route['undergraduate-programme'] = 'Undergraduate_programme';
 $route['postgraduate-programme'] = 'Postgraduate_programme';
 
-$route['international-overview'] = 'International/index';
+$route['international-overview'] = 'International';
 $route['international/current-foreign-students'] = 'International/current_foreign_students';
 $route['international/info-for-foreign-students'] = 'International/info_for_foreign_students';
 $route['international/opportunities-study-abroad'] = 'International/opportunities_study_abroad';
@@ -145,6 +141,10 @@ $route['quality/sawc'] = 'Quality/sawc';
 $route['quality/sawc/(:any)'] = 'Quality/sawc';
 $route['quality/ahead-project'] = 'Ahead_projects';
 $route['quality/ahead-project/(:any)'] = 'Ahead_projects/projects';
+$route['quality/functions-of-foaqac'] = 'Quality/index';
+$route['quality/foaqac'] = 'Quality/foaqac';
+$route['quality/member-of-foaqac'] = 'Quality/member_of_foaqac';
+$route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
 $route['404_override'] = '';
 
 $route['engagement-overview'] = 'Engagement';
