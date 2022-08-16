@@ -50,51 +50,55 @@ All Rights Reserved</small>
           <div class="row">
 
               <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 footer_link_col">
-                <a href=""><p>Home  </p></a>
-                <a href=""><p>About us</p></a>
-                <a href=""><p>University</p></a>
-                <a href=""><p>Faculty</p></a>
-                <a href=""><p>Academics </p></a>
-                <a href=""><p>Research</p></a>
+                <a href="<?php echo base_url('/'); ?>"><p>Home  </p></a>
+                <a href="<?php echo base_url('about-us'); ?>"><p>About us</p></a>
+                <a href="https://www.pdn.ac.lk/" target="_blank"><p>University</p></a>
+                <a href="<?php echo base_url('faculty-board'); ?>"><p>Faculty</p></a>
+                <a href="<?php echo base_url('undergraduate-programme'); ?>"><p>Academics </p></a>
+                <a href="<?php echo base_url('faculty-research-committee'); ?>"><p>Research</p></a>
               </div>
 
               <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 footer_link_col">
-                 <a href=""><p>International</p></a>
-                <a href=""><p>Students </p></a>
-                <a href=""><p>Quality   </p></a>
-                <a href=""><p>Engagement</p></a>
-                <a href=""><p>Services</p></a>
+                 <a href="<?php echo base_url('international-overview'); ?>"><p>International</p></a>
+                <a href="<?php echo base_url('current-students'); ?>"><p>Students </p></a>
+                <a href="<?php echo base_url('quality/functions-of-foaqac'); ?>"><p>Quality   </p></a>
+                <a href="<?php echo base_url('engagement-overview'); ?>"><p>Engagement</p></a>
+                <a href="<?php echo base_url('services/outreach-centers'); ?>"><p>Services</p></a>
               </div>
 
               <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 footer_link_col">
-                 <a href=""><p>Alumni</p></a>
-                <a href=""><p>Downloads   </p></a>
+                 <a href="<?php echo base_url('alumni'); ?>"><p>Alumni</p></a>
+                <a href="<?php echo base_url('downloads-staff'); ?>"><p>Downloads   </p></a>
                 <a href=""><p>Extranet   </p></a>
-                <a href=""><p>FAQ</p></a>
-                <a href=""><p>Quick Links</p></a>
+                <a href="<?php echo base_url('faq'); ?>"><p>FAQ</p></a>
+                <a href="<?php echo base_url('partnership'); ?>"><p>Quick Links</p></a>
               </div>
+
+              <?php 
+                $contact_details = get_contact_details();
+              ?>
 
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 
                 <p>
-                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;<a href="tel:+94 81 239 5012">+94 81 239 5012</a>  |  <a href="+94 81 238 8041">+94 81 238 8041</a>
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;<a href="tel:<?php echo $contact_details->vTele; ?>"><?php echo $contact_details->vTele; ?></a>  |  <a href="<?php echo $contact_details->vTele2; ?>"><?php echo $contact_details->vTele2; ?></a>
                 </p>
 
                  <p>
-                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;<a href="mailto:deanagri@pdn.ac.lk">deanagri@pdn.ac.lk</a> 
+                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;<a href="mailto:<?php echo $contact_details->vWaEmail; ?>"><?php echo $contact_details->vWaEmail; ?></a> 
                 </p>
 
                 <p>
-                   <i class="fa fa-internet-explorer" aria-hidden="true"></i> &nbsp;&nbsp;<a href="aragri@pdn.ac.lk">aragri@pdn.ac.lk</a> 
+                   <i class="fa fa-internet-explorer" aria-hidden="true"></i> &nbsp;&nbsp;<a href="<?php echo $contact_details->vEmail; ?>"><?php echo $contact_details->vEmail; ?></a> 
                 </p>
 
-                <p><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;&nbsp;+94 81 238 8041</p>
+                <p><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;&nbsp;<?php echo $contact_details->vFax; ?></p>
 
                  <p class="social_icon">
-                    <a href="" target="_blank" class="fa fa-facebook animate__animated animate__fadeInLeft"></a>
-                    <a href="" target="_blank" class="fa fa-instagram animate__animated animate__fadeInLeft"></a>
-                    <a href="" target="_blank" class="fa fa-twitter animate__animated animate__fadeInLeft"></a>
-                    <a href="" target="_blank" class="fa fa-linkedin animate__animated animate__fadeInLeft"></a>
+                    <a href="<?php echo $contact_details->vFacebook; ?>" target="_blank" class="fa fa-facebook animate__animated animate__fadeInLeft"></a>
+                    <a href="<?php echo $contact_details->vInstagram; ?>" target="_blank" class="fa fa-instagram animate__animated animate__fadeInLeft"></a>
+                    <a href="<?php echo $contact_details->vTwitter; ?>" target="_blank" class="fa fa-twitter animate__animated animate__fadeInLeft"></a>
+                    <a href="<?php echo $contact_details->vLinkedIn; ?>" target="_blank" class="fa fa-linkedin animate__animated animate__fadeInLeft"></a>
                 </p>
 
               </div>

@@ -146,6 +146,48 @@ class Research_model extends CI_Model {
             return array();
         }
     }
+
+    
+    public function get_research_story_main() {
+        $this->db->from('tbl_research_stories');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        $this->db->limit(1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_research_stories($id) {
+        $this->db->from('tbl_research_stories');
+        $this->db->where('cEnable', 'Y');
+        $this->db->where_not_in('id', $id);
+        $this->db->order_by('iOrder', 'asc');
+        $this->db->limit(6);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_research_story_detail($title) {
+        $this->db->from('tbl_research_stories');
+        $this->db->like('vTitle', $title);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
     
     /*****************AWARDS******************* */
 

@@ -13,11 +13,13 @@ Class Research extends CI_Controller {
     public function index() {
 
         $this->load->model('frontend_model/research_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['faculty_research'] = $this->research_model->get_faculty_research();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -29,11 +31,13 @@ Class Research extends CI_Controller {
     public function ethical_clearance_committee() {
 
         $this->load->model('frontend_model/research_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['commitee'] = $this->research_model->get_ethical_clearance_committee();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);
@@ -45,12 +49,14 @@ Class Research extends CI_Controller {
     public function faculty_research_committee() {
 
         $this->load->model('frontend_model/research_model');
+        $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $data['commitee'] = $this->research_model->get_faculty_research_committee();
         $data['members'] = $this->research_model->get_members();
+        $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
         $this->load->view('frontendview/inner_header_view',$data_header);

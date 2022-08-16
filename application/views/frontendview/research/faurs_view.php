@@ -52,7 +52,7 @@
                       <p class="sub_heading">   Committee </p>
                     </blockquote>
                     <!-- arrow link -->
-                      <a class='animated-arrow' href='<?php echo base_url(); ?>faurs_committee'>
+                      <a class='animated-arrow' href='<?php echo base_url('faurs-committee'); ?>'>
                       <span class='the-arrow -left'>
                         <span class='shaft'></span>
                       </span>
