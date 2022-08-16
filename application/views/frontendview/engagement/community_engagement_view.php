@@ -74,7 +74,10 @@
             </p> -->
 
             <!-- arrow link -->
-                <a class='animated-arrow' href='<?php echo base_url('engagement/com_detail/'.$latest->id) ?>'>
+                <a class='animated-arrow' href='<?php 
+                $heading = $latest->vName;
+                $name = str_replace(' ', '_', $heading);
+                echo base_url('engagement/com_detail/'.$name) ?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -132,7 +135,10 @@
                       ?>
                     </p>
                     <!-- arrow link -->
-                    <a class='animated-arrow' href='<?php echo base_url('engagement/com_detail/'.$all_data->id) ?>'>
+                    <a class='animated-arrow' href='<?php 
+                    $heading = $latest->vName;
+                    $name = str_replace(' ', '_', $heading);
+                    echo base_url('engagement/com_detail/'.$name) ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
@@ -168,7 +174,8 @@
           
             <!-- pagination -->
             <nav class="float-end">
-              <ul class="pagination" style="padding-left: 0px !important;">
+            <?php echo $links; ?>
+              <!-- <ul class="pagination" style="padding-left: 0px !important;">
                 <li class="page-item disabled">
                   <span class="page-link">Previous</span>
                 </li>
@@ -180,7 +187,7 @@
                 <li class="page-item">
                   <a class="page-link" href="#">Next</a>
                 </li>
-              </ul>
+              </ul> -->
             </nav>
             <!-- pagination -->
 
