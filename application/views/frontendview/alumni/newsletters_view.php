@@ -174,7 +174,8 @@
           
             <!-- pagination -->
             <nav class="float-end">
-              <ul class="pagination" style="padding-left: 0px !important;">
+            <?php echo $links; ?>
+              <!-- <ul class="pagination" style="padding-left: 0px !important;">
                 <li class="page-item disabled">
                   <span class="page-link">Previous</span>
                 </li>
@@ -186,7 +187,7 @@
                 <li class="page-item">
                   <a class="page-link" href="#">Next</a>
                 </li>
-              </ul>
+              </ul> -->
             </nav>
             <!-- pagination -->
 

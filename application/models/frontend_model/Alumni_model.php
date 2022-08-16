@@ -85,10 +85,16 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_news_list() {
+    public function get_count_news() 
+	{
+        return $this->db->count_all("tbl_alumni_news");
+    }
+
+    public function get_news_list($limit, $start) {
         $this->db->from('tbl_alumni_news');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -126,10 +132,16 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_events_list() {
+    public function get_count_events() 
+	{
+        return $this->db->count_all("tbl_alumni_events");
+    }
+
+    public function get_events_list($limit, $start) {
         $this->db->from('tbl_alumni_events');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -167,10 +179,16 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_newsletters_list() {
+    public function get_count_newsletters() 
+	{
+        return $this->db->count_all("tbl_alumni_newsletters");
+    }
+
+    public function get_newsletters_list($limit, $start) {
         $this->db->from('tbl_alumni_newsletters');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
