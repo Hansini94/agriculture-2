@@ -142,7 +142,7 @@
       <div class="row"> 
 
         <h1 class="heading mb-3">News & Updates</h1>
-
+<?php  if(isset($news_data)){?>
         <!-- news carousel -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">          
           <div class="carousel-inner">            
@@ -420,7 +420,7 @@
   </div>
 </div>
 <!-- sub news section -->
-
+<?php } ?>
 <div class="w-100 d-none d-md-block"></div>
 <br>
 

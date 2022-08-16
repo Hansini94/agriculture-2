@@ -25,9 +25,9 @@
         
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
           <div class="short_link_div stud_life_short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url().'/front_img/'.$data[0]->fImg;?>) !important; background-position:center top;">
-            <h1 class="heading" style="color: #ffffff;"><?php echo $data[0]->vTitleEnglish; ?></h1>
+            <h1 class="heading" style="color: #ffffff;"><?php echo $data[0]->vTitleSinhala; ?></h1>
             <p data-aos="fade-up" style="color: #ffffff;">
-                <?php echo $data[0]->tContentEnglish; ?>
+                <?php echo $data[0]->tContentSinhala; ?>
             </p>
             <!-- arrow link -->
               <a class='animated-arrow' href='<?php echo base_url() ?>student-life-societies'>
@@ -47,9 +47,9 @@
           </div>
 
            <div class="short_link_div stud_life_short_link_div short_link_div_middle_height" style="background-image: url(<?php echo base_url().'/front_img/'.$data[3]->fImg;?>) !important; background-position:center top;">
-            <h1 class="heading"><?php echo $data[3]->vTitleEnglish; ?></h1>
+            <h1 class="heading"><?php echo $data[3]->vTitleSinhala; ?></h1>
             <p data-aos="fade-up">
-              <?php echo $data[3]->tContentEnglish; ?>
+              <?php echo $data[3]->tContentSinhala; ?>
             </p>
             <!-- arrow link -->
               <a class='animated-arrow' href='<?php echo base_url() ?>student-life-sports'>
@@ -71,9 +71,9 @@
 
          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
           <div class="short_link_div stud_life_short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url().'/front_img/'.$data[1]->fImg;?>);">
-            <h1 class="heading" style="color: #ffffff;"><?php echo $data[1]->vTitleEnglish; ?></h1>
+            <h1 class="heading" style="color: #ffffff;"><?php echo $data[1]->vTitleSinhala; ?></h1>
             <p data-aos="fade-up" style="color: #ffffff;">
-            <?php echo $data[1]->tContentEnglish; ?>
+            <?php echo $data[1]->tContentSinhala; ?>
             </p>
             <!-- arrow link -->
               <a class='animated-arrow' href='<?php echo base_url() ?>student-life-events'>
@@ -96,9 +96,9 @@
          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
 
            <div class="short_link_div stud_life_short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url().'/front_img/'.$data[2]->fImg;?>) !important; background-position:center bottom;">
-            <h1 class="heading" style="color: #ffffff;"><?php echo $data[2]->vTitleEnglish; ?></h1>
+            <h1 class="heading" style="color: #ffffff;"><?php echo $data[2]->vTitleSinhala; ?></h1>
             <p data-aos="fade-up" style="color: #ffffff;">
-            <?php echo $data[2]->tContentEnglish; ?>
+            <?php echo $data[2]->tContentSinhala; ?>
 
             </p>
             <!-- arrow link -->
@@ -119,9 +119,9 @@
           </div>
 
           <div class="short_link_div short_link_div_middle_height stud_life_short_link_div" style="background-image: url(<?php echo base_url().'/front_img/'.$data[4]->fImg;?>) !important; background-position:center top;">
-            <h1 class="heading" style="color: #ffffff;"><?php echo $data[4]->vTitleEnglish; ?></h1>
+            <h1 class="heading" style="color: #ffffff;"><?php echo $data[4]->vTitleSinhala; ?></h1>
             <p data-aos="fade-up" style="color: #ffffff;">
-            <?php echo $data[4]->tContentEnglish; ?>
+            <?php echo $data[4]->tContentSinhala; ?>
             </p>
             <!-- arrow link -->
               <a class='animated-arrow' href='<?php echo base_url() ?>special-notices'>
