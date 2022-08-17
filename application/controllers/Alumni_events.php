@@ -72,7 +72,7 @@ Class Alumni_events extends CI_Controller {
         $data_header = array();
 
         $data['detail'] = $this->alumni_model->get_events_detail($newString);
-        $data['all'] = $this->alumni_model->get_events_list();
+        $data['all'] = $this->alumni_model->get_events_detail_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

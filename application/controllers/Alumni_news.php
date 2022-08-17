@@ -70,9 +70,10 @@ Class Alumni_news extends CI_Controller {
 
         $data = array();
         $data_header = array();
+        
 
         $data['detail'] = $this->alumni_model->get_news_detail($newString);
-        $data['all'] = $this->alumni_model->get_news_list();
+        $data['all'] = $this->alumni_model->get_news_detail_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

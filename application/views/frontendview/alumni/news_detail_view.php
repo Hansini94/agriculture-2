@@ -145,7 +145,9 @@
                           ?>
                           </p>
                           <!-- arrow link -->
-                          <a class='animated-arrow' href='<?php echo base_url('alumni_news/news_detail/'.$all_data->id) ?>'>
+                          <a class='animated-arrow' href='<?php $heading = $all_data->vTitle;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('alumni_news/news_detail/'.$name) ?>'>
                           <span class='the-arrow -left'>
                             <span class='shaft'></span>
                           </span>

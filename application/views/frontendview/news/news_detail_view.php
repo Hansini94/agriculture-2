@@ -4,11 +4,11 @@
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
-              <h1 class="heading" data-aos="fade-up">ALUMNI</h1>
+              <h1 class="heading" data-aos="fade-up">News</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><b>Alumni Newsletters</b></li>
+                <li class="breadcrumb-item active" aria-current="page"><b>News</b></li>
               </ol>
             </nav>
             </div>
@@ -31,14 +31,16 @@
   <!--===================body====================-->
 
 
-  <!-- newsletters section -->
+  <!-- news section -->
 
   <div class="container">
     
     <div class="row">
       
        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
-
+        <?php
+          if(isset($detail)){ 
+        ?>
         <div class="row m-auto">
         
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -46,35 +48,19 @@
           </div>
 
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $detail->dRDate; ?></small></p>
-            <h1 class="sub_heading"><?php echo $detail->vTitle; ?></h1>
+          <?php 
+                      $timestamp = strtotime($detail->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+            <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+            <h1 class="sub_heading"><?php echo $detail->vName; ?></h1>
             <p data-aos="fade-up">
               
               <?php 
-                          $str = $detail->tContent;; 
-    
-                          // Using str_word_count() function to
-                          // count number of words in a string
+                          $str = $detail->tContent;
                           $len = str_word_count($str);
                             
-                          // Printing the result
-                          // echo $len; 
-
-                          // if(strlen($all_data->tContent) > 155){
-                            echo substr($detail->tContent,0,885);
-                          // }
-                          // else{
-                          //     echo $all_data->tContent;
-                          // }
-
-                        // function substr_at_word_boundary($string, $chars = 100)
-                        // {
-                        //     preg_match('/^.{0,' . $chars. '}(?:.*?)\b/iu', $string, $matches);
-                        //     $new_string = $matches[0];
-                        //     return ($new_string === $string) ? $string : $new_string;
-                        // }
-
-                        // $string = substr_at_word_boundary($detail->tContent, 150)
+                          echo substr($detail->tContent,0,885);
                       ?>
             </p>
 
@@ -99,28 +85,30 @@
           </div>
 
         </div>
-
+        <?php
+          }
+        ?>                
        </div>
 
     </div>
 
   </div>
 
-  <!-- newsletters section -->
+  <!-- news section -->
 
       <div class="w-100 d-none d-md-block"></div>
     <br>
 
-    <!-- sub newsletters section -->
+    <!-- sub news section -->
     <div class="container">
       
       <div class="row">
 
-        <h1 class="heading">Related Newsletters</h1>
+        <h1 class="heading">Related News</h1>
 
         <div class="slider">
           <div class="owl-carousel">
-          <?php foreach($all as $all_data){ ?>
+          <?php if(isset($all)){ foreach($all as $all_data){ ?>
               <div class="slider-card">
                  <div class="news_div">
             
@@ -132,8 +120,12 @@
                       <div class="clearfix"></div>
 
                       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $all_data->dRDate; ?></small></p>
-                         <h1 class="sub_heading"><?php echo $all_data->vTitle; ?></h1>
+                      <?php 
+                      $timestamp = strtotime($all_data->dNewsdate);
+                      $date = date('d-M-Y', $timestamp);
+                ?>
+                        <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
+                         <h1 class="sub_heading"><?php echo $all_data->vName; ?></h1>
                          <p data-aos="fade-up">
                          <?php 
                             if(strlen($all_data->tContent) > 100){
@@ -145,9 +137,9 @@
                           ?>
                           </p>
                           <!-- arrow link -->
-                          <a class='animated-arrow' href='<?php $heading = $all_data->vTitle;
+                          <a class='animated-arrow' href='<?php $heading = $all_data->vName;
                                                     $name = str_replace(' ', '_', $heading);
-                                                    echo base_url('alumni_newsletters/newsletters_detail/'.$name) ?>'>
+                                                    echo base_url('news/news_detail/'.$name)  ?>'>
                           <span class='the-arrow -left'>
                             <span class='shaft'></span>
                           </span>
@@ -169,7 +161,7 @@
               <?php 
                 // $i++; 
                 // if($i ==3){ echo '<div class="clearfix"></div>'; $i=0; }
-                } ?>  
+                } }?>  
 
           </div>
       </div>
@@ -182,4 +174,4 @@
       </div>
 
     </div>
-    <!-- sub newsletters section -->
+    <!-- sub news section -->
