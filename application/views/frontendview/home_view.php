@@ -449,7 +449,11 @@
                 <?php echo $news->tContent; ?>
 
                 <!-- arrow link -->
-                <a class='animated-arrow' href=''>
+                <a class='animated-arrow' href='<?php 
+                                                    $heading = $news->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
                   <span class='the-arrow -left'>
                     <span class='shaft'></span>
                   </span>
@@ -524,7 +528,11 @@
             <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
             <h1 class="sub_heading"><?php echo $featured_news[0]->vName; ?></h1>
             <!-- arrow link -->
-            <a class='animated-arrow' href=''>
+            <a class='animated-arrow' href='<?php 
+                                                    $heading = $featured_news[0]->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -557,7 +565,11 @@
         <h1 class="sub_heading" style="min-height: 31px;"><?php echo $featured_news[1]->vName; ?></h1>
           <?php echo substr($featured_news[1]->tContent, 0, 200).'..'; ?>
 
-        <a class='animated-arrow' href=''>
+        <a class='animated-arrow' href='<?php 
+                                                    $heading = $featured_news[1]->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
           <span class='the-arrow -left'>
             <span class='shaft'></span>
           </span>
@@ -592,7 +604,11 @@
             <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
             <h1 class="sub_heading"><?php echo $featured_news[2]->vName; ?></h1>
             <!-- arrow link -->
-            <a class='animated-arrow' href=''>
+            <a class='animated-arrow' href='<?php 
+                                                    $heading = $featured_news[2]->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -635,7 +651,11 @@
             <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
             <h1 class="sub_heading"><?php echo $featured_news[3]->vName; ?></h1>
             <!-- arrow link -->
-            <a class='animated-arrow' href=''>
+            <a class='animated-arrow' href='<?php 
+                                                    $heading = $featured_news[3]->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -668,7 +688,11 @@
         <h1 class="sub_heading" style="min-height: 31px;"><?php echo $featured_news[4]->vName; ?></h1>
           <?php echo substr($featured_news[4]->tContent, 0, 200).'..'; ?>
 
-        <a class='animated-arrow' href=''>
+        <a class='animated-arrow' href='<?php 
+                                                    $heading = $featured_news[4]->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
           <span class='the-arrow -left'>
             <span class='shaft'></span>
           </span>
@@ -703,7 +727,11 @@
             <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
             <h1 class="sub_heading"><?php echo $featured_news[5]->vName; ?></h1>
             <!-- arrow link -->
-            <a class='animated-arrow' href=''>
+            <a class='animated-arrow' href='<?php 
+                                                    $heading = $featured_news[5]->vName;
+                                                    $name = str_replace(' ', '_', $heading);
+                                                    echo base_url('news/news_detail/'.$name) 
+                                                ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
