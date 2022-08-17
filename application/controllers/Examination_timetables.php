@@ -18,6 +18,8 @@ Class Examination_timetables extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 22;
+
         $data['examination_timetables'] = $this->home_page_model->get_examination_timetables();
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

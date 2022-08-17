@@ -18,6 +18,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['functions_of_foaqac'] = $this->quality_model->get_functions_of_foaqac();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -35,6 +37,8 @@ Class Quality extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $data['member_of_foaqac'] = $this->quality_model->get_member_of_foaqac();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -54,6 +58,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['member_of_foaqac'] = $this->quality_model->get_member_of_foaqac();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -71,6 +77,8 @@ Class Quality extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $data['schedule_of_meetings'] = $this->quality_model->get_schedule_of_meetings();
         $data['schedules'] = $this->quality_model->get_schedules();
@@ -91,6 +99,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['committee'] = $this->quality_model->get_faculty_research_committee();
         $data['members'] = $this->quality_model->get_members('tbl_research_committee_composition');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -109,6 +119,8 @@ Class Quality extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $data['committee'] = $this->quality_model->get_committee('tbl_curriculum_development_committee');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -138,6 +150,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['committee'] = $this->quality_model->get_committee('tbl_language_teaching_committee');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -163,6 +177,8 @@ Class Quality extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $data['committee'] = $this->quality_model->get_committee('tbl_library_committee');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -190,6 +206,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['committee'] = $this->quality_model->get_committee('tbl_public_relations_committee');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -215,6 +233,8 @@ Class Quality extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $data['committee'] = $this->quality_model->get_committee('tbl_computer_unit');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -242,6 +262,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['committee'] = $this->quality_model->get_committee('tbl_time_table_committee');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -268,6 +290,8 @@ Class Quality extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['committee'] = $this->quality_model->get_committee('tbl_teaching_method_unit');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -293,6 +317,8 @@ Class Quality extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $data['committee'] = $this->quality_model->get_committee('tbl_welfare_committee');
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

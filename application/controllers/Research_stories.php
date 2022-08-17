@@ -18,6 +18,8 @@ Class Research_stories extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 14;
+
         $data['research_story_main'] = $this->research_model->get_research_story_main();
         // var_dump($data['research_story_main'][0]->id);
         $data['research_stories'] = $this->research_model->get_research_stories($data['research_story_main'][0]->id);
@@ -43,6 +45,8 @@ Class Research_stories extends CI_Controller {
         // var_dump($title);exit();
 
         $storyTitle = str_replace('-', ' ', $title);
+
+        $data_header['meta'] = 14;
 
         $data['research_story_detail'] = $this->research_model->get_research_story_detail($storyTitle);
         $data['research_stories'] = $this->research_model->get_research_stories($data['research_story_detail'][0]->id);

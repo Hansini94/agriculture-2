@@ -18,6 +18,8 @@ Class Faculty_organization extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 8;
+
         $data['faculty_org_data'] = $this->about_us_model->get_faculty_org_data();
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

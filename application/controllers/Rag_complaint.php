@@ -16,6 +16,8 @@ class Rag_complaint extends CI_Controller {
 
         $data = array();
 
+        $data_header['meta'] = 32;
+
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
                 
 		$this->load->view('frontendview/inner_header_view',$data);

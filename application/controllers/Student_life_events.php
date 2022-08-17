@@ -18,6 +18,8 @@ Class Student_life_events extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 36;
+
         $data['events'] = $this->student_life_model->get_sport_details();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -36,6 +38,8 @@ Class Student_life_events extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 36;
 
         $data['data'] = $this->student_life_model->get_sport_data($newString);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

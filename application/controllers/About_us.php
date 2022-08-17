@@ -18,6 +18,8 @@ Class About_us extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 2;
+
         $data['about_us_data'] = $this->about_us_model->get_about_us_data();
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

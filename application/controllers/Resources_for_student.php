@@ -19,6 +19,8 @@ Class resources_for_student extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 33;
+
         $data['resources'] = $this->current_student_model->get_faculty_scholarships();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();   
         
@@ -36,6 +38,8 @@ Class resources_for_student extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 33;
 
         $data['video'] = $this->current_student_model->get_lab_videos();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();   

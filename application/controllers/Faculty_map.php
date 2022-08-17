@@ -18,6 +18,8 @@ Class Faculty_map extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 27;
+
         $data['faculty_map_data'] = $this->getting_around_model->get_faculty_map_data();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();

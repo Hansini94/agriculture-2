@@ -18,6 +18,8 @@ Class Gpa_calculator extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 30;
+
         $data['agtech'] = $this->current_student_model->get_gpa_agtech_data();  
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();    
         
@@ -36,6 +38,8 @@ Class Gpa_calculator extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 30;
+
         $data['asf'] = $this->current_student_model->get_gpa_asf_data();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();   
         
@@ -53,6 +57,8 @@ Class Gpa_calculator extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 30;
 
         $data['fst'] = $this->current_student_model->get_gpa_fst_data();  
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();    

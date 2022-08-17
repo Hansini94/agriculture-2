@@ -18,6 +18,8 @@ Class Current_students extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 29;
+
         $data['content'] = $this->current_student_model->get_cs_content();
         $data['prospectus'] = $this->current_student_model->get_prospectus();     
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();  

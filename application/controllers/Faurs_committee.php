@@ -18,6 +18,8 @@ Class Faurs_committee extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 15;
+
         $data['current'] = $this->research_model->get_current_committee();
         $data['previous'] = $this->research_model->get_previous_committee();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

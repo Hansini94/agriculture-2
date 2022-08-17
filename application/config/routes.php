@@ -187,6 +187,8 @@ $route['walk-around-uni'] = 'Walk_around_uni';
 $route['faculty-map'] = 'Faculty_map';
 $route['faculty-direction'] = 'Faculty_direction';
 
+$route['academic-calendar'] = 'Academic_calender';
+
 
 
 

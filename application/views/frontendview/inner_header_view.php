@@ -3,28 +3,98 @@
   <head>
 
   <?php
-    if (activate_menu('Home') == 'active') {
-        $meta = get_meta('Home');
-    } else if (activate_menu('about_us') == 'active') {
+    if ($meta == 1) {
+      $meta = get_meta('Home');
+    } else if ($meta == 2) {
         $meta = get_meta('about_us');
-    } else if (activate_menu('faculty_statistic_undergraduate') == 'active') {
-      $meta = get_meta('faculty_statistic_undergraduate');
-    } else if (activate_menu('faculty_statistic_academic_staff') == 'active') {
-      $meta = get_meta('faculty_statistic_academic_staff');
-    } else if (activate_menu('Dean_office') == 'active') {
+    } else if ($meta == 3) {
+      $meta = get_meta('Faculty_statistic_undergraduate');
+    } else if ($meta == 4) {
+      $meta = get_meta('Faculty_statistic_academic_staff');
+    } else if ($meta == 5) {
       $meta = get_meta('Dean_office');
-    } else if (activate_menu('Faculty_board') == 'active') {
+    } else if ($meta == 6) {
       $meta = get_meta('Faculty_board');
-    } else if (activate_menu('History') == 'active') {
+    } else if ($meta == 7) {
       $meta = get_meta('History');
+    } else if ($meta == 8) {
+      $meta = get_meta('Faculty_organization');
+    } else if ($meta == 9) {
+      $meta = get_meta('Faculty_brochure');
+    } else if ($meta == 10) {
+      $meta = get_meta('Undergraduate_programme');
+    } else if ($meta == 11) {
+      $meta = get_meta('Postgraduate_programme');
+    } else if ($meta == 11) {
+      $meta = get_meta('Postgraduate_programme');
+    } else if ($meta == 12) {
+      $meta = get_meta('International');
+    } else if ($meta == 13) {
+      $meta = get_meta('Quality');
+    } else if ($meta == 14) {
+      $meta = get_meta('Research');
+    } else if ($meta == 15) {
+      $meta = get_meta('Faurs');
+    } else if ($meta == 16) {
+      $meta = get_meta('Engagement');
+    } else if ($meta == 17) {
+      $meta = get_meta('Services'); 
+    } else if ($meta == 18) {
+      $meta = get_meta('Alumni'); 
+    } else if ($meta == 19) {
+      $meta = get_meta('Downloads'); 
+    } else if ($meta == 20) {
+      $meta = get_meta('FAQ'); 
+    } else if ($meta == 21) {
+      $meta = get_meta('Future_students'); 
+    } else if ($meta == 22) {
+      $meta = get_meta('Examination_time_tables'); 
+    } else if ($meta == 23) {
+      $meta = get_meta('Class_time_tables'); 
+    } else if ($meta == 24) {
+      $meta = get_meta('Dean_list'); 
+    } else if ($meta == 25) {
+      $meta = get_meta('Awards'); 
+    } else if ($meta == 26) {
+      $meta = get_meta('Academic_calendar'); 
+    } else if ($meta == 27) {
+      $meta = get_meta('Getting_around'); 
+    } else if ($meta == 28) {
+      $meta = get_meta('Faculty_staff'); 
+    } else if ($meta == 29) {
+      $meta = get_meta('Current_student'); 
+    } else if ($meta == 30) {
+      $meta = get_meta('Gpa_calculator'); 
+    } else if ($meta == 31) {
+      $meta = get_meta('Pandemic_information'); 
+    } else if ($meta == 32) {
+      $meta = get_meta('Rag_harassment_complaint'); 
+    } else if ($meta == 33) {
+      $meta = get_meta('Resources_students'); 
+    } else if ($meta == 34) {
+      $meta = get_meta('Search_results'); 
+    } else if ($meta == 35) {
+      $meta = get_meta('Special_notices'); 
+    } else if ($meta == 36) {
+      $meta = get_meta('Student_life'); 
+    } else if ($meta == 37) {
+      $meta = get_meta('Student_notices'); 
     } else {
-        $meta = get_meta('home');
+        $meta = get_meta('Home');
     }
   ?>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php echo $meta[0]->vMeta_description; ?>" />
+    <link rel="canonical" href="<?php echo $meta[0]->vOg_url; ?>" />
+    <meta property="og:site_name" content="<?php echo $meta[0]->vTitle; ?> | <?php echo $meta[0]->vPage_name; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<?php echo $meta[0]->vOg_title; ?>" />
+    <meta property="og:description" content="<?php echo $meta[0]->vOg_description; ?>" />
+    <meta property="og:url" content="<?php echo $meta[0]->vOg_url; ?>" />
+    <title><?php echo $meta[0]->vTitle; ?></title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -33,8 +103,6 @@
     <link href="<?php echo base_url("assets/frontend/"); ?>css/agri_uni.css" rel="stylesheet">
     <link href="<?php echo base_url("assets/frontend/"); ?>css/mediaquery.css" rel="stylesheet">
     <!-- Custom CSS -->
-
-    <title>Faculty of Agriculture | Notices</title>
 
     <!--favicon-->
     <link rel="shortcut icon" href="<?php echo base_url("assets/frontend/"); ?>images/favicon.png" />
@@ -148,7 +216,7 @@
 
           <ul class="navbar-nav ms-auto second_nav_bar">
 
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
             </li>
 
@@ -162,19 +230,19 @@
 
                  <li><a class="dropdown-item" href="#"> About Us &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li class="<?php echo activate_menu('about_us'); ?>"><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>
                     
                     <li><a class="dropdown-item" href="#">Faculty Statistics &raquo; </a>
                       <ul class="submenu dropdown-menu">
-                        <li class="<?php echo activate_menu('Faculty_statistic_undergraduate'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
-                        <li class="<?php echo activate_menu('Faculty_statistic_academic_staff'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
                     </ul>
                     </li>
 
-                    <li class="<?php echo activate_menu('Dean_office'); ?>"><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
-                    <li class="<?php echo activate_menu('Faculty_board'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>
-                    <li class="<?php echo activate_menu('History'); ?>"><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>
-                    <li class="<?php echo activate_menu('Faculty_organization'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>
 
                     <!-- <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
                     <li><a class="dropdown-item" href="map.html">Map & direction </a></li> -->
@@ -182,7 +250,7 @@
                  </ul>
                 </li>
 
-                <li class="<?php echo activate_menu('Faculty_brochure'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
                 <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/MI/" target="_blank">Sub Campus, MI </a></li>
 
                 <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
@@ -244,8 +312,8 @@
                 Academics
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li class="<?php echo activate_menu('Undergraduate_programme'); ?>"><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
-                <li class="<?php echo activate_menu('Postgraduate_programme'); ?>"><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>">Postgraduate Programme </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>">Postgraduate Programme </a></li>
               </ul>
             </li>
 
@@ -423,7 +491,7 @@
 
           <ul class="navbar-nav ms-auto second_nav_bar">
 
-              <li class="nav-item active">
+              <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
             </li>
 
@@ -437,19 +505,19 @@
 
                  <li><a class="dropdown-item" href="#"> About Us &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li class="<?php echo activate_menu('about_us'); ?>"><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>
                     
                     <li><a class="dropdown-item" href="#">Faculty Statistics &raquo; </a>
                       <ul class="submenu dropdown-menu">
-                        <li class="<?php echo activate_menu('Faculty_statistic_undergraduate'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
-                        <li class="<?php echo activate_menu('Faculty_statistic_academic_staff'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
                     </ul>
                     </li>
 
-                    <li class="<?php echo activate_menu('Dean_office'); ?>"><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
-                    <li class="<?php echo activate_menu('Faculty_board'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>
-                    <li class="<?php echo activate_menu('History'); ?>"><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>
-                    <li class="<?php echo activate_menu('Faculty_organization'); ?>"><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>
 
                     <!-- <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
                     <li><a class="dropdown-item" href="map.html">Map & direction </a></li> -->
@@ -457,7 +525,7 @@
                  </ul>
                 </li>
 
-                <li <?php echo activate_menu('Faculty_brochure'); ?>><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
                 <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/MI/" target="_blank">Sub Campus, MI </a></li>
 
                 <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
@@ -519,8 +587,8 @@
                 Academics
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li class="<?php echo activate_menu('Undergraduate_programme'); ?>"><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
-                <li class="<?php echo activate_menu('Postgraduate_programme'); ?>"><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>" target="_blank">Postgraduate Programme </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>" target="_blank">Postgraduate Programme </a></li>
               </ul>
             </li>
 
@@ -529,7 +597,7 @@
                 Research
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>

@@ -57,6 +57,7 @@ Class Search extends CI_Controller {
 		 
 		 $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
 
+         $data_header['meta'] = 34;
 
         $data['search_result'] = $this->search_model->get_search_result($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
