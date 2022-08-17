@@ -7,7 +7,7 @@ if (!defined('BASEPATH'))
  * author : Ayodhya
  */
 
-Class Cvcd_excellence_award extends CI_Controller {
+Class Cvcd_excellence_award  extends CI_Controller {
 
     private $table_name = "tbl_cvcd_excellence_award";
     private $page_id = "31";
@@ -27,10 +27,8 @@ Class Cvcd_excellence_award extends CI_Controller {
         $this->session->set_userdata('u_privilages', $user_privilages);
     }
 
-    public function index() {	
+    public function index() {
 
-       
-        
         $data['ckeditor_tContent'] = array(
             //ID of the textarea that will be replaced
             'id' => 'tContent',
@@ -42,17 +40,13 @@ Class Cvcd_excellence_award extends CI_Controller {
                 'height' => '200px', //Setting a custom height
             ),            
         );
-
-
-        $data['cSaveStatus']= 'E';
 		
+        $data['cSaveStatus']= 'A';
         $data['award_data'] = $this->awards_model->get_excellence_award_data();
-		//echo 'ff'; exit();
         $this->load->view('adminpanel/header_view');
         $this->load->view('adminpanel/awards/excellence_award_view', $data);
         $this->load->view('adminpanel/footer_view');
     }
-	
 
     public function save_awards($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
@@ -79,6 +73,50 @@ Class Cvcd_excellence_award extends CI_Controller {
             }
         }
     }
+	
+	public function edit_excellence_award() {
+
+        $data['ckeditor_tContent'] = array(
+            //ID of the textarea that will be replaced
+            'id' => 'tContent',
+            'path' => 'assets/js/ckeditor',
+            //Optionnal values
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "100%", //Setting a custom width
+                'height' => '200px', //Setting a custom height
+            ),            
+        );
+		
+        $data['cSaveStatus']= 'E';
+        $data['award_data'] = $this->awards_model->get_excellence_award_data();
+		$commId = $this->uri->segment(5);
+		$data['edit_excellence_award'] = $this->awards_model->get_edit_excellence_award($commId);
+        $this->load->view('adminpanel/header_view');
+        $this->load->view('adminpanel/awards/excellence_award_view', $data);
+        $this->load->view('adminpanel/footer_view');
+    }
+
+    public function change_status() {
+
+        $this->common_library->check_privilege('p_edit');
+        if ($this->common_library->check_privilege('p_edit')) {
+            $this->common_library->flexigrid_change_status($this->redirect_path, $this->table_name);
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
+            redirect(base_url() . $this->redirect_path);
+        }
+    }
+
+    public function delete_record() {
+        $this->common_library->check_privilege('p_edit');
+        if ($this->common_library->check_privilege('p_delete')) {
+            $this->common_library->flexigrid_delete_record($this->redirect_path, $this->table_name);
+        } else {
+            $this->session->set_flashdata('message_restricted', 'You do not have permission.');
+            redirect(base_url() . $this->redirect_path);
+        }
+    }
 
     public function remove_image() {
         if ($this->common_library->check_privilege('p_edit')) {
@@ -94,16 +132,6 @@ Class Cvcd_excellence_award extends CI_Controller {
                 $this->session->set_flashdata('message_error', 'Delete fail!');
                 redirect(base_url() . "adminpanel/awards/cvcd_excellence_award/update_details/".$imageID);
             }
-        }
-    }
-
-    public function update_details() {
-        if ($this->common_library->check_privilege('p_edit')) {
-            $data = $this->common_library->flexigrid_update_user($this->table_name);
-            $this->index();
-        } else {
-            $this->session->set_flashdata('message_restricted', 'You do not have permission..');
-            redirect(base_url() . $this->redirect_path);
         }
     }
 
