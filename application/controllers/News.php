@@ -4,23 +4,23 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /*
- * date : 10-08-2022
+ * date : 17-08-2022
  * author : Hansini
  */
 
-Class Alumni_news extends CI_Controller {
+Class News extends CI_Controller {
 
     public function index() {
 
         $this->load->library("pagination");
-        $this->load->model('frontend_model/alumni_model');
+        $this->load->model('frontend_model/news_model');
         $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "alumni_news";
+        $config["base_url"] = base_url() . "news";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';
@@ -41,7 +41,7 @@ Class Alumni_news extends CI_Controller {
 		$config['num_tag_close'] = '</span></li>';
 		$config['attributes'] = array('');
 
-        $config["total_rows"] = $this->alumni_model->get_count_news();
+        $config["total_rows"] = $this->news_model->get_count_news();
         $config["per_page"] = 6;
         $config["uri_segment"] = 3;
 
@@ -51,15 +51,13 @@ Class Alumni_news extends CI_Controller {
 		
 		$page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
         
-        $data['latest'] = $this->alumni_model->get_latest_news();
-        $data['all'] = $this->alumni_model->get_news_list($config["per_page"], $page);
+        $data['latest'] = $this->news_model->get_latest_news();
+        $data['all'] = $this->news_model->get_news_list($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
-        $data_header['meta'] = 18;
-
-        $this->load->view('frontendview/alumni/header_view',$data_header);
-        $this->load->view('frontendview/alumni/news_view',$data);
+        $this->load->view('frontendview/inner_header_view',$data_header);
+        $this->load->view('frontendview/news/news_view',$data);
         $this->load->view('frontendview/footer_view', $data_header);
        
     }    
@@ -67,22 +65,20 @@ Class Alumni_news extends CI_Controller {
         
         $newString = str_replace('_', ' ', $name);
 
-        $this->load->model('frontend_model/alumni_model');
+        $this->load->model('frontend_model/news_model');
         $this->load->model('frontend_model/home_page_model');
 
         $data = array();
         $data_header = array();
         
 
-        $data_header['meta'] = 18;
-
-        $data['detail'] = $this->alumni_model->get_news_detail($newString);
-        $data['all'] = $this->alumni_model->get_news_detail_list();
+        $data['detail'] = $this->news_model->get_news_detail($newString);
+        $data['all'] = $this->news_model->get_news_detail_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 
-        $this->load->view('frontendview/alumni/header_view',$data_header);
-        $this->load->view('frontendview/alumni/news_detail_view',$data);
+        $this->load->view('frontendview/inner_header_view',$data_header);
+        $this->load->view('frontendview/news/news_detail_view',$data);
         $this->load->view('frontendview/footer_view', $data_header);
        
     }

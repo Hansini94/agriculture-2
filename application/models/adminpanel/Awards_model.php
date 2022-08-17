@@ -18,6 +18,19 @@ class Awards_model extends CI_Model {
         }
     }
 
+    public function get_edit_excellence_award($id) {
+
+        $this->db->from('tbl_cvcd_excellence_award');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+       // echo $this->db->last_query();exit();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
     public function get_president_award_list() {
 
         $this->db->from('tbl_president_award');

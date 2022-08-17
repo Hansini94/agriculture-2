@@ -31,7 +31,7 @@
       <div class="row">
         
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 footer_logo_col">
-          <a href="index.html">
+          <a href="<?php echo base_url(); ?>">
             <img src="<?php echo base_url("assets/frontend/"); ?>images/logo.png" alt="" class="d-block w-100 footer_logo">
           </a>
           <p>
@@ -81,7 +81,10 @@ All Rights Reserved</small>
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 
                 <p>
-                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;<a href="tel:<?php echo $contact_details->vTele; ?>"><?php echo $contact_details->vTele; ?></a>  |  <a href="<?php echo $contact_details->vTele2; ?>"><?php echo $contact_details->vTele2; ?></a>
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;
+                  <a href="tel:<?php echo $contact_details->vTele; ?>"><?php echo $contact_details->vTele; ?></a> 
+                   |
+                  <a href="tel:<?php echo $contact_details->vTele2; ?>"><?php echo $contact_details->vTele2; ?></a>
                 </p>
 
                  <p>
@@ -89,16 +92,16 @@ All Rights Reserved</small>
                 </p>
 
                 <p>
-                   <i class="fa fa-internet-explorer" aria-hidden="true"></i> &nbsp;&nbsp;<a href="<?php echo $contact_details->vEmail; ?>"><?php echo $contact_details->vEmail; ?></a> 
+                   <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;<a href="<?php echo $contact_details->vEmail; ?>"><?php echo $contact_details->vEmail; ?></a> 
                 </p>
 
-                <p><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;&nbsp;<?php echo $contact_details->vFax; ?></p>
+                <p><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;&nbsp;<a href="fax-local-phone:<?php echo $contact_details->vFax; ?>"><?php echo $contact_details->vFax; ?></a></p>
 
                  <p class="social_icon">
-                    <a href="<?php echo $contact_details->vFacebook; ?>" target="_blank" class="fa fa-facebook animate__animated animate__fadeInLeft"></a>
-                    <a href="<?php echo $contact_details->vInstagram; ?>" target="_blank" class="fa fa-instagram animate__animated animate__fadeInLeft"></a>
-                    <a href="<?php echo $contact_details->vTwitter; ?>" target="_blank" class="fa fa-twitter animate__animated animate__fadeInLeft"></a>
-                    <a href="<?php echo $contact_details->vLinkedIn; ?>" target="_blank" class="fa fa-linkedin animate__animated animate__fadeInLeft"></a>
+                    <?php if($contact_details->vFacebook != ''){ ?><a href="<?php echo $contact_details->vFacebook; ?>" target="_blank" class="fa fa-facebook animate__animated animate__fadeInLeft"></a><?php } ?>
+                    <?php if($contact_details->vInstagram != ''){ ?><a href="<?php echo $contact_details->vInstagram; ?>" target="_blank" class="fa fa-instagram animate__animated animate__fadeInLeft"></a><?php } ?>
+                    <?php if($contact_details->vTwitter != ''){ ?><a href="<?php echo $contact_details->vTwitter; ?>" target="_blank" class="fa fa-twitter animate__animated animate__fadeInLeft"></a><?php } ?>
+                    <?php if($contact_details->vLinkedIn != ''){ ?><a href="<?php echo $contact_details->vLinkedIn; ?>" target="_blank" class="fa fa-linkedin animate__animated animate__fadeInLeft"></a><?php } ?>
                 </p>
 
               </div>

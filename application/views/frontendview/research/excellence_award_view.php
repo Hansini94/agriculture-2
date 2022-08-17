@@ -73,7 +73,15 @@
 
                 <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-8 col-sm-8 col-12">
 
-                    <?php echo $award_data[0]->tContent; ?>
+                <?php 
+                    if(isset($award_data)){
+                        $i=0;
+                        foreach($award_data as $awards )
+                        {
+                    
+                ?>
+
+                    <?php echo $awards->tContent; ?>
 
                     <!-- ============= -->
 
@@ -83,7 +91,7 @@
                             style="padding-top: 0px !important; padding-bottom: 0px !important;">
                             <div class="row">
                                 <div class="bgimg_div">
-                                    <img src="<?php echo base_url('front_img/').$award_data[0]->fImage1; ?>" alt="" class="dd-block w-100">
+                                    <img src="<?php echo base_url('front_img/').$awards->fImage1; ?>" alt="" class="dd-block w-100">
                                 </div>
                             </div>
                         </div>
@@ -92,7 +100,7 @@
                             style="padding-top: 0px !important; padding-bottom: 0px !important;">
                             <div class="row">
                                 <div class="bgimg_div">
-                                    <img src="<?php echo base_url('front_img/').$award_data[0]->fImage2; ?>" alt="" class="dd-block w-100">
+                                    <img src="<?php echo base_url('front_img/').$awards->fImage2; ?>" alt="" class="dd-block w-100">
                                 </div>
                             </div>
                         </div>
@@ -101,6 +109,13 @@
                     </div>
 
                     <!-- =========== -->
+
+                    <?php 
+                            $i++; 
+                            echo '<div class="clearfix"></div>';
+                            }
+                        } 
+                    ?>  
 
                 </div>
 

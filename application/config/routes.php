@@ -189,6 +189,7 @@ $route['faculty-direction'] = 'Faculty_direction';
 
 $route['academic-calendar'] = 'Academic_calender';
 
+$route['news'] = 'News';
 
 
 

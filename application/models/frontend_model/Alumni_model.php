@@ -114,8 +114,21 @@ class Alumni_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
     }
+
+        public function get_news_detail_list() {
+            $this->db->from('tbl_alumni_news');
+            $this->db->where('cEnable', 'Y');
+            $this->db->order_by('id', 'desc');
+            $result = $this->db->get();
+            //echo $this->db->last_query();  exit();  
+            if ($result->num_rows() > 0) {
+                return $result->result();
+            } else {
+                return array();
+            }
+        }
+    
 
     // ********************Alumni Events*******************
     public function get_latest_events() {
@@ -161,8 +174,21 @@ class Alumni_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
     }
+        
+        public function get_events_detail_list() {
+            $this->db->from('tbl_alumni_events');
+            $this->db->where('cEnable', 'Y');
+            $this->db->order_by('id', 'desc');
+            $result = $this->db->get();
+            //echo $this->db->last_query();  exit();  
+            if ($result->num_rows() > 0) {
+                return $result->result();
+            } else {
+                return array();
+            }
+        }
+    
 
     // ********************Alumni Newsletters*******************
     public function get_latest_newsletters() {
@@ -209,6 +235,20 @@ class Alumni_model extends CI_Model {
             return array();
         }
         // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+    }
+
+    public function get_newsletters_detail_list() {
+        $this->db->from('tbl_alumni_newsletters');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit();
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
     }
 
     // ******************Alumni Scholarships********************
