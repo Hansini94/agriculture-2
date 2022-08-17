@@ -178,6 +178,15 @@ $route['video-lab-practice'] = 'Resources_for_student/lab_videos';
 
 $route['current-students'] = 'Current_students';
 
+$route['student-life'] = 'Student_life';
+
+$route['faculty-staff'] = 'Faculty_n_staff';
+
+$route['getting-around'] = 'Getting_around';
+$route['walk-around-uni'] = 'Walk_around_uni';
+$route['faculty-map'] = 'Faculty_map';
+$route['faculty-direction'] = 'Faculty_direction';
+
 
 
 
