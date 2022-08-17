@@ -4,7 +4,7 @@ if ($cSaveStatus == "E") {
     $fImage = $edit_mobile_slider[0]->fImage;
     $vTitle = $edit_mobile_slider[0]->vTitle;
     $vCaption = $edit_mobile_slider[0]->vCaption;
-    $vUrl = $edit_mobile_slider[0]->vUrl;
+    // $vUrl = $edit_mobile_slider[0]->vUrl;
     $iOrder = $edit_mobile_slider[0]->iOrder;
     $cEnable = $edit_mobile_slider[0]->cEnable;
 	
@@ -13,7 +13,7 @@ if ($cSaveStatus == "E") {
     $fImage = "";
     $vTitle = "";
     $vCaption ="";
-    $vUrl = "";
+    // $vUrl = "";
     $iOrder = "";
     $cEnable = "Y";
 }
@@ -128,12 +128,12 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Read More </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
-                                </div> 
+                                </div>  -->
 
 
                                 <div class="form-group">

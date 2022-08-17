@@ -23,19 +23,20 @@ if ($cSaveStatus == "E") {
     $tTabContent4 = $edit_data[0]->tTabContent4;
     $tTabContent5 = $edit_data[0]->tTabContent5;
     $tTabContent6 = $edit_data[0]->tTabContent6;
-    // $vTabLink1 = $edit_data[0]->vTabLink1;
-    // $vTabLink2 = $edit_data[0]->vTabLink2;
-    // $vTabLink3 = $edit_data[0]->vTabLink3;
-    // $vTabLink4 = $edit_data[0]->vTabLink4;
-    // $vTabLink5 = $edit_data[0]->vTabLink5;
-    // $vTabLink6 = $edit_data[0]->vTabLink6;
+    $vTabLink1 = $edit_data[0]->vTabLink1;
+    $vTabLink2 = $edit_data[0]->vTabLink2;
+    $vTabLink3 = $edit_data[0]->vTabLink3;
+    $vTabLink4 = $edit_data[0]->vTabLink4;
+    $vTabLink5 = $edit_data[0]->vTabLink5;
+    $vTabLink6 = $edit_data[0]->vTabLink6;
 
     $fRagIcon = $edit_data[0]->fRagIcon;
     $fOtherIcon = $edit_data[0]->fOtherIcon;
     $vRagTitle = $edit_data[0]->vRagTitle;
     $vOtherTitle = $edit_data[0]->vOtherTitle;
     $tRagContent = $edit_data[0]->tRagContent;
-    // $vRagLink = $edit_data[0]->vRagLink;
+    $vRagLink = $edit_data[0]->vRagLink;
+    $vOtherLink = $edit_data[0]->vOtherLink;
 
     $fOtherImage1 = $edit_data[0]->fOtherImage1;
     $vOtherTitle1 = $edit_data[0]->vOtherTitle1;
@@ -51,6 +52,11 @@ if ($cSaveStatus == "E") {
     $vOtherTitle3 = $edit_data[0]->vOtherTitle3;
     $tOtherContent3 = $edit_data[0]->tOtherContent3;
     $vOtherLink3 = $edit_data[0]->vOtherLink3;
+
+    $fOtherImage4 = $edit_data[0]->fOtherImage4;
+    $vOtherTitle4 = $edit_data[0]->vOtherTitle4;
+    $tOtherContent4 = $edit_data[0]->tOtherContent4;
+    $vOtherLink4 = $edit_data[0]->vOtherLink4;
     
     $cEnable = $edit_data[0]->cEnable;
 
@@ -87,19 +93,20 @@ if ($cSaveStatus == "E") {
     $tTabContent4 = "";
     $tTabContent5 = "";
     $tTabContent6 = "";
-    // $vTabLink1 = "";
-    // $vTabLink2 = "";
-    // $vTabLink3 = "";
-    // $vTabLink4 = "";
-    // $vTabLink5 = "";
-    // $vTabLink6 = "";
+    $vTabLink1 = "";
+    $vTabLink2 = "";
+    $vTabLink3 = "";
+    $vTabLink4 = "";
+    $vTabLink5 = "";
+    $vTabLink6 = "";
 
     $fRagIcon = "";
     $fOtherIcon = "";
     $vRagTitle = "";
     $vOtherTitle = "";
     $tRagContent = "";
-    // $vRagLink = "";
+    $vRagLink = "";
+    $vOtherLink = "";
 
     $fOtherImage1 = "";
     $vOtherTitle1 = "";
@@ -107,14 +114,19 @@ if ($cSaveStatus == "E") {
     $vOtherLink1 = "";
 
     $fOtherImage2 = "";
-    $fOtherImage3 = "";
+    $fOtherTitle2 = "";
     $tOtherContent2 = "";
     $vOtherLink2 = "";
 
-    $vOtherTitle2 = "";
+    $vOtherImage3 = "";
     $vOtherTitle3 = "";
     $tOtherContent3 = "";
     $vOtherLink3 = "";
+
+    $vOtherImage4 = "";
+    $vOtherTitle4 = "";
+    $tOtherContent4 = "";
+    $vOtherLink4 = "";
 
     $cEnable = "Y";
 
@@ -216,23 +228,22 @@ if ($cSaveStatus == "E") {
                                 
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 1 <span class="required">*</span> </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTabTitle1" name="vTabTitle1" value="<?php echo $vTabTitle1; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div>
-                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 1 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTabLink1" name="vTabLink1" value="<?php echo $vTabLink1; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div> -->
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 1</label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
@@ -240,9 +251,9 @@ if ($cSaveStatus == "E") {
                                        
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                                 
-                                <div class="clearfix">
+                            <div class="clearfix">
 
                                 </div><div class="col-md-6 col-sm-6 col-xs-12">
                                 
@@ -264,23 +275,22 @@ if ($cSaveStatus == "E") {
                                  <?php } ?> 
                                  
                              </div>
-                             <div class="col-md-6 col-sm-6 col-xs-12">
- 
-                                 <div class="form-group">
-                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 2 <span class="required">*</span> </label>
-                                     <div class="col-md-8 col-sm-6 col-xs-12">
-                                         <input type="text" id="vTabTitle2" name="vTabTitle2" value="<?php echo $vTabTitle2; ?>" class="form-control col-md-7 col-xs-12">
-                                     </div>
-                                 </div> 
-                                 </div>
-                                 <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12"> 
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 2 <span class="required">*</span> </label>
+                                        <div class="col-md-8 col-sm-6 col-xs-12">
+                                            <input type="text" id="vTabTitle2" name="vTabTitle2" value="<?php echo $vTabTitle2; ?>" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div> 
+                                </div>
+                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                  <div class="form-group">
                                      <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 2 <span class="required">*</span></label>
                                      <div class="col-md-8 col-sm-6 col-xs-12">
                                          <input type="text" id="vTabLink2" name="vTabLink2" value="<?php echo $vTabLink2; ?>" class="form-control col-md-7 col-xs-12">
                                      </div>
                                  </div> 
-                                 </div> -->
+                                 </div>
                                  <div class="col-md-6 col-sm-6 col-xs-12">
                                  <div class="form-group">
                                      <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 2</label>
@@ -321,14 +331,14 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div> 
                                 </div>
-                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 3 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTabLink3" name="vTabLink3" value="<?php echo $vTabLink3; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div> -->
+                                </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 3</label>
@@ -370,14 +380,14 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div> 
                                 </div>
-                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 4 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTabLink4" name="vTabLink4" value="<?php echo $vTabLink4; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div> -->
+                                </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 4</label>
@@ -418,14 +428,14 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div> 
                                 </div>
-                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 5 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTabLink5" name="vTabLink5" value="<?php echo $vTabLink5; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div> -->
+                                </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 5</label>
@@ -466,14 +476,14 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div> 
                                 </div>
-                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 6 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vTabLink6" name="vTabLink6" value="<?php echo $vTabLink6; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div> -->
+                                </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 6</label>
@@ -488,7 +498,7 @@ if ($cSaveStatus == "E") {
                                 <hr>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <h5><b>Rag & Harassment</b></h5>
+                                    <h5><b>Other 1</b></h5>
                                 </div>
                             </div>
                             <br>
@@ -522,14 +532,14 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div> 
                                 </div>
-                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vRagLink" name="vRagLink" value="<?php echo $vRagLink; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div> -->
+                                </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description </label>
@@ -544,7 +554,7 @@ if ($cSaveStatus == "E") {
                                 <hr>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <h5><b>Other</b></h5>
+                                    <h5><b>Other 2</b></h5>
                                 </div>
                             </div>
                             <br>
@@ -575,6 +585,14 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title <span class="required">*</span> </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vOtherTitle" name="vOtherTitle" value="<?php echo $vOtherTitle; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vOtherLink" name="vOtherLink" value="<?php echo $vOtherLink; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
                                 </div>
@@ -757,8 +775,7 @@ if ($cSaveStatus == "E") {
                             </div>
                             <br>
                             <div class="clearfix"></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                
+                            <div class="col-md-6 col-sm-6 col-xs-12">                                
                                <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Image 1 ( 800 x 1200 px )
                                     </label>
@@ -779,22 +796,22 @@ if ($cSaveStatus == "E") {
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 1 <span class="required">*</span> </label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <input type="text" id="vOtherTitle1" name="vOtherTitle1" value="<?php echo $vOtherTitle1; ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div> 
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 1 <span class="required">*</span> </label>
+                                        <div class="col-md-8 col-sm-6 col-xs-12">
+                                            <input type="text" id="vOtherTitle1" name="vOtherTitle1" value="<?php echo $vOtherTitle1; ?>" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div> 
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 1 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vOtherLink1" name="vOtherLink1" value="<?php echo $vOtherLink1; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 1</label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
@@ -802,12 +819,11 @@ if ($cSaveStatus == "E") {
                                        
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                                 
-                                <div class="clearfix">
-
-                                </div><div class="col-md-6 col-sm-6 col-xs-12">
-                                
+                            <div class="clearfix"></div>
+                            
+                            <div class="col-md-6 col-sm-6 col-xs-12">   
                                 <div class="form-group">
                                      <label class="control-label col-md-4 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Image 2 ( 800 x 800 px )
                                      </label>
@@ -825,25 +841,24 @@ if ($cSaveStatus == "E") {
                                  </div>
                                  <?php } ?> 
                                  
-                             </div>
-                             <div class="col-md-6 col-sm-6 col-xs-12">
- 
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"> 
                                  <div class="form-group">
                                      <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 2 <span class="required">*</span> </label>
                                      <div class="col-md-8 col-sm-6 col-xs-12">
                                          <input type="text" id="vOtherTitle2" name="vOtherTitle2" value="<?php echo $vOtherTitle2; ?>" class="form-control col-md-7 col-xs-12">
                                      </div>
                                  </div> 
-                                 </div>
-                                 <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                  <div class="form-group">
                                      <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 2 <span class="required">*</span></label>
                                      <div class="col-md-8 col-sm-6 col-xs-12">
                                          <input type="text" id="vOtherLink2" name="vOtherLink2" value="<?php echo $vOtherLink2; ?>" class="form-control col-md-7 col-xs-12">
                                      </div>
                                  </div> 
-                                 </div>
-                                 <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                  <div class="form-group">
                                      <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 2</label>
                                      <div class="col-md-8 col-sm-6 col-xs-12">
@@ -851,11 +866,11 @@ if ($cSaveStatus == "E") {
                                         
                                      </div>
                                  </div>
-                                 </div>
+                            </div>
                                  
-                                 <div class="clearfix"></div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                
+                            <div class="clearfix"></div>
+                            
+                            <div class="col-md-6 col-sm-6 col-xs-12">                                
                                <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Image 3 ( 800 x 1200 px )
                                     </label>
@@ -875,23 +890,22 @@ if ($cSaveStatus == "E") {
                                 
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 3 <span class="required">*</span> </label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vOtherTitle3" name="vOtherTitle3" value="<?php echo $vOtherTitle3; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 3 <span class="required">*</span></label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                         <input type="text" id="vOtherLink3" name="vOtherLink3" value="<?php echo $vOtherLink3; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div> 
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 3</label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
@@ -899,11 +913,56 @@ if ($cSaveStatus == "E") {
                                        
                                     </div>
                                 </div>
+                            </div>
+                                
+                            <div class="clearfix"></div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">                                
+                               <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Image 4 ( 800 x 1200 px )
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="file" id="fOtherImage4" name="fOtherImage4">
+                                    </div>
                                 </div>
                                 
-                                <div class="clearfix"></div>
-
-
+                                <?php if($fOtherImage4!=''){ ?>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >&nbsp;</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <img class="img-responsive" src="<?php echo base_url().'front_img/'.$fOtherImage4;?>" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>  width="150px"/ />
+                                    </div>
+                                </div>
+								<?php } ?> 
+                                
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 4 <span class="required">*</span> </label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vOtherTitle4" name="vOtherTitle4" value="<?php echo $vOtherTitle4; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 4 <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <input type="text" id="vOtherLink4" name="vOtherLink4" value="<?php echo $vOtherLink4; ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 4</label>
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                       <textarea id="tOtherContent4" name="tOtherContent4" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $tOtherContent4; ?></textarea>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <div class="clearfix"></div>      
 
                             <div style="clear:both;"></div>
                             <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>

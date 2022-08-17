@@ -21,7 +21,10 @@
                   </h1>
                   <p><small><?php echo $home_details[0]->tTabContent1; ?></small></p>
                   <!-- arrow link -->
-                  <a class='animated-arrow' href='<?php echo base_url('future-student'); ?>'>
+                  <a class='animated-arrow' href='<?php 
+                                                    echo $home_details[0]->vTabLink1;
+                                                    // echo base_url('future-student'); 
+                                                  ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
@@ -59,7 +62,10 @@
                   </h1>
                   <p><small><?php echo $home_details[0]->tTabContent2; ?></small></p>
                   <!-- arrow link -->
-                  <a class='animated-arrow' href='<?php echo base_url('current-students'); ?>'>
+                  <a class='animated-arrow' href='<?php 
+                  echo $home_details[0]->vTabLink2;
+                  // echo base_url('current-students'); 
+                  ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
@@ -97,7 +103,10 @@
                   </h1>
                   <p><small><?php echo $home_details[0]->tTabContent3; ?></small></p>
                   <!-- arrow link -->
-                  <a class='animated-arrow' href='<?php echo base_url('getting-around'); ?>'>
+                  <a class='animated-arrow' href='<?php 
+                  echo $home_details[0]->vTabLink3;
+                  // echo base_url('getting-around'); 
+                  ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
@@ -135,7 +144,10 @@
                 </h1>
                 <p><small><?php echo $home_details[0]->tTabContent4; ?></small></p>
                 <!-- arrow link -->
-                <a class='animated-arrow' href='<?php echo base_url('faculty-staff'); ?>'>
+                <a class='animated-arrow' href='<?php 
+                echo $home_details[0]->vTabLink4;
+                // echo base_url('faculty-staff'); 
+                ?>'>
                   <span class='the-arrow -left'>
                     <span class='shaft'></span>
                   </span>
@@ -169,7 +181,10 @@
                 </h1>
                 <p><small><?php echo $home_details[0]->tTabContent5; ?></small></p>
                 <!-- arrow link -->
-                <a class='animated-arrow' href='<?php echo base_url('alumni'); ?>'>
+                <a class='animated-arrow' href='<?php 
+                echo $home_details[0]->vTabLink5;
+                // echo base_url('alumni'); 
+                ?>'>
                   <span class='the-arrow -left'>
                     <span class='shaft'></span>
                   </span>
@@ -203,7 +218,10 @@
                 </h1>
                 <p><small><?php echo $home_details[0]->tTabContent6; ?></small></p>
                 <!-- arrow link -->
-                <a class='animated-arrow' href='<?php echo base_url('student-life'); ?>'>
+                <a class='animated-arrow' href='<?php 
+                echo $home_details[0]->vTabLink6;
+                // echo base_url('student-life'); 
+                ?>'>
                   <span class='the-arrow -left'>
                     <span class='shaft'></span>
                   </span>
@@ -261,7 +279,10 @@
             <p style="margin-top: 10px;"><small><?php echo $home_details[0]->tRagContent; ?></small></p>
 
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
-              <a href="<?php echo base_url('rag-harassment') ?>">
+              <a href="<?php 
+              echo $home_details[0]->vRagLink;
+              // echo base_url('rag-harassment') 
+              ?>">
                 <button class="btn btn-outline-secondary ms-n5 orange_btn" type="button" style="margin-top: 10px; margin-bottom: 15px;" data-aos="fade-down">
                   &nbsp;Click Here&nbsp;
                 </button>
@@ -322,7 +343,10 @@
       <div class="top_box_div">
         <div id="container" style="position: relative; z-index: 99999; background-color: #faced6; margin-top: 5px; height: auto;">
 
-          <a href="<?php echo base_url('pandemic-information') ?>">
+          <a href="<?php 
+          echo $home_details[0]->vOtherLink;
+          // echo base_url('pandemic-information') 
+          ?>">
             <div class="row">
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                 <img src="<?php echo base_url("front_img/").$home_details[0]->fOtherIcon; ?>" alt="" class="d-block w-100 float-md-end" style="width: 70px !important;">
@@ -778,13 +802,13 @@
           <?php echo $home_details[0]->tOtherContent1; ?>
         </p>
         <!-- arrow link -->
-        <a class='animated-arrow' href=''>
+        <a class='animated-arrow' href='<?php echo base_url(); ?>student_life'>
           <span class='the-arrow -left'>
             <span class='shaft'></span>
           </span>
           <span class='main'>
             <span class='text'>
-              Ecplore More
+              Explore More
             </span>
             <span class='the-arrow -right'>
               <span class='shaft'></span>
@@ -796,12 +820,32 @@
     </div>
 
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage2; ?>) !important; background-position:center top;"></div>
+      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage4; ?>) !important; background-position:center top;">
+        <h1 class="heading" style="text-transform: uppercase; color: #ffffff;"><?php echo $home_details[0]->vOtherTitle4; ?></h1>
+        <p data-aos="fade-up" style="color: #ffffff;">
+          <?php echo $home_details[0]->tOtherContent4; ?>
+        </p>
+        <!-- arrow link -->
+        <a class='animated-arrow' href='<?php echo base_url(); ?>news'>
+          <span class='the-arrow -left'>
+            <span class='shaft'></span>
+          </span>
+          <span class='main'>
+            <span class='text' style="color: #ffffff;">
+              Explore More
+            </span>
+            <span class='the-arrow -right'>
+              <span class='shaft'></span>
+            </span>
+          </span>
+        </a>
+        <!-- arrow link -->
+      </div>
 
-      <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
-        <h1 class="heading"><?php echo $home_details[0]->vOtherTitle2; ?></h1>
-        <p data-aos="fade-up">
-          <?php echo $home_details[0]->tOtherContent3; ?>
+      <div class="short_link_div short_link_div_middle_height" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage2; ?>) !important; background-position:center top;">
+        <h1 class="heading" ><?php echo $home_details[0]->vOtherTitle2; ?></h1>
+        <p data-aos="fade-up" >
+          <?php echo $home_details[0]->tOtherContent2; ?>
         </p>
         <!-- arrow link -->
         <a class='animated-arrow' href=''>
@@ -810,7 +854,7 @@
           </span>
           <span class='main'>
             <span class='text'>
-              Ecplore More
+              Explore More
             </span>
             <span class='the-arrow -right'>
               <span class='shaft'></span>
