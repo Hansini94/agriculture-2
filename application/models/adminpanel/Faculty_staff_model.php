@@ -30,6 +30,7 @@ class Faculty_staff_model extends CI_Model {
         }
     }
 
+
     public function get_faculty_staff_data() {
 
         $this->db->from('tbl_faculty_staff_content');

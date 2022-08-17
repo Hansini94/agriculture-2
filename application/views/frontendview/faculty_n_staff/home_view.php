@@ -62,8 +62,8 @@
     <div class="row">      
         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="row m-auto">
-                <h1 class="heading"><?php echo $home->vSubTitle; ?></h1>
-                <h1 class="sub_heading"><?php echo $home->tSubContent; ?></h1>
+                <h1 class="heading">Links</h1>
+                <h1 class="sub_heading">Website links for future students informations</h1>
                 <div class="clearfix"></div>
                 <br>        
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
@@ -74,7 +74,7 @@
                             <p class="sub_heading"> Emeritus professors</p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>emeritus_professors' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url(); ?>emeritus-professors' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -100,7 +100,7 @@
                             <p class="sub_heading"> Code of Conduct  </p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>conduct_staff' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url(); ?>conduct-staff' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -127,7 +127,7 @@
                             <p class="sub_heading"> Guidelines for Professional Conduct </p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>conduct_guidelines' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url(); ?>conduct-guidelines' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -181,7 +181,7 @@
                             <p class="sub_heading"> Downloads </p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>faculty_n_staff_downloads' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url(); ?>downloads_staff' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>

@@ -1,11 +1,11 @@
 <header>
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+        <!-- <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <?php foreach($slider as $slid){ ?>
+        </div> -->
+        <?php if(isset($slider)){foreach($slider as $slid){ ?>
         <div class="carousel-inner">
           <div class="carousel-item active" style="background-image: url('<?php echo base_url().'/front_img/'.$slid->fImage;?>')">
             <div class="container carousel-caption">
@@ -18,15 +18,15 @@
             </div>
           </div>
         </div>
-        <?php  } ?> 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <?php  } }?> 
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
+        </button> -->
       </div>
 </header>
 
@@ -49,11 +49,11 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-        <?php foreach($slider as $slid){ ?>
+        <?php if(isset($slider)){foreach($slider as $slid){ ?>
           <div class="carousel-item active">
             <img src="<?php echo base_url().'/front_img/'.$slid->fImage;?>" class="d-block w-100" alt="...">
           </div>
-          <?php  } ?> 
+          <?php  }} ?> 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -437,7 +437,7 @@
   <?php echo $links[0]->vCaption; ?>
   </p>
   <!-- arrow link -->
-    <a class='animated-arrow' href='<?php echo base_url(); ?>student_life'>
+    <a class='animated-arrow' href='<?php echo base_url(); ?>student-life'>
     <span class='the-arrow -left'>
       <span class='shaft'></span>
     </span>
@@ -463,7 +463,7 @@
   <?php echo $links[1]->vCaption; ?>
   </p>
   <!-- arrow link -->
-    <a class='animated-arrow' href='<?php echo base_url(); ?>'>
+    <a class='animated-arrow' href='<?php echo base_url(); ?>research-stories'>
     <span class='the-arrow -left'>
       <span class='shaft'></span>
     </span>
@@ -488,7 +488,7 @@
   <?php echo $links[2]->vCaption; ?>
   </p>
   <!-- arrow link -->
-    <a class='animated-arrow' href='<?php echo base_url(); ?>'>
+    <a class='animated-arrow' href='<?php echo base_url(); ?>international-overview'>
     <span class='the-arrow -left'>
       <span class='shaft'></span>
     </span>

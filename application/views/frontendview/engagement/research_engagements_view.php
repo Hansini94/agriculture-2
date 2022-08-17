@@ -37,7 +37,9 @@
   <div class="container">
     
     <div class="row">
-      
+      <?php 
+      if(isset($latest)){
+      ?>
        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
         <div class="row m-auto">
@@ -97,7 +99,7 @@
         </div>
 
        </div>
-
+<?php } ?>
     </div>
 
   </div>
@@ -111,7 +113,7 @@
     <div class="container">
       
       <div class="row">
-        <?php $i=0; foreach($all as $all_data){ ?>
+        <?php if(isset($all)){ $i=0; foreach($all as $all_data){ ?>
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
           <div class="news_div">
             
@@ -162,7 +164,7 @@
         <?php 
                 $i++; 
                 if($i ==3){ echo '<div class="clearfix"></div>'; $i=0; }
-                } ?>  
+                } }?>  
 
          
 

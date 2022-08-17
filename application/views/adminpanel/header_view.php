@@ -19,7 +19,7 @@
         <link href="<?php echo base_url("assets/css/animate.min.css"); ?>" rel="stylesheet">
         <!-- Custom styling plus plugins -->
         <!--<link rel="icon" type="image/png" href="<?php echo base_url("assets/images/favicon2.ico"); ?>"> -->
-        <link rel="icon" type="image/png" href="<?php echo base_url("front_img/favi.png"); ?>">
+        <link rel="icon" type="image/png" href="<?php echo base_url("assets/frontend/"); ?>images/favicon.png">
         <link href="<?php echo base_url("assets/css/custom.css"); ?>" rel="stylesheet">
         <link href="<?php echo base_url("assets/css/icheck/flat/green.css"); ?>" rel="stylesheet">
         <link href="<?php echo base_url("assets/css/datatables/tools/css/dataTables.tableTools.css"); ?>" rel="stylesheet">

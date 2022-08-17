@@ -48,8 +48,11 @@
             <div class="row m-auto mb-3">
 
                 <a href="<?php echo $result->link; ?>"><h1 class="sub_heading"><?php echo $result->Heading; ?> </h1></a>
-                <p><?php  if($result->tContent != ""){ echo mb_substr(strip_tags($result->tContent), 0, 500, 'utf-8'); } ?></p>
-
+                <p>
+                    <a href="<?php echo $result->link; ?>">
+                        <?php  if($result->tContent != ""){ echo mb_substr(strip_tags($result->tContent), 0, 500, 'utf-8'); } ?>
+                    </a> 
+                </p>    
             </div>
             <?php } } else {  ?>
                     

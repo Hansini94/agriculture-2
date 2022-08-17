@@ -10,6 +10,7 @@ if (!defined('BASEPATH'))
 Class Emeritus_professor extends CI_Controller {
 
     private $table_name = "tbl_emeritus_professor";
+    private $table_name2 = "tbl_emeritus_prof_list";
     private $page_id = "271";
     private $redirect_path = "adminpanel/faculty_staff/emeritus_professor";
 
@@ -175,6 +176,43 @@ Class Emeritus_professor extends CI_Controller {
         }else{
             $this->session->set_flashdata('message_error', 'You do not have permission to deactivate..');
             redirect(base_url() . $this->redirect_path);
+        }
+    }
+
+    public function list_index() {	
+       
+        $data['cSaveStatus']= 'E';
+		
+        $data['edit_data'] = $this->common_model->get_all_data_list($this->table_name2);
+		// echo 'ff'; exit();
+        $this->load->view('adminpanel/header_view');
+        $this->load->view('adminpanel/faculty_staff/emeritus_professor_list_view', $data);
+        $this->load->view('adminpanel/footer_view');
+    }
+
+    public function list_save_data($data = '') {
+        $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
+        $id = $this->input->post('id', TRUE);
+        if ($cSaveStatus === 'E') {
+            if ($this->common_model->update_saved_data($this->table_name2)) {
+                //$tDes = "saved data has been updated";
+                //$this->common_model->add_log($tDes);
+                $this->session->set_flashdata('message_saved', 'Saved successfully.');
+                redirect(base_url() . 'adminpanel/faculty_staff/emeritus_professor');
+            } else {
+                $this->session->set_flashdata('message_error', 'Save fail!');
+                redirect(base_url() . 'adminpanel/faculty_staff/emeritus_professor');
+            }
+        } else {
+            if ($this->common_model->save_data($this->table_name2)) {
+                //$tDes = "saved data has been updated";
+                //$this->common_model->add_log($tDes);
+                $this->session->set_flashdata('message_saved', 'Saved successfully.');
+                redirect(base_url() . 'adminpanel/faculty_staff/emeritus_professor');
+            } else {
+                $this->session->set_flashdata('message_error', 'Save fail!');
+                redirect(base_url() . 'adminpanel/faculty_staff/emeritus_professor');
+            }
         }
     }
 

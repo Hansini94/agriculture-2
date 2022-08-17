@@ -7,7 +7,7 @@
               <h1 class="heading" data-aos="fade-up">Services</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Services</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Transcript Request</b></li>
               </ol>
@@ -41,7 +41,7 @@
         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
             <div class="row ms-auto">
-                <?php $i=0; foreach($transcript as $trans){ ?>
+                <?php if(isset($transcript)){ $i=0; foreach($transcript as $trans){ ?>
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
 
                     <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
@@ -111,7 +111,7 @@
                 <?php 
                     $i++; 
                     if($i ==2){ echo '<div class="clearfix"></div>'; $i=0; }
-                    } 
+                    } }
                 ?>    
             </div>
 

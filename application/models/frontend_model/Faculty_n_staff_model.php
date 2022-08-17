@@ -30,6 +30,18 @@ class Faculty_n_staff_model extends CI_Model {
         }
     }
 
+    public function get_emeritus_professor_list() {
+        $this->db->from('tbl_emeritus_prof_list');
+        $this->db->where('id', 1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+    }
+
     public function get_conduct_content() {
         $this->db->from('tbl_code_of_conduct');
         $this->db->where('id', 1);
