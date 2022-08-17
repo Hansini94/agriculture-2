@@ -14,7 +14,7 @@
         <link href="<?php echo base_url("assets/css/animate.min.css"); ?>" rel="stylesheet">
 
         
-        <link rel="icon" type="image/png" href="<?php echo base_url("front_img/favi.png"); ?>">
+        <link rel="icon" type="image/png" href="<?php echo base_url("assets/frontend/"); ?>images/favicon.png">
         <!-- Custom styling plus plugins -->
         <link href="<?php echo base_url("assets/css/custom.css"); ?>" rel="stylesheet">
         <link href="<?php echo base_url("assets/css/icheck/flat/green.css"); ?>" rel="stylesheet">
