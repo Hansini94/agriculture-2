@@ -18,6 +18,7 @@ Class History extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 7;
         $data['history_data'] = $this->about_us_model->get_history_data();
         $data['former_deans_data'] = $this->about_us_model->get_former_deans_data();
 

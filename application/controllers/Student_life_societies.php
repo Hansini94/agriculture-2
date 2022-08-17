@@ -18,6 +18,8 @@ Class Student_life_societies extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 36;
+
         $data['content'] = $this->student_life_model->get_society_content();
         $data['society'] = $this->student_life_model->get_society_details();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -37,6 +39,8 @@ Class Student_life_societies extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 36;
 
         $data['data'] = $this->student_life_model->get_society_data($newString);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

@@ -18,6 +18,8 @@ Class Pandemic_information extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 31;
+
         $data['prevention_information'] = $this->home_page_model->get_prevention_information_data();
         $data['prevent_post_data'] = $this->home_page_model->get_prevent_post_data();
         $data['leaflet_data'] = $this->home_page_model->get_leaflet_data();

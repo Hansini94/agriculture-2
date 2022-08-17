@@ -18,6 +18,7 @@ Class Faculty_statistic_academic_staff extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 4;
         $data['academic_staff_data'] = $this->about_us_model->get_faculty_stat_aca_staff_data();
         $data['non_academic_staff_data'] = $this->about_us_model->get_faculty_stat_non_aca_staff_data();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

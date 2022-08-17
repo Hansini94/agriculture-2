@@ -18,6 +18,8 @@ Class Faurs extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 15;
+
         $data['faurs'] = $this->research_model->get_faurs();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         

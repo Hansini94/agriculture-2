@@ -18,6 +18,7 @@ Class Alumni_scholarships extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 18;
         $data['scholarship'] = $this->alumni_model->get_scholarships_first();
         $data['schol_data'] = $this->alumni_model->get_scholarships_list();
         
@@ -39,6 +40,8 @@ Class Alumni_scholarships extends CI_Controller {
 
         $data = array();
         $data_header = array();
+        
+        $data_header['meta'] = 18;
 
         $data['scholarship'] = $this->alumni_model->get_scholarships_detail($newString);
         $data['schol_data'] = $this->alumni_model->get_scholarships_list();

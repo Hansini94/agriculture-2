@@ -18,6 +18,8 @@ Class Faculty_brochure extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 9;
+
         $data['faculty_brochure_data'] = $this->about_us_model->get_faculty_brochure_data();
         $data['brochure_top_images'] = $this->about_us_model->get_faculty_brochure_top_img();
         $data['brochure_bottom_images'] = $this->about_us_model->get_faculty_brochure_bottom_img();

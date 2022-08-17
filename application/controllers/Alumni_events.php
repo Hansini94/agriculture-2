@@ -51,6 +51,8 @@ Class Alumni_events extends CI_Controller {
 		
 		$page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
 
+        $data_header['meta'] = 18;
+
         $data['latest'] = $this->alumni_model->get_latest_events();
         $data['all'] = $this->alumni_model->get_events_list($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -70,6 +72,8 @@ Class Alumni_events extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 18;
 
         $data['detail'] = $this->alumni_model->get_events_detail($newString);
         $data['all'] = $this->alumni_model->get_events_detail_list();

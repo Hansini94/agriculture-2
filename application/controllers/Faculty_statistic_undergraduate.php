@@ -18,6 +18,7 @@ Class Faculty_statistic_undergraduate extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 3;
         $data['undergraduate_data'] = $this->about_us_model->get_faculty_stat_undergradate_data();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
 

@@ -18,6 +18,8 @@ Class Conduct_staff extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 28;
+
         $data['conduct'] = $this->faculty_n_staff_model->get_conduct_content();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();    
         

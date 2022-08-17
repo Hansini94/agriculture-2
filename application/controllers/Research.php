@@ -18,6 +18,8 @@ Class Research extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 14;
+
         $data['faculty_research'] = $this->research_model->get_faculty_research();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -36,6 +38,8 @@ Class Research extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 14;
+
         $data['commitee'] = $this->research_model->get_ethical_clearance_committee();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -53,6 +57,8 @@ Class Research extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 14;
 
         $data['commitee'] = $this->research_model->get_faculty_research_committee();
         $data['members'] = $this->research_model->get_members();

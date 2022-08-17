@@ -18,6 +18,8 @@ Class Services extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 17;
+
         $data['transcript'] = $this->services_model->get_transcript_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
@@ -37,6 +39,8 @@ Class Services extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 17;
 
         $data['centers'] = $this->services_model->get_outreach_centers();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -58,6 +62,8 @@ Class Services extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 17;
+
         $data['content'] = $this->services_model->get_as_content();
         $data['links'] = $this->services_model->get_as_link_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -78,6 +84,8 @@ Class Services extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 17;
 
         $data['content'] = $this->services_model->get_ref_content();
         $data['links'] = $this->services_model->get_ref_link_list();

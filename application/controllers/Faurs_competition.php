@@ -18,6 +18,8 @@ Class Faurs_competition extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 15;
+
         $data['competition'] = $this->research_model->get_competition_first();
         $data['competition_data'] = $this->research_model->get_competition_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -38,6 +40,8 @@ Class Faurs_competition extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 15;
 
         $data['competition'] = $this->research_model->get_competition_detail($newString);
         $data['competition_data'] = $this->research_model->get_competition_list();

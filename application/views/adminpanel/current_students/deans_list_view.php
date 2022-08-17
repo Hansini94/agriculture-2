@@ -65,9 +65,9 @@ if ($cSaveStatus == "E") {
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <ul class="nav navbar-right">
                                 <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/students/deans_list'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Video</span>&nbsp;</a></li>
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/current_students/deans_list'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add List</span>&nbsp;</a></li>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Video</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add List</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -173,14 +173,14 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><?php echo $no_count; ?></td>
                                             <td><?php echo $rowlist->vTitle;?></td>                                             
                                             <td><?php echo $rowlist->iOrder;?></td> 
-                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/students/deans_list/edit/$recordid" ?>">
+                                            <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/current_students/deans_list/edit/$recordid" ?>">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
-                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/students/deans_list/change_status/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/current_students/deans_list/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
                                             
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/students/deans_list/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/current_students/deans_list/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

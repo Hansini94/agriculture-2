@@ -18,6 +18,8 @@ Class Faculty_direction extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 27;
+
         $data['faculty_direction_data'] = $this->getting_around_model->get_faculty_direction_data();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();

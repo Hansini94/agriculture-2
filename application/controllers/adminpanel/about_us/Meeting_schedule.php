@@ -33,7 +33,7 @@ Class Meeting_Schedule extends CI_Controller {
             'config' => array(
                 'toolbar' => "Full", //Using the Full toolbar
                 'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
+                'height' => '400px', //Setting a custom height
             ),            
         );
 		
@@ -80,7 +80,7 @@ Class Meeting_Schedule extends CI_Controller {
             'config' => array(
                 'toolbar' => "Full", //Using the Full toolbar
                 'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
+                'height' => '400px', //Setting a custom height
             ),            
         );
 		

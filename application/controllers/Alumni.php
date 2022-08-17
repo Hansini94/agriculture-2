@@ -18,6 +18,8 @@ Class Alumni extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 18;
+
         $data['slider'] = $this->alumni_model->get_mainslider_details();
         $data['content'] = $this->alumni_model->get_home_content();
         $data['news_data'] = $this->alumni_model->get_news_list(7,0);

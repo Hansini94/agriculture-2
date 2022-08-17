@@ -18,6 +18,8 @@ Class Undergraduate_programme extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 10;
+
         /*************************AGTECH********************************* */
         $data['undergraduate_agtech_data'] = $this->academics_model->get_undergraduate_agtech_data();
         $data['agtech_programme_details'] = $this->academics_model->get_agtech_programme_details_data();

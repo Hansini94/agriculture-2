@@ -18,6 +18,7 @@ Class Dean_office extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 5;
         $data['dean_office_data'] = $this->about_us_model->get_dean_office_data();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // $data['dean_designation_data'] = $this->about_us_model->get_dean_officer_designation_data();

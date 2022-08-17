@@ -18,6 +18,8 @@ Class Faq extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 20;
+
         $data['faq'] = $this->home_page_model->get_faq_category();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();

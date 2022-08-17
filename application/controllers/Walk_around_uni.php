@@ -18,6 +18,8 @@ Class Walk_around_uni extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 27;
+
         $data['walk_around_uni_data'] = $this->getting_around_model->get_walk_around_data();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
