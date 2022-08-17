@@ -17,7 +17,9 @@ Class Emeritus_professors extends CI_Controller {
 
         $data = array();
         $data_header = array();
-        
+
+        $data_header['meta'] = 28;
+
         $data['emeritus'] = $this->faculty_n_staff_model->get_emeritus_professor();    
         $data['list'] = $this->faculty_n_staff_model->get_emeritus_professor_list();  
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();   

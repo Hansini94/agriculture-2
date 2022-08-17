@@ -16,6 +16,8 @@ class Rag_harassment extends CI_Controller {
 
         $data = array();
 
+        $data_header['meta'] = 32;
+
         $data['rag_harassment_data'] = $this->home_page_model->get_rag_harassment_data();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
                 

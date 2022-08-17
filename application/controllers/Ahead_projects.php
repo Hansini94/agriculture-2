@@ -18,6 +18,8 @@ Class Ahead_projects extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 13;
+
         $data['ahead_project_list'] = $this->quality_model->get_ahead_projects();
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -35,6 +37,8 @@ Class Ahead_projects extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 13;
 
         $projectName = $this->uri->segment(3);
 

@@ -18,6 +18,8 @@ Class Alumni_committee extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 18;
+
         $data['current'] = $this->alumni_model->get_current_committee();
         $data['previous'] = $this->alumni_model->get_previous_committee();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

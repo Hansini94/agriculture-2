@@ -18,6 +18,7 @@ Class Engagement extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 16;
         $data['overview'] = $this->engagement_model->get_overview();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
@@ -37,6 +38,7 @@ Class Engagement extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 16;
         $data['partnerships'] = $this->engagement_model->get_partnerships();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
@@ -90,6 +92,8 @@ Class Engagement extends CI_Controller {
 		
 		$page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
 
+        $data_header['meta'] = 16;
+
         $data['latest'] = $this->engagement_model->get_latest_research();
         $data['all'] = $this->engagement_model->get_research_list($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -109,6 +113,8 @@ Class Engagement extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 16;
 
         $data['detail'] = $this->engagement_model->get_rs_detail($newString);
         $data['all'] = $this->engagement_model->get_research_list(0,0);
@@ -164,6 +170,8 @@ Class Engagement extends CI_Controller {
 		
 		$page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
 
+        $data_header['meta'] = 16;
+
         $data['latest'] = $this->engagement_model->get_latest_ste();
         $data['all'] = $this->engagement_model->get_ste_list($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -183,6 +191,8 @@ Class Engagement extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 16;
 
         $data['detail'] = $this->engagement_model->get_st_detail($newString);
         $data['all'] = $this->engagement_model->get_ste_list(0,0);
@@ -238,6 +248,8 @@ Class Engagement extends CI_Controller {
 		
 		$page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
 
+        $data_header['meta'] = 16;
+
         $data['latest'] = $this->engagement_model->get_latest_com();
         $data['all'] = $this->engagement_model->get_com_list($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -258,6 +270,8 @@ Class Engagement extends CI_Controller {
 
         $data = array();
         $data_header = array();
+
+        $data_header['meta'] = 16;
 
         $data['detail'] = $this->engagement_model->get_com_detail($newString);
         $data['all'] = $this->engagement_model->get_com_list(0,0);

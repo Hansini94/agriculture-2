@@ -18,6 +18,7 @@ Class Faculty_board extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 6;
         $data['faculty_board_data'] = $this->about_us_model->get_faculty_board_data();
         $data['meeting_schedule_latest_data'] = $this->about_us_model->get_meeting_schedule_latest_data();
         $data['meeting_schedule_data'] = $this->about_us_model->get_meeting_schedule_data($data['meeting_schedule_latest_data'][0]->id);
@@ -43,7 +44,8 @@ Class Faculty_board extends CI_Controller {
 
         $data = array();
         $data_header = array();
-
+        
+        $data_header['meta'] = 6;
         $data['meeting_schedule_detail'] = $this->about_us_model->get_meeting_schedule_detail_data($year);
         $data['meeting_schedule_data'] = $this->about_us_model->get_meeting_schedule_data($data['meeting_schedule_detail'][0]->id);
 

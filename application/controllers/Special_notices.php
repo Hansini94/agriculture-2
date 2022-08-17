@@ -18,6 +18,8 @@ Class Special_notices extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 35;
+
         $data['special_notices'] = $this->home_page_model->get_special_notices();
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

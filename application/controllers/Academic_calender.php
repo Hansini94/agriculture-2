@@ -18,6 +18,7 @@ Class Academic_calender extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 26;
         $data['ac_content'] = $this->current_student_model->get_academic_calender();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();   
         

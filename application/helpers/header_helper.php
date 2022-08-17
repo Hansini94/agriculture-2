@@ -30,23 +30,32 @@ if (!function_exists('get_meta')) {
         $ci->load->database();
         $sql = " SELECT * FROM tbl_meta_tags where vPage_class='$page' ";
         $q = $ci->db->query($sql);
+        //    echo $ci->db->last_query();  exit();  
         return $q->result();
     }
 
 }
 
-if (!function_exists('get_top_banner_tbl')) {
+if (!function_exists('activate_menu')) {
 
-    function get_top_banner_tbl($tbl, $id) {
+    function activate_menu($controller) {
 
-        $ci = & get_instance();
-        $ci->load->database();
-        $sql = " SELECT * FROM " . $tbl . " where id='$id' ";
-        $q = $ci->db->query($sql);
-        return $q->result();
+        // die($controller);
+        
+// Getting CI class instance.        
+
+        $CI = get_instance();
+
+// Getting router class to active.        
+        
+       $class = $CI->router->fetch_class();
+      //exit();
+
+        return ($class == $controller) ? 'active' : '';
     }
 
 }
+
 
 if (!function_exists('get_contact')) {
 

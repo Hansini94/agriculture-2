@@ -18,6 +18,8 @@ Class Faculty_n_staff extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 28;
+
         $data['home'] = $this->faculty_n_staff_model->get_home_content();   
         $data['link'] = $this->faculty_n_staff_model->get_academic_staff();      
         $data['form'] = $this->faculty_n_staff_model->get_declaration_form();   

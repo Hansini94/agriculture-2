@@ -18,6 +18,8 @@ Class Downloads_students extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 19;
+
         $data['student'] = $this->downloads_model->get_student_downloads();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         

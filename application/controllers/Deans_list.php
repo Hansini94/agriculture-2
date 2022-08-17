@@ -18,6 +18,8 @@ Class Deans_list extends CI_Controller {
         $data = array();
         $data_header = array();
 
+        $data_header['meta'] = 24;
+
         $data['dean'] = $this->current_student_model->get_deans_list();  
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();     
         

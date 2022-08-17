@@ -90,7 +90,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','security','header_helper','flexigrid_helper','menu_helper');
+$autoload['helper'] = array('url','security','header_helper','flexigrid_helper');
 
 /*
 | -------------------------------------------------------------------
