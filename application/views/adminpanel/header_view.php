@@ -223,7 +223,7 @@
                             <div class="nav toggle">
                                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                             </div>
-                            <div class="col-md-8" style="text-align:center;"><a href="http://tekgeeks.net/"><img src="<?php echo base_url("assets/images/tg-logo2.png"); ?>" alt=""/ style="position: relative; top: -10px;"></a></div>
+                            <div class="col-md-8" style="text-align:center;"><a href="http://tekgeeks.net/"><img src="<?php echo base_url("assets/images/tg-logo2.png"); ?>" alt="" style="position: relative; top: -10px;"></a></div>
                             <ul class="nav navbar-nav navbar-right" >
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">

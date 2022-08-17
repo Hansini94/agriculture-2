@@ -143,26 +143,6 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Heading<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vSubTitle" name="vSubTitle" value="<?php echo $vSubTitle; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sub Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tSubContent" id="tSubContent" class="form-control col-md-7 col-xs-12" required><?php echo $tSubContent; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tSubContent); ?>
-                                    </div>
-                                </div>
-                            </div>
                         
                             <div style="clear:both;"></div>
                             <div class="ln_solid" style="margin-top:2px; margin-bottom:8px;"></div>
