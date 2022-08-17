@@ -210,7 +210,7 @@
       <div class="news_div">  
         <div class="row">
           <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
-            <img src="<?php echo base_url().'/front_img/'.$news_data[1]->fThumbnail;?>" class="d-block w-100" alt="...">
+            <img src="<?php echo base_url('front_img/').$news_data[1]->fThumbnail;?>" class="d-block w-100" alt="...">
           </div>
 
           <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">

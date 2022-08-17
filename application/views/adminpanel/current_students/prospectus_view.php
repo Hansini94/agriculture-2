@@ -80,7 +80,7 @@ if ($cSaveStatus == "E") {
                 <div class="x_panel">
                     <div class="x_title">
                         <div class="col-md-9 col-sm-9 col-xs-9">
-                            <h2>Current Students</h2>
+                            <h2>Prospectus</h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
