@@ -4,16 +4,12 @@ if ($cSaveStatus == "E") {
     $tDescription1 = $faculty_board_data[0]->tDescription1;
     $tDescription2 = $faculty_board_data[0]->tDescription2;
     $tComposition = $faculty_board_data[0]->tComposition;
-    $vHeading = $faculty_board_data[0]->vHeading;
-    $tMeetingSchedule = $faculty_board_data[0]->tMeetingSchedule;
     $cEnable = $faculty_board_data[0]->cEnable;
 } else {
     $id = '';
     $tDescription1 = '';
     $tDescription2 = '';
     $tComposition = '';
-    $vHeading = '';
-    $tMeetingSchedule = '';
     $cEnable = '';
 }
 ?>
@@ -127,25 +123,6 @@ if ($cSaveStatus == "E") {
                                     <div class="col-md-10 col-sm-10 col-xs-12">
                                         <textarea rows="15" name="tComposition" id="tComposition" class="form-control col-md-7 col-xs-12" required><?php echo $tComposition; ?></textarea>
                                         <?php echo display_ckeditor($ckeditor_tComposition); ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Heading (Meeting Schedule)<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vHeading" name="vHeading" value="<?php echo $vHeading; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tMeetingSchedule" id="tMeetingSchedule" class="form-control col-md-7 col-xs-12" required><?php echo $tMeetingSchedule; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tMeetingSchedule); ?>
                                     </div>
                                 </div>
                             </div>

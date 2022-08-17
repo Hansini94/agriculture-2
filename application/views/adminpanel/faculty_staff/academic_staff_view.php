@@ -82,27 +82,26 @@ if ($cSaveStatus == "E") {
                         <br />
                         <form id="edit_data" name="edit_data" action="<?php echo base_url('adminpanel/faculty_staff/academic_staff/save_department'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                         
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Department Name<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required> 
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Department Name <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <input type="text" id="vName" name="vName" value="<?php echo $vName; ?>" class="form-control col-md-7 col-xs-12" required>
+                                    </div>
+                                </div>
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">URL <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12">
-                                       <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Order <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
                             </div>

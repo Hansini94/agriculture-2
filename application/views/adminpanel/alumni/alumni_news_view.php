@@ -126,10 +126,10 @@ if ($cSaveStatus == "E") {
                                 <?php }
                                 ?>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Story Date<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12 xdisplay_inputx  has-feedback" style="padding-left:0px; padding-right:0px;">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Story Date<span class="required">*</span></label>
+                                    <div class="col-md-7 col-sm-6 col-xs-10 xdisplay_inputx  has-feedback" style="padding-left:0px; padding-right:0px;">
                                     <input type="text" class="form-control col-md-7 col-xs-12 has-feedback-left" id="dRDate"  name="dRDate" required aria-describedby="inputSuccess2Status" value="<?php echo $dRDate; ?>" autocomplete="off">
                                                     <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                     <span id="inputSuccess2Status" class="sr-only">(success)</span>
