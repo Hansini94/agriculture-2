@@ -6,6 +6,7 @@ if ($cSaveStatus == "E") {
 	$fImage = $edit_data['fImage'];   
     $cEnable = $edit_data['cEnable'];
     $iOrder = $edit_data['iOrder'];
+    
 } else {
     $id = ""; 
     $vName = "";    
@@ -13,7 +14,10 @@ if ($cSaveStatus == "E") {
     $fImage = "";  
     $cEnable = "Y";
     $iOrder = "";
+ 
 }
+
+
 ?>
 <div class="right_col" role="main">
     <div class="">
@@ -61,7 +65,7 @@ if ($cSaveStatus == "E") {
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">                    
                     <div class="x_title">
-                        <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
                             <h2>Emeritus Professor</h2>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
@@ -71,6 +75,12 @@ if ($cSaveStatus == "E") {
                                 <?php } else { ?>
                                 <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
                                 <?php } ?>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <ul class="nav navbar-right">
+                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/faculty_staff/emeritus_professor/list_index'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">List of Professor</span>&nbsp;</a></li>
+                                
                             </ul>
                         </div>
                         <div class="clearfix"></div>

@@ -375,7 +375,7 @@
                       <p class="sub_heading">list of Emeritus Professorst</p>
                     </blockquote>
                     <!-- arrow link -->
-                      <a class='animated-arrow' href=''>
+                      <a class='animated-arrow' href='<?php echo base_url().'/front_img/'.$list->fFilePdf; ?>'>
                       <span class='the-arrow -left'>
                         <span class='shaft'></span>
                       </span>
