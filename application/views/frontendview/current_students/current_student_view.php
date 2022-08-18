@@ -123,13 +123,9 @@
               </blockquote>
               <!-- arrow link -->
                 <a class='animated-arrow' href='<?php 
-                                          $file_pointer = base_url('front_img/').$prospectus->fPdfFile;
-                                          if (file_exists($file_pointer)) {
-                                            echo base_url('front_img/').$prospectus->fPdfFile; 
-                                          }
-                                          else{
-                                            echo "The file does not exists";
-                                          }
+                                          if($prospectus->fPdfFile != '') {
+                                            echo base_url('front_img/').$prospectus->fPdfFile;
+                                          } 
                                           ?>' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
@@ -204,7 +200,7 @@
                     </div>
                 </a>
 
-                <a href="<?php echo base_url('examination-timetables'); ?>">
+                <a href="<?php echo base_url('Examination_timetables'); ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Examination Timetables</p>
                         <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
@@ -270,7 +266,7 @@
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
               
-              <a href="<?php echo base_url('resources-for-student'); ?>">
+              <a href="<?php echo base_url('faculty-level-scholarship'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Faculty Level Scholarship</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -292,7 +288,7 @@
                 </div>
               </a>
 
-              <a href="<?php echo base_url('resources-for-student/lab-videos'); ?>">
+              <a href="<?php echo base_url('video-lab-practice'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Video on Safe Laboratory Practices</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
