@@ -181,6 +181,9 @@ $route['current-students'] = 'Current_students';
 $route['student-life'] = 'Student_life';
 
 $route['faculty-staff'] = 'Faculty_n_staff';
+$route['emeritus-professors'] = "Emeritus_professors";
+$route['conduct-staff'] = "Conduct_staff";
+$route['conduct-guidelines'] = "Conduct_guidelines";
 
 $route['getting-around'] = 'Getting_around';
 $route['walk-around-uni'] = 'Walk_around_uni';
@@ -193,6 +196,8 @@ $route['news'] = 'News';
 
 $route['deans-list'] = 'deans_list';
 $route['awards'] = 'awards';
+
+
 
 
 /* End of file routes.php */
