@@ -51,11 +51,28 @@
                         ?>
                     <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
                     <h1 class="sub_heading"><?php echo $research_story_detail[0]->vTitle; ?></h1>
-                    <?php echo $research_story_detail[0]->tContent; ?>
+                    
+                    <p data-aos="fade-up">
+              
+                        <?php 
+                          $str = $research_story_detail[0]->tContent;
+                          $len = str_word_count($str);
+                            
+                          echo substr($research_story_detail[0]->tContent,0,930);
+                      ?>
+                    </p>
                 </div>
 
-                <div class="w-100 d-none d-md-block"></div>
-                <br>
+                <div class="w-100 d-none d-md-block"></div>         <br>
+
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <p data-aos="fade-up">
+                        <?php
+                            echo substr($research_story_detail[0]->tContent,930,2000);
+                        ?>
+                    </p>
+                </div>
+
 
             </div>
 
