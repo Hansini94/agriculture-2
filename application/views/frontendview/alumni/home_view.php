@@ -142,7 +142,7 @@
       <div class="row"> 
 
         <h1 class="heading mb-3">News & Updates</h1>
-<?php  if(isset($news_data)){?>
+<?php  if(!empty($news_data[0])){?>
         <!-- news carousel -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">          
           <div class="carousel-inner">            
@@ -206,6 +206,7 @@
 <!-- sub news section -->
 <div class="container">
   <div class="row">
+    <?php  if($news_data[1]->vTitle === ''){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">  
         <div class="row">
@@ -238,7 +239,8 @@
         </div>
       </div>
     </div>
-
+    <?php } ?>
+    <?php  if($news_data[2]->vTitle === ''){?>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
       <div class="news_div">
         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $news_data[2]->dRDate; ?></small></p>
@@ -273,7 +275,8 @@
         <!-- arrow link -->
       </div>
     </div>
-
+    <?php } ?>
+    <?php  if($news_data[3]->vTitle === ''){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">  
         <div class="row">
@@ -307,11 +310,11 @@
 
       </div>
     </div>
-
+    <?php } ?>
     <!-- ============================== -->
     <div class="clearfix"></div>
     <!-- ============================== -->
-
+    <?php  if($news_data[4]->vTitle === ''){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">
         
@@ -346,7 +349,8 @@
 
       </div>
     </div>
-
+    <?php } ?>
+    <?php  if($news_data[5]->vTitle === ''){?>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
       <div class="news_div">
         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $news_data[5]->dRDate; ?></small></p>
@@ -381,7 +385,8 @@
           <!-- arrow link -->
       </div>
     </div>
-
+    <?php } ?>
+    <?php  if($news_data[6]->vTitle === ''){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">
         
@@ -416,7 +421,7 @@
 
       </div>
     </div>
-
+    <?php } ?>
   </div>
 </div>
 <!-- sub news section -->

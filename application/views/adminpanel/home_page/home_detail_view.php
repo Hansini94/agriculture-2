@@ -52,11 +52,6 @@ if ($cSaveStatus == "E") {
     $vOtherTitle3 = $edit_data[0]->vOtherTitle3;
     $tOtherContent3 = $edit_data[0]->tOtherContent3;
     $vOtherLink3 = $edit_data[0]->vOtherLink3;
-
-    $fOtherImage4 = $edit_data[0]->fOtherImage4;
-    $vOtherTitle4 = $edit_data[0]->vOtherTitle4;
-    $tOtherContent4 = $edit_data[0]->tOtherContent4;
-    $vOtherLink4 = $edit_data[0]->vOtherLink4;
     
     $cEnable = $edit_data[0]->cEnable;
 
@@ -122,11 +117,6 @@ if ($cSaveStatus == "E") {
     $vOtherTitle3 = "";
     $tOtherContent3 = "";
     $vOtherLink3 = "";
-
-    $vOtherImage4 = "";
-    $vOtherTitle4 = "";
-    $tOtherContent4 = "";
-    $vOtherLink4 = "";
 
     $cEnable = "Y";
 
@@ -910,53 +900,6 @@ if ($cSaveStatus == "E") {
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 3</label>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
                                        <textarea id="tOtherContent3" name="tOtherContent3" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $tOtherContent3; ?></textarea>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <div class="clearfix"></div>
-
-                            <div class="col-md-6 col-sm-6 col-xs-12">                                
-                               <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Image 4 ( 800 x 1200 px )
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="file" id="fOtherImage4" name="fOtherImage4">
-                                    </div>
-                                </div>
-                                
-                                <?php if($fOtherImage4!=''){ ?>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >&nbsp;</label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <img class="img-responsive" src="<?php echo base_url().'front_img/'.$fOtherImage4;?>" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>  width="150px"/ />
-                                    </div>
-                                </div>
-								<?php } ?> 
-                                
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Title 4 <span class="required">*</span> </label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <input type="text" id="vOtherTitle4" name="vOtherTitle4" value="<?php echo $vOtherTitle4; ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div> 
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Link 4 <span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <input type="text" id="vOtherLink4" name="vOtherLink4" value="<?php echo $vOtherLink4; ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div> 
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Description 4</label>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-                                       <textarea id="tOtherContent4" name="tOtherContent4" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $tOtherContent4; ?></textarea>
                                        
                                     </div>
                                 </div>
