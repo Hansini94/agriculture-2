@@ -41,7 +41,7 @@
                 <!-- nav tabs btn section -->
                 <div class="nav flex-column nav-pills me-3 side_nav_btn" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-                  <a href="<?php echo base_url(); ?>resources_for_student">
+                  <a href="<?php echo base_url('faculty-level-scholarship'); ?>">
                     <button class="nav-link active">
                         Faculty Level Scholarship
                     </button>
@@ -59,7 +59,7 @@
                     </button>
                   </a>
 
-                  <a href="<?php echo base_url(); ?>resources_for_student/lab_videos">
+                  <a href="<?php echo base_url('video-lab-practice'); ?>">
                     <button class="nav-link">
                         Video on Safe Laboratory Practices
                     </button>

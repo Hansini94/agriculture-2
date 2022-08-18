@@ -192,7 +192,7 @@ $route['academic-calendar'] = 'Academic_calender';
 $route['news'] = 'News';
 
 $route['deans-list'] = 'deans_list';
-
+$route['awards'] = 'awards';
 
 
 /* End of file routes.php */
