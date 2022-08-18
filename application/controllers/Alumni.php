@@ -22,7 +22,7 @@ Class Alumni extends CI_Controller {
 
         $data['slider'] = $this->alumni_model->get_mainslider_details();
         $data['content'] = $this->alumni_model->get_home_content();
-        $data['news_data'] = $this->alumni_model->get_news_list(7,0);
+        $data['news_data'] = $this->alumni_model->get_news_detail_list();
         $data['links'] = $this->alumni_model->get_shortlinks_details();
         
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();

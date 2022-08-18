@@ -241,7 +241,6 @@ class Alumni_model extends CI_Model {
         $this->db->from('tbl_alumni_newsletters');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
-        $this->db->limit();
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
