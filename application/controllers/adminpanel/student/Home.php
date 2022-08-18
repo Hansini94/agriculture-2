@@ -27,41 +27,7 @@ Class Home extends CI_Controller {
     }
 
     public function index() {
-        $data['ckeditor_tContentEnglish'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContentEnglish',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tContentSinhala'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContentSinhala',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tContentTamil'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContentTamil',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
+       
 		
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
@@ -97,41 +63,7 @@ Class Home extends CI_Controller {
     }
 	
 	public function edit() {
-        $data['ckeditor_tContentEnglish'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContentEnglish',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tContentSinhala'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContentSinhala',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
-
-        $data['ckeditor_tContentTamil'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContentTamil',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '200px', //Setting a custom height
-            ),            
-        );
+        
 		
         $data['cSaveStatus']= 'E';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
