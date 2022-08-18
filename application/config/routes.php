@@ -179,6 +179,11 @@ $route['video-lab-practice'] = 'Resources_for_student/lab_videos';
 $route['current-students'] = 'Current_students';
 
 $route['student-life'] = 'Student_life';
+$route['student-life-sinhala'] = 'Student_life/ss_sinhala/';
+$route['student-life-tamil'] = 'Student_life/ss_tamil/';
+$route['student-life-societies'] = 'Student_life_societies';
+$route['student-life-sports'] = 'Student_life_sports';
+$route['student-life-events'] = 'Student_life_events';
 
 $route['faculty-staff'] = 'Faculty_n_staff';
 $route['emeritus-professors'] = "Emeritus_professors";

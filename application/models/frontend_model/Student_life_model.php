@@ -60,6 +60,7 @@ class Student_life_model extends CI_Model {
         $this->db->from('tbl_student_sports');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit(1);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -82,10 +83,16 @@ class Student_life_model extends CI_Model {
         // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
     }
 
-    public function get_events_details() {
-        $this->db->from('tbl_student_events');
+    public function get_count_sports() 
+	{
+        return $this->db->count_all("tbl_student_sports");
+    }
+
+    public function get_sport_list($limit, $start) {
+        $this->db->from('tbl_student_sports');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -94,6 +101,21 @@ class Student_life_model extends CI_Model {
             return array();
         }
     }
+
+    public function get_events_details() {
+        $this->db->from('tbl_student_events');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'desc');
+        $result = $this->db->get();
+        $this->db->limit(1);
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+    
 
     public function get_events_data($newString) {
         $this->db->from('tbl_student_events');
@@ -106,6 +128,25 @@ class Student_life_model extends CI_Model {
             return array();
         }
         // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+    }
+
+    public function get_count_events() 
+	{
+        return $this->db->count_all("tbl_student_events");
+    }
+
+    public function get_events_list($limit, $start) {
+        $this->db->from('tbl_student_events');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
     }
 }
 

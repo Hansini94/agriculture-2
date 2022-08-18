@@ -10,8 +10,8 @@
       <div class="row m-auto">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/'); ?>">English</a></button>
-          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/ss-sinhala/'); ?>">සිංහල </a></button>
-          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/ss-tamil/'); ?>">தமிழ்</a></button>
+          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life-sinhala'); ?>">සිංහල </a></button>
+          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life-tamil'); ?>">தமிழ்</a></button>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
                 <?php echo $data[0]->tContentEnglish; ?>
             </p>
             <!-- arrow link -->
-              <a class='animated-arrow' href='<?php echo base_url() ?>student-life-societies'>
+              <a class='animated-arrow' href='<?php echo base_url('student-life-societies') ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -52,7 +52,7 @@
               <?php echo $data[3]->tContentEnglish; ?>
             </p>
             <!-- arrow link -->
-              <a class='animated-arrow' href='<?php echo base_url() ?>student-life-sports'>
+              <a class='animated-arrow' href='<?php echo base_url('student-life-sports') ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -76,7 +76,7 @@
             <?php echo $data[1]->tContentEnglish; ?>
             </p>
             <!-- arrow link -->
-              <a class='animated-arrow' href='<?php echo base_url() ?>student-life-events'>
+              <a class='animated-arrow' href='<?php echo base_url('student-life-events') ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -102,7 +102,7 @@
 
             </p>
             <!-- arrow link -->
-              <a class='animated-arrow' href='<?php echo base_url() ?>downloads-students'>
+              <a class='animated-arrow' href='<?php echo base_url('downloads-students') ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -124,7 +124,7 @@
             <?php echo $data[4]->tContentEnglish; ?>
             </p>
             <!-- arrow link -->
-              <a class='animated-arrow' href='<?php echo base_url() ?>special-notices'>
+              <a class='animated-arrow' href='<?php echo base_url('special-notices') ?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>

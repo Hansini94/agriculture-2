@@ -9,9 +9,9 @@
     <div class="container mb-3" style="margin-top: 50px;">
       <div class="row m-auto">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/'); ?>">English</a></button>
-          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/ss-sinhala/'); ?>">සිංහල </a></button>
-          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/ss-tamil/'); ?>">தமிழ்</a></button>
+          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life/'); ?>">English</a></button>
+          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life-sinhala'); ?>">සිංහල </a></button>
+          <button class="btn btn-outline-secondary" type="button"><a href="<?php  echo base_url('student-life-tamil'); ?>">தமிழ்</a></button>
         </div>
       </div>
     </div>
