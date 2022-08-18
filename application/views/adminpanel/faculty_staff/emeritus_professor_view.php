@@ -68,16 +68,20 @@ if ($cSaveStatus == "E") {
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <h2>Emeritus Professor</h2>
                         </div>
-                            <ul class="nav navbar-right col-md-2 col-sm-2 col-xs-2">                                
-                                <?php if($cSaveStatus == "E") { ?>
-                                <li><a class="collapse-link" href="<?php echo base_url('adminpanel/faculty_staff/emeritus_professor'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;</a></li>
+                        
+                            <?php if($cSaveStatus == "E") { ?>
+                                <a class="collapse-link" href="<?php echo base_url('adminpanel/faculty_staff/emeritus_professor'); ?>" style="text-align:right;cursor:pointer;float:right;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;</a>
                                 <?php } else { ?>
-                                <li><a class="collapse-link" style="text-align:right;cursor:pointer;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;<i class="fa fa-chevron-down"></i></a></li>
-                                <?php } ?>                                
-                            </ul>
-                            <ul class="nav navbar-right col-md-2 col-sm-2 col-xs-2">             
-                                <li><a href="<?php echo base_url('adminpanel/faculty_staff/emeritus_professor/list_index'); ?>" style="text-align:right;cursor:pointer;"><span class="btn btn-dark" style="color:#FFF;">List of Professor</span></a></li>                                                         
-                            </ul>
+                                <a class="collapse-link" style="text-align:right;cursor:pointer;float:right;"><span class="btn btn-dark"  style="color:#FFF;">Add Professor</span>&nbsp;<i class="fa fa-chevron-down"></i></a>
+                                <?php } ?> 
+                                <a href="<?php echo base_url('adminpanel/faculty_staff/emeritus_professor/list_index'); ?>" style="text-align:right;cursor:pointer; float:right;"><span class="btn btn-dark" style="color:#FFF;">List of Professor</span></a>                                                                             
+                               
+                            <!-- <ul class="nav navbar-right col-md-2 col-sm-2 col-xs-2">                                
+                                
+                            </ul> -->
+                            <!-- <ul class="nav navbar-right col-md-2 col-sm-2 col-xs-2">             
+                                
+                            </ul> -->
                         <div class="clearfix"></div>
                     </div>
                                 
