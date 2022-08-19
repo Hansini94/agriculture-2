@@ -11,12 +11,12 @@ CKEDITOR.editorConfig = function(config) {
     //config.extraPlugins = 'bootstrapVisibility';
     //config.extraPlugins = 'imageuploader';
     config.extraPlugins = 'youtube';
-    config.filebrowserBrowseUrl = '/~acllk05/assets/js/kcfinder/browse.php?opener=ckeditor&type=files';
-    config.filebrowserImageBrowseUrl = '/~acllk05/assets/js/kcfinder/browse.php?opener=ckeditor&type=images';
-    config.filebrowserFlashBrowseUrl = '/~acllk05/assets/js/kcfinder/browse.php?opener=ckeditor&type=flash';
-    config.filebrowserUploadUrl = '/~acllk05/assets/js/kcfinder/upload.php?opener=ckeditor&type=files';
-    config.filebrowserImageUploadUrl = '/~acllk05/assets/js/kcfinder/upload.php?opener=ckeditor&type=images';
-    config.filebrowserFlashUploadUrl = '/~acllk05/assets/js/kcfinder/upload.php?opener=ckeditor&type=flash';
+    config.filebrowserBrowseUrl = 'https://developments.tekgeeks.net/agri/developments.tekgeeks.net/agri//assets/js/kcfinder/browse.php?opener=ckeditor&type=files';
+    config.filebrowserImageBrowseUrl = 'https://developments.tekgeeks.net/agri/assets/js/kcfinder/browse.php?opener=ckeditor&type=images';
+    config.filebrowserFlashBrowseUrl = 'https://developments.tekgeeks.net/agri/assets/js/kcfinder/browse.php?opener=ckeditor&type=flash';
+    config.filebrowserUploadUrl = 'https://developments.tekgeeks.net/agri/assets/js/kcfinder/upload.php?opener=ckeditor&type=files';
+    config.filebrowserImageUploadUrl = 'https://developments.tekgeeks.net/agri/assets/js/kcfinder/upload.php?opener=ckeditor&type=images';
+    config.filebrowserFlashUploadUrl = 'https://developments.tekgeeks.net/agri/assets/js/kcfinder/upload.php?opener=ckeditor&type=flash';
     config.allowedContent = true;
 
 };

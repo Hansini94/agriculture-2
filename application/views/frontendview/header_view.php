@@ -271,7 +271,7 @@
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
-                    <li><a class="dropdown-item" href="fhttp://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
+                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
                  </ul>
@@ -546,7 +546,7 @@
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
-                    <li><a class="dropdown-item" href="fhttp://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
+                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
                     <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
                  </ul>
