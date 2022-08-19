@@ -79,6 +79,8 @@
         $meta = get_meta('Student_life'); 
       } else if ($meta == 37) {
         $meta = get_meta('Student_notices'); 
+      } else if ($meta == 38) {
+        $meta = get_meta('News'); 
       } else {
           $meta = get_meta('Home');
       }
