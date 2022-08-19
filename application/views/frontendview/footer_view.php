@@ -124,7 +124,7 @@
             </p>
 
             <p>
-              <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;<a href="<?php echo $contact_details->vEmail; ?>"><?php echo $contact_details->vEmail; ?></a>
+              <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;<a href="mailto:<?php echo $contact_details->vEmail; ?>"><?php echo $contact_details->vEmail; ?></a>
             </p>
 
             <p><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;&nbsp;<a href="fax-local-phone:<?php echo $contact_details->vFax; ?>"><?php echo $contact_details->vFax; ?></a></p>
