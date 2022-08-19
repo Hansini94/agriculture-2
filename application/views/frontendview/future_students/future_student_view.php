@@ -162,6 +162,62 @@
 
                 <!-- =========== -->
 
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="gray_text_div">
+
+                        <img src="<?php echo base_url('assets/frontend/'); ?>images/f_student.png" alt="" class="d-block float-start">
+
+                        <blockquote class="blockquote" style="margin-bottom: 0px;">
+                            <p class="sub_heading"> Student Societies </p>
+                        </blockquote>
+                        <!-- arrow link -->
+                        <a class='animated-arrow' href='<?php echo base_url('student-life-societies'); ?>'>
+                            <span class='the-arrow -left'>
+                                <span class='shaft'></span>
+                            </span>
+                            <span class='main'>
+                                <span class='text'>
+                                    Click here
+                                </span>
+                                <span class='the-arrow -right'>
+                                    <span class='shaft'></span>
+                                </span>
+                            </span>
+                        </a>
+                        <!-- arrow link -->
+                    </div>
+                </div>
+
+                <!-- =========== -->
+
+                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="gray_text_div">
+
+                        <img src="<?php echo base_url('assets/frontend/'); ?>images/f_student.png" alt="" class="d-block float-start">
+
+                        <blockquote class="blockquote" style="margin-bottom: 0px;">
+                            <p class="sub_heading"> PGIA </p>
+                        </blockquote> -->
+                        <!-- arrow link -->
+                        <!-- <a class='animated-arrow' href='<?php echo base_url('international-overview'); ?>'>
+                            <span class='the-arrow -left'>
+                                <span class='shaft'></span>
+                            </span>
+                            <span class='main'>
+                                <span class='text'>
+                                    Click here
+                                </span>
+                                <span class='the-arrow -right'>
+                                    <span class='shaft'></span>
+                                </span>
+                            </span>
+                        </a> -->
+                        <!-- arrow link -->
+                    <!-- </div>
+                </div> -->
+
+                <!-- =========== -->
+
 
             </div>
 
@@ -170,173 +226,8 @@
     </div>
 
     <div class="clearfix"></div>
-    <hr>
     <br>
 
-    <div class="row m-auto">
-
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-
-            <h1 class="heading mb-3">Academic</h1>
-
-            <div id="container" class="home_link_div"
-                style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-
-                <a href="<?php echo base_url('academic-calendar') ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Academic Calendar</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="<?php echo base_url('examination-timetables'); ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Examination Timetables</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-
-                </a>
-
-                <a href="<?php echo base_url('class-timetables'); ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Class Timetables</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="<?php echo base_url('deans-list'); ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Dean’s List </p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="<?php echo base_url('awards'); ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Faculty Awards </p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- =========== -->
-
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-
-            <h1 class="heading mb-3">Resources for Student</h1>
-
-            <div id="container" class="home_link_div"
-                style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-
-                <a href="<?php echo base_url('faculty-level-scholarship'); ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Faculty Level Scholarship</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="https://agri.pdn.ac.lk/Pages/about/downloads/Student_guide_book.pdf">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Student Guide Book</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-
-                </a>
-
-                <a href="https://agri.pdn.ac.lk/Pages/about/downloads/research/Research_Project_Handbook_FA_UP_2019_20_Final.pdf">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Research Project Handbook </p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="<?php echo base_url('video-lab-practice'); ?>">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Video on Safe Laboratory Practices</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- =========== -->
-
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-
-            <h1 class="heading mb-3">Advisory, Career Guidence and Councelling</h1>
-
-            <div id="container" class="home_link_div"
-                style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-
-                <a href="https://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingSinhalaVersion.pdf">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Counselling Booklet – Sinhala</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="https://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingEnglishVersion.pdf">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Counselling Booklet – English</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="https://www.pdn.ac.lk/cgu/" target="_blank">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">CGU </p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="http://www.roadtoadulthood.lk/" target="_blank">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Adulthood </p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="https://agri.pdn.ac.lk/student_Counsellors">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">Senior Student Counsellors</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-                <a href="https://agri.pdn.ac.lk/Pages/about/downloads/students/SGVB.pdf">
-                    <div class="quick_links_div">
-                        <p class="quick_links" data-aos="fade-up">SGBV</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
-                            width="20px;">
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- =========== -->
-
-    </div>
 
 </div>
 

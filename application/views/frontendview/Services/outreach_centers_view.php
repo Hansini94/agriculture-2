@@ -71,7 +71,7 @@
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
             <div class="gray_text_div">
 
-              <img src="images/www.png" alt="" class="d-block float-start">
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/www.png" alt="" class="d-block float-start">
 
               <blockquote class="blockquote" style="margin-bottom: 0px;">
                 <p class="sub_heading">   Agribusiness Centre  </p>
@@ -99,7 +99,7 @@
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
             <div class="gray_text_div">
 
-              <img src="images/www.png" alt="" class="d-block float-start">
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/www.png" alt="" class="d-block float-start">
 
               <blockquote class="blockquote" style="margin-bottom: 0px;">
                 <p class="sub_heading">   Agricultural Biotechnology Centre  </p>
@@ -127,7 +127,7 @@
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
             <div class="gray_text_div">
 
-              <img src="images/www.png" alt="" class="d-block float-start">
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/www.png" alt="" class="d-block float-start">
 
               <blockquote class="blockquote" style="margin-bottom: 0px;">
                 <p class="sub_heading">   Agriculture Education Unit  </p>
@@ -155,7 +155,7 @@
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
             <div class="gray_text_div">
 
-              <img src="images/www.png" alt="" class="d-block float-start">
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/www.png" alt="" class="d-block float-start">
 
               <blockquote class="blockquote" style="margin-bottom: 0px;">
                 <p class="sub_heading">   Gender Education & Women’s Initiative Unit  </p>
