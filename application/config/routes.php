@@ -202,7 +202,9 @@ $route['news'] = 'News';
 $route['deans-list'] = 'deans_list';
 $route['awards'] = 'awards';
 
-
+$route['Bsc-Agtech'] = 'Gpa_calculator';
+$route['Bsc-asf'] = 'Gpa_calculator/asf_gpa';
+$route['Bsc-fst'] = 'Gpa_calculator/fst_gpa';
 
 
 /* End of file routes.php */

@@ -246,21 +246,21 @@
 
           <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
             
-            <a href="<?php echo base_url('gpa-calculator'); ?>">
+            <a href="<?php echo base_url('Bsc-Agtech'); ?>">
               <div class="quick_links_div">
                 <p class="quick_links" data-aos="fade-up">BSc Agtech & Mgt GPA Calculator</p>
                 <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
               </div>
             </a>
 
-            <a href="<?php echo base_url('gpa-calculator/asf-gpa'); ?>">
+            <a href="<?php echo base_url('Bsc-asf'); ?>">
               <div class="quick_links_div">
                 <p class="quick_links" data-aos="fade-up">BSc ASF GPA Calculator</p>
                 <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
               </div>
             </a>
 
-            <a href="<?php echo base_url('gpa-calculator/fst-gpa'); ?>">
+            <a href="<?php echo base_url('Bsc-fst'); ?>">
               <div class="quick_links_div">
                 <p class="quick_links" data-aos="fade-up">BSc FST GPA Calculator</p>
                 <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
