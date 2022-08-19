@@ -53,7 +53,7 @@
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 
                                 <div class="gray_text_div">
-                                    <img src="images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
+                                    <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
                                     <blockquote class="blockquote" style="margin-bottom: 0px;">
                                         <p class="sub_heading" style="font-size: 13px;">PDF Format</p>
                                     </blockquote>
@@ -81,7 +81,7 @@
 
                                 <div class="gray_text_div">
 
-                                    <img src="images/pdf.png" alt="" class="d-block float-start">
+                                    <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start">
                                     <blockquote class="blockquote" style="margin-bottom: 0px;">
                                         <p class="sub_heading">Word Format</p>
                                     </blockquote>
