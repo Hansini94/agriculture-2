@@ -74,9 +74,14 @@
 
            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <p data-aos="fade-up">
-             <?php
-             echo substr($detail->tContent,885,2000);
-             ?>
+
+            
+                  <?php
+                    echo substr($detail->tContent,885,2000);
+                  ?>
+
+
+
             </p>
 
             <!-- <p data-aos="fade-up">
@@ -125,7 +130,14 @@
                       $date = date('d-M-Y', $timestamp);
                 ?>
                         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
-                         <h1 class="sub_heading"><?php echo $all_data->vName; ?></h1>
+                        <a href='<?php  
+                                    $heading = $all_data->vName; 
+                                    $name = str_replace(' ', '_', $heading); 
+                                    echo base_url('news/news_detail/'.$name) ?>'>
+                        <h1 class="sub_heading">
+                          <?php echo $all_data->vName; ?>
+                        </h1>
+                      </a>
                          <p data-aos="fade-up">
                          <?php 
                             if(strlen($all_data->tContent) > 100){
