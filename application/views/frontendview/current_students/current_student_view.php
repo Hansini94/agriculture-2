@@ -372,15 +372,15 @@
         <h1 class="heading mb-3">Advisory, Career Guidence and Councelling</h1>
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-              
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingSinhalaVersion.pdf" target="_blank">
+              <?php if(!empty($advisory)) { $i=0; foreach($advisory as $ads){ ?>
+              <a href="<?php echo $ads->vUrl;  ?>" target="_blank">
                 <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Counselling Booklet – Sinhala</p>
+                  <p class="quick_links" data-aos="fade-up"><?php echo $ads->vTitle ?></p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
-
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingEnglishVersion.pdf" target="_blank">
+            <?php $i++; } }?>
+              <!-- <a href="http://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingEnglishVersion.pdf" target="_blank">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Counselling Booklet – English</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -413,7 +413,7 @@
                   <p class="quick_links" data-aos="fade-up">SGBV</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
-              </a>
+              </a> -->
 
             </div>
 
@@ -425,21 +425,21 @@
         <h1 class="heading mb-3">Provision for Re-correction of Grades</h1>
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-              
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/students/Circular_978.pdf" target="_blank">
+              <?php if(!empty($provision)) { $i=0; foreach($provision as $prov){ ?>
+              <a href="<?php echo $prov->vUrl;  ?>" target="_blank">
                 <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Circular</p>
+                  <p class="quick_links" data-aos="fade-up"><?php echo $prov->vTitle;  ?></p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
-
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/students/Verification_of_Exam_Marks_Application_Form.pdf" target="_blank">
+              <?php $i++; } }?>
+              <!-- <a href="http://agri.pdn.ac.lk/Pages/about/downloads/students/Verification_of_Exam_Marks_Application_Form.pdf" target="_blank">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Application Form</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
                 
-              </a>
+              </a> -->
 
 
             </div>

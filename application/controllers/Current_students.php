@@ -21,7 +21,9 @@ Class Current_students extends CI_Controller {
         $data_header['meta'] = 29;
 
         $data['content'] = $this->current_student_model->get_cs_content();
-        $data['prospectus'] = $this->current_student_model->get_prospectus();     
+        $data['prospectus'] = $this->current_student_model->get_prospectus();   
+        $data['advisory'] = $this->current_student_model->get_acgc_link(); 
+        $data['provision'] = $this->current_student_model->get_prg_link();   
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();  
         
         // var_dump($data);exit();
