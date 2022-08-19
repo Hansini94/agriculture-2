@@ -126,7 +126,14 @@
                       $date = date('d-M-Y', $timestamp);
                 ?>
                     <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
-                    <h1 class="sub_heading"><?php echo $all_data->vName; ?></h1>
+                    <a href='<?php  
+                                    $heading = $all_data->vName; 
+                                    $name = str_replace(' ', '_', $heading); 
+                                    echo base_url('news/news_detail/'.$name) ?>'>
+                        <h1 class="sub_heading">
+                          <?php echo $all_data->vName; ?>
+                        </h1>
+                      </a>
                     <p data-aos="fade-up">
                       <?php 
                           if(strlen($all_data->tContent) > 100){
@@ -139,9 +146,9 @@
                     </p>
                     <!-- arrow link -->
                     <a class='animated-arrow' href='<?php 
-                                                          $heading = $latest->vName;
-                                                          $name = str_replace(' ', '_', $heading);
-                                                          echo base_url('news/'.$name) ?>'>
+                                                          $heading = $all_data->vName; 
+                                                          $name = str_replace(' ', '_', $heading); 
+                                                          echo base_url('news/news_detail/'.$name) ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>

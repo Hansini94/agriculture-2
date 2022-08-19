@@ -123,7 +123,14 @@
 
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $eve->dRDate; ?></small></p>
-                        <h1 class="sub_heading"><?php echo $eve->vTitle; ?></h1>
+                        <a href='<?php  
+                                    $heading = $eve->vTitle; 
+                                    $name = str_replace(' ', '_', $heading); 
+                                    echo base_url('student_life_events/events_detail/'.$name) ?>'>
+                        <h1 class="sub_heading">
+                          <?php echo $eve->vTitle; ?>
+                        </h1>
+                      </a>
                         <p data-aos="fade-up">
                         <?php 
                                 if(strlen($eve->tContent) > 100){

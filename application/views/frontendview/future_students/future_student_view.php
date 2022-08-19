@@ -190,7 +190,7 @@
 
                 <!-- =========== -->
 
-                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <div class="gray_text_div">
 
                         <img src="<?php echo base_url('assets/frontend/'); ?>images/f_student.png" alt="" class="d-block float-start">
@@ -199,7 +199,7 @@
                             <p class="sub_heading"> PGIA </p>
                         </blockquote> -->
                         <!-- arrow link -->
-                        <!-- <a class='animated-arrow' href='<?php echo base_url('international-overview'); ?>'>
+                        <a class='animated-arrow' href='http://www.pgia.pdn.ac.lk/'>
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -211,10 +211,10 @@
                                     <span class='shaft'></span>
                                 </span>
                             </span>
-                        </a> -->
+                        </a>
                         <!-- arrow link -->
-                    <!-- </div>
-                </div> -->
+                    </div>
+                </div>
 
                 <!-- =========== -->
 

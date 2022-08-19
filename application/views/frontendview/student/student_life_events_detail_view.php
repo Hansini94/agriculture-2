@@ -125,7 +125,14 @@
                       $date = date('d-M-Y', $timestamp);
                 ?>
                         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
-                         <h1 class="sub_heading"><?php echo $all_data->vTitle; ?></h1>
+                        <a href='<?php  
+                                    $heading = $all_data->vTitle; 
+                                    $name = str_replace(' ', '_', $heading); 
+                                    echo base_url('student_life_events/events_detail/'.$name) ?>'>
+                        <h1 class="sub_heading">
+                          <?php echo $all_data->vTitle; ?>
+                        </h1>
+                      </a>
                          <p data-aos="fade-up">
                          <?php 
                             if(strlen($all_data->tContent) > 100){
