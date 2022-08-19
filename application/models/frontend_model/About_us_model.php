@@ -126,6 +126,7 @@ class About_us_model extends CI_Model {
 
     public function get_former_deans_data() {
         $this->db->from('tbl_former_deans');
+        $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'ASC');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
