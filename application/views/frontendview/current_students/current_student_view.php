@@ -171,6 +171,61 @@
             </div>
           </div>
 
+          <!-- =========== -->          
+
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="gray_text_div">
+
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/f_student.png" alt="" class="d-block float-start">
+
+              <blockquote class="blockquote" style="margin-bottom: 0px;">
+                <p class="sub_heading"> Downloads </p>
+              </blockquote>
+              <!-- arrow link -->
+                <a class='animated-arrow' href='<?php echo base_url('downloads-students') ?>' target="_blank">
+                <span class='the-arrow -left'>
+                  <span class='shaft'></span>
+                </span>
+                <span class='main'>
+                  <span class='text'>
+                   Click here
+                  </span>
+                  <span class='the-arrow -right'>
+                    <span class='shaft'></span>
+                  </span>
+                </span>
+              </a>
+              <!-- arrow link -->
+            </div>
+          </div>
+
+          <!-- =========== -->
+
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="gray_text_div">
+
+              <img src="<?php echo base_url("assets/frontend/"); ?>images/f_student.png" alt="" class="d-block float-start">
+
+              <blockquote class="blockquote" style="margin-bottom: 0px;">
+                <p class="sub_heading"> FAQ </p>
+              </blockquote>
+              <!-- arrow link -->
+                <a class='animated-arrow' href='<?php echo base_url('Faq') ?>' target="_blank">
+                <span class='the-arrow -left'>
+                  <span class='shaft'></span>
+                </span>
+                <span class='main'>
+                  <span class='text'>
+                   Click here
+                  </span>
+                  <span class='the-arrow -right'>
+                    <span class='shaft'></span>
+                  </span>
+                </span>
+              </a>
+              <!-- arrow link -->
+            </div>
+          </div>
           <!-- =========== -->
 
 
@@ -185,6 +240,36 @@
     <br>
 
     <div class="row m-auto">
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+
+        <h1 class="heading mb-3">GPA Calculator</h1>
+
+          <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
+            
+            <a href="<?php echo base_url('gpa-calculator'); ?>">
+              <div class="quick_links_div">
+                <p class="quick_links" data-aos="fade-up">BSc Agtech & Mgt GPA Calculator</p>
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+              </div>
+            </a>
+
+            <a href="<?php echo base_url('gpa-calculator/asf-gpa'); ?>">
+              <div class="quick_links_div">
+                <p class="quick_links" data-aos="fade-up">BSc ASF GPA Calculator</p>
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+              </div>
+            </a>
+
+            <a href="<?php echo base_url('gpa-calculator/fst-gpa'); ?>">
+              <div class="quick_links_div">
+                <p class="quick_links" data-aos="fade-up">BSc FST GPA Calculator</p>
+                <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
+              </div>
+            </a>
+
+          </div>
+
+      </div>
         
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 
@@ -192,7 +277,7 @@
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
               
-        <a href="<?php echo base_url('academic-calendar') ?>">
+          <a href="<?php echo base_url('academic-calendar') ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Academic Calendar</p>
                         <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
@@ -225,34 +310,15 @@
                     </div>
                 </a>
 
-                <a href="<?php echo base_url('awards'); ?>">
+                <!-- <a href="<?php echo base_url('awards'); ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Faculty Awards </p>
                         <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
                             width="20px;">
                     </div>
-                </a>
+                </a> -->
               
-              <a href="<?php echo base_url('gpa-calculator'); ?>">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">BSc Agtech & Mgt GPA Calculator</p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
-
-              <a href="<?php echo base_url('gpa-calculator/asf-gpa'); ?>">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">BSc ASF GPA Calculator</p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
-
-              <a href="<?php echo base_url('gpa-calculator/fst-gpa'); ?>">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">BSc FST GPA Calculator</p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
+              
 
             </div>
 
@@ -306,15 +372,15 @@
         <h1 class="heading mb-3">Advisory, Career Guidence and Councelling</h1>
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-              
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingSinhalaVersion.pdf" target="_blank">
+              <?php if(!empty($advisory)) { $i=0; foreach($advisory as $ads){ ?>
+              <a href="<?php echo $ads->vUrl;  ?>" target="_blank">
                 <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Counselling Booklet – Sinhala</p>
+                  <p class="quick_links" data-aos="fade-up"><?php echo $ads->vTitle ?></p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
-
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingEnglishVersion.pdf" target="_blank">
+            <?php $i++; } }?>
+              <!-- <a href="http://agri.pdn.ac.lk/Pages/about/downloads/std_counseling/CounsellingEnglishVersion.pdf" target="_blank">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Counselling Booklet – English</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -347,7 +413,7 @@
                   <p class="quick_links" data-aos="fade-up">SGBV</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
-              </a>
+              </a> -->
 
             </div>
 
@@ -359,21 +425,21 @@
         <h1 class="heading mb-3">Provision for Re-correction of Grades</h1>
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-              
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/students/Circular_978.pdf" target="_blank">
+              <?php if(!empty($provision)) { $i=0; foreach($provision as $prov){ ?>
+              <a href="<?php echo $prov->vUrl;  ?>" target="_blank">
                 <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Circular</p>
+                  <p class="quick_links" data-aos="fade-up"><?php echo $prov->vTitle;  ?></p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
-
-              <a href="http://agri.pdn.ac.lk/Pages/about/downloads/students/Verification_of_Exam_Marks_Application_Form.pdf" target="_blank">
+              <?php $i++; } }?>
+              <!-- <a href="http://agri.pdn.ac.lk/Pages/about/downloads/students/Verification_of_Exam_Marks_Application_Form.pdf" target="_blank">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Application Form</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
                 
-              </a>
+              </a> -->
 
 
             </div>

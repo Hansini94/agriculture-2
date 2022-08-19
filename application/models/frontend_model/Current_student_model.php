@@ -112,6 +112,32 @@ class Current_student_model extends CI_Model {
         }
     }
 
+    public function get_acgc_link() {
+        $this->db->from('tbl_acgc_link');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_prg_link() {
+        $this->db->from('tbl_prg_link');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
 }
 
 ?>
