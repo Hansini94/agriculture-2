@@ -122,7 +122,11 @@
                 <p class="sub_heading"> Prospectus  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='<?php echo base_url().'/front_img/'.$prospectus->fPdfFile; ?>' target="_blank">
+                <a class='animated-arrow' href='<?php 
+                                          if($prospectus->fPdfFile != '') {
+                                            echo base_url('front_img/').$prospectus->fPdfFile;
+                                          } 
+                                          ?>' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -188,57 +192,62 @@
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
               
-              <a href="<?php echo base_url(); ?>academic_calender">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Academic Calendar</p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
+        <a href="<?php echo base_url('academic-calendar') ?>">
+                    <div class="quick_links_div">
+                        <p class="quick_links" data-aos="fade-up">Academic Calendar</p>
+                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                            width="20px;">
+                    </div>
+                </a>
 
-              <a href="">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Examination Timetables</p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-                
-              </a>
+                <a href="<?php echo base_url('Examination_timetables'); ?>">
+                    <div class="quick_links_div">
+                        <p class="quick_links" data-aos="fade-up">Examination Timetables</p>
+                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                            width="20px;">
+                    </div>
 
-              <a href="">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Class Timetables</p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
+                </a>
 
-              <a href="<?php echo base_url(); ?>deans_list">
-                <div class="quick_links_div">
-                  <p class="quick_links" data-aos="fade-up">Dean’s List </p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
+                <a href="<?php echo base_url('class-timetables'); ?>">
+                    <div class="quick_links_div">
+                        <p class="quick_links" data-aos="fade-up">Class Timetables</p>
+                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                            width="20px;">
+                    </div>
+                </a>
 
-              <a href="">
-                <div class="quick_links_div">
-                   <p class="quick_links" data-aos="fade-up">Faculty Awards </p>
-                  <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
-                </div>
-              </a>
+                <a href="<?php echo base_url('deans-list'); ?>">
+                    <div class="quick_links_div">
+                        <p class="quick_links" data-aos="fade-up">Dean’s List </p>
+                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                            width="20px;">
+                    </div>
+                </a>
+
+                <a href="<?php echo base_url('awards'); ?>">
+                    <div class="quick_links_div">
+                        <p class="quick_links" data-aos="fade-up">Faculty Awards </p>
+                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                            width="20px;">
+                    </div>
+                </a>
               
-              <a href="<?php echo base_url(); ?>gpa_calculator">
+              <a href="<?php echo base_url('gpa-calculator'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">BSc Agtech & Mgt GPA Calculator</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
 
-              <a href="<?php echo base_url(); ?>gpa_calculator/asf_gpa">
+              <a href="<?php echo base_url('gpa-calculator/asf-gpa'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">BSc ASF GPA Calculator</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
                 </div>
               </a>
 
-              <a href="<?php echo base_url(); ?>gpa_calculator/fst_gpa">
+              <a href="<?php echo base_url('gpa-calculator/fst-gpa'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">BSc FST GPA Calculator</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -257,7 +266,7 @@
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
               
-              <a href="<?php echo base_url(); ?>resources_for_student">
+              <a href="<?php echo base_url('faculty-level-scholarship'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Faculty Level Scholarship</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
@@ -279,7 +288,7 @@
                 </div>
               </a>
 
-              <a href="<?php echo base_url(); ?>resources_for_student/lab_videos">
+              <a href="<?php echo base_url('video-lab-practice'); ?>">
                 <div class="quick_links_div">
                   <p class="quick_links" data-aos="fade-up">Video on Safe Laboratory Practices</p>
                   <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">

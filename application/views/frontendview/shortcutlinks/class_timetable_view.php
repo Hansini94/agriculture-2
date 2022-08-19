@@ -76,7 +76,7 @@
                                                 </blockquote>
                                                 <!-- arrow link -->
                                                 <a class='animated-arrow'
-                                                    href='<?php echo base_url('front_img/').$timetable->fFile; ?>'
+                                                    href='<?php if($timetable->fFile != '') {echo base_url('front_img/').$timetable->fFile; }?>'
                                                     target="_blank">
                                                     <span class='the-arrow -left'>
                                                         <span class='shaft'></span>

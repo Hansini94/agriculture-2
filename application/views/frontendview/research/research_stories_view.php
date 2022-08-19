@@ -45,20 +45,30 @@
                 </div>
 
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <?php 
-                            $timestamp = strtotime($research_story_main[0]->dRDate);
-                            $date = date('d-M-Y', $timestamp);
-                        ?>
+                    <?php 
+                        $timestamp = strtotime($research_story_main[0]->dRDate);
+                        $date = date('d-M-Y', $timestamp);
+                    ?>
                     <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
                     <h1 class="sub_heading"><?php echo $research_story_main[0]->vTitle; ?></h1>
-                    <?php echo $research_story_main[0]->tContent; 
-                    
-                    $storyTitle = str_replace(' ', '-', $research_story_main[0]->vTitle);
-                    
+                    <p data-aos="fade-up">
+                    <?php 
+                        function trimtext($data, $limit) {
+                            $arr = explode(" ", $data);
+                            $new_arr = array_slice($arr, 0, $limit);
+                            return implode(" ", $new_arr);
+                        }
+                        
+                        // $test = 'This is a very very very long words here blablabla blablabla blablabla  test';
+                        echo trimtext($research_story_main[0]->tContent, 140);
+                    // echo $research_story_main[0]->tContent;    
                     ?>
-
+                    </p>
                     <!-- arrow link -->
-                    <a class='animated-arrow' href='<?php echo base_url('research-stories/story-detail/').$storyTitle; ?>'>
+                    <a class='animated-arrow' href='<?php 
+                                                            $storyTitle = str_replace(' ', '-', $research_story_main[0]->vTitle);
+                                                            echo base_url('research-stories/story-detail/').$storyTitle; 
+                                                    ?>'>
                         <span class='the-arrow -left'>
                             <span class='shaft'></span>
                         </span>

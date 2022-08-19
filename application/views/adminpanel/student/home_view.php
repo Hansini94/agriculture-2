@@ -3,21 +3,21 @@ if ($cSaveStatus == "E") {
     $id = $edit_data['id'];    
     $fImg = $edit_data['fImg']; 
     $vTitleEnglish = $edit_data['vTitleEnglish'];
-	$tContentEnglish = $edit_data['tContentEnglish'];   
+	$vCaptionEnglish = $edit_data['vCaptionEnglish'];   
     $vTitleSinhala = $edit_data['vTitleSinhala'];
-	$tContentSinhala = $edit_data['tContentSinhala'];  
+	$vCaptionSinhala = $edit_data['vCaptionSinhala'];  
     $vTitleTamil = $edit_data['vTitleTamil'];
-	$tContentTamil = $edit_data['tContentTamil'];  
+	$vCaptionTamil = $edit_data['vCaptionTamil'];  
     $cEnable = $edit_data['cEnable'];
 } else {
     $id = ""; 
     $fImg = ""; 
     $vTitleEnglish = "";    
-	$tContentEnglish = "";  
+	$vCaptionEnglish = "";  
     $vTitleSinhala = "";    
-	$tContentSinhala = ""; 
+	$vCaptionSinhala = ""; 
     $vTitleTamil = "";    
-	$tContentTamil = ""; 
+	$vCaptionTamil = ""; 
     $cEnable = "Y";
 }
 ?>
@@ -125,16 +125,16 @@ if ($cSaveStatus == "E") {
                                        <input type="text" id="vTitleEnglish" name="vTitleEnglish" value="<?php echo $vTitleEnglish; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
-                            </div> 
+                            </div>                               
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">English Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContentEnglish" id="tContentEnglish" class="form-control col-md-7 col-xs-12" required><?php echo $tContentEnglish; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContentEnglish); ?>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">English Content</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <textarea id="vCaptionEnglish" name="vCaptionEnglish" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $vCaptionEnglish; ?></textarea>
+                                       
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sinhala Heading<span class="required">*</span></label>
@@ -145,13 +145,13 @@ if ($cSaveStatus == "E") {
                             </div> 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sinhala Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContentSinhala" id="tContentSinhala" class="form-control col-md-7 col-xs-12" required><?php echo $tContentSinhala; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContentSinhala); ?>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Sinhala Content</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <textarea id="vCaptionSinhala" name="vCaptionSinhala" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $vCaptionSinhala; ?></textarea>
+                                       
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Tamil Heading<span class="required">*</span></label>
@@ -159,16 +159,16 @@ if ($cSaveStatus == "E") {
                                        <input type="text" id="vTitleTamil" name="vTitleTamil" value="<?php echo $vTitleTamil; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>
-                            </div> 
+                            </div>     
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Tamil Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContentTamil" id="tContentTamil" class="form-control col-md-7 col-xs-12" required><?php echo $tContentTamil; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContentTamil); ?>
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Tamil Content</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <textarea id="vCaptionTamil" name="vCaptionTamil" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $vCaptionTamil; ?></textarea>
+                                       
                                     </div>
                                 </div>
-                            </div>                             
+                            </div>                      
                                                          
 
                             <div style="clear:both;"></div>

@@ -179,8 +179,16 @@ $route['video-lab-practice'] = 'Resources_for_student/lab_videos';
 $route['current-students'] = 'Current_students';
 
 $route['student-life'] = 'Student_life';
+$route['student-life-sinhala'] = 'Student_life/ss_sinhala/';
+$route['student-life-tamil'] = 'Student_life/ss_tamil/';
+$route['student-life-societies'] = 'Student_life_societies';
+$route['student-life-sports'] = 'Student_life_sports';
+$route['student-life-events'] = 'Student_life_events';
 
 $route['faculty-staff'] = 'Faculty_n_staff';
+$route['emeritus-professors'] = "Emeritus_professors";
+$route['conduct-staff'] = "Conduct_staff";
+$route['conduct-guidelines'] = "Conduct_guidelines";
 
 $route['getting-around'] = 'Getting_around';
 $route['walk-around-uni'] = 'Walk_around_uni';
@@ -190,6 +198,10 @@ $route['faculty-direction'] = 'Faculty_direction';
 $route['academic-calendar'] = 'Academic_calender';
 
 $route['news'] = 'News';
+
+$route['deans-list'] = 'deans_list';
+$route['awards'] = 'awards';
+
 
 
 

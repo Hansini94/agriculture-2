@@ -372,7 +372,7 @@
                     <img src="images/pdf.png" alt="" class="d-block float-start">
 
                     <blockquote class="blockquote" style="margin-bottom: 0px;">
-                      <p class="sub_heading">list of Emeritus Professorst</p>
+                      <p class="sub_heading">list of Emeritus Professors</p>
                     </blockquote>
                     <!-- arrow link -->
                       <a class='animated-arrow' href='<?php echo base_url().'/front_img/'.$list->fFilePdf; ?>'>

@@ -74,7 +74,7 @@
                             <p class="sub_heading"> Emeritus professors</p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>emeritus-professors' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url('emeritus-professors'); ?>' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -100,7 +100,7 @@
                             <p class="sub_heading"> Code of Conduct  </p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>conduct-staff' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url('conduct-staff'); ?>' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -127,7 +127,7 @@
                             <p class="sub_heading"> Guidelines for Professional Conduct </p>
                         </blockquote>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href='<?php echo base_url(); ?>conduct-guidelines' target="_blank">
+                        <a class='animated-arrow' href='<?php echo base_url('conduct-guidelines'); ?>' target="_blank">
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -212,7 +212,7 @@
             <h1 class="heading mb-3">Academic Staff</h1>        
             <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
                 <?php foreach($link as $lins){ ?>
-                    <a href="<?php echo $lins->vUrl; ?>">
+                    <a href="<?php echo $lins->vUrl; ?>" target="_blank">
                         <div class="quick_links_div">
                             <p class="quick_links" data-aos="fade-up"><?php echo $lins->vName; ?></p>
                             <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">

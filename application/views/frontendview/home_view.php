@@ -820,35 +820,15 @@
     </div>
 
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage4; ?>) !important; background-position:center top;">
-        <h1 class="heading" style="text-transform: uppercase; color: #ffffff;"><?php echo $home_details[0]->vOtherTitle4; ?></h1>
-        <p data-aos="fade-up" style="color: #ffffff;">
-          <?php echo $home_details[0]->tOtherContent4; ?>
-        </p>
-        <!-- arrow link -->
-        <a class='animated-arrow' href='<?php echo base_url(); ?>news'>
-          <span class='the-arrow -left'>
-            <span class='shaft'></span>
-          </span>
-          <span class='main'>
-            <span class='text' style="color: #ffffff;">
-              Explore More
-            </span>
-            <span class='the-arrow -right'>
-              <span class='shaft'></span>
-            </span>
-          </span>
-        </a>
-        <!-- arrow link -->
-      </div>
+      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage2; ?>) !important; background-position:center top;"></div>
 
-      <div class="short_link_div short_link_div_middle_height" style="background-image: url(<?php echo base_url("front_img/").$home_details[0]->fOtherImage2; ?>) !important; background-position:center top;">
-        <h1 class="heading" ><?php echo $home_details[0]->vOtherTitle2; ?></h1>
-        <p data-aos="fade-up" >
+      <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
+        <h1 class="heading"><?php echo $home_details[0]->vOtherTitle2; ?></h1>
+        <p data-aos="fade-up">
           <?php echo $home_details[0]->tOtherContent2; ?>
         </p>
         <!-- arrow link -->
-        <a class='animated-arrow' href=''>
+        <a class='animated-arrow' href='<?php echo base_url(); ?>news'>
           <span class='the-arrow -left'>
             <span class='shaft'></span>
           </span>

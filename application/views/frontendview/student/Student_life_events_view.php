@@ -109,7 +109,7 @@
     <div class="container">
       
       <div class="row">
-        <?php $i=1; foreach($events as $eve){ ?>
+        <?php $i=1; foreach($all as $eve){ ?>
             
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
             <div class="news_div">
@@ -166,6 +166,32 @@
             
 
         </div>
+        <div class="row">
+        
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          
+            <!-- pagination -->
+            <nav class="float-end">
+            <?php echo $links; ?>
+              <!-- <ul class="pagination" style="padding-left: 0px !important;">
+                <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
+                  <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul> -->
+            </nav>
+            <!-- pagination -->
+
+        </div>
+
+      </div>
 
       </div>
 

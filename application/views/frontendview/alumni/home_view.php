@@ -142,7 +142,7 @@
       <div class="row"> 
 
         <h1 class="heading mb-3">News & Updates</h1>
-<?php  if(isset($news_data)){?>
+<?php  if(!empty($news_data)){?>
         <!-- news carousel -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">          
           <div class="carousel-inner">            
@@ -206,6 +206,7 @@
 <!-- sub news section -->
 <div class="container">
   <div class="row">
+    <?php if(!empty($news_data[1])){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">  
         <div class="row">
@@ -238,7 +239,8 @@
         </div>
       </div>
     </div>
-
+    <?php }  
+      if(!empty($news_data[2])){?>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
       <div class="news_div">
         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $news_data[2]->dRDate; ?></small></p>
@@ -273,7 +275,8 @@
         <!-- arrow link -->
       </div>
     </div>
-
+    <?php }  
+      if(!empty($news_data[3])){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">  
         <div class="row">
@@ -307,11 +310,12 @@
 
       </div>
     </div>
-
+    <?php } ?>
     <!-- ============================== -->
     <div class="clearfix"></div>
     <!-- ============================== -->
-
+    <?php 
+      if(!empty($news_data[4])){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">
         
@@ -346,7 +350,8 @@
 
       </div>
     </div>
-
+    <?php }  
+      if(!empty($news_data[5])){?>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
       <div class="news_div">
         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $news_data[5]->dRDate; ?></small></p>
@@ -381,7 +386,8 @@
           <!-- arrow link -->
       </div>
     </div>
-
+    <?php }  
+      if(!empty($news_data[6])){?>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
       <div class="news_div">
         
@@ -416,11 +422,13 @@
 
       </div>
     </div>
-
+   <?php } ?>
   </div>
 </div>
 <!-- sub news section -->
 <?php } ?>
+
+
 <div class="w-100 d-none d-md-block"></div>
 <br>
 
@@ -428,88 +436,88 @@
 <!-- shortcut links -->
 <div class="container-fluid">
 
-<div class="row">
+  <div class="row">
 
-<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-<div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url().'/front_img/'.$links[0]->fImage;?>);">
-  <h1 class="heading"><?php echo $links[0]->vTitle; ?> </h1>
-  <p data-aos="fade-up">
-  <?php echo $links[0]->vCaption; ?>
-  </p>
-  <!-- arrow link -->
-    <a class='animated-arrow' href='<?php echo base_url(); ?>student-life'>
-    <span class='the-arrow -left'>
-      <span class='shaft'></span>
-    </span>
-    <span class='main'>
-      <span class='text'>
-        Ecplore More
-      </span>
-      <span class='the-arrow -right'>
-        <span class='shaft'></span>
-      </span>
-    </span>
-  </a>
-  <!-- arrow link -->
-</div>
-</div>
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
+      <div class="short_link_div short_link_div_full_height" style="background-image: url(<?php echo base_url().'/front_img/'.$links[0]->fImage;?>);">
+        <h1 class="heading"><?php echo $links[0]->vTitle; ?> </h1>
+        <p data-aos="fade-up">
+        <?php echo $links[0]->vCaption; ?>
+        </p>
+        <!-- arrow link -->
+          <a class='animated-arrow' href='<?php echo base_url(); ?>student-life'>
+          <span class='the-arrow -left'>
+            <span class='shaft'></span>
+          </span>
+          <span class='main'>
+            <span class='text'>
+              Ecplore More
+            </span>
+            <span class='the-arrow -right'>
+              <span class='shaft'></span>
+            </span>
+          </span>
+        </a>
+        <!-- arrow link -->
+      </div>
+    </div>
 
-<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
-<div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url().'/front_img/'.$links[1]->fImage;?>) !important; background-position:center top;"></div>
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
+      <div class="short_link_div short_link_div_middle_height mb-2" style="background-image: url(<?php echo base_url().'/front_img/'.$links[1]->fImage;?>) !important; background-position:center top;"></div>
 
- <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
-  <h1 class="heading"><?php echo $links[1]->vTitle; ?></h1>
-  <p data-aos="fade-up">
-  <?php echo $links[1]->vCaption; ?>
-  </p>
-  <!-- arrow link -->
-    <a class='animated-arrow' href='<?php echo base_url(); ?>research-stories'>
-    <span class='the-arrow -left'>
-      <span class='shaft'></span>
-    </span>
-    <span class='main'>
-      <span class='text'>
-        Ecplore More
-      </span>
-      <span class='the-arrow -right'>
-        <span class='shaft'></span>
-      </span>
-    </span>
-  </a>
-  <!-- arrow link -->
-</div>
-</div>
+      <div class="short_link_div short_link_div_middle_height" style="background-color: #c4df9b;">
+        <h1 class="heading"><?php echo $links[1]->vTitle; ?></h1>
+        <p data-aos="fade-up">
+        <?php echo $links[1]->vCaption; ?>
+        </p>
+        <!-- arrow link -->
+          <a class='animated-arrow' href='<?php echo base_url(); ?>research-stories'>
+          <span class='the-arrow -left'>
+            <span class='shaft'></span>
+          </span>
+          <span class='main'>
+            <span class='text'>
+              Ecplore More
+            </span>
+            <span class='the-arrow -right'>
+              <span class='shaft'></span>
+            </span>
+          </span>
+        </a>
+        <!-- arrow link -->
+      </div>
+    </div>
 
-<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 p-1">
 
- <div class="short_link_div short_link_div_middle_height" style="background-color: #d5b79f;">
-  <h1 class="heading"><?php echo $links[2]->vTitle; ?></h1>
-  <p data-aos="fade-up">
-  <?php echo $links[2]->vCaption; ?>
-  </p>
-  <!-- arrow link -->
-    <a class='animated-arrow' href='<?php echo base_url(); ?>international-overview'>
-    <span class='the-arrow -left'>
-      <span class='shaft'></span>
-    </span>
-    <span class='main'>
-      <span class='text'>
-        Ecplore More
-      </span>
-      <span class='the-arrow -right'>
-        <span class='shaft'></span>
-      </span>
-    </span>
-  </a>
-  <!-- arrow link -->
-</div>
+      <div class="short_link_div short_link_div_middle_height" style="background-color: #d5b79f;">
+        <h1 class="heading"><?php echo $links[2]->vTitle; ?></h1>
+        <p data-aos="fade-up">
+        <?php echo $links[2]->vCaption; ?>
+        </p>
+        <!-- arrow link -->
+          <a class='animated-arrow' href='<?php echo base_url(); ?>international-overview'>
+          <span class='the-arrow -left'>
+            <span class='shaft'></span>
+          </span>
+          <span class='main'>
+            <span class='text'>
+              Ecplore More
+            </span>
+            <span class='the-arrow -right'>
+              <span class='shaft'></span>
+            </span>
+          </span>
+        </a>
+        <!-- arrow link -->
+      </div>
 
- <div class="short_link_div short_link_div_middle_height mt-2" style="background-image: url(<?php echo base_url().'/front_img/'.$links[2]->fImage;?>) !important; background-position:center top;"></div>
+      <div class="short_link_div short_link_div_middle_height mt-2" style="background-image: url(<?php echo base_url().'/front_img/'.$links[2]->fImage;?>) !important; background-position:center top;"></div>
 
-</div>
+    </div>
 
 
-</div>
+  </div>
 
 </div>
 <!-- shortcut links -->
