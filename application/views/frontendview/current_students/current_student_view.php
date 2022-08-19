@@ -245,27 +245,31 @@
         <h1 class="heading mb-3">GPA Calculator</h1>
 
           <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
-            
-            <a href="<?php echo base_url('gpa-calculator'); ?>">
+          <?php if(!empty($gpa)) { $i=0; foreach($gpa as $gpa_data){ ?>
+            <a href="<?php 
+                if($gpa_data->fFileExcel != '') {
+                  echo base_url('front_img/').$gpa_data->fFileExcel;
+                }  
+                ?>" target="_blank">
               <div class="quick_links_div">
-                <p class="quick_links" data-aos="fade-up">BSc Agtech & Mgt GPA Calculator</p>
+                <p class="quick_links" data-aos="fade-up"><?php echo $gpa_data->vTitle;  ?></p>
                 <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
               </div>
             </a>
-
-            <a href="<?php echo base_url('gpa-calculator/asf-gpa'); ?>">
+            <?php $i++; } }?>
+            <!-- <a href="<?php echo base_url('Bsc-asf'); ?>">
               <div class="quick_links_div">
                 <p class="quick_links" data-aos="fade-up">BSc ASF GPA Calculator</p>
                 <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
               </div>
             </a>
 
-            <a href="<?php echo base_url('gpa-calculator/fst-gpa'); ?>">
+            <a href="<?php echo base_url('Bsc-fst'); ?>">
               <div class="quick_links_div">
                 <p class="quick_links" data-aos="fade-up">BSc FST GPA Calculator</p>
                 <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow" width="20px;">
               </div>
-            </a>
+            </a> -->
 
           </div>
 
