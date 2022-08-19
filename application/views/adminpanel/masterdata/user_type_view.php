@@ -73,7 +73,7 @@ if ($saveStatus == "A") {
                         </div>
                         <ul class="nav navbar-right col-md-3 col-sm-3 col-xs-3">
                             <li><a class="collapse-link" style="text-align:right;cursor:pointer;">
-                                <span class="btn btn-dark"  style="color:#FFF;">Add Uer Type</span>
+                                <span class="btn btn-dark"  style="color:#FFF;">Add User Type</span>
                                 &nbsp;<i class="fa fa-chevron-down"></i></a>
                             </li>
                         </ul>
@@ -263,14 +263,23 @@ if ($saveStatus == "A") {
                                         <td><?php echo $rowlist->vAccTypeName; ?></td>
                                         <td><?php echo $rowlist->vAccDescription; ?></td>
                                         <td><?php echo $rowlist->dSaveDate; ?></td>
-                                        <td style="text-align:center;"><a href="<?php echo base_url() . "adminpanel/master/user_type/update_user/$recordid" ?>">
-                                                <i class="fa fa-edit"></i></a>
+                                        <td style="text-align:center;">
+                                            <?php if($recordid != 1) { ?>
+                                            <a href="<?php echo base_url() . "adminpanel/master/user_type/update_user/$recordid" ?>"><i class="fa fa-edit"></i></a>
+                                            <?php } ?>
                                         </td>
-                                        <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/master/user_type/change_status/$recordid" ?>">
+                                        <td style="text-align:center;">
+                                            <?php if($recordid != 1) { ?>
+                                                <a  href="<?php echo base_url() . "adminpanel/master/user_type/change_status/status/$recordid" ?>">
                                                 <i class="<?php echo $clicon; ?>"></i></a>
+                                                <?php } ?>
                                         </td>
-                                        <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/master/user_type/delete_record/$recordid" ?>">
-                                                <i class="fa fa-trash-o"></i></a></td>
+                                        <td class="a-right a-right" style="text-align:center;">
+                                            <?php if($recordid != 1) { ?>
+                                                <a  href="<?php echo base_url() . "adminpanel/master/user_type/delete_record/$recordid" ?>">
+                                                <i class="fa fa-trash-o"></i></a>
+                                                <?php } ?>
+                                            </td>
                                         </td>
                                     </tr>
 <?php } ?>

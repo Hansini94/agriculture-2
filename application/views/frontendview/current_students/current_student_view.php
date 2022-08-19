@@ -373,7 +373,7 @@
 
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 
-        <h1 class="heading mb-3">Advisory, Career Guidence and Councelling</h1>
+        <h1 class="heading mb-3">Advisory, Career Guidance and Counselling</h1>
         
         <div id="container" class="home_link_div" style="position: relative; z-index: 99999; background-color: #b8e0d2; margin-top: 0px; height: auto;">
               <?php if(!empty($advisory)) { $i=0; foreach($advisory as $ads){ ?>
