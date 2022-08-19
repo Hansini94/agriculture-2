@@ -21,7 +21,7 @@ class Rag_harassment extends CI_Controller {
         $data['rag_harassment_data'] = $this->home_page_model->get_rag_harassment_data();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
                 
-		$this->load->view('frontendview/inner_header_view',$data);
+		$this->load->view('frontendview/inner_header_view',$data_header);
 		$this->load->view('frontendview/shortcutlinks/rag_harassment_view',$data);
 		$this->load->view('frontendview/footer_view',$data_header);
 		

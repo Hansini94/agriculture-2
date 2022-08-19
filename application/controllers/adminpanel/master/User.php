@@ -8,7 +8,7 @@ if (!defined('BASEPATH'))
 Class User extends CI_Controller {
 
     private $table_name = "tbl_backend_user";
-    private $page_id = "13";
+    private $page_id = "202";
     private $redirect_path = "adminpanel/master/user/add_user";
 
     public function __construct() {
