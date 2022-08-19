@@ -51,6 +51,7 @@ Class News extends CI_Controller {
 		
 		$page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
         
+        $data_header['meta'] = 38;
         $data['latest'] = $this->news_model->get_latest_news();
         $data['all'] = $this->news_model->get_news_list($config["per_page"], $page);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
@@ -71,6 +72,7 @@ Class News extends CI_Controller {
         $data = array();
         $data_header = array();
         
+        $data_header['meta'] = 38;
 
         $data['detail'] = $this->news_model->get_news_detail($newString);
         $data['all'] = $this->news_model->get_news_detail_list();
