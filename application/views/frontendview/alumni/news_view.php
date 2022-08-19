@@ -124,7 +124,11 @@
 
                 <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $all_data->dRDate; ?></small></p>
-                    <h1 class="sub_heading"><?php echo $all_data->vTitle; ?></h1>
+                    <a href='<?php  $heading = $all_data->vTitle; $name = str_replace(' ', '_', $heading); echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                        <h1 class="sub_heading">
+                          <?php echo $all_data->vTitle; ?>
+                        </h1>
+                      </a> 
                     <p data-aos="fade-up">
                       <?php 
                           if(strlen($all_data->tContent) > 100){
@@ -139,7 +143,7 @@
                     <a class='animated-arrow' href='<?php 
                                                           $heading = $latest->vTitle;
                                                           $name = str_replace(' ', '_', $heading);
-                                                          echo base_url('alumni_news/'.$name) ?>'>
+                                                          echo base_url('alumni_news/news_detail/'.$name) ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
