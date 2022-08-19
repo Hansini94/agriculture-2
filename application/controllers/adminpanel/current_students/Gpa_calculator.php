@@ -27,17 +27,17 @@ Class Gpa_calculator extends CI_Controller {
     }
 
     public function index() {
-        $data['ckeditor_tContent'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContent',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '400px', //Setting a custom height
-            ),            
-        );
+        // $data['ckeditor_tContent'] = array(
+        //     //ID of the textarea that will be replaced
+        //     'id' => 'tContent',
+        //     'path' => 'assets/js/ckeditor',
+        //     //Optionnal values
+        //     'config' => array(
+        //         'toolbar' => "Full", //Using the Full toolbar
+        //         'width' => "100%", //Setting a custom width
+        //         'height' => '400px', //Setting a custom height
+        //     ),            
+        // );
 		
         $data['cSaveStatus']= 'A';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);
@@ -73,17 +73,17 @@ Class Gpa_calculator extends CI_Controller {
     }
 	
 	public function edit() {
-        $data['ckeditor_tContent'] = array(
-            //ID of the textarea that will be replaced
-            'id' => 'tContent',
-            'path' => 'assets/js/ckeditor',
-            //Optionnal values
-            'config' => array(
-                'toolbar' => "Full", //Using the Full toolbar
-                'width' => "100%", //Setting a custom width
-                'height' => '400px', //Setting a custom height
-            ),            
-        );
+        // $data['ckeditor_tContent'] = array(
+        //     //ID of the textarea that will be replaced
+        //     'id' => 'tContent',
+        //     'path' => 'assets/js/ckeditor',
+        //     //Optionnal values
+        //     'config' => array(
+        //         'toolbar' => "Full", //Using the Full toolbar
+        //         'width' => "100%", //Setting a custom width
+        //         'height' => '400px', //Setting a custom height
+        //     ),            
+        // );
 		
         $data['cSaveStatus']= 'E';
         $data['list_data'] = $this->common_model->get_all_data_list($this->table_name);

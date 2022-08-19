@@ -28,38 +28,50 @@ class Current_student_model extends CI_Model {
     }
 
     // GPA Calculator
-    public function get_gpa_agtech_data() {
+    public function get_gpa_data() {
         $this->db->from('tbl_gpa_cal');
-        $this->db->where('id', 1);
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'asc');
         $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
-            return $result->row();
+            return $result->result();
         } else {
             return array();
         }
     }
+    // public function get_gpa_data() {
+    //     $this->db->from('tbl_gpa_cal');
+    //     $this->db->where('id', 1);
+    //     $result = $this->db->get();
+    //     if ($result->num_rows() > 0) {
+    //         return $result->row();
+    //     } else {
+    //         return array();
+    //     }
+    // }
 
-    public function get_gpa_asf_data() {
-        $this->db->from('tbl_gpa_cal');
-        $this->db->where('id', 2);
-        $result = $this->db->get();
-        if ($result->num_rows() > 0) {
-            return $result->row();
-        } else {
-            return array();
-        }
-    }
+    // public function get_gpa_asf_data() {
+    //     $this->db->from('tbl_gpa_cal');
+    //     $this->db->where('id', 2);
+    //     $result = $this->db->get();
+    //     if ($result->num_rows() > 0) {
+    //         return $result->row();
+    //     } else {
+    //         return array();
+    //     }
+    // }
 
-    public function get_gpa_fst_data() {
-        $this->db->from('tbl_gpa_cal');
-        $this->db->where('id', 3);
-        $result = $this->db->get();
-        if ($result->num_rows() > 0) {
-            return $result->row();
-        } else {
-            return array();
-        }
-    }
+    // public function get_gpa_fst_data() {
+    //     $this->db->from('tbl_gpa_cal');
+    //     $this->db->where('id', 3);
+    //     $result = $this->db->get();
+    //     if ($result->num_rows() > 0) {
+    //         return $result->row();
+    //     } else {
+    //         return array();
+    //     }
+    // }
 
     // Academic Calculator
     public function get_academic_calender() {

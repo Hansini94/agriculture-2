@@ -2,16 +2,16 @@
 if ($cSaveStatus == "E") {
     $id = $edit_data['id'];    
     $fFileExcel = $edit_data['fFileExcel']; 
-    $fImg = $edit_data['fImg']; 
+    // $fImg = $edit_data['fImg']; 
     $vTitle = $edit_data['vTitle']; 
-    $tContent = $edit_data['tContent']; 
+    // $tContent = $edit_data['tContent']; 
     $cEnable = $edit_data['cEnable'];
 } else {
     $id = ""; 
     $fFileExcel = ""; 
-    $fImg = ""; 
+    // $fImg = ""; 
     $vTitle = "";    
-    $tContent = "";    
+    // $tContent = "";    
     $cEnable = "Y";
 }
 ?>
@@ -96,38 +96,7 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div> 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Image (1200 * 800px) </label>
-                                    <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
-                                        <input type="file" id="fImg" name="fImg" <?php if ($cSaveStatus != "E") {?> required  <?php } ?> >
-                                    </div>                                    
-                                </div>                                
-                                
-                                 <?php 
-								    if($fImg){
-								?>
-                                <div class="form-group" id="image_delete_<?php echo $id; ?>">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">&nbsp;</label>
-                                    <div class="col-md-7 col-sm-6 col-xs-10">
-                                        <img class="img-responsive" src="<?php echo base_url().'/front_img/'.$fImg;?>"  style="width:250px;" />
-                                    </div>
-                                    <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
-                                        <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_image('<?php echo $id; ?>');" title="Delete Link"></span>
-                                    </div> -->
-                                </div>
-                                <?php }
-                                ?>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="item form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                        <textarea rows="15" name="tContent" id="tContent" class="form-control col-md-7 col-xs-12" required><?php echo $tContent; ?></textarea>
-                                        <?php echo display_ckeditor($ckeditor_tContent); ?>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="col-md-12 col-sm-12 col-xs-12">                                
                                <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" style="padding-top:8px;" for="first-name" >Excel
