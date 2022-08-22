@@ -20,7 +20,7 @@ class Rag_complaint extends CI_Controller {
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
                 
-		$this->load->view('frontendview/inner_header_view',$data);
+		$this->load->view('frontendview/inner_header_view',$data_header);
 		$this->load->view('frontendview/shortcutlinks/rag_complaint_view',$data);
 		$this->load->view('frontendview/footer_view',$data_header);
 		
