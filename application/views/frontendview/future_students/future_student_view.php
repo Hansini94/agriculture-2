@@ -197,7 +197,7 @@
 
                         <blockquote class="blockquote" style="margin-bottom: 0px;">
                             <p class="sub_heading"> PGIA </p>
-                        </blockquote> -->
+                        </blockquote> 
                         <!-- arrow link -->
                         <a class='animated-arrow' href='http://www.pgia.pdn.ac.lk/'>
                             <span class='the-arrow -left'>
