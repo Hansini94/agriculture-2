@@ -284,7 +284,7 @@
           <a href="<?php echo base_url('academic-calendar') ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Academic Calendar</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                        <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
                             width="20px;">
                     </div>
                 </a>
@@ -292,7 +292,7 @@
                 <a href="<?php echo base_url('Examination_timetables'); ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Examination Timetables</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                        <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
                             width="20px;">
                     </div>
 
@@ -301,7 +301,7 @@
                 <a href="<?php echo base_url('class-timetables'); ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Class Timetables</p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                        <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
                             width="20px;">
                     </div>
                 </a>
@@ -309,7 +309,7 @@
                 <a href="<?php echo base_url('deans-list'); ?>">
                     <div class="quick_links_div">
                         <p class="quick_links" data-aos="fade-up">Dean’s List </p>
-                        <img src="images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
+                        <img src="<?php echo base_url("assets/frontend/"); ?>images/right_arrow.svg" alt="" class="d-block float-md-end quick_links_arrow"
                             width="20px;">
                     </div>
                 </a>
