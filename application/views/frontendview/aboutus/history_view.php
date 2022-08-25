@@ -76,8 +76,9 @@
                             </blockquote>
                             <figcaption class="blockquote-footer" style="margin-bottom: 0px;">
                                 <?php 
+                                    // var_dump($former_dean->vTerm1);exit();
                                     if($former_dean->vTerm2 != "") { 
-                                        echo '('.$former_dean->vTerm1.')' & '('.$former_dean->vTerm2.')';
+                                        echo '('.$former_dean->vTerm1.')' .' & '. '('.$former_dean->vTerm2.')';
                                     } else {
                                         echo '('.$former_dean->vTerm1.')';
                                     }
