@@ -41,7 +41,7 @@
        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
         <div class="row ms-auto">
-            <?php $i=0; foreach($student as $down){ ?>
+            <?php  foreach($student as $down){ ?>
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
 
                 <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
@@ -109,7 +109,7 @@
                 </div> <!-- down div end -->
 
             </div>
-            <?php $i++; if($i ==2){ echo '<div class="clearfix"></div>'; $i=0; }   } ?> 
+            <?php   } ?> 
           <!-- ======================= -->
 
           </div>
