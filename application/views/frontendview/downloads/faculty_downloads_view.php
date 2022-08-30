@@ -49,7 +49,7 @@
             <div class="accordion-body">
 
               <div class="row">
-              <?php $i=0; foreach($enewsletter as $enews){ ?>
+              <?php foreach($enewsletter as $enews){ ?>
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
 
                         <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
@@ -117,7 +117,7 @@
                         </div> <!-- enews div end -->
 
                     </div>
-                    <?php $i++; if($i ==2){ echo '<div class="clearfix"></div>'; $i=0; }   } ?> 
+                    <?php  } ?> 
               </div>
 
               <!-- ======================= -->
