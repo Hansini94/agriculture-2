@@ -2,13 +2,13 @@
 if ($cSaveStatus == "E") {
     $id = $edit_data['id'];  
     $vTitle = $edit_data['vTitle'];
-	$vUrl = $edit_data['vUrl'];  
+	$fFile = $edit_data['fFile'];  
     $cEnable = $edit_data['cEnable'];
     $iOrder = $edit_data['iOrder'];
 } else {
     $id = ""; 
     $vTitle = "";    
-	$vUrl = "";  
+	$fFile = "";  
     $cEnable = "Y";
     $iOrder = "";
 }
@@ -92,11 +92,26 @@ if ($cSaveStatus == "E") {
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">URL<span class="required">*</span></label>
-                                    <div class="col-md-10 col-sm-6 col-xs-12">
-                                       <input type="text" id="vUrl" name="vUrl" value="<?php echo $vUrl; ?>" class="form-control col-md-7 col-xs-12" required> 
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >File </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12" style="padding-top:8px;">
+                                        <input type="file" id="fFile" name="fFile" <?php if ($cSaveStatus != "E") {?> required  <?php } ?> >
+                                    </div>                                    
+                                </div>                                
+                                
+                                 <?php 
+								    if($fFile){
+								?>
+                                <div class="form-group" id="image_delete_<?php echo $id; ?>">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">&nbsp;</label>
+                                    <div class="col-md-710 col-sm-10 col-xs-12">
+                                    <a href="<?php echo base_url().'/front_img/'.$fFile;?>" target="_blank"><?php echo $fFile; ?></a>
                                     </div>
+                                    <!-- <div class="col-md-1 col-sm-3 col-xs-2" >
+                                        <span class="glyphicon glyphicon-trash" style="line-height:30px; cursor:pointer;" onclick="delete_image('<?php echo $id; ?>');" title="Delete Link"></span>
+                                    </div> -->
                                 </div>
+                                <?php }
+                                ?>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
