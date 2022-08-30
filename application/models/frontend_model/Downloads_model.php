@@ -18,6 +18,32 @@ class Downloads_model extends CI_Model {
         }
     }
 
+    public function get_general_downloads() {
+        $this->db->from('tbl_sec_general_download');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+    public function get_research_downloads() {
+        $this->db->from('tbl_sec_research_download');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
 // ********************Student Downloads**************************
     public function get_student_downloads() {
         $this->db->from('tbl_student_downloads');

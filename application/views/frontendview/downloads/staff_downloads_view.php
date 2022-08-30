@@ -49,7 +49,7 @@
             <div class="accordion-body">
 
               <div class="row">
-                <?php foreach($staff as $down){ ?>
+                <?php foreach($general as $down){ ?>
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
 
                     <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
@@ -59,7 +59,7 @@
                         <div class="row">
                     
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="gray_text_div">
+                              <div class="gray_text_div">
 
                                 <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
 
@@ -67,7 +67,7 @@
                                 <p class="sub_heading" style="font-size: 13px;">PDF Format</p>
                                 </blockquote>
                                 <!-- arrow link -->
-                                <a class='animated-arrow' href='<?php echo base_url().'/front_img/'.$down->fFilePdf; ?>' target="_blank">
+                                <a class='animated-arrow' href='<?php echo base_url().'front_img/'.$down->fFilePdf; ?>' target="_blank">
                                 <span class='the-arrow -left'>
                                     <span class='shaft'></span>
                                 </span>
@@ -81,13 +81,13 @@
                                 </span>
                                 </a>
                                 <!-- arrow link -->
-                            </div>
+                              </div>
                             </div>
 
                             <!-- ============== -->
 
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="gray_text_div">
+                              <div class="gray_text_div">
 
                                 <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start">
 
@@ -95,7 +95,7 @@
                                 <p class="sub_heading">Word Format</p>
                                 </blockquote>
                                 <!-- arrow link -->
-                                <a class='animated-arrow' href='<?php echo base_url().'/front_img/'.$down->fFileWord; ?>' target="_blank">
+                                <a class='animated-arrow' href='<?php echo base_url().'front_img/'.$down->fFileWord; ?>' target="_blank">
                                 <span class='the-arrow -left'>
                                     <span class='shaft'></span>
                                 </span>
@@ -109,7 +109,7 @@
                                 </span>
                                 </a>
                                 <!-- arrow link -->
-                            </div>
+                              </div>
                             </div>
 
                         </div>
@@ -141,141 +141,79 @@
              
               <div class="row">
         
-          <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+              <?php foreach($research as $down){ ?>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
 
-            <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
+                    <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
 
-            <p class="sub_heading">research awards applications</p>
+                        <p class="sub_heading"><?php echo $down->vTitle; ?></p>
 
-            <div class="row">
-              
-                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                      <div class="gray_text_div">
+                        <div class="row">
+                    
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <div class="gray_text_div">
 
-                        <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
+                                <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
 
-                        <blockquote class="blockquote" style="margin-bottom: 0px;">
-                          <p class="sub_heading" style="font-size: 13px;">PDF Format</p>
-                        </blockquote>
-                        <!-- arrow link -->
-                          <a class='animated-arrow' href='http://agri.pdn.ac.lk/Pages/about/MOU_Faculty_of_Agriculture.pdf' target="_blank">
-                          <span class='the-arrow -left'>
-                            <span class='shaft'></span>
-                          </span>
-                          <span class='main'>
-                            <span class='text'>
-                            Download
-                            </span>
-                            <span class='the-arrow -right'>
-                              <span class='shaft'></span>
-                            </span>
-                          </span>
-                        </a>
-                        <!-- arrow link -->
-                      </div>
-                    </div>
+                                <blockquote class="blockquote" style="margin-bottom: 0px;">
+                                <p class="sub_heading" style="font-size: 13px;">PDF Format</p>
+                                </blockquote>
+                                <!-- arrow link -->
+                                <a class='animated-arrow' href='<?php echo base_url().'front_img/'.$down->fFilePdf; ?>' target="_blank">
+                                <span class='the-arrow -left'>
+                                    <span class='shaft'></span>
+                                </span>
+                                <span class='main'>
+                                    <span class='text'>
+                                    Download
+                                    </span>
+                                    <span class='the-arrow -right'>
+                                    <span class='shaft'></span>
+                                    </span>
+                                </span>
+                                </a>
+                                <!-- arrow link -->
+                              </div>
+                            </div>
 
-                    <!-- ============== -->
+                            <!-- ============== -->
 
-                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                      <div class="gray_text_div">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <div class="gray_text_div">
 
-                        <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start">
+                                <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start">
 
-                        <blockquote class="blockquote" style="margin-bottom: 0px;">
-                          <p class="sub_heading">Word Format</p>
-                        </blockquote>
-                        <!-- arrow link -->
-                          <a class='animated-arrow' href='http://agri.pdn.ac.lk/Pages/about/MOU_Faculty_of_Agriculture.pdf' target="_blank">
-                          <span class='the-arrow -left'>
-                            <span class='shaft'></span>
-                          </span>
-                          <span class='main'>
-                            <span class='text'>
-                             Download
-                            </span>
-                            <span class='the-arrow -right'>
-                              <span class='shaft'></span>
-                            </span>
-                          </span>
-                        </a>
-                        <!-- arrow link -->
-                      </div>
-                    </div>
+                                <blockquote class="blockquote" style="margin-bottom: 0px;">
+                                <p class="sub_heading">Word Format</p>
+                                </blockquote>
+                                <!-- arrow link -->
+                                <a class='animated-arrow' href='<?php echo base_url().'front_img/'.$down->fFileWord; ?>' target="_blank">
+                                <span class='the-arrow -left'>
+                                    <span class='shaft'></span>
+                                </span>
+                                <span class='main'>
+                                    <span class='text'>
+                                    Download
+                                    </span>
+                                    <span class='the-arrow -right'>
+                                    <span class='shaft'></span>
+                                    </span>
+                                </span>
+                                </a>
+                                <!-- arrow link -->
+                              </div>
+                            </div>
 
-                </div>
+                        </div>
 
-              </div> <!-- down div end -->
-
-              </div>
-
-              <!-- ======================= -->
-
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-
-                <div class="down_div" style="background-color: #f2fde3; padding: 20px 20px 0px 20px;">
-
-                <p class="sub_heading">research awards applications</p>
-
-                <div class="row">
-                  
-                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                      <div class="gray_text_div">
-
-                        <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
-
-                        <blockquote class="blockquote" style="margin-bottom: 0px;">
-                          <p class="sub_heading" style="font-size: 13px;">PDF Format</p>
-                        </blockquote>
-                        <!-- arrow link -->
-                          <a class='animated-arrow' href='http://agri.pdn.ac.lk/Pages/about/MOU_Faculty_of_Agriculture.pdf' target="_blank">
-                          <span class='the-arrow -left'>
-                            <span class='shaft'></span>
-                          </span>
-                          <span class='main'>
-                            <span class='text'>
-                            Download
-                            </span>
-                            <span class='the-arrow -right'>
-                              <span class='shaft'></span>
-                            </span>
-                          </span>
-                        </a>
-                        <!-- arrow link -->
-                      </div>
-                    </div>
-
-                    <!-- ============== -->
-
-                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                      <div class="gray_text_div">
-
-                        <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start">
-
-                        <blockquote class="blockquote" style="margin-bottom: 0px;">
-                          <p class="sub_heading">Word Format</p>
-                        </blockquote>
-                        <!-- arrow link -->
-                          <a class='animated-arrow' href='http://agri.pdn.ac.lk/Pages/about/MOU_Faculty_of_Agriculture.pdf' target="_blank">
-                          <span class='the-arrow -left'>
-                            <span class='shaft'></span>
-                          </span>
-                          <span class='main'>
-                            <span class='text'>
-                             Download
-                            </span>
-                            <span class='the-arrow -right'>
-                              <span class='shaft'></span>
-                            </span>
-                          </span>
-                        </a>
-                        <!-- arrow link -->
-                      </div>
-                    </div>
+                    </div> <!-- down div end -->
 
                 </div>
 
-              </div> <!-- down div end -->
+                <?php 
+                // $i++; 
+                // if($i ==2){ echo '<div class="clearfix"></div>'; $i=0; }
+                } ?>  <!-- down div end -->
 
               </div>
 

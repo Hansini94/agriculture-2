@@ -20,7 +20,8 @@ Class Downloads_staff extends CI_Controller {
 
         $data_header['meta'] = 19;
 
-        $data['staff'] = $this->downloads_model->get_staff_downloads();
+        $data['general'] = $this->downloads_model->get_general_downloads();       
+        $data['research'] = $this->downloads_model->get_research_downloads(); 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         
         // var_dump($data);exit();
