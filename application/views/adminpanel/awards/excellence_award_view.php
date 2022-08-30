@@ -81,7 +81,7 @@ if ($cSaveStatus == "E") {
                     ?>>
                         <br />
                         <form id="edit_excellence_award" name="edit_excellence_award" action="<?php echo base_url('adminpanel/awards/cvcd_excellence_award/save_cvcd_excellence_award'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>
                                     <div class="col-md-10 col-sm-10 col-xs-12">
@@ -134,7 +134,14 @@ if ($cSaveStatus == "E") {
                                
 								    <?php } ?>
                                 </div>
-
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="item form-group">
+                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Display Order <span class="required">*</span></label>
+                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                        <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
+                                    </div>
+                                </div>
                             </div>
 
                             <div style="clear:both;"></div>
