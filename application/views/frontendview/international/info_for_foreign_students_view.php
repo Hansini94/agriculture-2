@@ -80,7 +80,7 @@
                 <p class="sub_heading">Foreign Students handbook</p>
               </blockquote>
                <!-- arrow link -->
-                <a class='animated-arrow' target="_blank" href=<?php echo $foreign_students_info->vStudentHandBook; ?>'>
+                <a class='animated-arrow' target="_blank" href='<?php echo $foreign_students_info->vStudentHandBook; ?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>

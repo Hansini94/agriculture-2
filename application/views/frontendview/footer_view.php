@@ -65,7 +65,7 @@
             <a href="<?php echo base_url('undergraduate-programme'); ?>">
               <p>Academics </p>
             </a>
-            <a href="<?php echo base_url('faculty-research-committee'); ?>">
+            <a href="<?php echo base_url('research/faculty-research-committee'); ?>">
               <p>Research</p>
             </a>
           </div>

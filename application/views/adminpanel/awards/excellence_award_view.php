@@ -137,8 +137,8 @@ if ($cSaveStatus == "E") {
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
-                                    <label class="control-label col-md-4 col-sm-5 col-xs-12" for="vProTitle">Display Order <span class="required">*</span></label>
-                                    <div class="col-md-8 col-sm-7 col-xs-12">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Display Order <span class="required">*</span></label>
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
                                         <input type="text" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required>
                                     </div>
                                 </div>
