@@ -601,7 +601,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>" target="_blank">Postgraduate Programme </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>" >Postgraduate Programme </a></li>
               </ul>
             </li>
 
