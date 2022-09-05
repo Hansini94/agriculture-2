@@ -6,7 +6,7 @@
                     <h1 class="heading" data-aos="fade-up">CVCD Excellence Award</h1>
                     <nav aria-label="breadcrumb" data-aos="fade-down">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Research</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo base_url('excellence_award') ?>">Awards</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><b>CVCD Excellence Award</b></li>

@@ -6,7 +6,7 @@
                     <h1 class="heading" data-aos="fade-up">Annual Research Excellence Awards – 2018 -Faculty of Agriculture</h1>
                     <nav aria-label="breadcrumb" data-aos="fade-down">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo base_url('awards') ?>">Research</a></li>
                             <!-- <li class="breadcrumb-item"><a href="#">Faculty Statistics</a></li> -->
                             <li class="breadcrumb-item active" aria-current="page"><b>Awards - 2018</b></li>

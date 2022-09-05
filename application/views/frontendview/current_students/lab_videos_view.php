@@ -7,8 +7,9 @@
               <h1 class="heading" data-aos="fade-up">Current students </h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?php echo base_url("current_student"); ?>">Resources for Student</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url("current_students"); ?>">Current Undergraduates</a></li>
+                <li class="breadcrumb-item"><a href="#">Resources for Student</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Faculty Level Scholarship</b></li>
               </ol>
             </nav>

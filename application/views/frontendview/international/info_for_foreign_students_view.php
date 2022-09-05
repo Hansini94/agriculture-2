@@ -8,7 +8,7 @@
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">International</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('international-overview'); ?>">International</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Information for Foreign Students</b></li>
               </ol>
             </nav>

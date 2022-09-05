@@ -4,12 +4,12 @@
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
-              <h1 class="heading" data-aos="fade-up">enewsloads</h1>
+              <h1 class="heading" data-aos="fade-up">Downloads</h1>
               <nav aria-label="breadcrumb" data-aos="fade-enews">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">enewsloads</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><b>Faculty enewsloads</b></li>
+                <li class="breadcrumb-item"><a href="#">Downloads</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><b>Faculty Downloads</b></li>
               </ol>
             </nav>
             </div>

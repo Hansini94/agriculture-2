@@ -6,6 +6,7 @@
                     <h1 class="heading" data-aos="fade-up">Research Stories</h1>
                     <nav aria-label="breadcrumb" data-aos="fade-down">
                         <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo base_url('research-stories'); ?>">Research</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><b>Research Stories</b></li>
                         </ol>

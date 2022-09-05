@@ -7,7 +7,8 @@
               <h1 class="heading" data-aos="fade-up">Research Engagements</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url("engagement"); ?>">Engagement</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Research Engagements</b></li>
               </ol>
             </nav>

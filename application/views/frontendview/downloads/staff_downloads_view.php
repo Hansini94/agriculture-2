@@ -7,7 +7,7 @@
               <h1 class="heading" data-aos="fade-up">Downloads</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url("assets/frontend/"); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Downloads</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Staff Downloads</b></li>
               </ol>

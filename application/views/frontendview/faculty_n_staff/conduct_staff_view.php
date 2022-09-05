@@ -7,8 +7,8 @@
               <h1 class="heading" data-aos="fade-up">Code of Conduct for academic Staff</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Academic</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url("faculty-staff"); ?>">Faculty and Staff</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Code of Conduct for academic Staff</b></li>
               </ol>
             </nav>

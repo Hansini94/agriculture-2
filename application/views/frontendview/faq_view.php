@@ -7,8 +7,7 @@
               <h1 class="heading" data-aos="fade-up">Frequently asked questions</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Current Undergraduates</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Frequently asked questions</b></li>
               </ol>
             </nav>

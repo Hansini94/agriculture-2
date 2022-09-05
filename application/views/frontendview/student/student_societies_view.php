@@ -7,7 +7,7 @@
               <h1 class="heading" data-aos="fade-up"><?php echo $data->vName; ?></h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url("assets/frontend/"); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url(""); ?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="<?php echo base_url("student_life_societies"); ?>">Students</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b><?php echo $data->vName; ?></b></li>
               </ol>

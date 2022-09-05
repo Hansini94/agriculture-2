@@ -6,7 +6,7 @@
                     <h1 class="heading" data-aos="fade-up">Faculty Proposal</h1>
                     <nav aria-label="breadcrumb" data-aos="fade-down">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo base_url('quality/functions-of-foaqac') ?>">Quality</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo base_url('quality/ahead-project') ?>">Ahead Projects </a></li>
                             <li class="breadcrumb-item active" aria-current="page"><b>Faculty Proposal</b></li>
