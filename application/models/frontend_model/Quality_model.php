@@ -128,6 +128,46 @@ class Quality_model extends CI_Model {
             return array();
         }
     }
+    
+    public function get_quality_tab_data() {
+        $this->db->from('tbl_other_qualities');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'asc');
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }    
+
+    public function get_id() {
+        $this->db->from('tbl_other_qualities');
+        $this->db->order_by('id', 'asc');
+        $this->db->limit(1);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+    } 
+    
+    public function get_quality_detail($id) {
+        $this->db->from('tbl_other_qualities');
+        $this->db->where('id', $id);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+    } 
 
 }
 

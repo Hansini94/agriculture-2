@@ -180,5 +180,28 @@ if (!function_exists('get_contact_details')) {
     }
 }
 
+if (!function_exists('get_innerpage_banner')) {
+
+    function get_innerpage_banner($pageRoute) {
+        $ci = & get_instance();
+        $ci->load->database();
+
+        $ci->db->from('tbl_innerpage_banner');
+        $ci->db->where('vPageRoute', $pageRoute);
+        $ci->db->where('cEnable', 'Y');
+        $ci->db->order_by('id', 'desc');
+        $ci->db->limit(1);
+        $result = $ci->db->get();
+        // echo $ci->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return false;
+        }
+    }
+
+}
+
+
 //}
 ?>

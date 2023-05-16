@@ -107,6 +107,13 @@ small {
 }
 
 
+.logo_75{
+    position: absolute;
+    z-index: 9999;
+    width: 95px !important;
+    right: 0px;
+}
+
 /*******common css*************/
 
 
@@ -169,9 +176,9 @@ small {
 
 /* ============ small devices .end// ============ */
 
-.top_logo {
-    width: 230px !important;
-}
+/*.top_logo {*/
+/*    width: 270px !important;*/
+/*}*/
 
 .carousel-item {
     height: 100vh;

@@ -1,5 +1,34 @@
 <style>
 
+        .nav.side-menu>li>a, .nav.child_menu>li>a {
+            color: #ffffff !important;
+            font-weight: 500;
+        }
+        
+        #sidebar-menu .fa {
+            color: #ffffff;
+            width: 26px;
+            opacity: .99;
+            display: inline-block;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+    body.nav-md .container.body .col-md-3.left_col {
+        width: 230px;
+        padding: 0;
+        position: absolute;
+        display: flex;
+        background-image:url('<?php echo base_url('front_img/agri_menu_bg.png'); ?>') !important;
+        background-repeat:no-repeat !important;
+        background-size:cover !important;
+        background-position:left center !important;
+    }
+
     body.nav-md .container.body .right_col{
         height: 100vh !important;
         background-image:url('<?php echo base_url('front_img/product_bg.jpg'); ?>') !important;
@@ -9,7 +38,8 @@
     }
     
     .x_panel{
-        background-color: #c8cfe9;
+        background-color: #879aec;
+        padding: 0px !important;
         /*background-image:url('http://173.231.230.98/~tgcss/kelani_cables_css/images/shape_bg.png') !important;*/
         /*background-repeat:no-repeat !important;*/
         /*background-size:cover !important;*/
@@ -19,25 +49,16 @@
     }
 
     .dash_bg{
-
         background-position: center center;
-
         background-repeat: no-repeat;
-
-        background-size: cover;
-
+        background-size: contain;
         display: flex;
-
         flex-direction: column;
- 
         justify-content: center;
-
         text-align: center;
-
-        /*background-image: url('<?php echo base_url('assets/images/dashboardBG.png'); ?>');*/
-
-        height: 200px;
-
+        background-image: url('<?php echo base_url('front_img/welcome_bg.png'); ?>');
+        height: 300px;
+        padding: 0px;
     }
 
 </style>
@@ -86,7 +107,7 @@ if ($hour > 4 && $hour <= 11) {
 
             <div class="title_left">
 
-                <h3 style="color: #ffffff;">
+                <h3 style="color: #000000;">
 
                     Dashboard
 
@@ -108,11 +129,11 @@ if ($hour > 4 && $hour <= 11) {
 
                         <div class="dash_bg">
 
-                            <div style="color: #ffffff;">
+                            <!--<div style="color: #ffffff;">-->
 
-                                <h1><?php echo $gritting . ", " . $this->session->userdata('vUserNamebackendsession'); ?></h1>
+                            <!--    <h1><?php echo $gritting . ", " . $this->session->userdata('vUserNamebackendsession'); ?></h1>-->
 
-                            </div>
+                            <!--</div>-->
 
                            
 

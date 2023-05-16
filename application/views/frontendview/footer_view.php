@@ -5,11 +5,13 @@
   <div class="slider">
     <div class="owl-carousel">
       <?php foreach ($quick_links as $quick_link) { ?>
-        <div class="slider-card">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-            <img src="<?php echo base_url("front_img/") . $quick_link->fImg; ?>" class="img-fluid">
-          </div>
-        </div>
+        <a href="<?php if($quick_link->vUrlLink !== ''){echo $quick_link->vUrlLink;}else{echo base_url();}?>">
+            <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <img src="<?php echo base_url("front_img/") . $quick_link->fImg; ?>" class="img-fluid">
+                </div>
+            </div>
+        </a>
       <?php } ?>
     </div>
   </div>
@@ -29,17 +31,20 @@
   <div class="container">
 
     <div class="row">
-
+ <?php
+          $contact_details = get_contact_details();
+          ?>
       <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 footer_logo_col">
         <a href="<?php echo base_url(); ?>">
-          <img src="<?php echo base_url("assets/frontend/"); ?>images/logo.png" alt="" class="d-block w-100 footer_logo">
+          <img src="<?php  echo base_url().'/front_img/'.$contact_details->fFooterImage; ?>" alt="" class="d-block w-100 footer_logo">
         </a>
+        
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            <?php echo $contact_details->tFooterDes ?>
         </p>
 
         <p style="color: #999999;" class="d-none d-lg-block">
-          <small>Copyright ©2022 Faculty of Agriculture - University of Peradeniya. <br>
+          <small>Copyright ©<?php echo date("Y"); ?> Faculty of Agriculture - University of Peradeniya. <br>
             All Rights Reserved</small>
         </p>
 
@@ -106,9 +111,7 @@
             </a>
           </div>
 
-          <?php
-          $contact_details = get_contact_details();
-          ?>
+         
 
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 
@@ -139,7 +142,7 @@
           </div>
 
           <p style="color: #999999;" class="d-block d-md-block d-lg-none">
-            <small>Copyright ©2022 Faculty of Agriculture - University of Peradeniya. <br>
+            <small>Copyright ©<?php echo date("Y"); ?> Faculty of Agriculture - University of Peradeniya. <br>
               All Rights Reserved</small>
           </p>
 
@@ -251,6 +254,72 @@
 </script>
 
 <!-- count down -->
+
+<script>
+  var carousel = document.querySelector('#carouselExampleCaptions');
+  var carouselInstance = new bootstrap.Carousel(carousel);
+
+  var prevButton = document.querySelector('.carousel-control-prev');
+    prevButton.addEventListener('click', function() {
+    carouselInstance.prev();
+  });
+
+  var nextButton = document.querySelector('.carousel-control-next');
+    nextButton.addEventListener('click', function() {
+    carouselInstance.next();
+  });
+</script>
+
+<!--mobile menu-->
+<script>
+    function bootnavbar(options) {
+  const defaultOption = {
+    selector: "main_mobile_navbar",
+    animation: true,
+    // animateIn: "animate__fadeIn",
+  };
+
+  const bnOptions = { ...defaultOption, ...options };
+
+  init = function () {
+    var dropdowns = document
+      .getElementById(bnOptions.selector)
+      .getElementsByClassName("dropdown");
+
+    Array.prototype.forEach.call(dropdowns, (item) => {
+      //add animation
+      if (bnOptions.animation) {
+        const element = item.querySelector(".dropdown-menu");
+        element.classList.add("animate__animated");
+        element.classList.add(bnOptions.animateIn);
+      }
+
+      //hover effects
+      item.addEventListener("mouseover", function () {
+        this.classList.add("show");
+        const element = this.querySelector(".dropdown-menu");
+        element.classList.add("show");
+      });
+
+      item.addEventListener("mouseout", function () {
+        this.classList.remove("show");
+        const element = this.querySelector(".dropdown-menu");
+        element.classList.remove("show");
+      });
+    });
+  };
+
+  init();
+}
+
+</script>
+
+ <script>
+    new bootnavbar();
+</script>
+<!--mobile menu-->
+
+
 
 
 </body>

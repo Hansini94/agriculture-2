@@ -290,6 +290,10 @@
 	.footer_link_col{
 		text-align: center;
 	}
+	
+	.top_logo{
+	    width: 245px !important;
+	}
 
 }
 

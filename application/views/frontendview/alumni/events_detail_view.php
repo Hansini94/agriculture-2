@@ -1,14 +1,13 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top no-repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
               <h1 class="heading" data-aos="fade-up">ALUMNI</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?php echo base_url('alumni'); ?>">Alumni</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Alumni Events</b></li>
               </ol>
             </nav>
@@ -134,7 +133,11 @@
 
                       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $all_data->dRDate; ?></small></p>
-                        <a href='<?php  $heading = $all_data->vTitle; $name = str_replace(' ', '_', $heading); echo base_url('alumni_events/events_detail/'.$name) ?>'>
+                        <a href='<?php 
+                        // $heading = $all_data->vTitle; 
+                        // $name = str_replace(' ', '_', $heading); 
+                        // echo base_url('alumni_events/events_detail/'.$name) 
+                        echo base_url('alumni_events/events_detail/'.$all_data->id)?>'>
                         <h1 class="sub_heading">
                           <?php echo $all_data->vTitle; ?>
                         </h1>
@@ -150,9 +153,11 @@
                           ?>
                           </p>
                           <!-- arrow link -->
-                          <a class='animated-arrow' href='<?php $heading = $all_data->vTitle;
-                                                    $name = str_replace(' ', '_', $heading);
-                                                    echo base_url('alumni_events/events_detail/'.$name) ?>'>
+                          <a class='animated-arrow' href='<?php 
+                        //   $heading = $all_data->vTitle;
+                        //                             $name = str_replace(' ', '_', $heading);
+                        //                             echo base_url('alumni_events/events_detail/'.$name)
+                                                    echo base_url('alumni_events/events_detail/'.$all_data->id)?>'>
                           <span class='the-arrow -left'>
                             <span class='shaft'></span>
                           </span>

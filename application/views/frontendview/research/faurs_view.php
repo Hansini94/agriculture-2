@@ -1,6 +1,6 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
@@ -9,7 +9,7 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="<?php echo base_url("research"); ?>">Research</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><b>Faurs</b></li>
+                <li class="breadcrumb-item active" aria-current="page"><b>FAuRS</b></li>
               </ol>
             </nav>
             </div>
@@ -80,7 +80,7 @@
                       <p class="sub_heading">   Competitions</p>
                     </blockquote>
                     <!-- arrow link -->
-                      <a class='animated-arrow' href='<?php echo base_url(); ?>faurs_competition'>
+                      <a class='animated-arrow' href='<?php echo base_url(); ?>faurs-competition'>
                       <span class='the-arrow -left'>
                         <span class='shaft'></span>
                       </span>

@@ -154,9 +154,41 @@
                                         <input type="text" id="vLinkedIn" name="vLinkedIn" value="<?php echo $contact_us_data[0]->vLinkedIn; ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
-
                             </div>
-                            
+                            <div class="clearfix"></div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <h5><b>Footer</b></h5>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="clearfix"></div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="vProTitle">Footer Description</label>
+                                        <div class="col-md-8 col-sm-6 col-xs-12">
+                                            <textarea id="tFooterDes" name="tFooterDes" class="form-control col-md-7 col-xs-12" rows="5"><?php echo $contact_us_data[0]->tFooterDes; ?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                   <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-3 col-xs-12" style="padding-top:8px;" for="first-name" >Image ( 331 x 83 px )</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="file" id="fFooterImage" name="fFooterImage" accept="image/png, image/gif, image/jpeg, image/jpg">
+                                        </div>
+                                    </div>
+                                    
+                                    <?php if($contact_us_data[0]->fFooterImage!=''){ ?>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >&nbsp;</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <img class="img-responsive" src="<?php echo base_url().'front_img/'.$contact_us_data[0]->fFooterImage;?>" <?php if ($cSaveStatus != "E") {?> required  <?php } ?>   />
+                                        </div>
+                                    </div>
+    								<?php } ?> 
+                                    
+                                </div>
                             
 							<div style="clear:both;"></div>                            
                             

@@ -104,9 +104,9 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_news_detail($newString) {
+    public function get_news_detail($id) {
         $this->db->from('tbl_alumni_news');
-        $this->db->where('vTitle', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -164,9 +164,9 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_events_detail($newString) {
+    public function get_events_detail($id) {
         $this->db->from('tbl_alumni_events');
-        $this->db->where('vTitle', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -224,9 +224,9 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_newsletters_detail($newString) {
+    public function get_newsletters_detail($id) {
         $this->db->from('tbl_alumni_newsletters');
-        $this->db->where('vTitle', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -278,9 +278,9 @@ class Alumni_model extends CI_Model {
         }
     }
 
-    public function get_scholarships_detail($newString) {
+    public function get_scholarships_detail($id) {
         $this->db->from('tbl_alumni_scholarships');
-        $this->db->where('vName', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {

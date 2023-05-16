@@ -36,6 +36,8 @@ Class Home_detail extends CI_Controller {
     public function save_home($data = '') {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
+        // $fFooterImage = $this->input->post('fFooterImage', TRUE);
+        // echo "test";echo $fFooterImage; exit();
         if ($cSaveStatus === 'E') {
             if ($this->common_model->update_saved_data($this->table_name)) {
                 //$tDes = "saved data has been updated";

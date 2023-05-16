@@ -1,14 +1,14 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top no-repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
               <h1 class="heading" data-aos="fade-up"> Alumni  </h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?php echo base_url('alumni'); ?>">Alumni</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url("alumni"); ?>">Alumni</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b> Committee  </b></li>
               </ol>
             </nav>
@@ -52,7 +52,7 @@
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                   <br>
-                   <h1 class="heading mb-3">Current FaURS Committee </h1>
+                   <h1 class="heading mb-3">Current Committee </h1>
                    <br>
 
                    <div class="row">

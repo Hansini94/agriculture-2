@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1920px) {
+
+
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1536px) {
+
+	.short_link_div{
+	    background: no-repeat center bottom scroll;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+
+	.short_link_div_full_height{
+	    height: 600px;
+	}
+
+	.short_link_div_middle_height{
+	    height: 296px;
+	}
+
+	.short_link_div_text_div{
+	    margin-top: -225px;
+	}
+
+	.navbar-expand-lg .navbar-nav .nav-link {
+	    padding-right: 0.4rem;
+	    padding-left: 0.4rem;
+	}
+
+	.inner_page_top_div {
+	  height: 350px;
+	}
+
+	.inner_page_top_heading{
+	    padding-top: 230px;
+	}
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1280px) {
+
+
+
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+
+	.navbar-light .navbar-nav .nav-link {
+	    font-size: 11px;
+	}
+
+	#container h1 {
+	    font-size: 16px;
+	}
+
+	#container p {
+	    line-height: initial;
+	}
+
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1024px) {
+
+	.short_link_div_text_div {
+	    margin-top: -275px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+
+	.fixed-top {
+	    z-index: 999999999;
+	}
+
+
+	.logo {
+	    width: 150px;
+	}
+
+	.footer_logo {
+	    width: 320px !important;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+	    font-size: 11px;
+	    text-align: center;
+	}
+
+	.navbar-expand-lg .navbar-collapse {
+	    flex-basis: auto;
+	    margin-top: 10px;
+	}
+
+	.navbar-collapse {
+	    flex-basis: 100% !important;
+	}
+
+	.d-flex{
+		display: flex !important;
+	}
+
+	.first_nav_bar {
+	    padding-left: 0px !important;
+	    float: none;
+	}
+
+	.second_nav_bar {
+	    border-top: 1px solid transparent;
+	}
+
+	.navbar-nav {
+	    padding-left: 0px !important;
+	    width: 100%;
+	}
+
+	.navbar-nav {
+	    padding-left: 0px !important;
+	}
+
+	.dropdown-item {
+	    text-align: center !important;
+	}
+
+	.hidden_item{
+		display: none;
+	}
+
+	.carousel-control-next, .carousel-control-prev {
+	     bottom: 0px; 
+	}
+
+	.short_link_div_text_div {
+	    margin-top: -280px;
+	}
+
+	.rag_har_div{
+		top: -25px !important;
+	}
+
+	.rag_har_div:before {
+	    top: 0;
+	    transform-origin: left top;
+	    transform: skewY(0deg);
+	}
+
+	.rag_har_div img{
+		width: 60px !important;
+	}
+
+	#container h1 {
+	    text-transform: uppercase;
+	    color: #ffffff;
+	    font-size: 16px;
+	    margin-bottom: 0px;
+	    margin-top: 0px;
+	}
+
+	#container p {
+	    line-height: initial;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+
+		.footer_row {
+		    text-align: left;
+		}
+
+		.top_box_con {
+		    position: relative;
+		    margin-top: 3px;
+		}
+
+		.angled-bottom-left:after {
+		  bottom: 0;
+		  transform-origin: right bottom;
+		  transform: skewY(-0deg);
+		}
+
+		.angled-top-right:before {
+		    top: 0;
+		    transform-origin: left top;
+		    transform: skewY(-0deg);
+		}
+
+		.skew_top_box_div_2 #container {
+		    top: 0px;
+		    height: 135px;
+		    padding-top: 15px;
+		}
+
+		.skew_top_box_div_3 #container {
+		    top: 0px;
+		    height: 135px;
+		    padding-top: 15px;
+		}
+
+		.top_box {
+		    padding-left: 2px;
+		    padding-right: 2px;
+		    margin-bottom: 2px;
+		    position: relative;
+		    margin-top: 1px;
+		}
+
+		.carousel-caption {
+		    bottom: -20px;
+		}
+
+		.rag_har_div {
+		    top: 0px !important;
+		}
+
+		.home_link_div{
+			margin-top: 3px !important;
+		}
+
+		.footer_link_col{
+			text-align: left;
+		}
+
+
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 575px) {
+
+		.footer_row {
+		    text-align: center;
+		}
+
+		.footer_logo {
+		    width: 320px !important;
+		    margin: auto;
+		}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.footer_row {
+	    text-align: center;
+	}
+
+	.short_link_div_text_div {
+	    margin-top: -215px;
+	}
+
+	#container {
+	    padding-top: 15px;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 375px) {
+
+
+
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 360px) {
+
+
+
+}
+
+
+@media only screen and (max-width : 320px) {
+
+
+
+}

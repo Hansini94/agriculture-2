@@ -1,0 +1,103 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class Training_consultancies_model extends CI_Model {
+
+    public function get_count_projects() 
+	{
+        return $this->db->count_all("tbl_training");
+    }
+
+    public function get_projects_list($limit, $start) {
+        $this->db->from('tbl_training');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    } 
+
+    public function get_projects_detail($id) {
+        $this->db->from('tbl_training');
+        $this->db->where('id', $id);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+    }  
+    public function get_projects_detail_list() {
+        $this->db->from('tbl_training');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        // $this->db->limit(12);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+
+//Student Research
+
+public function get_count_student() 
+	{
+        return $this->db->count_all("tbl_consultancies");
+    }
+
+    public function get_student_list($limit, $start) {
+        $this->db->from('tbl_consultancies');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit($limit, $start);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    } 
+
+    public function get_student_detail($id) {
+        $this->db->from('tbl_consultancies');
+        $this->db->where('id', $id);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return array();
+        }
+        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+    }  
+    public function get_student_detail_list() {
+        $this->db->from('tbl_consultancies');
+        $this->db->where('cEnable', 'Y');
+        $this->db->order_by('iOrder', 'asc');
+        // $this->db->limit(12);
+        $result = $this->db->get();
+        //echo $this->db->last_query();  exit();  
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return array();
+        }
+    }
+    
+
+}
+
+?>

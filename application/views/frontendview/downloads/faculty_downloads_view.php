@@ -1,15 +1,15 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
-              <h1 class="heading" data-aos="fade-up">Downloads</h1>
+              <h1 class="heading" data-aos="fade-up">enewsloads</h1>
               <nav aria-label="breadcrumb" data-aos="fade-enews">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Downloads</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><b>Faculty Downloads</b></li>
+                <li class="breadcrumb-item"><a href="#">enewsloads</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><b>Faculty enewsloads</b></li>
               </ol>
             </nav>
             </div>

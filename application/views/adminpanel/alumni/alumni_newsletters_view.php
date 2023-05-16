@@ -107,7 +107,7 @@ if ($cSaveStatus == "E") {
                                 <div class="form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name" >Main Image (1200 * 800px) </label>
                                     <div class="col-md-5 col-sm-6 col-xs-10" style="padding-top:8px;">
-                                        <input type="file" id="fThumbnail" name="fThumbnail" <?php if ($cSaveStatus != "E") {?> required  <?php } ?> >
+                                        <input type="file" id="fThumbnail" name="fThumbnail" <?php if ($cSaveStatus != "E") {?> required  <?php } ?> accept="image/png, image/gif, image/jpeg, image/jpg">
                                     </div>                                    
                                 </div>                                
                                 

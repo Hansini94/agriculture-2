@@ -1,10 +1,10 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
-              <h1 class="heading" data-aos="fade-up">EVENTS</h1>
+              <h1 class="heading" data-aos="fade-up">Sports</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
@@ -76,7 +76,7 @@
                 <a class='animated-arrow' href='<?php 
                                                       $heading = $sports[0]->vTitle;
                                                       $name = str_replace(' ', '_', $heading);
-                                                      echo base_url('student_life_sports/sports_detail/'.$name) ?>'>
+                                                      echo base_url('student-life-sports/student-life-sports-detail/'.$sports[0]->id.'/'.$name) ?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -126,7 +126,7 @@
                         <a href='<?php  
                                     $heading = $spt->vTitle; 
                                     $name = str_replace(' ', '_', $heading); 
-                                    echo base_url('student_life_sports/sports_detail/'.$name) ?>'>
+                                    echo base_url('student-life-sports/student-life-sports-detail/'.$spt->id.'/'.$name) ?>'>
                         <h1 class="sub_heading">
                           <?php echo $spt->vTitle; ?>
                         </h1>
@@ -145,7 +145,7 @@
                             <a class='animated-arrow' href='<?php 
                                                             $heading = $spt->vTitle;
                                                             $name = str_replace(' ', '_', $heading);
-                                                            echo base_url('student_life_sports/sports_detail/'.$name) ?>'>
+                                                            echo base_url('student-life-sports/student-life-sports-detail/'.$spt->id.'/'.$name) ?>'>
                             <span class='the-arrow -left'>
                             <span class='shaft'></span>
                             </span>

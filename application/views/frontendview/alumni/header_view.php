@@ -101,7 +101,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>alumni_committee">Committee </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni-committee">Committee </a>
             </li>
 
              <li class="nav-item dropdown">
@@ -109,18 +109,18 @@
                   News and Events 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_news">News</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_events">Events </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_newsletters">Newsletters</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni-news">News</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni-events">Events </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni-newsletter">Newsletters</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>alumni_scholarships">  Scholarships </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni-scholarships">  Scholarships </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>alumni_joinus">  Join Us </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni-join-us">  Join Us </a>
             </li>
 
             <!-- <li class="nav-item dropdown">
@@ -146,7 +146,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">
       <div class="container">
 
-        <a class="navbar-brand" href="index.html"><img src="<?php echo base_url("assets/frontend/"); ?>images/uni_logo_top.png" alt="" class="d-block w-100 top_logo"></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url("assets/frontend/"); ?>images/uni_logo_top.png" alt="" class="d-block w-100 top_logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -161,7 +161,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>alumni_committee">Committee </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni-committee">Committee </a>
             </li>
 
              <li class="nav-item dropdown">
@@ -169,18 +169,18 @@
                   News and Events 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_news">News</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_events">Events </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni_newsletters">Newsletters</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni-news">News</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni-events">Events </a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url(); ?>alumni-newsletter">Newsletters</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>alumni_scholarships">  Scholarships </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni-scholarships">  Scholarships </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>alumni_joinus">  Join us </a>
+              <a class="nav-link" href="<?php echo base_url(); ?>alumni-join-us">  Join us </a>
             </li>
 
           </ul>

@@ -63,9 +63,9 @@ Class Alumni_newsletters extends CI_Controller {
         $this->load->view('frontendview/footer_view', $data_header);
        
     }    
-    public function newsletters_detail($name) {
+    public function newsletters_detail($id) {
 
-        $newString = str_replace('_', ' ', $name);
+        // $newString = str_replace('_', ' ', $name);
 
         $this->load->model('frontend_model/alumni_model');
         $this->load->model('frontend_model/home_page_model');
@@ -75,7 +75,7 @@ Class Alumni_newsletters extends CI_Controller {
 
         $data_header['meta'] = 18;
 
-        $data['detail'] = $this->alumni_model->get_newsletters_detail($newString);
+        $data['detail'] = $this->alumni_model->get_newsletters_detail($id);
         $data['all'] = $this->alumni_model->get_newsletters_detail_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
