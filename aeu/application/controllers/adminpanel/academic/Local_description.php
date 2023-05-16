@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Local_description extends CI_Controller {
 
-    private $table_name = "tbl_local_description";
+    private $table_name = "tbl_aeu_local_description";
     private $page_id = "7";
     private $redirect_path = "adminpanel/academic/local_description";
 

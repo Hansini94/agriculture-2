@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 class Academic_model extends CI_Model {
 
     public function get_core_program_data() {
-        $this->db->from('tbl_core_program');
+        $this->db->from('tbl_aeu_core_program');
         $this->db->where('id', 1);
         $result = $this->db->get();
          //echo $this->db->last_query();  exit();  
@@ -18,7 +18,7 @@ class Academic_model extends CI_Model {
     }
 
     public function get_module_tab_data() {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_aeu_advanced_modules');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
@@ -31,7 +31,7 @@ class Academic_model extends CI_Model {
     }    
     
     public function get_id() {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_aeu_advanced_modules');
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
@@ -41,11 +41,11 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_aeu_engagement_research', ['id' => $id])->row();
     } 
     
     public function get_module_details() {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_aeu_advanced_modules');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -54,11 +54,11 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_aeu_engagement_research', ['id' => $id])->row();
     }
 
     public function get_module_detail($id) {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_aeu_advanced_modules');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -67,14 +67,14 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_aeu_engagement_research', ['id' => $id])->row();
     } 
 
 
     /*******************POSTGRADUATE******************** */
 
     public function get_local_program_data() {
-        $this->db->from('tbl_postgraduate_program');
+        $this->db->from('tbl_aeu_postgraduate_program');
         $this->db->where('id', 1);
         $result = $this->db->get();
          //echo $this->db->last_query();  exit();  
@@ -86,7 +86,7 @@ class Academic_model extends CI_Model {
     }
 
     public function get_local_module_tab_data() {
-        $this->db->from('tbl_local_description');
+        $this->db->from('tbl_aeu_local_description');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
@@ -99,7 +99,7 @@ class Academic_model extends CI_Model {
     }    
     
     public function get_local_id() {
-        $this->db->from('tbl_local_description');
+        $this->db->from('tbl_aeu_local_description');
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
@@ -109,11 +109,11 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_aeu_engagement_research', ['id' => $id])->row();
     } 
     
     public function get_local_module_details() {
-        $this->db->from('tbl_local_description');
+        $this->db->from('tbl_aeu_local_description');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -122,11 +122,11 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_aeu_engagement_research', ['id' => $id])->row();
     }
 
     public function get_local_module_detail($id) {
-        $this->db->from('tbl_local_description');
+        $this->db->from('tbl_aeu_local_description');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -135,7 +135,7 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_aeu_engagement_research', ['id' => $id])->row();
     } 
 
     #################################################	
