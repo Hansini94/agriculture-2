@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class research_projects extends CI_Controller {
 
-    private $table_name = "tbl_research_projects";
+    private $table_name = "tbl_biology_research_projects";
     private $page_id = "20";
     private $redirect_path = "adminpanel/research/research_projects";
 

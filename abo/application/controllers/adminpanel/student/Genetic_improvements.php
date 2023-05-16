@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Genetic_improvements extends CI_Controller {
 
-    private $table_name = "tbl_gip_series_students";
+    private $table_name = "tbl_biology_gip_series_students";
     private $page_id = "15";
     private $redirect_path = "adminpanel/student/genetic_improvements";
 

@@ -9,7 +9,7 @@ class Model_users extends CI_Model {
         $this->db->where('vUserName', $this->input->post('vUserName'));
         $this->db->where('pPassword', md5($this->input->post('pPassword')));
         $this->db->where('cEnable', 'Y');
-        $query = $this->db->get('tbl_backend_user');
+        $query = $this->db->get('tbl_biology_backend_user');
         if ($query->num_rows() == 1) {
             return true;
         } else {
@@ -18,12 +18,12 @@ class Model_users extends CI_Model {
     }
 
     public function get_user_id() {
-        $this->db->select('tbl_backend_user.id,tbl_backend_user.vUserName,tbl_backend_user.iUserType');
-        $this->db->from('tbl_backend_user');
-        $this->db->join('tbl_user_type', 'tbl_backend_user.iUserType = tbl_user_type.id');
-        $this->db->where('tbl_backend_user.vUserName', $this->input->post('vUserName'));
-        $this->db->where('tbl_backend_user.pPassword', md5($this->input->post('pPassword')));
-        $this->db->where('tbl_backend_user.cEnable', 'Y');
+        $this->db->select('tbl_biology_backend_user.id,tbl_biology_backend_user.vUserName,tbl_biology_backend_user.iUserType');
+        $this->db->from('tbl_biology_backend_user');
+        $this->db->join('tbl_biology_user_type', 'tbl_biology_backend_user.iUserType = tbl_biology_user_type.id');
+        $this->db->where('tbl_biology_backend_user.vUserName', $this->input->post('vUserName'));
+        $this->db->where('tbl_biology_backend_user.pPassword', md5($this->input->post('pPassword')));
+        $this->db->where('tbl_biology_backend_user.cEnable', 'Y');
         $query = $this->db->get();
 
         if ($query->num_rows() == 1) {

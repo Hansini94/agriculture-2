@@ -6,10 +6,10 @@ if (!defined('BASEPATH'))
 class Admin_model extends CI_Model {
 
     public function form_names() {
-        //return $query = $this->db->get('tbl_dyn_menu');
-		$this->db->where('tbl_dyn_menu.show_menu', 1);
+        //return $query = $this->db->get('tbl_biology_dyn_menu');
+		$this->db->where('tbl_biology_dyn_menu.show_menu', 1);
         $this->db->order_by("fOrder", "ASC");
-        $result = $this->db->get('tbl_dyn_menu');
+        $result = $this->db->get('tbl_biology_dyn_menu');
         
         if ($result->num_rows() > 0) {
             return $result->result();
@@ -21,7 +21,7 @@ class Admin_model extends CI_Model {
 
         
         $this->db->order_by("vAccTypeName", "ASC");
-        $result = $this->db->get('tbl_user_type');
+        $result = $this->db->get('tbl_biology_user_type');
 
         if ($result->num_rows() > 0) {
             return $result->result();
@@ -34,10 +34,10 @@ class Admin_model extends CI_Model {
     public function get_user_detail() {
 
 
-        $this->db->select('tbl_backend_user.id,tbl_backend_user.vFirstName,tbl_backend_user.vUserName,tbl_backend_user.vLastName,tbl_backend_user.cEnable,tbl_backend_user.vContactNo,tbl_backend_user.vEmail,tbl_backend_user.iUserType');
-        $this->db->from('tbl_backend_user');
-        $this->db->join('tbl_user_type', 'tbl_backend_user.iUserType = tbl_user_type.id');
-        $this->db->order_by("tbl_backend_user.vFirstName", "ASC");
+        $this->db->select('tbl_biology_backend_user.id,tbl_biology_backend_user.vFirstName,tbl_biology_backend_user.vUserName,tbl_biology_backend_user.vLastName,tbl_biology_backend_user.cEnable,tbl_biology_backend_user.vContactNo,tbl_biology_backend_user.vEmail,tbl_biology_backend_user.iUserType');
+        $this->db->from('tbl_biology_backend_user');
+        $this->db->join('tbl_biology_user_type', 'tbl_biology_backend_user.iUserType = tbl_biology_user_type.id');
+        $this->db->order_by("tbl_biology_backend_user.vFirstName", "ASC");
         $result = $this->db->get();
 
         if ($result->num_rows() > 0) {
@@ -58,7 +58,7 @@ class Admin_model extends CI_Model {
 
         if ($save_status === 'A') {
             $this->db->trans_start();
-            $this->db->insert('tbl_user_type', $data);
+            $this->db->insert('tbl_biology_user_type', $data);
             $insert_id = $this->db->insert_id();
 
             for ($i = 0; $i < count($rowCount); $i++) {
@@ -85,7 +85,7 @@ class Admin_model extends CI_Model {
                 }
                 $data_t['vPrivilages'] = $viewVal . "," . $editVal . "," . $deleteVal;
 
-                $query = $this->db->insert('tbl_privilage', $data_t);
+                $query = $this->db->insert('tbl_biology_privilage', $data_t);
             }
 
             $this->db->trans_complete();
@@ -94,9 +94,9 @@ class Admin_model extends CI_Model {
 
             $this->db->trans_start();
             $this->db->where('id', $user_type_id);
-            $this->db->update('tbl_user_type', $data);
+            $this->db->update('tbl_biology_user_type', $data);
             $this->db->where('iUserTypeID', $user_type_id);
-            $this->db->delete('tbl_privilage');
+            $this->db->delete('tbl_biology_privilage');
 
             for ($i = 0; $i < count($rowCount); $i++) {
                 $data_t = array();
@@ -122,7 +122,7 @@ class Admin_model extends CI_Model {
                 }
                 $data_t['vPrivilages'] = $viewVal . "," . $editVal . "," . $deleteVal;
 
-                $query = $this->db->insert('tbl_privilage', $data_t);
+                $query = $this->db->insert('tbl_biology_privilage', $data_t);
             }
 
             $this->db->trans_complete();
@@ -142,7 +142,7 @@ class Admin_model extends CI_Model {
         if ($user_type_id != '') {
             $this->db->select('iFormID,vPrivilages', false);
             $this->db->where('iUserTypeID', $user_type_id);
-            $res = $this->db->get('tbl_privilage');
+            $res = $this->db->get('tbl_biology_privilage');
             if ($res->num_rows() > 0) {
                 foreach ($res->result() as $row) {
                     $data[] = $row;
@@ -159,10 +159,10 @@ class Admin_model extends CI_Model {
 
         $this->db->trans_start();
         $this->db->where('id', $iUserTypeID);
-        $this->db->delete('tbl_user_type');
+        $this->db->delete('tbl_biology_user_type');
 
         $this->db->where('iUserTypeID', $iUserTypeID);
-        $this->db->delete('tbl_privilage');
+        $this->db->delete('tbl_biology_privilage');
 
         $this->db->trans_complete();
 
