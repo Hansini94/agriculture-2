@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Outreach extends CI_Controller {
 
-    private $table_name = "tbl_postgraduate_program";
+    private $table_name = "tbl_abc_postgraduate_program";
     private $page_id = "8";
     private $redirect_path = "adminpanel/projects_outreach/outreach";
 

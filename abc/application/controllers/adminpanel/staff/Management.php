@@ -6,9 +6,9 @@ if (!defined('BASEPATH'))
 
 Class Management extends CI_Controller {
 
-    private $table_name = "tbl_academic_staff";
-    private $table_name1 = "tbl_academic_staff_caption";
-    private $table_name2 = "tbl_academic_staff_category";
+    private $table_name = "tbl_abc_academic_staff";
+    private $table_name1 = "tbl_abc_academic_staff_caption";
+    private $table_name2 = "tbl_abc_academic_staff_category";
     private $page_id = "10";
     private $redirect_path = "adminpanel/staff/management";
 

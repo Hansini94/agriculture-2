@@ -15,25 +15,25 @@ Class Dynamic_menu {
             redirect('adminpanel/login');
         } else {
             $query_string = "SELECT
-tbl_dyn_menu.id,
-tbl_dyn_menu.icon,
-tbl_dyn_menu.title,
-tbl_dyn_menu.page_id,
-tbl_dyn_menu.url,
-tbl_dyn_menu.parent_id,
-tbl_dyn_menu.is_parent,
-tbl_dyn_menu.show_menu,
-tbl_dyn_menu.parent_order,
-tbl_dyn_menu.child_order
+tbl_abc_dyn_menu.id,
+tbl_abc_dyn_menu.icon,
+tbl_abc_dyn_menu.title,
+tbl_abc_dyn_menu.page_id,
+tbl_abc_dyn_menu.url,
+tbl_abc_dyn_menu.parent_id,
+tbl_abc_dyn_menu.is_parent,
+tbl_abc_dyn_menu.show_menu,
+tbl_abc_dyn_menu.parent_order,
+tbl_abc_dyn_menu.child_order
 
 FROM
-tbl_privilage
-INNER JOIN tbl_dyn_menu ON tbl_privilage.iFormID = tbl_dyn_menu.id
+tbl_abc_privilage
+INNER JOIN tbl_abc_dyn_menu ON tbl_abc_privilage.iFormID = tbl_abc_dyn_menu.id
 WHERE
-tbl_privilage.iUserTypeID = $iUserType AND tbl_dyn_menu.show_menu = 1
-AND tbl_privilage.vPrivilages != '0,0,0'
+tbl_abc_privilage.iUserTypeID = $iUserType AND tbl_abc_dyn_menu.show_menu = 1
+AND tbl_abc_privilage.vPrivilages != '0,0,0'
 ORDER BY
-tbl_dyn_menu.parent_order ASC";
+tbl_abc_dyn_menu.parent_order ASC";
             $query = $this->ci->db->query($query_string);
 
             $html_out = "";
@@ -71,26 +71,26 @@ tbl_dyn_menu.parent_order ASC";
         $has_subcats = FALSE;
 
         $query_string = "SELECT
-tbl_dyn_menu.id,
-tbl_dyn_menu.icon,
-tbl_dyn_menu.title,
-tbl_dyn_menu.page_id,
-tbl_dyn_menu.url,
-tbl_dyn_menu.parent_id,
-tbl_dyn_menu.is_parent,
-tbl_dyn_menu.show_menu,
-tbl_dyn_menu.parent_order,
-tbl_dyn_menu.child_order
+tbl_abc_dyn_menu.id,
+tbl_abc_dyn_menu.icon,
+tbl_abc_dyn_menu.title,
+tbl_abc_dyn_menu.page_id,
+tbl_abc_dyn_menu.url,
+tbl_abc_dyn_menu.parent_id,
+tbl_abc_dyn_menu.is_parent,
+tbl_abc_dyn_menu.show_menu,
+tbl_abc_dyn_menu.parent_order,
+tbl_abc_dyn_menu.child_order
 
 FROM
-tbl_privilage
-INNER JOIN tbl_dyn_menu ON tbl_privilage.iFormID = tbl_dyn_menu.id
+tbl_abc_privilage
+INNER JOIN tbl_abc_dyn_menu ON tbl_abc_privilage.iFormID = tbl_abc_dyn_menu.id
 WHERE
-tbl_privilage.iUserTypeID = $iUserType AND
-tbl_dyn_menu.parent_id = $id AND tbl_dyn_menu.show_menu = 1
-AND tbl_privilage.vPrivilages != '0,0,0'
+tbl_abc_privilage.iUserTypeID = $iUserType AND
+tbl_abc_dyn_menu.parent_id = $id AND tbl_abc_dyn_menu.show_menu = 1
+AND tbl_abc_privilage.vPrivilages != '0,0,0'
 ORDER BY
-tbl_dyn_menu.child_order ASC";
+tbl_abc_dyn_menu.child_order ASC";
         $query = $this->ci->db->query($query_string);
 
         foreach ($query->result() as $row) {
