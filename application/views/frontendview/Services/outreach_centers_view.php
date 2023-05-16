@@ -77,7 +77,7 @@
                 <p class="sub_heading">   Agribusiness Centre  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agri_business_centre/' target="_blank">
+                <a class='animated-arrow' href='https://agri.pdn.ac.lk/abc/' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -105,7 +105,7 @@
                 <p class="sub_heading">   Agricultural Biotechnology Centre  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agri_biotechnology_centre/' target="_blank">
+                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agbc/' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -133,7 +133,7 @@
                 <p class="sub_heading">   Agriculture Education Unit  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agri_education_unit/' target="_blank">
+                <a class='animated-arrow' href='https://agri.pdn.ac.lk/aeu/' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -161,7 +161,7 @@
                 <p class="sub_heading">   Gender Education & Women’s Initiative Unit  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='http://www.pgia.pdn.ac.lk/' target="_blank">
+                <a class='animated-arrow' href='http://www.pgia.pdn.ac.lk/gewiu' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
