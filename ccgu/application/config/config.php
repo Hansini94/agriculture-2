@@ -25,7 +25,7 @@ date_default_timezone_set('Asia/Colombo');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://agri.pdn.ac.lk/agri_career_guidance_unit/';
+$config['base_url'] = 'https://agri.pdn.ac.lk/ccgu/';
 
 
 
