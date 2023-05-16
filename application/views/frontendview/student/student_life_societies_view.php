@@ -1,6 +1,6 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider03.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
@@ -99,7 +99,7 @@
                 <a class='animated-arrow' href='<?php 
                                                     $heading = $societies->vName;
                                                     $name = str_replace(' ', '_', $heading);
-                                                    echo base_url('student_life_societies/society_detail/'.$name) 
+                                                    echo base_url('student-life-societies/student-life-societies-detail/'.$societies->id.'/'.$name) 
                                                 ?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>

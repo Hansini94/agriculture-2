@@ -163,9 +163,10 @@
                   </p> -->
                   <!-- arrow link -->
                   <a class='animated-arrow' href='<?php 
-                                                          $heading = $news_data[0]->vTitle;
-                                                          $name = str_replace(' ', '_', $heading);
-                                                          echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                        //   $heading = $news_data[0]->vTitle;
+                                                        //   $name = str_replace(' ', '_', $heading);
+                                                        //   echo base_url('alumni_news/news_detail/'.$name)
+                                                          echo base_url('alumni_news/news_detail/'.$news_data[0]->id)?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>
@@ -219,9 +220,10 @@
             <h1 class="sub_heading"><?php echo $news_data[1]->vTitle; ?></h1>
             <!-- arrow link -->
             <a class='animated-arrow' href='<?php 
-                                                          $heading = $news_data[1]->vTitle;
-                                                          $name = str_replace(' ', '_', $heading);
-                                                          echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                        //   $heading = $news_data[1]->vTitle;
+                                                        //   $name = str_replace(' ', '_', $heading);
+                                                        //   echo base_url('alumni_news/news_detail/'.$name)
+                                                          echo base_url('alumni_news/news_detail/'.$news_data[1]->id)?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -257,9 +259,10 @@
         </p>
         <!-- arrow link -->
         <a class='animated-arrow' href='<?php 
-                                                          $heading = $news_data[2]->vTitle;
-                                                          $name = str_replace(' ', '_', $heading);
-                                                          echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                        //   $heading = $news_data[2]->vTitle;
+                                                        //   $name = str_replace(' ', '_', $heading);
+                                                        //   echo base_url('alumni_news/news_detail/'.$name) 
+                                                          echo base_url('alumni_news/news_detail/'.$news_data[2]->id)?>'>
           <span class='the-arrow -left'>
             <span class='shaft'></span>
           </span>
@@ -289,9 +292,10 @@
             <h1 class="sub_heading"><?php echo $news_data[3]->vTitle; ?></h1>
             <!-- arrow link -->
             <a class='animated-arrow' href='<?php 
-                                                          $heading = $news_data[3]->vTitle;
-                                                          $name = str_replace(' ', '_', $heading);
-                                                          echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                        //   $heading = $news_data[3]->vTitle;
+                                                        //   $name = str_replace(' ', '_', $heading);
+                                                        //   echo base_url('alumni_news/news_detail/'.$name)
+                                                          echo base_url('alumni_news/news_detail/'.$news_data[3]->id)?>'>
               <span class='the-arrow -left'>
                 <span class='shaft'></span>
               </span>
@@ -329,9 +333,10 @@
               <h1 class="sub_heading"><?php echo $news_data[4]->vTitle; ?></h1>
                 <!-- arrow link -->
                 <a class='animated-arrow' href='<?php 
-                                                                $heading = $news_data[4]->vTitle;
-                                                                $name = str_replace(' ', '_', $heading);
-                                                                echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                                // $heading = $news_data[4]->vTitle;
+                                                                // $name = str_replace(' ', '_', $heading);
+                                                                // echo base_url('alumni_news/news_detail/'.$name)
+                                                                echo base_url('alumni_news/news_detail/'.$news_data[4]->id)?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -368,9 +373,10 @@
         </p>
         <!-- arrow link -->
             <a class='animated-arrow' href='<?php 
-                                                                $heading = $news_data[5]->vTitle;
-                                                                $name = str_replace(' ', '_', $heading);
-                                                                echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                                // $heading = $news_data[5]->vTitle;
+                                                                // $name = str_replace(' ', '_', $heading);
+                                                                // echo base_url('alumni_news/news_detail/'.$name)
+                                                                echo base_url('alumni_news/news_detail/'.$news_data[5]->id)?>'>
             <span class='the-arrow -left'>
               <span class='shaft'></span>
             </span>
@@ -401,9 +407,10 @@
               <h1 class="sub_heading"><?php echo $news_data[6]->vTitle; ?></h1>
                 <!-- arrow link -->
                 <a class='animated-arrow' href='<?php 
-                                                                $heading = $news_data[6]->vTitle;
-                                                                $name = str_replace(' ', '_', $heading);
-                                                                echo base_url('alumni_news/news_detail/'.$name) ?>'>
+                                                                // $heading = $news_data[6]->vTitle;
+                                                                // $name = str_replace(' ', '_', $heading);
+                                                                // echo base_url('alumni_news/news_detail/'.$name)
+                                                                echo base_url('alumni_news/news_detail/'.$news_data[6]->id)?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -451,7 +458,7 @@
           </span>
           <span class='main'>
             <span class='text'>
-              Ecplore More
+              Explore More
             </span>
             <span class='the-arrow -right'>
               <span class='shaft'></span>
@@ -477,7 +484,7 @@
           </span>
           <span class='main'>
             <span class='text'>
-              Ecplore More
+              Explore More
             </span>
             <span class='the-arrow -right'>
               <span class='shaft'></span>
@@ -502,7 +509,7 @@
           </span>
           <span class='main'>
             <span class='text'>
-              Ecplore More
+              Explore More
             </span>
             <span class='the-arrow -right'>
               <span class='shaft'></span>

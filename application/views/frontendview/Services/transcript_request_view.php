@@ -1,6 +1,6 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(2)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(2) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
@@ -53,7 +53,7 @@
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 
                                 <div class="gray_text_div">
-                                    <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
+                                    <img src="images/pdf.png" alt="" class="d-block float-start" style="width: 55px !important; margin-top: 5px;">
                                     <blockquote class="blockquote" style="margin-bottom: 0px;">
                                         <p class="sub_heading" style="font-size: 13px;">PDF Format</p>
                                     </blockquote>
@@ -81,7 +81,7 @@
 
                                 <div class="gray_text_div">
 
-                                    <img src="<?php echo base_url("assets/frontend/"); ?>images/pdf.png" alt="" class="d-block float-start">
+                                    <img src="images/pdf.png" alt="" class="d-block float-start">
                                     <blockquote class="blockquote" style="margin-bottom: 0px;">
                                         <p class="sub_heading">Word Format</p>
                                     </blockquote>

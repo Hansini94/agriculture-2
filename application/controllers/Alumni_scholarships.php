@@ -31,9 +31,9 @@ Class Alumni_scholarships extends CI_Controller {
        
     }   
     
-    public function scholarships_detail($name) {
+    public function scholarships_detail($id) {
         
-        $newString = str_replace('_', ' ', $name);
+        // $newString = str_replace('_', ' ', $name);
 
         $this->load->model('frontend_model/alumni_model');
         $this->load->model('frontend_model/home_page_model');
@@ -43,7 +43,7 @@ Class Alumni_scholarships extends CI_Controller {
         
         $data_header['meta'] = 18;
 
-        $data['scholarship'] = $this->alumni_model->get_scholarships_detail($newString);
+        $data['scholarship'] = $this->alumni_model->get_scholarships_detail($id);
         $data['schol_data'] = $this->alumni_model->get_scholarships_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();

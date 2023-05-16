@@ -4,6 +4,7 @@ if ($cSaveStatus == "E") {
     $vName = $edit_data['vName'];
 	$tContent = $edit_data['tContent'];   
 	$fThumbnail = $edit_data['fThumbnail'];  
+	$tNewsVideo = $edit_data['tNewsVideo']; 
     $dNewsdate = $edit_data['dNewsdate'];  
     $cEnable = $edit_data['cEnable'];
 	$cFeatured = $edit_data['cFeatured'];  
@@ -14,6 +15,7 @@ if ($cSaveStatus == "E") {
     $vName = "";    
 	$tContent = "";    
     $fThumbnail = "";  
+    $tNewsVideo = ""; 
     $dNewsdate = "";  
     $cEnable = "Y";
     $cFeatured = "N";
@@ -107,6 +109,15 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Video URL</label>
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                       <input type="text" id="tNewsVideo" name="tNewsVideo" value="<?php echo $tNewsVideo; ?>" class="form-control col-md-7 col-xs-12"> 
+                                       <!--<span style="color:red;">Note : you have to submit the embed src link in here</span>-->
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name" >Main Image (1200 * 800px) </label>
@@ -130,21 +141,21 @@ if ($cSaveStatus == "E") {
                                 <?php }
                                 ?>
                             </div>
+                            <div class="clearfix"></div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">News Date<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12 xdisplay_inputx  has-feedback" style="padding-left:0px; padding-right:0px;">
+                                    <div class="col-md-8 col-sm-12 col-xs-12 xdisplay_inputx  has-feedback" style="padding-left:0px; padding-right:0px;">
                                     <input type="text" class="form-control col-md-7 col-xs-12 has-feedback-left" id="dNewsdate"  name="dNewsdate" required aria-describedby="inputSuccess2Status" value="<?php echo $dNewsdate; ?>" autocomplete="off">
                                                     <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                     <span id="inputSuccess2Status" class="sr-only">(success)</span>
                                 </div>
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-2 col-sm-12 col-xs-12" for="vProTitle">Order<span class="required">*</span></label>
-                                    <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                        <input type="number" id="iOrder" name="iOrder" value="<?php echo $iOrder; ?>" class="form-control col-md-7 col-xs-12" required> 
                                     </div>
                                 </div>

@@ -43,9 +43,9 @@ class Student_life_model extends CI_Model {
         }
     }
 
-    public function get_society_data($newString) {
+    public function get_society_data($id) {
         $this->db->from('tbl_student_societies');
-        $this->db->where('vName', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -70,9 +70,9 @@ class Student_life_model extends CI_Model {
         }
     }
 
-    public function get_sport_data($newString) {
+    public function get_sport_data($id) {
         $this->db->from('tbl_student_sports');
-        $this->db->where('vTitle', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -117,9 +117,9 @@ class Student_life_model extends CI_Model {
     }
     
 
-    public function get_events_data($newString) {
+    public function get_events_data($id) {
         $this->db->from('tbl_student_events');
-        $this->db->where('vTitle', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {

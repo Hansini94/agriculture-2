@@ -1,6 +1,6 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(2)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(2) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
@@ -94,6 +94,32 @@
                       Student Advisory & Welfare Committee  
                     </button>
                   </a>
+                  
+                  <?php 
+                                    if(isset($other)){
+                                        $i=0;
+                                        foreach($other as $module )
+                                        {
+                                    
+                                ?>
+                                <a href="<?php 
+                                    $heading = $module->vTitle; 
+                                    $name = str_replace(' ', '-', $heading); 
+                                    $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                    $module_id = base64_encode($module->id);
+                                    // $module_id = $module->id;
+                                    echo base_url('quality/other/'. $module_id . '/' .$name);
+                                // echo base_url('Units/units-detail/'.$module->id) 
+                                ?>">
+                                    <button class="nav-link <?php if($detail->id === $module->id){echo 'active';}else{echo '';}?>">
+                                        <?php echo $module->vTitle; ?>
+                                    </button>
+                                </a>  
+                                <?php 
+                                        $i++; 
+                                        }
+                                    } 
+                                ?> 
 
                 </div>
                 <!-- nav tabs btn section -->

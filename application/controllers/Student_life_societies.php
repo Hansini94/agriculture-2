@@ -30,9 +30,10 @@ Class Student_life_societies extends CI_Controller {
         $this->load->view('frontendview/footer_view', $data_header);
        
     }    
-    public function society_detail($name) {
+    public function society_detail() {
         
-        $newString = str_replace('_', ' ', $name);
+        // $newString = str_replace('_', ' ', $name);
+        $id = $this->uri->segment(3);  
 
         $this->load->model('frontend_model/student_life_model');
         $this->load->model('frontend_model/home_page_model');
@@ -42,7 +43,7 @@ Class Student_life_societies extends CI_Controller {
 
         $data_header['meta'] = 36;
 
-        $data['data'] = $this->student_life_model->get_society_data($newString);
+        $data['data'] = $this->student_life_model->get_society_data($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

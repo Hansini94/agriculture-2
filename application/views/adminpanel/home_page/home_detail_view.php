@@ -63,6 +63,7 @@ if ($cSaveStatus == "E") {
     $fNoOfStudent = $edit_data[0]->fNoOfStudent;
     $fStudentStaffRatio = $edit_data[0]->fStudentStaffRatio;
     $fFieldsOfStudy = $edit_data[0]->fFieldsOfStudy;
+    
 	
 } else {
     $id = "";    
@@ -128,6 +129,7 @@ if ($cSaveStatus == "E") {
     $fNoOfStudent = "";
     $fStudentStaffRatio = "";
     $fFieldsOfStudy = "";
+    
 }
 ?>
 <div class="right_col" role="main">
@@ -904,7 +906,7 @@ if ($cSaveStatus == "E") {
                                     </div>
                                 </div>
                             </div>
-                                
+                            
                             <div class="clearfix"></div>      
 
                             <div style="clear:both;"></div>
@@ -914,11 +916,9 @@ if ($cSaveStatus == "E") {
                                     <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
                                     <input type="hidden" id="uploadpath" name="uploadpath" value="front_img">
                                     <input type="hidden" id="cEnable" name="cEnable" value="Y">
-                                    <input type="hidden" id="cSaveStatus" name="cSaveStatus"
-                                        value="<?php echo $cSaveStatus; ?>">
-                                    <button type="button" class="btn btn-default pull-right"
-                                        onclick="document.location.href = '<?php echo base_url('adminpanel/home_page/home_detail/edit_home_detail'); ?>';">Cancel</button>
-                                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                                    <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $cSaveStatus; ?>">
+                                    <button type="button" class="btn btn-default pull-right" onclick="document.location.href = '<?php echo base_url('adminpanel/home_page/home_detail/edit_home_detail'); ?>';">Cancel</button>
+                                    <button type="submit" class="btn btn-primary pull-right" id="btn_submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -939,6 +939,7 @@ if ($cSaveStatus == "E") {
             border-style: none;
         }
     </style>
+    
 
 
 </div>

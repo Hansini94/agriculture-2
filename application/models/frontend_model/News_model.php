@@ -39,9 +39,9 @@ class News_model extends CI_Model {
         }
     }
 
-    public function get_news_detail($newString) {
+    public function get_news_detail($id) {
         $this->db->from('tbl_news_updates');
-        $this->db->where('vName', $newString);
+        $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {

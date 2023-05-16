@@ -121,6 +121,7 @@ $route['excellence-award'] = 'Excellence_award';
 $route['president-award'] = 'President_award';
 $route['faurs'] = 'Faurs';
 $route['faurs-committee'] = 'Faurs_committee';
+$route['faurs-competition'] = 'Faurs_competition';
 
 $route['quality/frc'] = 'Quality/frc';
 $route['quality/cdc'] = 'Quality/cdc';
@@ -145,6 +146,10 @@ $route['quality/functions-of-foaqac'] = 'Quality/index';
 $route['quality/foaqac'] = 'Quality/foaqac';
 $route['quality/member-of-foaqac'] = 'Quality/member_of_foaqac';
 $route['quality/schedule-of-meetings'] = 'Quality/schedule_of_meetings';
+
+$route['quality/other'] = 'Quality/other';
+$route['quality/other/(:any)/(:any)'] = 'Quality/load_detail';
+
 $route['404_override'] = '';
 
 $route['engagement-overview'] = 'Engagement';
@@ -162,7 +167,7 @@ $route['alumni'] = 'Alumni';
 $route['alumni-committee'] = 'Alumni_committee';
 $route['alumni-news'] = 'Alumni_news';
 $route['alumni-events'] = 'Alumni_events';
-$route['alumni-newsletter'] = 'Alumni_newsletter';
+$route['alumni-newsletter'] = 'Alumni_newsletters';
 $route['alumni-scholarships'] = 'Alumni_scholarships';
 $route['alumni-join-us'] = 'Alumni_joinus';
 
@@ -182,8 +187,11 @@ $route['student-life'] = 'Student_life';
 $route['student-life-sinhala'] = 'Student_life/ss_sinhala/';
 $route['student-life-tamil'] = 'Student_life/ss_tamil/';
 $route['student-life-societies'] = 'Student_life_societies';
+$route['student-life-societies/student-life-societies-detail/(:num)/(:any)'] = 'Student_life_societies/society_detail';
 $route['student-life-sports'] = 'Student_life_sports';
+$route['student-life-sports/student-life-sports-detail/(:num)/(:any)'] = 'Student_life_sports/sports_detail';
 $route['student-life-events'] = 'Student_life_events';
+$route['student-life-events/student-life-events-detail/(:num)/(:any)'] = 'Student_life_events/events_detail';
 
 $route['faculty-staff'] = 'Faculty_n_staff';
 $route['emeritus-professors'] = "Emeritus_professors";
@@ -198,13 +206,12 @@ $route['faculty-direction'] = 'Faculty_direction';
 $route['academic-calendar'] = 'Academic_calender';
 
 $route['news'] = 'News';
+$route['news/news-detail/(:num)/(:any)'] = 'News/news_detail';
 
 $route['deans-list'] = 'deans_list';
 $route['awards'] = 'awards';
 
-// $route['Bsc-Agtech'] = 'Gpa_calculator';
-// $route['Bsc-asf'] = 'Gpa_calculator/asf_gpa';
-// $route['Bsc-fst'] = 'Gpa_calculator/fst_gpa';
+
 
 
 /* End of file routes.php */

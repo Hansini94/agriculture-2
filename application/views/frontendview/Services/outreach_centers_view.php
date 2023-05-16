@@ -1,13 +1,13 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(2)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(2) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
               <h1 class="heading" data-aos="fade-up">Services</h1>
               <nav aria-label="breadcrumb" data-aos="fade-down">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Services</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><b>Outreach Centers</b></li>
               </ol>
@@ -77,7 +77,7 @@
                 <p class="sub_heading">   Agribusiness Centre  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='http://173.231.230.98/~tgcss/vibudha/agri_css/sub_site_css/index.html' target="_blank">
+                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agri_business_centre/' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -105,7 +105,7 @@
                 <p class="sub_heading">   Agricultural Biotechnology Centre  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='http://www.pgia.pdn.ac.lk/' target="_blank">
+                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agri_biotechnology_centre/' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>
@@ -133,7 +133,7 @@
                 <p class="sub_heading">   Agriculture Education Unit  </p>
               </blockquote>
               <!-- arrow link -->
-                <a class='animated-arrow' href='http://www.pgia.pdn.ac.lk/' target="_blank">
+                <a class='animated-arrow' href='https://agri.pdn.ac.lk/agri_education_unit/' target="_blank">
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
                 </span>

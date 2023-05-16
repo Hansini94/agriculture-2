@@ -20,7 +20,7 @@ Class News extends CI_Controller {
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "news";
+        $config["base_url"] = base_url() . "News";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';
@@ -62,9 +62,9 @@ Class News extends CI_Controller {
         $this->load->view('frontendview/footer_view', $data_header);
        
     }    
-    public function news_detail($name) {
+    public function news_detail() {
         
-        $newString = str_replace('_', ' ', $name);
+        $id = $this->uri->segment(3);  
 
         $this->load->model('frontend_model/news_model');
         $this->load->model('frontend_model/home_page_model');
@@ -74,7 +74,7 @@ Class News extends CI_Controller {
         
         $data_header['meta'] = 38;
 
-        $data['detail'] = $this->news_model->get_news_detail($newString);
+        $data['detail'] = $this->news_model->get_news_detail($id);
         $data['all'] = $this->news_model->get_news_detail_list();
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();

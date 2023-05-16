@@ -218,7 +218,7 @@ if ($cSaveStatus == "E") {
                                             <td style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/change_status/status/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="<?php echo $clicon; ?>"></i></a>
                                             </td>
-                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/delete_record/$recordid" ?>" onclick="return confirm('Are you sure?')">
+                                            <td class="a-right a-right" style="text-align:center;"><a  href="<?php echo base_url() . "adminpanel/home_page/mobile_slider/delete_record/delete/$recordid" ?>" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash-o"></i></a></td>
                                             </td>
                                         </tr>

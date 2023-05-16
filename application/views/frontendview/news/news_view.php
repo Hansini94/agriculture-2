@@ -1,6 +1,6 @@
 <header>
       <div class="inner_page_top_div">
-        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php echo base_url("assets/frontend/"); ?>images/slider01.jpg) center top repeat;">
+        <div class="inner_page_top_img" style="background: url(<?php echo base_url("assets/frontend/"); ?>images/shading.png) left center no-repeat, url(<?php $pageBanner = get_innerpage_banner($this->uri->segment(1)); if($pageBanner !== false){ foreach($pageBanner as $banner){if($this->uri->segment(1) == $banner->vPageRoute){echo base_url().'front_img/'.$banner->fImage;}}}else{echo base_url().'/assets/frontend/images/slider01.jpg';}  ?> ) center top repeat;">
           
           <div class="container inner_page_top_heading">
             <div class="row ms-auto">
@@ -73,9 +73,10 @@
 
             <!-- arrow link -->
                 <a class='animated-arrow' href='<?php 
-                                                    $heading = $latest->vName;
-                                                    $name = str_replace(' ', '_', $heading);
-                                                    echo base_url('news/news_detail/'.$name) 
+                                                    $heading = $latest->vName; 
+                                                    $name = str_replace(' ', '-', $heading); 
+                                                    $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                                    echo base_url('news/news-detail/'. $latest->id . '/' .$name)
                                                 ?>'>
                 <span class='the-arrow -left'>
                   <span class='shaft'></span>
@@ -128,8 +129,9 @@
                     <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
                     <a href='<?php  
                                     $heading = $all_data->vName; 
-                                    $name = str_replace(' ', '_', $heading); 
-                                    echo base_url('news/news_detail/'.$name) ?>'>
+                                    $name = str_replace(' ', '-', $heading); 
+                                    $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                    echo base_url('news/news-detail/'. $all_data->id . '/' .$name);?>'>
                         <h1 class="sub_heading">
                           <?php echo $all_data->vName; ?>
                         </h1>
@@ -146,9 +148,10 @@
                     </p>
                     <!-- arrow link -->
                     <a class='animated-arrow' href='<?php 
-                                                          $heading = $all_data->vName; 
-                                                          $name = str_replace(' ', '_', $heading); 
-                                                          echo base_url('news/news_detail/'.$name) ?>'>
+                                                    $heading = $all_data->vName; 
+                                                    $name = str_replace(' ', '-', $heading); 
+                                                    $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                                    echo base_url('news/news-detail/'. $all_data->id . '/' .$name);?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>

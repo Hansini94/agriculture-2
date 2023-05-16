@@ -156,6 +156,10 @@
 
       <!--=============================================-->
   <!--===================header====================-->
+  
+  <!--75 logo-->
+  <img src="<?php echo base_url('front_img/logo_75.png'); ?>" alt="" class="d-block w-100 logo_75">
+  <!--75 logo-->
 
     <!-- header section -->
 
@@ -246,10 +250,10 @@
                     <li><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>
                     
                     <li><a class="dropdown-item" href="#">Faculty Statistics &raquo; </a>
-                      <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
-                    </ul>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
+                        </ul>
                     </li>
 
                     <li><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
@@ -264,35 +268,39 @@
                 </li>
 
                 <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
-                <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/MI/" target="_blank">Sub Campus, MI </a></li>
+                <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/mi/" target="_blank">Sub Campus, MI </a></li>
 
                 <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/abo/" target="_blank">Agricultural Biology </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abo/" target="_blank">Agricultural Biology </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
                  </ul>
                 </li>
 
                 <li><a class="dropdown-item" href="#"> Centers and Units &raquo;</a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/" target="_blank">Agriculture Education Unit (AEU)</a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/cdu/" target="_blank">Community Development Unit </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>
                  </ul>
                 </li>
 
                 <li><a class="dropdown-item" href="#">Teaching/ Students Research Farms &raquo;</a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/farms/dodangolla/index.php" target="_blank">University Experimental Station, Dodangolla </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/livestock/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/404" target="_blank">Meewathura Farm, Peradeniya </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>
+                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
+                    <!--<li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_meewathura_farm/" target="_blank">Meewathura Farm, Peradeniya </a></li>-->
                  </ul>
                 </li>
 
@@ -309,7 +317,7 @@
                 </ul>
             </li>
 
-<!-- 
+            <!-- 
              <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 University
@@ -339,7 +347,7 @@
                 <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('faurs'); ?>">Faurs</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('faurs'); ?>">FAuRS</a></li>
 
                 <!-- <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
                    <ul class="submenu dropdown-menu">
@@ -359,7 +367,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
-                <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/Sustainable%20Tropical%20Agricultural%20Systems%20of%20Sri%20Lanka.html" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
+                <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>
@@ -456,283 +464,461 @@
     <!-- ============================= -->
     <!-- mobile menu section -->
     <!-- ============================= -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">
-      <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" id="main_mobile_navbar" style="position: absolute; background-color: #ffffff !important;">
+        <div class="container">
+            <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo base_url(); ?>">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://www.pdn.ac.lk/" target="_blank">University</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('alumni'); ?>">Alumni</a>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Downloads&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url('downloads-staff'); ?>">Staff Downloads</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('downloads-students'); ?>">Students Downloads</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('downloads-faculty'); ?>">Faculty Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('faq'); ?>">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Faculty&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;About Us&nbsp;</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message</a></li>
+                                    <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Faculty Statistics&nbsp;</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates</a></li>
+                                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
+                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/mi/" target="_blank">Sub Campus, MI</a></li>
+                            <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Departments&nbsp;</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abo/" target="_blank">Agricultural Biology </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Centers and Units&nbsp;</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/cdu/" target="_blank">Community Development Unit </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Teaching/ Students Research Farms&nbsp;</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>
+                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="http://www.lib.pdn.ac.lk/branches/agri" target="_blank">Agriculture Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Academics&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url('undergraduate-programme'); ?>">Undergraduate Programs</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('postgraduate-programme'); ?>">Postgraduate Programme</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Research&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">FAuRS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;International&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
+                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Quality&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url().'quality/functions-of-foaqac'; ?>">Faculty Quality Assurance Cell (FQAC) </a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'quality/frc'; ?>">Faculty Sub Committees </a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url().'quality/ahead-project'; ?>">AHEAD Projects  </a></li>
+                            <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Downloads&nbsp;</a>
+                                <ul class="dropdown-menu">
+                                    <?php
+                                        $quality_downloads = get_quality_downloads();
+                                        foreach($quality_downloads as $download) {
+                                    ?>
+                                        <li><a class="dropdown-item" href="<?php echo base_url('/').$download->fPdf; ?>" target="_blank"><?php echo $download->vHeading; ?> </a></li>
+                                    <?php } ?>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Engagement&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url('engagement-overview'); ?>">Overview</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>
+                            <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Downloads&nbsp;</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?php echo base_url('research-engagements'); ?>">Research Engagements</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url('student-engagements'); ?>">Student Engagements</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url('community-engagements'); ?>">Community Engagements</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Services&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url('services/transcript-request'); ?>">Transcript Request (For students)</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('services/outreach-centers'); ?>">Outreach Centres</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('services/analytical-services'); ?>">Analytical Services</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('services/research-experimental-facilities'); ?>">Research & Experimental Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="input-group search_bar">
+                            <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="button" style="height: 30px;">
+                                    <i class="fa fa-search" style="position: relative; top: -4px;"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none d-xl-none d-xxl-none" style="position: absolute; background-color: #ffffff !important;">-->
+<!--      <div class="container">-->
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<!--        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/frontend/images/logo.png'); ?>" alt="" class="d-block w-100 top_logo"></a>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
 
-        <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarResponsive">
+<!--        <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarResponsive">-->
 
 
-          <ul class="navbar-nav ms-auto first_nav_bar">
+<!--          <ul class="navbar-nav ms-auto first_nav_bar">-->
 
-           <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('alumni'); ?>">Alumni</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Downloads
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url('downloads-staff'); ?>" style="text-align: left;">Staff Downloads</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('downloads-students'); ?>" style="text-align: left;">Students Downloads</a></li>
-                 <li><a class="dropdown-item" href="<?php echo base_url('downloads-faculty'); ?>" style="text-align: left;">Faculty Downloads</a></li>
+<!--           <li class="nav-item">-->
+<!--              <a class="nav-link" href="<?php echo base_url('alumni'); ?>">Alumni</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Downloads-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url('downloads-staff'); ?>" style="text-align: left;">Staff Downloads</a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url('downloads-students'); ?>" style="text-align: left;">Students Downloads</a></li>-->
+<!--                 <li><a class="dropdown-item" href="<?php echo base_url('downloads-faculty'); ?>" style="text-align: left;">Faculty Downloads</a></li>-->
                 <!-- <li><a class="dropdown-item" href="#">Faculty Downloads &raquo;</a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="">e-Newsletter</a></li>
-                    <li><a class="dropdown-item" href="">Faurs</a></li>
-                    <li><a class="dropdown-item" href="">Hanthana Blossoms</a></li>
-                 </ul>
-                </li> -->
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('faq'); ?>">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>
-            </li>
+<!--                   <ul class="submenu dropdown-menu">-->
+<!--                    <li><a class="dropdown-item" href="">e-Newsletter</a></li>-->
+<!--                    <li><a class="dropdown-item" href="">Faurs</a></li>-->
+<!--                    <li><a class="dropdown-item" href="">Hanthana Blossoms</a></li>-->
+<!--                 </ul>-->
+<!--                </li> -->-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="<?php echo base_url('faq'); ?>">FAQ</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="<?php echo base_url('partnership'); ?>">Quick Links</a>-->
+<!--            </li>-->
 
-          </ul>
+<!--          </ul>-->
 
             <!-- ============== -->
-            <div class="clearfix"></div>
+<!--            <div class="clearfix"></div>-->
 
 
-          <ul class="navbar-nav ms-auto second_nav_bar">
+<!--          <ul class="navbar-nav ms-auto second_nav_bar">-->
 
-              <li class="nav-item active">
-              <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
-            </li>
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>-->
+<!--            </li>-->
 
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.pdn.ac.lk/" target="_blank">University </a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="https://www.pdn.ac.lk/" target="_blank">University </a>-->
+<!--            </li>-->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Faculty  </a>
-                <ul class="dropdown-menu">
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Faculty  </a>-->
+<!--                <ul class="dropdown-menu">-->
+<!--                    <li>-->
+<!--                        <a class="dropdown-item" href="#" data-bs-toggle="dropdown"> About Us &raquo; </a>-->
+<!--                        <ul class="submenu dropdown-menu">-->
+<!--                            <li><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Faculty Statistics &raquo; </a>-->
+<!--                                 <ul class="submenu dropdown-menu">-->
+<!--                                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>-->
+<!--                                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
 
-                 <li><a class="dropdown-item" href="#"> About Us &raquo; </a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="<?php echo base_url("about-us"); ?>">Mission, Vision, Dean’s Message </a></li>
-                    
-                    <li><a class="dropdown-item" href="#">Faculty Statistics &raquo; </a>
-                      <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-undergraduate"); ?>">Undergraduates </a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url("faculty-statistic-academic-staff"); ?>">Academic Staff</a></li>
-                    </ul>
-                    </li>
+<!--                            <li><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>-->
+<!--                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>-->
+<!--                            <li><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>-->
+<!--                            <li><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>-->
 
-                    <li><a class="dropdown-item" href="<?php echo base_url("dean-office"); ?>">Dean’s Office</a></li>
-                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-board"); ?>">Faculty Board</a></li>
-                    <li><a class="dropdown-item" href="<?php echo base_url("history"); ?>">History</a></li>
-                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-organization"); ?>">Faculty Organization</a></li>
+                            <!-- <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
+<!--                            <li><a class="dropdown-item" href="map.html">Map & direction </a></li> -->-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
-                    <!-- <li><a class="dropdown-item" href="fac_broucher.html">Faculty Brochures</a></li>
-                    <li><a class="dropdown-item" href="map.html">Map & direction </a></li> -->
+<!--                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>-->
+<!--                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_sub_campus/" target="_blank">Sub Campus, MI </a></li>-->
 
-                 </ul>
-                </li>
+<!--                    <li><a class="dropdown-item" href="#"> Departments &raquo; </a>-->
+<!--                        <ul class="submenu dropdown-menu">-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agricultural_biology/" target="_blank">Agricultural Biology </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_economic_business/" target="_blank">Agricultural Economics & Business Management </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agriculture_engineering/" target="_blank">Agriculture Engineering </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agriculture_extension/" target="_blank">Agriculture Extension</a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_animal_science/" target="_blank">Animal Science </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_crop_science/" target="_blank">Crop Science  </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_food_science/" target="_blank">Food Science & Technology </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_soil_science/" target="_blank">Soil Science  </a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
-                <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
-                <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/MI/" target="_blank">Sub Campus, MI </a></li>
+<!--                    <li><a class="dropdown-item" href="#"> Centers and Units &raquo;</a>-->
+<!--                        <ul class="submenu dropdown-menu">-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_business_centre/" target="_blank">Agribusiness Centre (AbC)  </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_biotechnology_centre/" target="_blank">Agricultural Biotechnology Centre </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Agriculture Education Unit (AEU)</a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_eltu_unit/" target="_blank">English Language Teaching Unit (ELTU) </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_career_guidance_unit/" target="_blank">Counselling and Career Guidance Unit </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_com_dev_unit/" target="_blank">Community Development Unit </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
-                <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/abo/" target="_blank">Agricultural Biology </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
-                 </ul>
-                </li>
+<!--                    <li><a class="dropdown-item" href="#">Teaching/ Students Research Farms &raquo;</a>-->
+<!--                        <ul class="submenu dropdown-menu">-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_experimental_station/" target="_blank">University Experimental Station, Dodangolla </a></li>-->
+<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_livestock_farm/" target="_blank">Livestock Farm, Udaperadeniya </a></li>-->
+                            <!--<li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_meewathura_farm/" target="_blank">Meewathura Farm, Peradeniya </a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
-                <li><a class="dropdown-item" href="#"> Centers and Units &raquo;</a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/" target="_blank">Agriculture Education Unit (AEU)</a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
-                 </ul>
-                </li>
+<!--                    <li><a class="dropdown-item" href="http://www.lib.pdn.ac.lk/branches/agri" target="_blank">Agriculture Library </a></li>-->
 
-                <li><a class="dropdown-item" href="#">Teaching/ Students Research Farms &raquo;</a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/farms/dodangolla/index.php" target="_blank">University Experimental Station, Dodangolla </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/livestock/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
-                    <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/404" target="_blank">Meewathura Farm, Peradeniya </a></li>
-                 </ul>
-                </li>
+                      <!-- <li><a class="dropdown-item" href="#">Downloads &raquo;</a>
+<!--                       <ul class="submenu dropdown-menu">-->
+<!--                        <li><a class="dropdown-item" href="">e-Newsletter</a></li>-->
+<!--                        <li><a class="dropdown-item" href="">Faurs</a></li>-->
+<!--                        <li><a class="dropdown-item" href="">Hanthana Blossoms</a></li>-->
+<!--                     </ul>-->
+<!--                    </li> -->-->
 
-                 <li><a class="dropdown-item" href="http://www.lib.pdn.ac.lk/branches/agri" target="_blank">Agriculture Library </a></li>
-
-                  <!-- <li><a class="dropdown-item" href="#">Downloads &raquo;</a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="">e-Newsletter</a></li>
-                    <li><a class="dropdown-item" href="">Faurs</a></li>
-                    <li><a class="dropdown-item" href="">Hanthana Blossoms</a></li>
-                 </ul>
-                </li> -->
-
-                </ul>
-            </li>
+<!--                </ul>-->
+<!--            </li>-->
 
 <!-- 
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                University
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-              </ul>
-            </li> -->
+<!--             <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                University-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--                <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--              </ul>-->
+<!--            </li> -->-->
 
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Academics
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>" >Postgraduate Programme </a></li>
-              </ul>
-            </li>
+<!--             <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Academics-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url("undergraduate-programme"); ?>">Undergraduate Programs </a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url("postgraduate-programme"); ?>" >Postgraduate Programme </a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
 
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Research
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">Awards</a></li>
+<!--             <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Research-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'research/faculty-research-committee'; ?>">Faculty Research Committee </a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'research/ethical-clearance-committee'; ?>">Ethical Review Committee</a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'research-stories'; ?>">Research Stories</a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'excellence-award'; ?>">FAuRS</a></li>-->
 
                 <!-- <li><a class="dropdown-item" href="#"> Awards &raquo; </a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="cvcd_award.html">CVCD Excellence Award </a></li>
-                    <li><a class="dropdown-item" href="presi_award.html">Presidents’ Award</a></li>
-                    <li><a class="dropdown-item" href="calling_application.html">Calling Application – 2018</a></li>
-                    <li><a class="dropdown-item" href="award.html">Awards - 2018</a></li>
-                 </ul>
-                </li> -->
+<!--                   <ul class="submenu dropdown-menu">-->
+<!--                    <li><a class="dropdown-item" href="cvcd_award.html">CVCD Excellence Award </a></li>-->
+<!--                    <li><a class="dropdown-item" href="presi_award.html">Presidents’ Award</a></li>-->
+<!--                    <li><a class="dropdown-item" href="calling_application.html">Calling Application – 2018</a></li>-->
+<!--                    <li><a class="dropdown-item" href="award.html">Awards - 2018</a></li>-->
+<!--                 </ul>-->
+<!--                </li> -->-->
 
-              </ul>
-            </li>
+<!--              </ul>-->
+<!--            </li>-->
 
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                International
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
-                <li><a class="dropdown-item" href="http://agri.pdn.ac.lk/centers_units/AEU/Sustainable%20Tropical%20Agricultural%20Systems%20of%20Sri%20Lanka.html" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>
-              </ul>
-            </li>
+<!--             <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                International-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--              <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>-->
+<!--                <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
 
              <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Students
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="student_societies.html">Agriculture Faculty Chess Club</a></li>
-              </ul>
-            </li> -->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Students-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--                <li><a class="dropdown-item" href="student_societies.html">Agriculture Faculty Chess Club</a></li>-->
+<!--              </ul>-->
+<!--            </li> -->-->
 
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Quality
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="<?php echo base_url().'quality/functions-of-foaqac'; ?>">Faculty Quality Assurance Cell (FQAC) </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'quality/frc'; ?>">Faculty Sub Committees </a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url().'quality/ahead-project'; ?>">AHEAD Projects  </a></li>
+<!--             <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Quality-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--              <li><a class="dropdown-item" href="<?php echo base_url().'quality/functions-of-foaqac'; ?>">Faculty Quality Assurance Cell (FQAC) </a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'quality/frc'; ?>">Faculty Sub Committees </a></li>-->
+<!--                <li><a class="dropdown-item" href="<?php echo base_url().'quality/ahead-project'; ?>">AHEAD Projects  </a></li>-->
 
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+<!--                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
 
-                  <li><a class="dropdown-item" href="#"> Downloads &raquo; </a>
-                    <ul class="submenu dropdown-menu">
+<!--                  <li><a class="dropdown-item" href="#"> Downloads &raquo; </a>-->
+<!--                    <ul class="submenu dropdown-menu">-->
                       <?php
-                        $quality_downloads = get_quality_downloads();
-                        foreach($quality_downloads as $download) {
+                        // $quality_downloads = get_quality_downloads();
+                        // foreach($quality_downloads as $download) {
                       ?>
-                      <li><a class="dropdown-item" href="<?php echo base_url('/').$download->fPdf; ?>" target="_blank"><?php echo $download->vHeading; ?> </a></li>
-                      <?php } ?>
-                   </ul>
-                  </li>
-                </ul>
+                      <!--<li><a class="dropdown-item" href="<?php echo base_url('/').$download->fPdf; ?>" target="_blank"><?php echo $download->vHeading; ?> </a></li>-->
+                      <?php 
+                    //   } 
+                      ?>
+    <!--               </ul>-->
+    <!--              </li>-->
+    <!--            </ul>-->
 
-              </ul>
-            </li>
+    <!--          </ul>-->
+    <!--        </li>-->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Engagement
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url('engagement-overview'); ?>">Overview</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>
+    <!--        <li class="nav-item dropdown">-->
+    <!--          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+    <!--            Engagement-->
+    <!--          </a>-->
+    <!--          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+    <!--            <li><a class="dropdown-item" href="<?php echo base_url('engagement-overview'); ?>">Overview</a></li>-->
+    <!--            <li><a class="dropdown-item" href="<?php echo base_url('partnership'); ?>">Partnerships</a></li>-->
 
-                <li><a class="dropdown-item" href="#">Engagements &raquo; </a>
-                   <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="<?php echo base_url('research-engagements'); ?>">Research Engagements</a></li>
-                    <li><a class="dropdown-item" href="<?php echo base_url('student-engagements'); ?>">Student Engagements</a></li>
-                    <li><a class="dropdown-item" href="<?php echo base_url('community-engagements'); ?>">Community Engagements</a></li>
-                 </ul>
-                </li>
+    <!--            <li><a class="dropdown-item" href="#">Engagements &raquo; </a>-->
+    <!--               <ul class="submenu dropdown-menu">-->
+    <!--                <li><a class="dropdown-item" href="<?php echo base_url('research-engagements'); ?>">Research Engagements</a></li>-->
+    <!--                <li><a class="dropdown-item" href="<?php echo base_url('student-engagements'); ?>">Student Engagements</a></li>-->
+    <!--                <li><a class="dropdown-item" href="<?php echo base_url('community-engagements'); ?>">Community Engagements</a></li>-->
+    <!--             </ul>-->
+    <!--            </li>-->
 
-              </ul>
+    <!--          </ul>-->
 
-            </li>
+    <!--        </li>-->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="<?php echo base_url('services/transcript-request'); ?>">Transcript Request (For students)</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('services/outreach-centers'); ?>">Outreach Centres</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('services/analytical-services'); ?>">Analytical Services</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('services/research-experimental-facilities'); ?>">Research & Experimental Facilities</a></li>
-              </ul>
-            </li>
+    <!--        <li class="nav-item dropdown">-->
+    <!--          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+    <!--            Services-->
+    <!--          </a>-->
+    <!--          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+    <!--            <li><a class="dropdown-item" href="<?php echo base_url('services/transcript-request'); ?>">Transcript Request (For students)</a></li>-->
+    <!--            <li><a class="dropdown-item" href="<?php echo base_url('services/outreach-centers'); ?>">Outreach Centres</a></li>-->
+    <!--            <li><a class="dropdown-item" href="<?php echo base_url('services/analytical-services'); ?>">Analytical Services</a></li>-->
+    <!--            <li><a class="dropdown-item" href="<?php echo base_url('services/research-experimental-facilities'); ?>">Research & Experimental Facilities</a></li>-->
+    <!--          </ul>-->
+    <!--        </li>-->
 
-            <li class="nav-item">
-              <div class="input-group search_bar">
-                  <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">
-                  <span class="input-group-append">
-                      <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="button" style="height: 30px;">
-                          <i class="fa fa-search" style="position: relative; top: -4px;"></i>
-                      </button>
-                  </span>
-              </div>
-            </li>
+    <!--        <li class="nav-item">-->
+    <!--          <div class="input-group search_bar">-->
+    <!--              <input class="form-control border-end-0 border" type="search" value="search" id="example-search-input" style="height: 30px; font-size: 13px;">-->
+    <!--              <span class="input-group-append">-->
+    <!--                  <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search_btn" type="button" style="height: 30px;">-->
+    <!--                      <i class="fa fa-search" style="position: relative; top: -4px;"></i>-->
+    <!--                  </button>-->
+    <!--              </span>-->
+    <!--          </div>-->
+    <!--        </li>-->
 
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!--      </ul>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</nav>-->
     <!-- ============================= -->
     <!-- mobile menu section -->
     <!-- ============================= -->
 
     <header>
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <!-- <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> -->
+        <div class="carousel-indicators">
+            <?php 
+            // $mobileSliders = get_mobile_sliders();
+            // $numRecords = count($mobileSliders);
+            //     $count = 0;
+            //     for($i=0;$i<$numRecords;$i++){
+            ?>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){echo 'active';}?>" aria-current="true" aria-label="Slide <?php echo $i+1; ?>"></button>
+          <?php 
+        //   } 
+          ?>
+          <!--<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+          <!--<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+          <!--<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+        </div> 
         <div class="carousel-inner">
           <?php
             $mainSliders = get_main_sliders();
@@ -743,23 +929,23 @@
           <div class="carousel-item <?php if($count == 0) { echo "active"; } ?>" style="background-image: url('<?php echo base_url("front_img/").$slider->fImage; ?>')">
             <div class="container carousel-caption">
               <div class="row">
-                <div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">
-                  <h5><?php echo $slider->vTitle; ?></h5>
-                  <p><?php echo $slider->vCaption; ?></p>
-                </div>
+                <!--<div class="col-xxl-6 offset-xxl-6 col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 carousel_caption_col angled-bottom-left">-->
+                  <!--<h5><?php echo $slider->vTitle; ?></h5>-->
+                  <!--<p><?php echo $slider->vCaption; ?></p>-->
+                <!--</div>-->
               </div>
             </div>
           </div>
           <?php $count++; } ?>
         </div>
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button> -->
+        </button>
       </div>
     </header>
 
@@ -777,9 +963,16 @@
     <div class="container-fluid no_padding d-none">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <?php 
+            $mobileSliders = get_mobile_sliders();
+            $numRecords = count($mobileSliders);
+                $count = 0;
+                for($i=0;$i<$numRecords;$i++){
+            ?>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){echo 'active';}?>" aria-current="true" aria-label="Slide <?php echo $i+1; ?>"></button>
+          <?php } ?>
+          <!--<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+          <!--<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
         </div>
         <div class="carousel-inner">
           <?php
@@ -793,14 +986,14 @@
           </div>
           <?php $count++; } ?>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">-->
+        <!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+        <!--  <span class="visually-hidden">Previous</span>-->
+        <!--</button>-->
+        <!--<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">-->
+        <!--  <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+        <!--  <span class="visually-hidden">Next</span>-->
+        <!--</button>-->
       </div>
     </div>
     <!-- mobile slider section -->
