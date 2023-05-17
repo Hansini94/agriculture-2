@@ -5,8 +5,8 @@ if (!defined('BASEPATH'))
 
 Class Local extends CI_Controller {
 
-    private $table_name = "tbl_local";
-    private $table_name1 = "tbl_local_students";
+    private $table_name = "tbl_gewiu_local";
+    private $table_name1 = "tbl_gewiu_local_students";
     private $page_id = "13";
     private $redirect_path = "adminpanel/our_experts/local";
 

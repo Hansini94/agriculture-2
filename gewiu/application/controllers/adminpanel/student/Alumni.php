@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Alumni extends CI_Controller {
 
-    private $table_name = "tbl_student_alumni";
+    private $table_name = "tbl_gewiu_student_alumni";
     private $page_id = "18";
     private $redirect_path = "adminpanel/student/alumni";
 
