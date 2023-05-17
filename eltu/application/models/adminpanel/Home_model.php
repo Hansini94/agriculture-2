@@ -9,8 +9,8 @@ class Home_model extends CI_Model {
 ## contact us START
 	public function get_contact_us_content() {
 
-        $this->db->from('tbl_contact_us');
-		//$this->db->order_by('tbl_currency.iOrder','asc');
+        $this->db->from('tbl_eltu_contact_us');
+		//$this->db->order_by('tbl_eltu_currency.iOrder','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -25,8 +25,8 @@ class Home_model extends CI_Model {
 	
 	public function get_main_slider_list() {
 
-        $this->db->from('tbl_main_slider');
-		$this->db->order_by('tbl_main_slider.iOrder','asc');
+        $this->db->from('tbl_eltu_main_slider');
+		$this->db->order_by('tbl_eltu_main_slider.iOrder','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -35,7 +35,7 @@ class Home_model extends CI_Model {
     }
 	public function get_edit_main_slider($sliderid) {
 
-        $this->db->from('tbl_main_slider');
+        $this->db->from('tbl_eltu_main_slider');
 		$this->db->where('id', $sliderid);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -46,7 +46,7 @@ class Home_model extends CI_Model {
 
     public function get_edit_main_slider_video() {
 
-        $this->db->from('tbl_main_slider_video');
+        $this->db->from('tbl_eltu_main_slider_video');
 		$this->db->where('id', 1);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -59,8 +59,8 @@ class Home_model extends CI_Model {
 
     public function get_mobile_slider_list() {
 
-        $this->db->from('tbl_mobile_slider');
-		$this->db->order_by('tbl_mobile_slider.iOrder','asc');
+        $this->db->from('tbl_eltu_mobile_slider');
+		$this->db->order_by('tbl_eltu_mobile_slider.iOrder','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -71,7 +71,7 @@ class Home_model extends CI_Model {
     }
 	public function get_edit_mobile_slider($sliderid) {
 
-        $this->db->from('tbl_mobile_slider');
+        $this->db->from('tbl_eltu_mobile_slider');
 		$this->db->where('id', $sliderid);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -84,7 +84,7 @@ class Home_model extends CI_Model {
 	
     public function get_edit_home_detail() {
 
-        $this->db->from('tbl_home_detail');
+        $this->db->from('tbl_eltu_home_detail');
 		$this->db->where('id',1);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -95,8 +95,8 @@ class Home_model extends CI_Model {
 	
     public function get_awards_list() {
 
-        $this->db->from('tbl_awards');
-		$this->db->order_by('tbl_awards.iOrder','asc');
+        $this->db->from('tbl_eltu_awards');
+		$this->db->order_by('tbl_eltu_awards.iOrder','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -105,7 +105,7 @@ class Home_model extends CI_Model {
     }
 	public function get_edit_awards($id) {
 
-        $this->db->from('tbl_awards');
+        $this->db->from('tbl_eltu_awards');
 		$this->db->where('id', $id);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -116,8 +116,8 @@ class Home_model extends CI_Model {
 
     public function get_proof_confidence_list() {
 
-        $this->db->from('tbl_proof_confidence');
-		$this->db->order_by('tbl_proof_confidence.iOrder','asc');
+        $this->db->from('tbl_eltu_proof_confidence');
+		$this->db->order_by('tbl_eltu_proof_confidence.iOrder','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -126,7 +126,7 @@ class Home_model extends CI_Model {
     }
 	public function get_edit_proof_confidence() {
 
-        $this->db->from('tbl_proof_confidence');
+        $this->db->from('tbl_eltu_proof_confidence');
 		$this->db->where('id', 1);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -136,7 +136,7 @@ class Home_model extends CI_Model {
     }
 public function get_intro_content($vPage) {
 
-        $this->db->from('tbl_intro');
+        $this->db->from('tbl_eltu_intro');
         $this->db->where('vPage', $vPage);
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
@@ -147,8 +147,8 @@ public function get_intro_content($vPage) {
    
 public function get_careers_content_list() {
 
-        $this->db->from('tbl_career_cv');
-        $this->db->order_by('tbl_career_cv.dDateTime','desc');
+        $this->db->from('tbl_eltu_career_cv');
+        $this->db->order_by('tbl_eltu_career_cv.dDateTime','desc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -232,8 +232,8 @@ public function get_careers_content_list() {
     
     public function get_innerpage_list() {
 
-        $this->db->from('tbl_page_details');
-		$this->db->order_by('tbl_page_details.vPageName','asc');
+        $this->db->from('tbl_eltu_page_details');
+		$this->db->order_by('tbl_eltu_page_details.vPageName','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -246,8 +246,8 @@ public function get_careers_content_list() {
 
     public function get_innerpage_banner_list() {
 
-        $this->db->from('tbl_innerpage_banner');
-		$this->db->order_by('tbl_innerpage_banner.vPageRoute','asc');
+        $this->db->from('tbl_eltu_innerpage_banner');
+		$this->db->order_by('tbl_eltu_innerpage_banner.vPageRoute','asc');
         $query = $this->db->get();
        // echo $this->db->last_query();exit();
         if ($query->num_rows() > 0) {
@@ -260,7 +260,7 @@ public function get_careers_content_list() {
 
 	public function get_edit_innerpage_banner($recId) {
 
-        $this->db->from('tbl_innerpage_banner');
+        $this->db->from('tbl_eltu_innerpage_banner');
 		$this->db->where('id', $recId);
         $query = $this->db->get();
         // echo $this->db->last_query();exit();

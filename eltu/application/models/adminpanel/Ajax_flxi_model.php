@@ -116,8 +116,8 @@ class Ajax_flxi_model extends CI_Model {
     public function get_grid_data_join_reporteduser($valid_fields) {
 
         $this->db->select($valid_fields);
-        $this->db->from('tbl_report_user');
-        $this->db->join('tbl_frontend_user', 'tbl_frontend_user.id = tbl_report_user.iUserid');
+        $this->db->from('tbl_eltu_report_user');
+        $this->db->join('tbl_eltu_frontend_user', 'tbl_eltu_frontend_user.id = tbl_eltu_report_user.iUserid');
 
         $this->flexigrid->build_query();
 
@@ -125,9 +125,9 @@ class Ajax_flxi_model extends CI_Model {
         $return['records'] = $this->db->get();
         // echo $this->db->last_query();
 
-        $this->db->select('count(tbl_report_user.id) as record_count');
-        $this->db->from('tbl_report_user');
-        $this->db->join('tbl_frontend_user', 'tbl_frontend_user.id = tbl_report_user.iUserid');
+        $this->db->select('count(tbl_eltu_report_user.id) as record_count');
+        $this->db->from('tbl_eltu_report_user');
+        $this->db->join('tbl_eltu_frontend_user', 'tbl_eltu_frontend_user.id = tbl_eltu_report_user.iUserid');
 
         $record_count = $this->db->get();
         $row = $record_count->row();

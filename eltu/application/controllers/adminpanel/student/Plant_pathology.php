@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Plant_pathology extends CI_Controller {
 
-    private $table_name = "tbl_ppm_series_students";
+    private $table_name = "tbl_eltu_ppm_series_students";
     private $page_id = "17";
     private $redirect_path = "adminpanel/student/plant_pathology";
 
