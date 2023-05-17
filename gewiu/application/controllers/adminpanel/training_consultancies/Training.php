@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Training extends CI_Controller {
 
-    private $table_name = "tbl_training";
+    private $table_name = "tbl_gewiu_training";
     private $page_id = "20";
     private $redirect_path = "adminpanel/training_consultancies/training";
 

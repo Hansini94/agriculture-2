@@ -12,7 +12,7 @@ if (!defined('BASEPATH'))
 Class Meta_tags extends CI_Controller {
 
 //echo "ff";exit();
-    private $table_name = "tbl_meta_tags";
+    private $table_name = "tbl_gewiu_meta_tags";
     private $page_id = "27";
     private $redirect_path = "adminpanel/meta/meta_tags/view";
 
@@ -40,7 +40,7 @@ Class Meta_tags extends CI_Controller {
             $data=array();
             $data['saveStatus'] = 'A';
         }
-        $data['meta_list'] = $this->common_model->get_all_data_multi_where('tbl_meta_tags', $field = array(), $value = array(), 'iOrder', 'asc');
+        $data['meta_list'] = $this->common_model->get_all_data_multi_where('tbl_gewiu_meta_tags', $field = array(), $value = array(), 'iOrder', 'asc');
 
         $this->load->view('adminpanel/header_view');
         $this->load->view('adminpanel/meta/meta_tags_view', $data);
