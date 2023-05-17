@@ -28,7 +28,7 @@ if (!function_exists('get_meta')) {
 
         $ci = & get_instance();
         $ci->load->database();
-        $sql = " SELECT * FROM tbl_meta_tags where vPage_class='$page' ";
+        $sql = " SELECT * FROM tbl_aext_meta_tags where vPage_class='$page' ";
         $q = $ci->db->query($sql);
         //    echo $ci->db->last_query();  exit();  
         return $q->result();
@@ -63,7 +63,7 @@ if (!function_exists('get_contact')) {
 
         $ci = & get_instance();
         $ci->load->database();
-        $sql = " SELECT * FROM tbl_contact_us where id='1' ";
+        $sql = " SELECT * FROM tbl_aext_contact_us where id='1' ";
         $q = $ci->db->query($sql);
         return $q->result();
     }
@@ -76,10 +76,10 @@ if (!function_exists('get_faq_list')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_faq');
+        $ci->db->from('tbl_aext_faq');
         $ci->db->where('iFaqId', $faq_id);
-        $ci->db->where('tbl_faq.cEnable', 'Y');
-        $ci->db->order_by('tbl_faq.iOrder', 'asc');
+        $ci->db->where('tbl_aext_faq.cEnable', 'Y');
+        $ci->db->order_by('tbl_aext_faq.iOrder', 'asc');
         $result = $ci->db->get();
         //echo $ci->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -114,7 +114,7 @@ if (!function_exists('get_quality_downloads')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_quality_download');
+        $ci->db->from('tbl_aext_quality_download');
         $ci->db->where('cEnable', 'Y');
         $ci->db->order_by('iOrder', 'asc');
         $result = $ci->db->get();
@@ -132,7 +132,7 @@ if (!function_exists('get_main_sliders')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_main_slider');
+        $ci->db->from('tbl_aext_main_slider');
         $ci->db->where('cEnable', 'Y');
         $ci->db->order_by('iOrder', 'asc');
         $result = $ci->db->get();
@@ -150,7 +150,7 @@ if (!function_exists('get_mobile_sliders')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_mobile_slider');
+        $ci->db->from('tbl_aext_mobile_slider');
         $ci->db->where('cEnable', 'Y');
         $ci->db->order_by('iOrder', 'asc');
         $result = $ci->db->get();
@@ -168,7 +168,7 @@ if (!function_exists('get_contact_details')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_contact_us');
+        $ci->db->from('tbl_aext_contact_us');
         $ci->db->where('id', 1);
         $result = $ci->db->get();
         // echo $ci->db->last_query();  exit();  
@@ -185,7 +185,7 @@ if (!function_exists('get_logo')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_home_detail');
+        $ci->db->from('tbl_aext_home_detail');
         $ci->db->where('id', 1);
         $result = $ci->db->get();
         // echo $ci->db->last_query();  exit();  
@@ -203,7 +203,7 @@ if (!function_exists('get_innerpage_banner')) {
         $ci = & get_instance();
         $ci->load->database();
 
-        $ci->db->from('tbl_innerpage_banner');
+        $ci->db->from('tbl_aext_innerpage_banner');
         $ci->db->where('vPageRoute', $pageRoute);
         $result = $ci->db->get();
         // echo $ci->db->last_query();  exit();  

@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class Contact_us extends CI_Controller {
 
-    private $table_name = "tbl_contact_us";
+    private $table_name = "tbl_aext_contact_us";
     private $page_id = "25";
     private $redirect_path = "adminpanel/contact_us";
 
@@ -35,7 +35,7 @@ Class Contact_us extends CI_Controller {
         $save_status = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($save_status === 'E') {
-            if ($this->common_model->update_saved_data('tbl_contact_us')) {
+            if ($this->common_model->update_saved_data('tbl_aext_contact_us')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
@@ -45,7 +45,7 @@ Class Contact_us extends CI_Controller {
                 redirect(base_url() . 'adminpanel/contact_us');
             }
         } else {
-            if ($this->common_model->save_data('tbl_contact_us')) {
+            if ($this->common_model->save_data('tbl_aext_contact_us')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
