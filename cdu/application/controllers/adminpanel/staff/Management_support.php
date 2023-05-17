@@ -6,9 +6,9 @@ if (!defined('BASEPATH'))
 
 Class Management_support extends CI_Controller {
 
-    private $table_name = "tbl_management_support";
-    private $table_name1 = "tbl_management_support_caption";
-    private $table_name2 = "tbl_management_support_category";
+    private $table_name = "tbl_comdev_management_support";
+    private $table_name1 = "tbl_comdev_management_support_caption";
+    private $table_name2 = "tbl_comdev_management_support_category";
     private $page_id = "11";
     private $redirect_path = "adminpanel/staff/management_support";
 

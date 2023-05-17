@@ -6,9 +6,9 @@ if (!defined('BASEPATH'))
 
 Class Management extends CI_Controller {
 
-    private $table_name = "tbl_management";
-    private $table_name1 = "tbl_management_caption";
-    private $table_name2 = "tbl_management_category";
+    private $table_name = "tbl_comdev_management";
+    private $table_name1 = "tbl_comdev_management_caption";
+    private $table_name2 = "tbl_comdev_management_category";
     private $page_id = "10";
     private $redirect_path = "adminpanel/staff/management";
 
