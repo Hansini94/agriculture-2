@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Partnerships extends CI_Controller {
 
-    private $table_name = "tbl_partnerships";
+    private $table_name = "tbl_aebm_partnerships";
     private $page_id = "25";
     private $redirect_path = "adminpanel/partnerships/partnerships";
 
