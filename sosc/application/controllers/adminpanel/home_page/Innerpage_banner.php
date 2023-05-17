@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class Innerpage_banner extends CI_Controller {
 
-    private $table_name = "tbl_innerpage_banner";
+    private $table_name = "tbl_soil_innerpage_banner";
     private $page_id = "94";
     private $redirect_path = "adminpanel/home_page/innerpage_banner";
 
@@ -71,7 +71,7 @@ Class Innerpage_banner extends CI_Controller {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_innerpage_banner')) {
+            if ($this->common_model->update_saved_data('tbl_soil_innerpage_banner')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
@@ -81,7 +81,7 @@ Class Innerpage_banner extends CI_Controller {
                 redirect(base_url() . 'adminpanel/home_page/innerpage_banner');
             }
         } else {
-            if ($this->common_model->save_data('tbl_innerpage_banner')) {
+            if ($this->common_model->save_data('tbl_soil_innerpage_banner')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
