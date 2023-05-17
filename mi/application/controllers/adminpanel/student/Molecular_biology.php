@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Molecular_biology extends CI_Controller {
 
-    private $table_name = "tbl_mbb_series_students";
+    private $table_name = "tbl_mi_mbb_series_students";
     private $page_id = "16";
     private $redirect_path = "adminpanel/student/molecular_biology";
 
