@@ -7,11 +7,11 @@ class Training_consultancies_model extends CI_Model {
 
     public function get_count_projects() 
 	{
-        return $this->db->count_all("tbl_training");
+        return $this->db->count_all("tbl_career_training");
     }
 
     public function get_projects_list($limit, $start) {
-        $this->db->from('tbl_training');
+        $this->db->from('tbl_career_training');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
         $this->db->limit($limit, $start);
@@ -25,7 +25,7 @@ class Training_consultancies_model extends CI_Model {
     } 
 
     public function get_projects_detail($id) {
-        $this->db->from('tbl_training');
+        $this->db->from('tbl_career_training');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -34,10 +34,10 @@ class Training_consultancies_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_career_engagement_research', ['id' => $id])->row();
     }  
     public function get_projects_detail_list() {
-        $this->db->from('tbl_training');
+        $this->db->from('tbl_career_training');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
         // $this->db->limit(12);
@@ -54,11 +54,11 @@ class Training_consultancies_model extends CI_Model {
 
 public function get_count_student() 
 	{
-        return $this->db->count_all("tbl_consultancies");
+        return $this->db->count_all("tbl_career_consultancies");
     }
 
     public function get_student_list($limit, $start) {
-        $this->db->from('tbl_consultancies');
+        $this->db->from('tbl_career_consultancies');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
         $this->db->limit($limit, $start);
@@ -72,7 +72,7 @@ public function get_count_student()
     } 
 
     public function get_student_detail($id) {
-        $this->db->from('tbl_consultancies');
+        $this->db->from('tbl_career_consultancies');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -81,10 +81,10 @@ public function get_count_student()
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_career_engagement_research', ['id' => $id])->row();
     }  
     public function get_student_detail_list() {
-        $this->db->from('tbl_consultancies');
+        $this->db->from('tbl_career_consultancies');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
         // $this->db->limit(12);

@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class Temperory_staff extends CI_Controller {
 
-    private $table_name = "tbl_temperory_staff";
+    private $table_name = "tbl_career_temperory_staff";
     private $page_id = "7";
     private $redirect_path = "adminpanel/staff/temperory_staff";
 
@@ -50,7 +50,7 @@ Class Temperory_staff extends CI_Controller {
         $cSaveStatus = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($cSaveStatus === 'E') {
-            if ($this->common_model->update_saved_data('tbl_temperory_staff')) {
+            if ($this->common_model->update_saved_data('tbl_career_temperory_staff')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
@@ -60,7 +60,7 @@ Class Temperory_staff extends CI_Controller {
                 redirect(base_url() . 'adminpanel/staff/temperory_staff');
             }
         } else {
-            if ($this->common_model->save_data('tbl_temperory_staff')) {
+            if ($this->common_model->save_data('tbl_career_temperory_staff')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
