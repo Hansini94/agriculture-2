@@ -30,7 +30,7 @@ class Common_model extends CI_Model {
             'vIP' => $ip,
             'dDateTime' => date('Y-m-d H:i:s')
         );
-         $this->db->insert('tbl_logs', $logData);
+         $this->db->insert('tbl_animal_logs', $logData);
         // echo $this->db->last_query();
         //exit();
     }
@@ -40,8 +40,8 @@ class Common_model extends CI_Model {
      * author : Thushara
      */
 
-    public function save_data($tbl_name) {
-		$fields = $this->db->list_fields($tbl_name);
+    public function save_data($tbl_animal_name) {
+		$fields = $this->db->list_fields($tbl_animal_name);
 
         $data = array();
         foreach ($fields as $field) {
@@ -72,7 +72,7 @@ class Common_model extends CI_Model {
             }
         }
 
-        $query = $this->db->insert($tbl_name, $data);
+        $query = $this->db->insert($tbl_animal_name, $data);
         if ($query) {
             return true;
         } else {
@@ -80,8 +80,8 @@ class Common_model extends CI_Model {
         }
     }
 
-    public function update_saved_data($tbl_name) {
-        $fields = $this->db->list_fields($tbl_name);
+    public function update_saved_data($tbl_animal_name) {
+        $fields = $this->db->list_fields($tbl_animal_name);
 
         $data = array();
         foreach ($fields as $field) {
@@ -112,7 +112,7 @@ class Common_model extends CI_Model {
             else
                 $data[$field] = $this->input->post($field, TRUE);
         }
-        $query = $this->db->update($tbl_name, $data, "id = $id");
+        $query = $this->db->update($tbl_animal_name, $data, "id = $id");
         if ($query) {
             return true;
         } else {
@@ -120,7 +120,7 @@ class Common_model extends CI_Model {
         }
     }
 
-    public function update_password_data_useless($tbl_name) {
+    public function update_password_data_useless($tbl_animal_name) {
 
         $uUserID = $this->session->userdata('userbackendsession');
 
@@ -136,7 +136,7 @@ class Common_model extends CI_Model {
             $data = array();
             $data['pPassword'] = $newpw;
 
-            $query = $this->db->update($tbl_name, $data, "id = $uUserID");
+            $query = $this->db->update($tbl_animal_name, $data, "id = $uUserID");
             if ($query) {
                 return true;
             } else {
@@ -147,7 +147,7 @@ class Common_model extends CI_Model {
         }
     }
 
-    public function update_password_data($tbl_name) {
+    public function update_password_data($tbl_animal_name) {
 
         $uUserID = $this->session->userdata('userbackendsession');
 
@@ -158,7 +158,7 @@ class Common_model extends CI_Model {
         $data = array();
         $data['pPassword'] = $newpw;
 
-        $query = $this->db->update($tbl_name, $data, "id = $uUserID");
+        $query = $this->db->update($tbl_animal_name, $data, "id = $uUserID");
         if ($query) {
             return true;
         } else {
@@ -174,8 +174,8 @@ class Common_model extends CI_Model {
      * author : Thushara
      */
 
-    function get_edit_data($userID, $tbl_name) {
-        $result = $this->db->get_where($tbl_name, array('id' => $userID));
+    function get_edit_data($userID, $tbl_animal_name) {
+        $result = $this->db->get_where($tbl_animal_name, array('id' => $userID));
         //echo $this->db->last_query(); exit();
         if ($result->num_rows() > 0) {
             return $result->row_array();
@@ -183,11 +183,11 @@ class Common_model extends CI_Model {
         return array();
     }
 
-    function chge_status($userID, $tbl_name) {
+    function chge_status($userID, $tbl_animal_name) {
 		//echo "hh";exit();
         $this->db->select('cEnable');
         $this->db->where('id', $userID);
-        $query = $this->db->get($tbl_name);
+        $query = $this->db->get($tbl_animal_name);
 
         if ($query->num_rows() > 0) {
             $row = $query->row();
@@ -204,19 +204,19 @@ class Common_model extends CI_Model {
             'cEnable' => $status
         );
 
-        $this->db->update($tbl_name, $arrData, "id = $userID");
+        $this->db->update($tbl_animal_name, $arrData, "id = $userID");
 		//echo $this->db->last_query(); exit();
     }
 
-    function del_records($userID, $tbl_name) {
+    function del_records($userID, $tbl_animal_name) {
         $this->db->where('id', $userID);
-        $this->db->delete($tbl_name);
+        $this->db->delete($tbl_animal_name);
     }
 
     function get_sector_detail($sec_id) {
         $this->db->select('vCompanysector');
         $this->db->where('id', $sec_id);
-        $query = $this->db->get('tbl_company_sector');
+        $query = $this->db->get('tbl_animal_company_sector');
 
         if ($query->num_rows() > 0) {
             return $query->result();
@@ -232,13 +232,13 @@ class Common_model extends CI_Model {
         } else {
             $iUserType = $this->session->userdata('iUserTypebackendsession');
             $query_string = "SELECT
-            tbl_privilage.vPrivilages 
+            tbl_animal_privilage.vPrivilages 
             FROM
-            tbl_privilage
-            INNER JOIN tbl_dyn_menu ON tbl_privilage.iFormID = tbl_dyn_menu.id
+            tbl_animal_privilage
+            INNER JOIN tbl_animal_dyn_menu ON tbl_animal_privilage.iFormID = tbl_animal_dyn_menu.id
             WHERE
-            tbl_privilage.iUserTypeID = $iUserType AND
-            tbl_dyn_menu.id = $page_id";
+            tbl_animal_privilage.iUserTypeID = $iUserType AND
+            tbl_animal_dyn_menu.id = $page_id";
             $query = $this->db->query($query_string);
 
             if ($query->num_rows() > 0) {
@@ -280,8 +280,8 @@ class Common_model extends CI_Model {
         }
     }
 
-    function get_last_serial($tbl_name, $field_name) {
-        $query = "select TOP 1 $field_name from $tbl_name order by id DESC";
+    function get_last_serial($tbl_animal_name, $field_name) {
+        $query = "select TOP 1 $field_name from $tbl_animal_name order by id DESC";
         $res = $this->db->query($query);
         if ($res->num_rows() > 0) {
             $row = $res->row();

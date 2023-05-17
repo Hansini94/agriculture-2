@@ -182,7 +182,7 @@ if ($saveStatus == "A") {
                                         <input type="text" id="vUserName" name="vUserName" required class="form-control col-md-7 col-xs-12" value="<?php echo set_value('vUserName', $vUserName); ?>">
                                         <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $saveStatus; ?>">
                                         <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
-                                        <input type="hidden" id="tbl_name" name="tbl_name" value="tbl_backend_user">
+                                        <input type="hidden" id="tbl_animal_name" name="tbl_animal_name" value="tbl_animal_backend_user">
                                     </div>
                                 </div>
                                 <div class="item form-group">
