@@ -9,11 +9,11 @@ class Our_experts_model extends CI_Model {
 
     public function get_count_alumni() 
 	{
-        return $this->db->count_all("tbl_foreign");
+        return $this->db->count_all("tbl_iqac_foreign");
     }
 
     public function get_alumni_list($limit, $start) {
-        $this->db->from('tbl_foreign');
+        $this->db->from('tbl_iqac_foreign');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
         $this->db->limit($limit, $start);
@@ -27,7 +27,7 @@ class Our_experts_model extends CI_Model {
     }    
 
     public function get_module() {
-        $this->db->from('tbl_local');
+        $this->db->from('tbl_iqac_local');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
@@ -40,7 +40,7 @@ class Our_experts_model extends CI_Model {
     }    
     
      public function get_module_name_id() {
-        $this->db->from('tbl_local');
+        $this->db->from('tbl_iqac_local');
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
@@ -50,11 +50,11 @@ class Our_experts_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_iqac_engagement_research', ['id' => $id])->row();
     }
 
     public function get_module_name($id) {
-        $this->db->from('tbl_local');
+        $this->db->from('tbl_iqac_local');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -66,7 +66,7 @@ class Our_experts_model extends CI_Model {
     } 
     
      public function get_module_series_id($id) {
-        $this->db->from('tbl_local_students');
+        $this->db->from('tbl_iqac_local_students');
         $this->db->where('iModuleId', $id);
         $this->db->group_by('vSeries');
         $this->db->order_by('id', 'asc');
@@ -78,11 +78,11 @@ class Our_experts_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_iqac_engagement_research', ['id' => $id])->row();
     }
 
     public function get_module_series($id) {
-        $this->db->from('tbl_local_students');
+        $this->db->from('tbl_iqac_local_students');
         $this->db->where('iModuleId', $id);
         $this->db->group_by('vSeries');
         $result = $this->db->get();
@@ -95,7 +95,7 @@ class Our_experts_model extends CI_Model {
     } 
     
      public function get_module_students_id($id) {
-        $this->db->from('tbl_local_students');
+        $this->db->from('tbl_iqac_local_students');
         $this->db->where('iModuleId', $id);
         $this->db->group_by('vSeries');
         $this->db->order_by('id', 'asc');
@@ -107,11 +107,11 @@ class Our_experts_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_iqac_engagement_research', ['id' => $id])->row();
     }
     
     public function get_module_students($id) {
-        $this->db->from('tbl_local_students');
+        $this->db->from('tbl_iqac_local_students');
         $this->db->where('iModuleId', $id);
         $this->db->order_by('id','asc');
         $result = $this->db->get();
@@ -126,7 +126,7 @@ class Our_experts_model extends CI_Model {
 //Economic and Applied Entomology
 
     // public function get_eae_students() {
-    //     $this->db->from('tbl_eae_series_students');
+    //     $this->db->from('tbl_iqac_eae_series_students');
     //     $this->db->group_by('vSeries');
     //     $this->db->order_by('id', 'desc');
     //     $result = $this->db->get();
@@ -141,7 +141,7 @@ class Our_experts_model extends CI_Model {
 //Genetic Improvement of plants
 
 // public function get_gip_students() {
-//     $this->db->from('tbl_gip_series_students');
+//     $this->db->from('tbl_iqac_gip_series_students');
 //     $this->db->group_by('vSeries');
 //     $this->db->order_by('id', 'desc');
 //     $result = $this->db->get();
@@ -156,7 +156,7 @@ class Our_experts_model extends CI_Model {
 //Molecular biology and biotechnology
 
 // public function get_mbb_students() {
-//     $this->db->from('tbl_mbb_series_students');
+//     $this->db->from('tbl_iqac_mbb_series_students');
 //     $this->db->group_by('vSeries');
 //     $this->db->order_by('id', 'desc');
 //     $result = $this->db->get();
@@ -171,7 +171,7 @@ class Our_experts_model extends CI_Model {
 //plant pathology and microbiology
 
 // public function get_ppm_students() {
-//     $this->db->from('tbl_ppm_series_students');
+//     $this->db->from('tbl_iqac_ppm_series_students');
 //     $this->db->group_by('vSeries');
 //     $this->db->order_by('id', 'desc');
 //     $result = $this->db->get();

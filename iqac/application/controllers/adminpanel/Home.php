@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class Home extends CI_Controller {
 
-    private $table_name = "tbl_home";
+    private $table_name = "tbl_iqac_home";
     private $page_id = "2";
     private $redirect_path = "adminpanel/home";
 
@@ -60,7 +60,7 @@ Class Home extends CI_Controller {
         $save_status = $this->input->post('cSaveStatus', TRUE);
         $id = $this->input->post('id', TRUE);
         if ($save_status === 'E') {
-            if ($this->common_model->update_saved_data('tbl_home')) {
+            if ($this->common_model->update_saved_data('tbl_iqac_home')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');
@@ -70,7 +70,7 @@ Class Home extends CI_Controller {
                 redirect(base_url() . 'adminpanel/home');
             }
         } else {
-            if ($this->common_model->save_data('tbl_home')) {
+            if ($this->common_model->save_data('tbl_iqac_home')) {
                 //$tDes = "saved data has been updated";
                 //$this->common_model->add_log($tDes);
                 $this->session->set_flashdata('message_saved', 'Saved successfully.');

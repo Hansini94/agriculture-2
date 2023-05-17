@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Ongoing_projects extends CI_Controller {
 
-    private $table_name = "tbl_ongoing_projects";
+    private $table_name = "tbl_iqac_ongoing_projects";
     private $page_id = "6";
     private $redirect_path = "adminpanel/projects_outreach/ongoing_projects";
 
