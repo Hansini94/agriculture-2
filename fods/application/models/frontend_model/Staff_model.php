@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 class Staff_model extends CI_Model {
 
     public function get_academic_caption() {
-        $this->db->from('tbl_academic_staff_caption');
+        $this->db->from('tbl_food_academic_staff_caption');
         $this->db->where('id', 1);
         $result = $this->db->get();
          //echo $this->db->last_query();  exit();  
@@ -17,7 +17,7 @@ class Staff_model extends CI_Model {
         }
     }
     public function get_academic_staff_data() {
-        $this->db->from('tbl_academic_staff');
+        $this->db->from('tbl_food_academic_staff');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
         $result = $this->db->get();
@@ -30,7 +30,7 @@ class Staff_model extends CI_Model {
     } 
 
     public function get_academic_staff_detail($id) {
-        $this->db->from('tbl_academic_staff');
+        $this->db->from('tbl_food_academic_staff');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -39,12 +39,12 @@ class Staff_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_food_engagement_research', ['id' => $id])->row();
     }
 
 
     public function get_academic_staff_category() {
-        $this->db->from('tbl_academic_staff_category');
+        $this->db->from('tbl_food_academic_staff_category');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
         $result = $this->db->get();
@@ -59,7 +59,7 @@ class Staff_model extends CI_Model {
     // ********************non academic
 
     public function get_non_academic_staff_category() {
-        $this->db->from('tbl_non_academic_staff_category');
+        $this->db->from('tbl_food_non_academic_staff_category');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
         $result = $this->db->get();
@@ -72,7 +72,7 @@ class Staff_model extends CI_Model {
     }
 
     public function get_non_academic_caption() {
-        $this->db->from('tbl_non_academic_staff_caption');
+        $this->db->from('tbl_food_non_academic_staff_caption');
         $this->db->where('id', 1);
         $result = $this->db->get();
          //echo $this->db->last_query();  exit();  
@@ -84,7 +84,7 @@ class Staff_model extends CI_Model {
     }    
 
     public function get_non_academic_staff_data() {
-        $this->db->from('tbl_non_academic_staff');
+        $this->db->from('tbl_food_non_academic_staff');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
         $result = $this->db->get();
@@ -97,7 +97,7 @@ class Staff_model extends CI_Model {
     }
 
     public function get_non_academic_staff_detail($id) {
-        $this->db->from('tbl_non_academic_staff');
+        $this->db->from('tbl_food_non_academic_staff');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -106,7 +106,7 @@ class Staff_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_food_engagement_research', ['id' => $id])->row();
     } 
 
 }
