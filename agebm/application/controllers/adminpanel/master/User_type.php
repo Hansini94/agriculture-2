@@ -7,7 +7,7 @@ if (!defined('BASEPATH'))
 
 Class User_type extends CI_Controller {
 
-    private $table_name = "tbl_user_type";
+    private $table_name = "tbl_aebm_user_type";
 
     public function __construct() {
         parent::__construct();
@@ -73,7 +73,7 @@ Class User_type extends CI_Controller {
         if ($save_status === 'E')
             $this->form_validation->set_rules('vAccTypeName', 'account type', 'required|trim|max_length[50]');
         else
-            $this->form_validation->set_rules('vAccTypeName', 'account type', 'required|trim|is_unique[tbl_user_type.vAccTypeName]|max_length[50]');
+            $this->form_validation->set_rules('vAccTypeName', 'account type', 'required|trim|is_unique[tbl_aebm_user_type.vAccTypeName]|max_length[50]');
 
         $this->form_validation->set_rules('vAccDescription', 'description', 'trim');
 

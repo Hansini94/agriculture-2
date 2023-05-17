@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Economic_applied_entomology extends CI_Controller {
 
-    private $table_name = "tbl_eae_series_students";
+    private $table_name = "tbl_aebm_eae_series_students";
     private $page_id = "14";
     private $redirect_path = "adminpanel/student/economic_applied_entomology";
 

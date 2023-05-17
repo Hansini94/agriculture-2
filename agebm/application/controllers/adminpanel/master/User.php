@@ -7,7 +7,7 @@ if (!defined('BASEPATH'))
 
 Class User extends CI_Controller {
 
-    private $table_name = "tbl_backend_user";
+    private $table_name = "tbl_aebm_backend_user";
     private $page_id = "31";
     private $redirect_path = "adminpanel/master/user/add_user";
 
@@ -39,7 +39,7 @@ Class User extends CI_Controller {
         if ($uType != 1) {
             $where = 'where id!=1';
         }else {$where='';}
-        $sql_user_type = "SELECT tbl_user_type.vAccTypeName,tbl_user_type.id FROM tbl_user_type $where ORDER BY tbl_user_type.vAccTypeName ASC";
+        $sql_user_type = "SELECT tbl_aebm_user_type.vAccTypeName,tbl_aebm_user_type.id FROM tbl_aebm_user_type $where ORDER BY tbl_aebm_user_type.vAccTypeName ASC";
         $data['iUserTypeArr'] = $this->common_model->populate_drop_down($sql_user_type);
         //$data['iUserType'] = "echo";
         //echo $this->session->userdata('u_privilages');
@@ -59,7 +59,7 @@ Class User extends CI_Controller {
             if ($save_status === 'E')
                 $this->form_validation->set_rules('vUserName', 'user name', 'required|trim|xss_clean');
             else
-                $this->form_validation->set_rules('vUserName', 'user name', 'required|trim|is_unique[tbl_backend_user.vUserName]|xss_clean');
+                $this->form_validation->set_rules('vUserName', 'user name', 'required|trim|is_unique[tbl_aebm_backend_user.vUserName]|xss_clean');
 
             $this->form_validation->set_rules('vEmail', 'email address', 'required|trim|valid_email|xss_clean');
             $this->form_validation->set_rules('iUserType', 'user type', 'required');

@@ -7,7 +7,7 @@ if (!defined('BASEPATH'))
 
 Class Main_facilities extends CI_Controller {
 
-    private $table_name = "tbl_main_facilities";
+    private $table_name = "tbl_aebm_main_facilities";
     private $page_id = "16";
     private $redirect_path = "adminpanel/master/main_facilities/add_main_facilities";
 
