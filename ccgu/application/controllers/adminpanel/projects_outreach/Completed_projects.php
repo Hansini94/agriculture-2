@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Completed_projects extends CI_Controller {
 
-    private $table_name = "tbl_completed_projects";
+    private $table_name = "tbl_career_completed_projects";
     private $page_id = "7";
     private $redirect_path = "adminpanel/projects_outreach/completed_projects";
 
