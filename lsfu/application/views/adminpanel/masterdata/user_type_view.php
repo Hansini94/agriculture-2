@@ -100,7 +100,7 @@ if ($saveStatus == "A") {
                                         <input type="text" id="vAccDescription" name="vAccDescription" required class="form-control col-md-7 col-xs-12" value="<?php echo set_value('vAccDescription', $vAccDescription); ?>">
                                         <input type="hidden" id="cSaveStatus" name="cSaveStatus" value="<?php echo $saveStatus; ?>">
                                         <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
-                                        <input type="hidden" id="tbl_name" name="tbl_name" value="tbl_user_type">
+                                        <input type="hidden" id="tbl_livestock_name" name="tbl_livestock_name" value="tbl_livestock_user_type">
                                     </div>
                                 </div>
                                 </div>

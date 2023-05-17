@@ -9,7 +9,7 @@ if (!defined('BASEPATH'))
 
 Class Enquire_details extends CI_Controller {
 
-    private $table_name = "tbl_enquire_details";
+    private $table_name = "tbl_livestock_enquire_details";
     private $page_id = "36";
     private $redirect_path = "adminpanel/contact_us/enquire_details";
 
