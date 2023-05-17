@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Core_program extends CI_Controller {
 
-    private $table_name = "tbl_core_program";
+    private $table_name = "tbl_experimental_core_program";
     private $page_id = "6";
     private $redirect_path = "adminpanel/academic/core_program";
 
