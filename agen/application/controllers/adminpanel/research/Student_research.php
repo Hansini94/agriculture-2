@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Student_research extends CI_Controller {
 
-    private $table_name = "tbl_student_research";
+    private $table_name = "tbl_aeng_student_research";
     private $page_id = "21";
     private $redirect_path = "adminpanel/research/student_research";
 
