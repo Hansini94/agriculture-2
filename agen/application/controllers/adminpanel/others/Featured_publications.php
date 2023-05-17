@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Featured_publications extends CI_Controller {
 
-    private $table_name = "tbl_feautured_publications";
+    private $table_name = "tbl_aeng_feautured_publications";
     private $page_id = "20";
     private $redirect_path = "adminpanel/others/featured_publications";
 

@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class advanced_module extends CI_Controller {
 
-    private $table_name = "tbl_advanced_modules";
+    private $table_name = "tbl_aeng_advanced_modules";
     private $page_id = "7";
     private $redirect_path = "adminpanel/academic/advanced_module";
 
