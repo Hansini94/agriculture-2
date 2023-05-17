@@ -5,8 +5,8 @@ if (!defined('BASEPATH'))
 
 Class Module extends CI_Controller {
 
-    private $table_name = "tbl_module";
-    private $table_name1 = "tbl_module_students";
+    private $table_name = "tbl_soil_module";
+    private $table_name1 = "tbl_soil_module_students";
     private $page_id = "13";
     private $redirect_path = "adminpanel/student/module";
 
