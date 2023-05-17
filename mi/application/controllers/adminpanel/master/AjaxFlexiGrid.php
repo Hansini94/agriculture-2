@@ -17,7 +17,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_user_data() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_backend_user";
+        $table_name = "tbl_mi_backend_user";
         $valid_fields = array('id', 'vFirstName', 'vLastName', 'vEmail', 'vUserName', 'vContactNo', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -55,7 +55,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_sector_list() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_company_sector";
+        $table_name = "tbl_mi_company_sector";
         $valid_fields = array('id', 'vCompanysector', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -87,7 +87,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_areaofservice_list() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_company_type";
+        $table_name = "tbl_mi_company_type";
         $valid_fields = array('id', 'iSector_id', 'vCompanytype', 'cEnable');
         $sectorid = $this->security->xss_clean($this->uri->segment(5));
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -121,7 +121,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_user_type() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_user_type";
+        $table_name = "tbl_mi_user_type";
         $valid_fields = array('id', 'vAccTypeName', 'vAccDescription', 'dSaveDate', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -156,7 +156,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_faq() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_faq";
+        $table_name = "tbl_mi_faq";
         $valid_fields = array('id', 'vQuestion', 'vAnswer', 'iOrder', 'cEnable', 'iType');
 
 
@@ -195,7 +195,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_home_content_img() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_home_content";
+        $table_name = "tbl_mi_home_content";
         $valid_fields = array('id', 'vTitle1', 'vColor1', 'vTitle2', 'vColor2', 'fImage', 'cEnable');
 
 
@@ -234,7 +234,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_generalaccount() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_frontend_user";
+        $table_name = "tbl_mi_frontend_user";
         $valid_fields = array('id', 'vName', 'vLastName', 'vTele', 'vEmail', 'cEnable');
 
 
@@ -274,8 +274,8 @@ class AjaxFlexiGrid extends CI_Controller {
     ##
 
     function get_Reported_user_List() {
-        $valid_fields = array('tbl_report_user.id', 'tbl_report_user.vCommentername', 'tbl_report_user.vReason', 'tbl_report_user.cEnable', 'tbl_frontend_user.vName');
-        $this->flexigrid->validate_post('tbl_report_user.id', 'desc', $valid_fields);
+        $valid_fields = array('tbl_mi_report_user.id', 'tbl_mi_report_user.vCommentername', 'tbl_mi_report_user.vReason', 'tbl_mi_report_user.cEnable', 'tbl_mi_frontend_user.vName');
+        $this->flexigrid->validate_post('tbl_mi_report_user.id', 'desc', $valid_fields);
 
         $records = $this->ajax_flxi_model->get_grid_data_join_reporteduser($valid_fields);
 
@@ -309,7 +309,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_employeeaccount() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_frontend_user";
+        $table_name = "tbl_mi_frontend_user";
         $valid_fields = array('id', 'vName', 'vLastName', 'vTele', 'vEmail', 'cEnable');
 
 
@@ -348,7 +348,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_activecompany() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_frontend_user";
+        $table_name = "tbl_mi_frontend_user";
         $valid_fields = array('id', 'vName', 'iCompanyreff', 'vCompanyreg', 'vFeedbacktype', 'cEnable');
 
 
@@ -398,7 +398,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_pendingcompany() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_frontend_user";
+        $table_name = "tbl_mi_frontend_user";
         $valid_fields = array('id', 'vName', 'vCompanyreg', 'vFeedbacktype', 'cEnable', 'iCompanyreff');
 
 
@@ -448,7 +448,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_property_list() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_hotels";
+        $table_name = "tbl_mi_hotels";
         $valid_fields = array('id', 'vPropertyName', 'vLoacation', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -486,7 +486,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_main_facility_list() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_main_facilities";
+        $table_name = "tbl_mi_main_facilities";
         $valid_fields = array('id', 'vFacilityName', 'iOrder', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -520,7 +520,7 @@ class AjaxFlexiGrid extends CI_Controller {
         $this->load->model('adminpanel/master_data_model');
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_sub_facilities";
+        $table_name = "tbl_mi_sub_facilities";
         $valid_fields = array('id', 'iMainFacilityID', 'vSubFacilityName', 'iOrder', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -556,7 +556,7 @@ class AjaxFlexiGrid extends CI_Controller {
     function get_room_list() {
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_room_type";
+        $table_name = "tbl_mi_room_type";
         $valid_fields = array('id', 'vRoomTypeName', 'iOrder', 'cEnable');
 
         $this->flexigrid->validate_post('id', 'asc', $valid_fields);
@@ -590,7 +590,7 @@ class AjaxFlexiGrid extends CI_Controller {
         $iPropertyID = $_GET['iPropertyID'];
         //List of all fields that can be sortable. This is Optional.
         //This prevents that a user sorts by a column that we dont want him to access, or that doesnt exist, preventing errors.
-        $table_name = "tbl_link_property_room_type";
+        $table_name = "tbl_mi_link_property_room_type";
         $valid_fields = array('id', 'iRoomTypeID', 'iMaxAdult', 'iMaxChildren', 'iNoOfRooms', 'fPrice', 'cEnable');
 
         $this->load->model('adminpanel/master_data_model');
