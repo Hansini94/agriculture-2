@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class Home_detail extends CI_Controller {
 
-    private $table_name = "tbl_home_detail";
+    private $table_name = "tbl_comdev_home_detail";
     private $page_id = "3";
     private $redirect_path = "adminpanel/home_page/home_detail";
 

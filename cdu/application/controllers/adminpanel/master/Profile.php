@@ -7,7 +7,7 @@ if (!defined('BASEPATH'))
 
 Class Profile extends CI_Controller {
 
-    private $table_name = "tbl_backend_user";
+    private $table_name = "tbl_comdev_backend_user";
     private $page_id = "10";
     private $redirect_path = "adminpanel/master/profile/update_profile";
 
@@ -37,7 +37,7 @@ Class Profile extends CI_Controller {
         $user_privilages = $this->common_model->get_page_detail($this->page_id);
         $this->session->set_userdata('u_privilages', $user_privilages);
 
-        $sql_user_type = "SELECT tbl_user_type.vAccTypeName,tbl_user_type.id FROM tbl_user_type ORDER BY tbl_user_type.vAccTypeName ASC";
+        $sql_user_type = "SELECT tbl_comdev_user_type.vAccTypeName,tbl_comdev_user_type.id FROM tbl_comdev_user_type ORDER BY tbl_comdev_user_type.vAccTypeName ASC";
         $data['iUserTypeArr'] = $this->common_model->populate_drop_down($sql_user_type);
         //$data['iUserType'] = "echo";
         //echo $this->session->userdata('u_privilages');
