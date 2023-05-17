@@ -16,11 +16,11 @@ Class Common_library {
         log_message('debug', "Common Class Initialized");
     }
 
-    public function flexigrid_change_status($redirect_path, $tbl_name) {
+    public function flexigrid_change_status($redirect_path, $tbl_experimental_name) {
 
         $userID = $this->ci->security->xss_clean($this->ci->uri->segment(6));
        
-        $this->ci->common_model->chge_status($userID, $tbl_name);
+        $this->ci->common_model->chge_status($userID, $tbl_experimental_name);
         $this->ci->session->set_flashdata('message', 'Status changed!');
         
         $tDes = "Status has been changed";
@@ -28,32 +28,32 @@ Class Common_library {
 
         redirect(base_url() . $redirect_path);
     }
-	public function flexigrid_update_record($tbl_name) {
+	public function flexigrid_update_record($tbl_experimental_name) {
 
         $userID = $this->ci->security->xss_clean($this->ci->uri->segment(5));
         $data = array();
 
-        $data = $this->ci->common_model->get_edit_data($userID, $tbl_name);
+        $data = $this->ci->common_model->get_edit_data($userID, $tbl_experimental_name);
         $data['saveStatus'] = 'E';
 
         return $data;
     }
 
-    public function flexigrid_update_user($tbl_name) {
+    public function flexigrid_update_user($tbl_experimental_name) {
 
         $userID = $this->ci->security->xss_clean($this->ci->uri->segment(5));
         $data = array();
 
-        $data = $this->ci->common_model->get_edit_data($userID, $tbl_name);
+        $data = $this->ci->common_model->get_edit_data($userID, $tbl_experimental_name);
         $data['saveStatus'] = 'E';
 
         return $data;
     }
 
-    public function flexigrid_delete_record($redirect_path, $tbl_name) {
+    public function flexigrid_delete_record($redirect_path, $tbl_experimental_name) {
         $userID = $this->ci->security->xss_clean($this->ci->uri->segment(6));
 //echo 'dd111111111'; exit();
-        $this->ci->common_model->del_records($userID, $tbl_name);
+        $this->ci->common_model->del_records($userID, $tbl_experimental_name);
         $this->ci->session->set_flashdata('message', 'Data successfully deleted!');
         
         $tDes = "Record has been deleteed";

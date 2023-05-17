@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Consultancies extends CI_Controller {
 
-    private $table_name = "tbl_student_research";
+    private $table_name = "tbl_experimental_student_research";
     private $page_id = "21";
     private $redirect_path = "adminpanel/training_consultancies/consultancies";
 

@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class Overview extends CI_Controller {
 
-    private $table_name = "tbl_engagement_overview";
+    private $table_name = "tbl_experimental_engagement_overview";
     private $page_id = "22";
     private $redirect_path = "adminpanel/engagements/overview";
 

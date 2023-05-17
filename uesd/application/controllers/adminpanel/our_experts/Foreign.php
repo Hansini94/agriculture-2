@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 
 Class Foreign extends CI_Controller {
 
-    private $table_name = "tbl_student_alumni";
+    private $table_name = "tbl_experimental_student_alumni";
     private $page_id = "18";
     private $redirect_path = "adminpanel/our_experts/foreign";
 
