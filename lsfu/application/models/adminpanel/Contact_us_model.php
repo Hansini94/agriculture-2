@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 class Contact_us_model extends CI_Model {   
 
     public function get_enquire_details() {
-        $this->db->from('tbl_enquire_details');
+        $this->db->from('tbl_livestock_enquire_details');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'desc');
         $query = $this->db->get();

@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 Class news extends CI_Controller {
 
-    private $table_name = "tbl_news_updates";
+    private $table_name = "tbl_livestock_news_updates";
     private $page_id = "23";
     private $redirect_path = "adminpanel/others/news";
 

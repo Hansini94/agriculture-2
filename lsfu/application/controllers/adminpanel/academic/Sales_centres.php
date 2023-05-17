@@ -6,8 +6,8 @@ if (!defined('BASEPATH'))
 
 Class Sales_centres extends CI_Controller {
 
-    private $table_name = "tbl_sales_centres";
-    private $table_name1 = "tbl_sales_units_gallery";
+    private $table_name = "tbl_livestock_sales_centres";
+    private $table_name1 = "tbl_livestock_sales_units_gallery";
     private $page_id = "33";
     private $redirect_path = "adminpanel/academic/sales_centres";
     private $redirect_path1 = "adminpanel/academic/sales_centres/gallery";

@@ -6,8 +6,8 @@ if (!defined('BASEPATH'))
 
 Class Processing_unit extends CI_Controller {
 
-    private $table_name = "tbl_processing_unit";
-    private $table_name1 = "tbl_processing_units_gallery";
+    private $table_name = "tbl_livestock_processing_unit";
+    private $table_name1 = "tbl_livestock_processing_units_gallery";
     private $page_id = "34";
     private $redirect_path = "adminpanel/academic/processing_unit";
     private $redirect_path1 = "adminpanel/academic/processing_unit/gallery";

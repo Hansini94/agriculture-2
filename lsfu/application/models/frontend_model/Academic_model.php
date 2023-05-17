@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 class Academic_model extends CI_Model {
 
     public function get_core_program_data() {
-        $this->db->from('tbl_core_program');
+        $this->db->from('tbl_livestock_core_program');
         $this->db->where('id', 1);
         $result = $this->db->get();
          //echo $this->db->last_query();  exit();  
@@ -18,7 +18,7 @@ class Academic_model extends CI_Model {
     }
 
     public function get_module_tab_data() {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_livestock_advanced_modules');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
@@ -31,7 +31,7 @@ class Academic_model extends CI_Model {
     }    
 
     public function get_id() {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_livestock_advanced_modules');
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
@@ -41,11 +41,11 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     } 
     
     public function get_module_details() {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_livestock_advanced_modules');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -54,10 +54,10 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     }
     public function get_module_detail($id) {
-        $this->db->from('tbl_advanced_modules');
+        $this->db->from('tbl_livestock_advanced_modules');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -66,14 +66,14 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     } 
 
 
     /*******************POSTGRADUATE******************** */
 
     public function get_postgraduate_data() {
-        $this->db->from('tbl_postgraduate_program');
+        $this->db->from('tbl_livestock_postgraduate_program');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'ASC');
         $result = $this->db->get();
@@ -88,7 +88,7 @@ class Academic_model extends CI_Model {
     #################################################	
     
     public function get_sales_centres_data() {
-        $this->db->from('tbl_sales_centres');
+        $this->db->from('tbl_livestock_sales_centres');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
@@ -101,7 +101,7 @@ class Academic_model extends CI_Model {
     } 
     
     public function get_sales_centres_id() {
-        $this->db->from('tbl_sales_centres');
+        $this->db->from('tbl_livestock_sales_centres');
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
@@ -111,12 +111,12 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     } 
     
     
     public function get_sales_centres_details($id) {
-        $this->db->from('tbl_sales_centres');
+        $this->db->from('tbl_livestock_sales_centres');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -125,14 +125,14 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     }
     
     
     #################################################	
     
     public function get_processing_unit_data() {
-        $this->db->from('tbl_processing_unit');
+        $this->db->from('tbl_livestock_processing_unit');
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('id', 'asc');
         $result = $this->db->get();
@@ -145,7 +145,7 @@ class Academic_model extends CI_Model {
     } 
     
     public function get_processing_unit_id() {
-        $this->db->from('tbl_processing_unit');
+        $this->db->from('tbl_livestock_processing_unit');
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
@@ -155,12 +155,12 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     } 
     
     
     public function get_processing_unit_details($id) {
-        $this->db->from('tbl_processing_unit');
+        $this->db->from('tbl_livestock_processing_unit');
         $this->db->where('id', $id);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -169,7 +169,7 @@ class Academic_model extends CI_Model {
         } else {
             return array();
         }
-        // return $this->db->get_where('tbl_engagement_research', ['id' => $id])->row();
+        // return $this->db->get_where('tbl_livestock_engagement_research', ['id' => $id])->row();
     }
 }
 
