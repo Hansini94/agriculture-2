@@ -68,7 +68,7 @@ Class News extends CI_Controller {
         $data_header['meta'] = 13;
 
         $data['detail'] = $this->news_model->get_news_detail($id);
-        $data['all'] = $this->news_model->get_news_detail_list();
+        $data['all'] = $this->news_model->get_news_detail_list($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

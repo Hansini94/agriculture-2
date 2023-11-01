@@ -91,16 +91,21 @@ $route['Intensive-Course'] = 'Postgraduate_programme';
 $route['Staff'] = 'Staff';
 
 $route['Services'] = 'Services';
+$route['Services/(:num)'] = 'Services';
 $route['services/services-detail/(:num)/(:any)'] = 'Services/services_detail';
 $route['Facilities'] = 'Facilities';
+$route['Facilities/(:num)'] = 'Facilities';
 $route['facilities/facilities-detail/(:num)/(:any)'] = 'Facilities/facilities_detail';
 
 $route['News'] = 'News';
+$route['News/(:num)'] = 'News';
 $route['news/news-detail/(:num)/(:any)'] = 'News/news_detail';
 $route['Events'] = 'Events';
+$route['Events/(:num)'] = 'Events';
 $route['events/events-detail/(:num)/(:any)'] = 'Events/events_detail';
 
 // $route['Student-Alumni'] = 'Student_alumni';
+// $route['Student-Alumni/(:num)'] = 'Student_alumni';
 // $route['Module'] = 'Module';
 // $route['Module-EAE'] = 'Module_eae';
 // $route['Module-GIP'] = 'Module_gip';

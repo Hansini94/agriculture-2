@@ -91,17 +91,22 @@ $route['Outreach'] = 'Postgraduate_programme';
 $route['Staff'] = 'Staff';
 
 $route['News'] = 'News';
+$route['News/(:num)'] = 'News';
 $route['news/news-detail/(:num)/(:any)'] = 'News/news_detail';
 
 $route['Publications'] = 'Publications';
+$route['Publications/(:num)'] = 'Publications';
 $route['publications/publications-detail/(:num)/(:any)'] = 'Publications/publications_detail';
 
 $route['Training'] = 'Training';
+$route['Training/(:num)'] = 'Training';
 $route['training/training-detail/(:num)/(:any)'] = 'Training/projects_detail';
 $route['Consultancies'] = 'Consultancies';
+$route['Consultancies/(:num)'] = 'Consultancies';
 $route['consultancies/consultancies-detail/(:num)/(:any)'] = 'Consultancies/student_detail';
 
 $route['Foreign'] = 'Student_alumni';
+$route['Foreign/(:num)'] = 'Student_alumni';
 $route['Local'] = 'Local';
 // $route['Module-EAE'] = 'Module_eae';
 // $route['Module-GIP'] = 'Module_gip';

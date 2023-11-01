@@ -27,6 +27,7 @@ Class Innerpage_banner extends CI_Controller {
         $data['cSaveStatus']= 'A';
         // $data['list_data'] = $this->home_model->get_main_slider_list();
         $data['page_list'] = $this->home_model->get_innerpage_list();
+        // var_dump($data['page_list']);exit();
         $data['list_data'] = $this->home_model->get_innerpage_banner_list();
         $this->load->view('adminpanel/header_view');
         $this->load->view('adminpanel/home_page/innerpage_banner_view', $data);

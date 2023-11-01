@@ -15,7 +15,7 @@ Class News extends CI_Controller {
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "news";
+        $config["base_url"] = base_url() . "News";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';
@@ -68,7 +68,7 @@ Class News extends CI_Controller {
         $data_header['meta'] = 13;
 
         $data['detail'] = $this->news_model->get_news_detail($id);
-        $data['all'] = $this->news_model->get_news_detail_list();
+        $data['all'] = $this->news_model->get_news_detail_list($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

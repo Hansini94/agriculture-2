@@ -42,7 +42,7 @@ Class Login extends CI_Controller {
             // exit();
         } else {
             //echo "ok-else-1"; exit();
-            $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Lfu3e0gAAAAAOyS4Z2EhF4H69tARdFcmzQPUM3a&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']), true);
+            $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Lf6jzAgAAAAAIUcdM0_DVNkyYgPk_HGMdVjfKBV&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']), true);
             // $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']), true);
             if ($response['success'] == false) {
                 $data = array();

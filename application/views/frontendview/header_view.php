@@ -268,39 +268,39 @@
                 </li>
 
                 <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
-                <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/mi/" target="_blank">Sub Campus, MI </a></li>
+                <li><a class="dropdown-item" href="http://localhost/agriculture_local/mi/" target="_blank">Sub Campus, MI </a></li>
 
                 <li><a class="dropdown-item" href="#"> Departments &raquo; </a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abo/" target="_blank">Agricultural Biology </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/abo/" target="_blank">Agricultural Biology </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/agen/" target="_blank">Agriculture Engineering </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/aget/" target="_blank">Agriculture Extension</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/ansc/" target="_blank">Animal Science </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/crsc/" target="_blank">Crop Science  </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/fods/" target="_blank">Food Science & Technology </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/sosc/" target="_blank">Soil Science  </a></li>
                  </ul>
                 </li>
 
                 <li><a class="dropdown-item" href="#"> Centers and Units &raquo;</a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/cdu/" target="_blank">Community Development Unit </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/cdu/" target="_blank">Community Development Unit </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>
                  </ul>
                 </li>
 
                 <li><a class="dropdown-item" href="#">Teaching/ Students Research Farms &raquo;</a>
                    <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>
-                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
-                    <!--<li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_meewathura_farm/" target="_blank">Meewathura Farm, Peradeniya </a></li>-->
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>
+                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
+                    <!--<li><a class="dropdown-item" href="http://localhost/agriculture_local/agri_meewathura_farm/" target="_blank">Meewathura Farm, Peradeniya </a></li>-->
                  </ul>
                 </li>
 
@@ -367,7 +367,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
-                <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
+                <li><a class="dropdown-item" href="http://localhost/agriculture_local/aeu/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>
@@ -517,35 +517,35 @@
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>
-                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/mi/" target="_blank">Sub Campus, MI</a></li>
+                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/mi/" target="_blank">Sub Campus, MI</a></li>
                             <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Departments&nbsp;</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abo/" target="_blank">Agricultural Biology </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agen/" target="_blank">Agriculture Engineering </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aget/" target="_blank">Agriculture Extension</a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ansc/" target="_blank">Animal Science </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/crsc/" target="_blank">Crop Science  </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/fods/" target="_blank">Food Science & Technology </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/sosc/" target="_blank">Soil Science  </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/abo/" target="_blank">Agricultural Biology </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/agen/" target="_blank">Agriculture Engineering </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/aget/" target="_blank">Agriculture Extension</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/ansc/" target="_blank">Animal Science </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/crsc/" target="_blank">Crop Science  </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/fods/" target="_blank">Food Science & Technology </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/sosc/" target="_blank">Soil Science  </a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Centers and Units&nbsp;</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/cdu/" target="_blank">Community Development Unit </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/cdu/" target="_blank">Community Development Unit </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;Teaching/ Students Research Farms&nbsp;</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>
-                                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="http://www.lib.pdn.ac.lk/branches/agri" target="_blank">Agriculture Library</a></li>
@@ -568,7 +568,7 @@
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">&nbsp;International&nbsp;</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>
-                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
+                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/aeu/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>
@@ -709,39 +709,39 @@
 <!--                    </li>-->
 
 <!--                    <li><a class="dropdown-item" href="<?php echo base_url("faculty-brochure"); ?>">Brochure</a></li>-->
-<!--                    <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_sub_campus/" target="_blank">Sub Campus, MI </a></li>-->
+<!--                    <li><a class="dropdown-item" href="http://localhost/agriculture_local/mi/" target="_blank">Sub Campus, MI </a></li>-->
 
 <!--                    <li><a class="dropdown-item" href="#"> Departments &raquo; </a>-->
 <!--                        <ul class="submenu dropdown-menu">-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agricultural_biology/" target="_blank">Agricultural Biology </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_economic_business/" target="_blank">Agricultural Economics & Business Management </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agriculture_engineering/" target="_blank">Agriculture Engineering </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agriculture_extension/" target="_blank">Agriculture Extension</a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_animal_science/" target="_blank">Animal Science </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_crop_science/" target="_blank">Crop Science  </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_food_science/" target="_blank">Food Science & Technology </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_soil_science/" target="_blank">Soil Science  </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/abo/" target="_blank">Agricultural Biology </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/agebm/" target="_blank">Agricultural Economics & Business Management </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/agen/" target="_blank">Agriculture Engineering </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/aget/" target="_blank">Agriculture Extension</a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/ansc/" target="_blank">Animal Science </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/crsc/" target="_blank">Crop Science  </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/fods/" target="_blank">Food Science & Technology </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/sosc/" target="_blank">Soil Science  </a></li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
 
 <!--                    <li><a class="dropdown-item" href="#"> Centers and Units &raquo;</a>-->
 <!--                        <ul class="submenu dropdown-menu">-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_business_centre/" target="_blank">Agribusiness Centre (AbC)  </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_biotechnology_centre/" target="_blank">Agricultural Biotechnology Centre </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Agriculture Education Unit (AEU)</a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_eltu_unit/" target="_blank">English Language Teaching Unit (ELTU) </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_career_guidance_unit/" target="_blank">Counselling and Career Guidance Unit </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_com_dev_unit/" target="_blank">Community Development Unit </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/abc/" target="_blank">Agribusiness Centre (AbC)  </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/agbc/" target="_blank">Agricultural Biotechnology Centre </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/aeu/" target="_blank">Agriculture Education Unit (AEU)</a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/eltu/" target="_blank">English Language Teaching Unit (ELTU) </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/ccgu/" target="_blank">Counselling and Career Guidance Unit </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/cdu/" target="_blank">Community Development Unit </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/gewiu/" target="_blank">Gender Education and Women's Initiative Unit (GEWIU)</a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/iqac/" target="_blank">Internal Quality Assurance Unit (IQAC)</a></li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
 
 <!--                    <li><a class="dropdown-item" href="#">Teaching/ Students Research Farms &raquo;</a>-->
 <!--                        <ul class="submenu dropdown-menu">-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_experimental_station/" target="_blank">University Experimental Station, Dodangolla </a></li>-->
-<!--                            <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_livestock_farm/" target="_blank">Livestock Farm, Udaperadeniya </a></li>-->
-                            <!--<li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_meewathura_farm/" target="_blank">Meewathura Farm, Peradeniya </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/uesd/" target="_blank">University Experimental Station, Dodangolla </a></li>-->
+<!--                            <li><a class="dropdown-item" href="http://localhost/agriculture_local/lsfu/" target="_blank">Livestock Farm, Udaperadeniya </a></li>-->
+                            <!--<li><a class="dropdown-item" href="http://localhost/agriculture_local/agri_meewathura_farm/" target="_blank">Meewathura Farm, Peradeniya </a></li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
 
@@ -807,7 +807,7 @@
 <!--              </a>-->
 <!--              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
 <!--              <li><a class="dropdown-item" href="<?php echo base_url().'international-overview'; ?>">Overview</a></li>-->
-<!--                <li><a class="dropdown-item" href="https://agri.pdn.ac.lk/agri_education_unit/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>-->
+<!--                <li><a class="dropdown-item" href="http://localhost/agriculture_local/aeu/" target="_blank">Study Abroad Programme for Foreign Universities </a></li>-->
 <!--                <li><a class="dropdown-item" href="<?php echo base_url().'international/current-foreign-students'; ?>">Current Foreign Students</a></li>-->
 <!--                <li><a class="dropdown-item" href="<?php echo base_url().'international/opportunities-study-abroad'; ?>">Opportunities for Study Abroad</a></li>-->
 <!--                <li><a class="dropdown-item" href="<?php echo base_url().'international/info-for-foreign-students'; ?>">Information for Foreign Students</a></li>-->

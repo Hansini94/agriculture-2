@@ -15,7 +15,7 @@ class Student_model extends CI_Model {
     public function get_alumni_list($limit, $start) {
         $this->db->from('tbl_soil_student_alumni');
         $this->db->where('cEnable', 'Y');
-        $this->db->order_by('id', 'desc');
+        $this->db->order_by('iOrder', 'desc');
         $this->db->limit($limit, $start);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -29,7 +29,7 @@ class Student_model extends CI_Model {
     public function get_module() {
         $this->db->from('tbl_soil_module');
         $this->db->where('cEnable', 'Y');
-        $this->db->order_by('id', 'asc');
+        $this->db->order_by('iOrder', 'asc');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
@@ -69,7 +69,7 @@ class Student_model extends CI_Model {
         $this->db->from('tbl_soil_module_students');
         $this->db->where('iModuleId', $id);
         $this->db->group_by('vSeries');
-        $this->db->order_by('id', 'asc');
+        $this->db->order_by('iOrder', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -98,7 +98,7 @@ class Student_model extends CI_Model {
         $this->db->from('tbl_soil_module_students');
         $this->db->where('iModuleId', $id);
         $this->db->group_by('vSeries');
-        $this->db->order_by('id', 'asc');
+        $this->db->order_by('iOrder', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
@@ -113,7 +113,7 @@ class Student_model extends CI_Model {
     public function get_module_students($id) {
         $this->db->from('tbl_soil_module_students');
         $this->db->where('iModuleId', $id);
-        $this->db->order_by('id','asc');
+        $this->db->order_by('iOrder','asc');
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {

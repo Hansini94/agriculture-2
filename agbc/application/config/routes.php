@@ -99,12 +99,14 @@ $route['News-Events/(:num)'] = 'Publications';
 $route['news/news-detail/(:num)/(:any)'] = 'Publications/publications_detail';
 
 $route['Ongoing-Research'] = 'Ongoing_research';
+$route['Ongoing-Research/(:num)'] = 'Ongoing_research';
 $route['ongoing-research/ongoing-research-detail/(:num)/(:any)'] = 'Ongoing_research/ongoing_research_detail';
 $route['Completed-Research'] = 'Completed_research';
-$route['Completed-Research/(:num)'] = 'News';
+$route['Completed-Research/(:num)'] = 'Completed_research';
 $route['completed-research/completed-research-detail/(:num)/(:any)'] = 'Completed_research/completed_research_detail';
 
 $route['Undergraduate-Research-Students'] = 'Student_alumni';
+$route['Undergraduate-Research-Students/(:num)'] = 'Student_alumni';
 $route['Postgraduate-Research-Students'] = 'Module';
 // $route['Module-EAE'] = 'Module_eae';
 // $route['Module-GIP'] = 'Module_gip';

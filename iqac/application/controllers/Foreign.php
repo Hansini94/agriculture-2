@@ -15,7 +15,7 @@ Class Foreign extends CI_Controller {
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "foreign";
+        $config["base_url"] = base_url() . "Foreign";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';

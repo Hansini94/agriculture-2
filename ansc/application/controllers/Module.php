@@ -20,12 +20,11 @@ Class Module extends CI_Controller {
         $module_name_id = $this->student_model->get_module_name_id();
         if(isset($module_name_id)){$data['name'] = $this->student_model->get_module_name($module_name_id->id);}
         
-        $module_series_id = $this->student_model->get_module_series_id($module_name_id->id);
-        
-        if(isset($module_series_id)){$data['series'] = $this->student_model->get_module_series($module_series_id->id);}
+        $module_series_id = $this->student_model->get_module_series_id($module_name_id->id);        
+        if(isset($module_series_id)){$data['series'] = $this->student_model->get_module_series($module_name_id->id);}
         
         $module_students_id = $this->student_model->get_module_students_id($module_name_id->id);
-        if(isset($module_students_id)){$data['students'] = $this->student_model->get_module_students($module_students_id->id);}
+        if(isset($module_students_id)){$data['students'] = $this->student_model->get_module_students($module_name_id->id);}
 
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data['former_deans_data']);exit();

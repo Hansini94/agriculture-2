@@ -97,10 +97,10 @@ $query_builder = TRUE;
 */
 
 
-$db['default']['hostname'] = 'dbwala.pdn.ac.lk';
-$db['default']['username'] = 'agriwebdb';
-$db['default']['password'] = 'Gim#Men3';
-$db['default']['database'] = 'agriwebdb';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'agri';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;

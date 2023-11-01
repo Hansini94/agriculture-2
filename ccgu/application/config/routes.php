@@ -91,18 +91,23 @@ $route['Outreach'] = 'Outreach';
 $route['Staff'] = 'Staff';
 
 $route['Foreign'] = 'Foreign';
+$route['Foreign/(:num)'] = 'Foreign';
 $route['Local'] = 'Local';
 
 $route['Training'] = 'Training';
+$route['Training/(:num)'] = 'Training';
 $route['training/training-detail/(:num)/(:any)'] = 'Training/projects_detail';
 $route['Consultancies'] = 'Consultancies';
+$route['Consultancies/(:num)'] = 'Consultancies';
 $route['consultancies/consultancies-detail/(:num)/(:any)'] = 'Consultancies/student_detail';
 
 
 $route['News'] = 'News';
+$route['News/(:num)'] = 'News';
 $route['news/news-detail/(:num)/(:any)'] = 'News/news_detail';
 
 $route['Publications'] = 'Publications';
+$route['Publications/(:num)'] = 'Publications';
 $route['publications/publications-detail/(:num)/(:any)'] = 'Publications/publications_detail';
 
 

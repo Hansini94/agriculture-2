@@ -62,8 +62,9 @@
               <?php 
                           $str = $detail->tContent;
                           $len = str_word_count($str);
+                          echo $detail->tContent;
                             
-                          echo substr($detail->tContent,0,885);
+                          // echo substr($detail->tContent,0,885);
                       ?>
             </p>
           </div>
@@ -73,11 +74,14 @@
 
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p data-aos="fade-up">            
-                    <?php echo substr($detail->tContent,885,2000);  ?>
+                    <?php 
+                    // echo substr($detail->tContent,885,2000); 
+                     ?>
               </p>
             </div>
 
         </div>
+        <?php if($detail->tNewsVideo != NULL){?>
          <div class="row m-auto">
             <div class=" col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-6 offset-sm-3 col-xs-6 offset-xs-3">
                 <h1 class="sub_heading center">Related Link </h1>
@@ -87,7 +91,7 @@
             </div>
         </div>
         <?php
-          }
+          }}
         ?> 
 
        </div>

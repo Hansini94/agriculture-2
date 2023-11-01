@@ -15,7 +15,7 @@ Class Publications extends CI_Controller {
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "publications";
+        $config["base_url"] = base_url() . "Publications";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';
@@ -68,7 +68,7 @@ Class Publications extends CI_Controller {
         $data_header['meta'] = 14;
 
         $data['detail'] = $this->publications_model->get_publications_detail($id);
-        $data['all'] = $this->publications_model->get_publications_detail_list();
+        $data['all'] = $this->publications_model->get_publications_detail_list($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

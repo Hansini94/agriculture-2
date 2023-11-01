@@ -59,10 +59,10 @@
                 ?>
                   <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
                   <a href='<?php  
-                                    $heading = $all_data->vName; 
-$name = str_replace(' ', '-', $heading); 
-$name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
-echo base_url('news/news-detail/'. $all_data->id . '/' .$name);
+                              $heading = $all_data->vName; 
+                              $name = str_replace(' ', '-', $heading); 
+                              $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                              echo base_url('news/news-detail/'. $all_data->id . '/' .$name);
                             ?>'>
                         <h1 class="sub_heading">
                           <?php echo $all_data->vName; ?>
@@ -80,10 +80,10 @@ echo base_url('news/news-detail/'. $all_data->id . '/' .$name);
                     <!--</p>-->
                     <!-- arrow link -->
                     <a class='animated-arrow' href='<?php 
-                                                    $heading = $all_data->vName; 
-$name = str_replace(' ', '-', $heading); 
-$name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
-echo base_url('news/news-detail/'. $all_data->id . '/' .$name); ?>'>
+                                                  $heading = $all_data->vName; 
+                                                  $name = str_replace(' ', '-', $heading); 
+                                                  $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                                  echo base_url('news/news-detail/'. $all_data->id . '/' .$name); ?>'>
                     <span class='the-arrow -left'>
                       <span class='shaft'></span>
                     </span>

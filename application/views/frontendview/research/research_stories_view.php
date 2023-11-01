@@ -66,7 +66,8 @@
                     </p>
                     <!-- arrow link -->
                     <a class='animated-arrow' href='<?php 
-                                                            $storyTitle = str_replace(' ', '-', $research_story_main[0]->vTitle);
+                                                            // $storyTitle = str_replace(' ', '-', $research_story_main[0]->vTitle);
+                                                            $storyTitle = urlencode($research_story_main[0]->vTitle);
                                                             echo base_url('research-stories/story-detail/').$storyTitle; 
                                                     ?>'>
                         <span class='the-arrow -left'>
@@ -129,7 +130,11 @@
 
                             <br><br>
                         <!-- arrow link -->
-                        <a class='animated-arrow' href=''>
+                        <a class='animated-arrow' href='<?php 
+                                                            // $storyTitle = str_replace(' ', '-', $research_story_main[0]->vTitle);
+                                                            $storyTitle = urlencode($research_story->vTitle);
+                                                            echo base_url('research-stories/story-detail/').$storyTitle; 
+                                                    ?>'>
                             <span class='the-arrow -left'>
                                 <span class='shaft'></span>
                             </span>
@@ -159,7 +164,7 @@
         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
             <!-- pagination -->
-            <nav class="float-end">
+            <!-- <nav class="float-end">
                 <ul class="pagination" style="padding-left: 0px !important;">
                     <li class="page-item disabled">
                         <span class="page-link">Previous</span>
@@ -173,7 +178,7 @@
                         <a class="page-link" href="#">Next</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
             <!-- pagination -->
 
         </div>

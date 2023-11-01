@@ -57,36 +57,36 @@
 
           <div class="row">
             
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+            <!-- <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
               <div class="gray_text_div dean_des_div">              
                 <h1 class="sub_heading mb-1">Duration</h1>
                   <p class="fst-italic mb-1">
                     <?php echo $detail->vDuration; ?>
                   </p>
               </div>
-            </div>
+            </div> -->
 
             <!-- =========== -->
 
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+            <!-- <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
               <div class="gray_text_div dean_des_div">              
                 <h1 class="sub_heading mb-1">Co-Investigators</h1>
                   <p class="fst-italic mb-1">
                   <?php echo $detail->tInvestigators; ?>
                   </p>
               </div>
-            </div>
+            </div> -->
 
             <!-- =========== -->
 
-             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
+             <!-- <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
               <div class="gray_text_div dean_des_div">              
                 <h1 class="sub_heading mb-1">Principle Investigator / Team Leader</h1>
                   <p class="fst-italic mb-1">
                   <?php echo $detail->vLeader; ?>
                   </p>
               </div>
-            </div>
+            </div> -->
 
             <!-- =========== -->
 
@@ -96,10 +96,10 @@
             <p data-aos="fade-up">
               
               <?php 
-                          // $str = $detail->tDescription;
-                          // $len = str_word_count($str);
+                          $str = $detail->tDescription;
+                          $len = str_word_count($str);
                             
-                          // echo substr($detail->tDescription,0,885);
+                          echo substr($detail->tDescription,0,900);
                       ?>
             </p>
           </div>
@@ -109,7 +109,7 @@
 
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p data-aos="fade-up">            
-                    <?php echo $detail->tDescription;  ?>
+                    <?php echo substr($detail->tDescription,900,2000);  ?>
               </p>
             </div>
 

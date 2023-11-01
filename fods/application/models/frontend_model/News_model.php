@@ -36,11 +36,12 @@ class News_model extends CI_Model {
         }
         // return $this->db->get_where('tbl_food_engagement_research', ['id' => $id])->row();
     }  
-    public function get_news_detail_list() {
+    public function get_news_detail_list($id) {
         $this->db->from('tbl_food_news_updates');
+        $this->db->where_not_in('id', $id);
         $this->db->where('cEnable', 'Y');
         $this->db->order_by('iOrder', 'asc');
-        // $this->db->limit(12);
+        $this->db->limit(6);
         $result = $this->db->get();
         //echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {

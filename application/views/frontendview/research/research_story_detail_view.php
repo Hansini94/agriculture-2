@@ -121,7 +121,11 @@
                                     <?php echo substr($story->tContent, 0, 95).'...'; ?>
                                 </p>
                                 <!-- arrow link -->
-                                <a class='animated-arrow' href=''>
+                                <a class='animated-arrow' href='<?php 
+                                                            // $storyTitle = str_replace(' ', '-', $research_story_main[0]->vTitle);
+                                                            $storyTitle = urlencode($story->vTitle);
+                                                            echo base_url('research-stories/story-detail/').$storyTitle; 
+                                                    ?>'>
                                     <span class='the-arrow -left'>
                                         <span class='shaft'></span>
                                     </span>

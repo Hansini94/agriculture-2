@@ -15,7 +15,7 @@ Class Training extends CI_Controller {
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "training";
+        $config["base_url"] = base_url() . "Training";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';
@@ -68,7 +68,7 @@ Class Training extends CI_Controller {
         $data_header['meta'] = 11;
 
         $data['detail'] = $this->training_consultancies_model->get_projects_detail($id);
-        $data['all'] = $this->training_consultancies_model->get_projects_detail_list();
+        $data['all'] = $this->training_consultancies_model->get_projects_detail_list($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

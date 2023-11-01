@@ -93,9 +93,11 @@ $route['Local-Description'] = 'Local_description';
 $route['Staff'] = 'Staff';
 
 $route['News'] = 'News';
+$route['News/(:num)'] = 'News';
 $route['news/news-detail/(:num)/(:any)'] = 'News/news_detail';
 
 $route['Events'] = 'Publications';
+$route['Events/(:num)'] = 'Publications';
 $route['events/events-detail/(:num)/(:any)'] = 'Publications/publications_detail';
 
 $route['Current-Year'] = 'Current_year';

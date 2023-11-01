@@ -94,18 +94,31 @@ $route['Foreign'] = 'Foreign';
 $route['Local'] = 'Local';
 
 $route['Training'] = 'Training';
+$route['Training/(:num)'] = 'Training';
 $route['training/training-detail/(:num)/(:any)'] = 'Training/projects_detail';
 $route['Consultancies'] = 'Consultancies';
+$route['Consultancies/(:num)'] = 'Consultancies';
 $route['consultancies/consultancies-detail/(:num)/(:any)'] = 'Consultancies/student_detail';
 
 
 $route['News'] = 'News';
+$route['News/(:num)'] = 'News';
 $route['news/news-detail/(:num)/(:any)'] = 'News/news_detail';
 
 $route['Publications'] = 'Publications';
+$route['Publications/(:num)'] = 'Publications';
 $route['publications/publications-detail/(:num)/(:any)'] = 'Publications/publications_detail';
 
+$route['Research-Projects'] = 'Research_Projects';
+$route['Research-Projects/(:num)'] = 'Research_Projects';
+$route['research-projects/projects-detail/(:num)/(:any)'] = 'Research_Projects/projects_detail';
+$route['Student-Research'] = 'Student_Research';
+$route['Student-Research/(:num)'] = 'Student_Research';
+$route['student-research/student-detail/(:num)/(:any)'] = 'Student_Research/student_detail';
 
+$route['Student-Alumni'] = 'Student_alumni';
+$route['Student-Alumni/(:num)'] = 'Student_alumni';
+$route['Module'] = 'Module';
 
 
 // $route['Module-EAE'] = 'Module_eae';

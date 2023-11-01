@@ -40,11 +40,14 @@ Class Research_stories extends CI_Controller {
         $data = array();
         $data_header = array();
 
-        $title = $this->uri->segment(3);
+        // $title = $this->uri->segment(3);
+
+        $storyTitle = urldecode($this->uri->segment(3));
+        // $storyTitle = str_replace('-', ' ', $title);
 
         // var_dump($title);exit();
 
-        $storyTitle = str_replace('-', ' ', $title);
+        // $storyTitle = str_replace('-', ' ', $title);
 
         $data_header['meta'] = 14;
 

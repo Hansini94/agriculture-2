@@ -292,11 +292,13 @@ class Common_model extends CI_Model {
 
     public function doupload($field) {
 
-
-
+        
         $curentpath = FCPATH;
 
         $uploadpath = $this->input->post("uploadpath", TRUE);
+
+        var_dump($uploadpath);exit();
+
 
         $filename = $_FILES[$field]['name'];
 

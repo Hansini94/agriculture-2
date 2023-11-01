@@ -15,7 +15,7 @@ Class Student_Research extends CI_Controller {
         $data_header = array();
 
         $config = array();
-        $config["base_url"] = base_url() . "student_research";
+        $config["base_url"] = base_url() . "Student-Research";
 
         $config['full_tag_open'] = '<ul class="pagination" style="padding-left: 0px !important;">';
 		$config['full_tag_close'] = '</ul>';
@@ -68,7 +68,7 @@ Class Student_Research extends CI_Controller {
         $data_header['meta'] = 12;
 
         $data['detail'] = $this->research_model->get_student_detail($id);
-        $data['all'] = $this->research_model->get_student_detail_list();
+        $data['all'] = $this->research_model->get_student_detail_list($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

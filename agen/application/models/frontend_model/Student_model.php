@@ -86,7 +86,7 @@ class Student_model extends CI_Model {
         $this->db->where('iModuleId', $id);
         $this->db->group_by('vSeries');
         $result = $this->db->get();
-        //echo $this->db->last_query();  exit();  
+        // echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
             return $result->result();
         } else {
@@ -101,7 +101,7 @@ class Student_model extends CI_Model {
         $this->db->order_by('id', 'asc');
         $this->db->limit(1);
         $result = $this->db->get();
-        //echo $this->db->last_query();  exit();  
+        // echo $this->db->last_query();  exit();  
         if ($result->num_rows() > 0) {
             return $result->row();
         } else {

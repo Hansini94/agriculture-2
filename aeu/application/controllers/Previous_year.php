@@ -71,7 +71,7 @@ Class Previous_year extends CI_Controller {
         $data_header['meta'] = 12;
 
         $data['detail'] = $this->research_model->get_student_detail($id);
-        $data['all'] = $this->research_model->get_student_detail_list();
+        $data['all'] = $this->research_model->get_student_detail_list($id);
         $data_header['quick_links'] = $this->home_page_model->get_quick_list();
         // var_dump($data);exit();
 

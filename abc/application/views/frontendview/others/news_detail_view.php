@@ -78,6 +78,7 @@
             </div>
 
         </div>
+        <?php if($detail->tNewsVideo != NULL){?>
          <div class="row m-auto">
             <div class=" col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-6 offset-sm-3 col-xs-6 offset-xs-3">
                 <h1 class="sub_heading center">Related Link </h1>
@@ -87,7 +88,7 @@
             </div>
         </div>
         <?php
-          }
+          }}
         ?> 
 
        </div>
@@ -126,32 +127,32 @@
                       <?php 
                       $timestamp = strtotime($all_data->dNewsdate);
                       $date = date('d-M-Y', $timestamp);
-                ?>
+                      ?>
                         <p style="margin-top: 0px; margin-bottom: 0px; color: #2c4f93;"><small><?php echo $date; ?></small></p>
                         <a href='<?php  
                                     $heading = $all_data->vName; 
-$name = str_replace(' ', '-', $heading); 
-$name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
-echo base_url('news/news-detail/'. $all_data->id . '/' .$name); ?>'>
+                                    $name = str_replace(' ', '-', $heading); 
+                                    $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                    echo base_url('news/news-detail/'. $all_data->id . '/' .$name); ?>'>
                         <h1 class="sub_heading">
                           <?php echo $all_data->vName; ?>
                         </h1>
                       </a>
                          <p data-aos="fade-up">
                          <?php 
-                            if(strlen($all_data->tContent) > 100){
-                                echo substr($all_data->tContent,0,100) . " ...";
-                            }
-                            else{
-                                echo $all_data->tContent;
-                            }
+                            // if(strlen($all_data->tContent) > 100){
+                            //     echo substr($all_data->tContent,0,100) . " ...";
+                            // }
+                            // else{
+                            //     echo $all_data->tContent;
+                            // }
                           ?>
                           </p>
                           <!-- arrow link -->
                           <a class='animated-arrow' href='<?php $heading = $all_data->vName; 
-$name = str_replace(' ', '-', $heading); 
-$name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
-echo base_url('news/news-detail/'. $all_data->id . '/' .$name); ?>'>
+                                $name = str_replace(' ', '-', $heading); 
+                                $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                                echo base_url('news/news-detail/'. $all_data->id . '/' .$name); ?>'>
                           <span class='the-arrow -left'>
                             <span class='shaft'></span>
                           </span>

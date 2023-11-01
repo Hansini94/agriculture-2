@@ -80,7 +80,7 @@ if ($cSaveStatus == "E") {
                     }
                     ?>>
                         <br />
-                        <form id="edit_excellence_award" name="edit_excellence_award" action="<?php echo base_url('adminpanel/awards/cvcd_excellence_award/save_cvcd_excellence_award'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="edit_excellence_award" name="edit_excellence_award" action="<?php echo base_url('adminpanel/awards/cvcd_excellence_award/save_awards'); ?>" method="post"  enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="item form-group">
                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="vProTitle">Content<span class="required">*</span></label>

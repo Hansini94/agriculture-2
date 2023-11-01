@@ -11,12 +11,12 @@ CKEDITOR.editorConfig = function(config) {
     //config.extraPlugins = 'bootstrapVisibility';
     //config.extraPlugins = 'imageuploader';
     config.extraPlugins = 'youtube';
-    config.filebrowserBrowseUrl = 'https://agri.pdn.ac.lk/agri/developments.tekgeeks.net/agri//assets/js/kcfinder/browse.php?opener=ckeditor&type=files';
-    config.filebrowserImageBrowseUrl = 'https://agri.pdn.ac.lk/agri/assets/js/kcfinder/browse.php?opener=ckeditor&type=images';
-    config.filebrowserFlashBrowseUrl = 'https://agri.pdn.ac.lk/agri/assets/js/kcfinder/browse.php?opener=ckeditor&type=flash';
-    config.filebrowserUploadUrl = 'https://agri.pdn.ac.lk/agri/assets/js/kcfinder/upload.php?opener=ckeditor&type=files';
-    config.filebrowserImageUploadUrl = 'https://agri.pdn.ac.lk/agri/assets/js/kcfinder/upload.php?opener=ckeditor&type=images';
-    config.filebrowserFlashUploadUrl = 'https://agri.pdn.ac.lk/agri/assets/js/kcfinder/upload.php?opener=ckeditor&type=flash';
+    config.filebrowserBrowseUrl = 'http://localhost/agriculture_local/iqac/assets/js/kcfinder/browse.php?opener=ckeditor&type=files';
+    config.filebrowserImageBrowseUrl = 'http://localhost/agriculture_local/iqac/assets/js/kcfinder/browse.php?opener=ckeditor&type=images';
+    config.filebrowserFlashBrowseUrl = 'http://localhost/agriculture_local/iqac/assets/js/kcfinder/browse.php?opener=ckeditor&type=flash';
+    config.filebrowserUploadUrl = 'http://localhost/agriculture_local/iqac/assets/js/kcfinder/upload.php?opener=ckeditor&type=files';
+    config.filebrowserImageUploadUrl = 'http://localhost/agriculture_local/iqac/assets/js/kcfinder/upload.php?opener=ckeditor&type=images';
+    config.filebrowserFlashUploadUrl = 'http://localhost/agriculture_local/iqac/assets/js/kcfinder/upload.php?opener=ckeditor&type=flash';
     config.allowedContent = true;
 
 };
